@@ -1,0 +1,44 @@
+name: CI
+
+# Gates the project. Two independent checks, mirroring the two harnesses:
+#   1. self_test.py  — validates the DOCUMENTATION (docs exist, terms, JSON blocks)
+#   2. validate_seed_data.py — validates the canonical SEED DATA (v0.8.0)
+# The seed validator exits non-zero on any Severity-1 defect, so a structurally
+# broken seed fails the build. Only the canonical seed is gated; historical
+# snapshots (v0.1.0 / v0.6.0 / v0.6.5 / v0.7.0) are kept for provenance and are
+# intentionally not validated here.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+permissions:
+  contents: read
+
+jobs:
+  docs-self-test:
+    name: Documentation self-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run docs self-test
+        run: python3 scripts/self_test.py
+
+  seed-data-validation:
+    name: Seed-data validation (v0.8.0 canonical)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate canonical seed (fails on any Severity-1 defect)
+        run: |
+          python3 tools/validate_seed_data.py \
+            data/source_map_seed_data_v080.json \
+            --manifest reports/defect_manifest_v080.json

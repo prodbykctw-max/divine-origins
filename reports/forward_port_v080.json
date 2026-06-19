@@ -1,0 +1,96 @@
+{
+  "remapped_traditions": [
+    {
+      "deity": "guan-yu-deity",
+      "from": "chinese",
+      "to": "chinese-folk"
+    },
+    {
+      "deity": "pangu",
+      "from": "chinese",
+      "to": "taoist-chinese"
+    },
+    {
+      "deity": "xi-he",
+      "from": "chinese",
+      "to": "chinese-folk"
+    },
+    {
+      "deity": "dagon",
+      "from": "levantine",
+      "to": "canaanite-ugaritic"
+    }
+  ],
+  "repointed_parallels": [
+    {
+      "id": "p_osiris_dionysus",
+      "before": {
+        "facet_a_id": "osiris-dying-rising",
+        "facet_b_id": "osiris-dying-rising"
+      },
+      "after": {
+        "facet_a_id": "osiris-dying-rising",
+        "facet_b_id": "dionysus-twice-born"
+      }
+    },
+    {
+      "id": "p_sun_wukong_loki",
+      "before": {
+        "facet_a_id": "loki-trickster-liberator",
+        "facet_b_id": "loki-bound"
+      },
+      "after": {
+        "facet_a_id": "sun-wukong-equal-to-heaven",
+        "facet_b_id": "loki-bound"
+      }
+    }
+  ],
+  "dropped_parallels": [
+    "p214"
+  ],
+  "deduped_parallels": [
+    {
+      "dropped": "p_inanna_persephone",
+      "kept": "p002"
+    },
+    {
+      "dropped": "p_inti_ra",
+      "kept": "p_ra_inti"
+    },
+    {
+      "dropped": "p_zurvan_kali",
+      "kept": "p_kali_time_zurvan"
+    },
+    {
+      "dropped": "p_veles_erlik",
+      "kept": "p_erlik_veles"
+    },
+    {
+      "dropped": "p_izanami_ereshkigal",
+      "kept": "p_ereshkigal_izanami"
+    },
+    {
+      "dropped": "p_persephone_inanna",
+      "kept": "p002"
+    },
+    {
+      "dropped": "p_athena_durga",
+      "kept": "p_durga_athena"
+    },
+    {
+      "dropped": "p_isis_mary_iconography",
+      "kept": "p_mary_isis"
+    },
+    {
+      "dropped": "p_loki_iblis_bound",
+      "kept": "p_loki_iblis"
+    },
+    {
+      "dropped": "p_mara_iblis",
+      "kept": "p_iblis_satan"
+    }
+  ],
+  "citations_ported": 14,
+  "triage_ported": 267,
+  "triage_corrected": 46
+}
