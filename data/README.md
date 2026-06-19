@@ -5,11 +5,21 @@ describes. It is **separate** from the spec self-test: `scripts/self_test.py`
 validates the *documentation* (files exist, contain required terms, JSON blocks
 parse). It does **not** load the seed data. Use the validator below for that.
 
+## Canonical seed
+
+**`source_map_seed_data_v080.json` is the canonical, CI-gated seed** — the clean
+forward-port of v0.6.5's structure + v0.7.0's citations (643 deities, 934 facets,
+259 parallels, 56 citation-backed). It validates with **0 Severity-1 / 0
+Severity-2** defects (exit 0). Built by `../tools/forward_port.py`; full change
+log in `../reports/FORWARD_PORT_v080.md`. The earlier snapshots below are kept
+for provenance only and are intentionally *not* gated.
+
 ## Files
 
 | Path | What |
 |---|---|
-| `source_map_seed_data_v070.json` | Current seed: 152 traditions, 673 deities, 1326 facets, 329 parallels. |
+| `source_map_seed_data_v080.json` | **Canonical.** 643 deities, 934 facets, 259 parallels, 56 cited. 2 Sev-3 defects, exit 0. |
+| `source_map_seed_data_v070.json` | Snapshot: 673 deities, 1326 facets, 329 parallels (196 defects). |
 | `../tools/validate_seed_data.py` | Referential-integrity + consistency validator. Exits non-zero on any Severity-1 defect. |
 | `../reports/defect_manifest_v070.json` | Every defect (id + detail) found in the current data. |
 | `../reports/AUDIT_v070.md` | Human-readable summary + hand-fix lists. |
