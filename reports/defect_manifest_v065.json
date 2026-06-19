@@ -1,0 +1,152 @@
+{
+  "summary": {
+    "counts": {
+      "traditions": 152,
+      "deities": 643,
+      "facets": 934,
+      "parallels": 270
+    },
+    "defects_total": 19,
+    "by_severity": {
+      "SEVERITY-1": 7,
+      "SEVERITY-2": 9,
+      "SEVERITY-3": 3
+    },
+    "by_code": {
+      "deity_bad_tradition_fk": 4,
+      "parallel_same_deity": 2,
+      "parallel_self_facet": 1,
+      "duplicate_parallel_pair": 9,
+      "strength_not_discriminating": 1,
+      "type_vocabulary_uncontrolled": 1,
+      "facets_mostly_unsourced": 1
+    },
+    "strength_distribution": {
+      "identity": 12,
+      "strong-parallel": 44,
+      "derivation": 11,
+      "partial-parallel": 31,
+      "contrast": 1,
+      "confident": 165,
+      "working": 5,
+      "tentative": 1
+    },
+    "facets_with_scholarly_note": 47
+  },
+  "defects": [
+    {
+      "severity": "SEVERITY-1",
+      "code": "deity_bad_tradition_fk",
+      "ref": "guan-yu-deity",
+      "detail": "tradition_id 'chinese' not in traditions"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "deity_bad_tradition_fk",
+      "ref": "pangu",
+      "detail": "tradition_id 'chinese' not in traditions"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "deity_bad_tradition_fk",
+      "ref": "xi-he",
+      "detail": "tradition_id 'chinese' not in traditions"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "deity_bad_tradition_fk",
+      "ref": "dagon",
+      "detail": "tradition_id 'levantine' not in traditions"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_same_deity",
+      "ref": "p214",
+      "detail": "both facets belong to deity 'anakim': anakim-iy-anaq-egyptian + anakim-giant-warriors. id slug='p214'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_self_facet",
+      "ref": "p_osiris_dionysus",
+      "detail": "both sides are the same facet 'osiris-dying-rising' (Osiris (full theology) :: Dying and Rising God)"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_same_deity",
+      "ref": "p_sun_wukong_loki",
+      "detail": "both facets belong to deity 'loki': loki-trickster-liberator + loki-bound. id slug='p_sun_wukong_loki'"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p002,p_inanna_persephone,p_persephone_inanna",
+      "detail": "same facet pair ('inanna-descended-goddess', 'persephone-descent') appears 3x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_iblis_satan,p_mara_iblis",
+      "detail": "same facet pair ('iblis-accuser', 'mara-lord-samsara') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_mary_isis,p_isis_mary_iconography",
+      "detail": "same facet pair ('isis-queen-of-heaven', 'mary-queen-heaven') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_ereshkigal_izanami,p_izanami_ereshkigal",
+      "detail": "same facet pair ('ereshkigal-underworld-queen', 'izanami-yomi-queen') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_ra_inti,p_inti_ra",
+      "detail": "same facet pair ('inti-sun-sovereign', 'ra-solar-king') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_erlik_veles,p_veles_erlik",
+      "detail": "same facet pair ('erlik-underworld-adversary', 'veles-underworld-serpent') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_kali_time_zurvan,p_zurvan_kali",
+      "detail": "same facet pair ('kali-time-destroyer', 'zurvan-boundless-time') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_durga_athena,p_athena_durga",
+      "detail": "same facet pair ('athena-war', 'durga-warrior') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-2",
+      "code": "duplicate_parallel_pair",
+      "ref": "p_loki_iblis,p_loki_iblis_bound",
+      "detail": "same facet pair ('iblis-bound-until-judgment', 'loki-trickster-bound') appears 2x"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "strength_not_discriminating",
+      "ref": "confident",
+      "detail": "'confident' is 165/270 (61%) of all parallels"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "type_vocabulary_uncontrolled",
+      "ref": "97",
+      "detail": "97 distinct 'type' values across 270 parallels (free text, not a controlled taxonomy)"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "facets_mostly_unsourced",
+      "ref": "47/934",
+      "detail": "only 47/934 (5.0%) facets carry a scholarly_note"
+    }
+  ]
+}
