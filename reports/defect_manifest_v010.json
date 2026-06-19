@@ -1,0 +1,881 @@
+{
+  "summary": {
+    "counts": {
+      "traditions": 8,
+      "deities": 16,
+      "facets": 48,
+      "parallels": 8
+    },
+    "defects_total": 142,
+    "by_severity": {
+      "SEVERITY-1": 139,
+      "SEVERITY-3": 3
+    },
+    "by_code": {
+      "parallel_facets_dangling": 135,
+      "parallel_facet_missing": 4,
+      "strength_not_discriminating": 1,
+      "type_vocabulary_uncontrolled": 1,
+      "facets_mostly_unsourced": 1
+    },
+    "strength_distribution": {
+      "identity": 2,
+      "strong-parallel": 6
+    },
+    "facets_with_scholarly_note": 0
+  },
+  "defects": [
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'ein-sof'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'brahman-nirguna'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'tao-unnamed'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'the-one-plotinus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'nun-primordial'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'ginnungagap'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'sunyata'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "monad-unmanifest",
+      "detail": "parallel_facets references missing facet 'al-haqq'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "yaldabaoth-demiurge",
+      "detail": "parallel_facets references missing facet 'brahma-egoic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "yaldabaoth-usurper",
+      "detail": "parallel_facets references missing facet 'lucifer-usurper'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "yahweh-creator",
+      "detail": "parallel_facets references missing facet 'brahma-egoic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "yahweh-covenantal",
+      "detail": "parallel_facets references missing facet 'mithra-oath-keeper'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "el-elyon-council-head",
+      "detail": "parallel_facets references missing facet 'anu-sky-council'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "el-elyon-council-head",
+      "detail": "parallel_facets references missing facet 'brahma-saguna'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "el-elyon-council-head",
+      "detail": "parallel_facets references missing facet 'barbelo-first-aeon'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-protector-of-ra",
+      "detail": "parallel_facets references missing facet 'thor-mjolnir'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-protector-of-ra",
+      "detail": "parallel_facets references missing facet 'indra-vajra'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-protector-of-ra",
+      "detail": "parallel_facets references missing facet 'michael-archangel'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-usurper-murderer",
+      "detail": "parallel_facets references missing facet 'lucifer-usurper'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-usurper-murderer",
+      "detail": "parallel_facets references missing facet 'cain-genesis'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-storm-desert",
+      "detail": "parallel_facets references missing facet 'baal-hadad-storm'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-storm-desert",
+      "detail": "parallel_facets references missing facet 'thor-storm'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "set-storm-desert",
+      "detail": "parallel_facets references missing facet 'indra-storm-king'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "marduk-cosmic-orderer",
+      "detail": "parallel_facets references missing facet 'brahma-egoic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "marduk-warrior",
+      "detail": "parallel_facets references missing facet 'thor-mjolnir'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "marduk-warrior",
+      "detail": "parallel_facets references missing facet 'indra-vajra'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "marduk-warrior",
+      "detail": "parallel_facets references missing facet 'michael-archangel'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-love-fertility",
+      "detail": "parallel_facets references missing facet 'aphrodite-love'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-love-fertility",
+      "detail": "parallel_facets references missing facet 'venus-love'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-love-fertility",
+      "detail": "parallel_facets references missing facet 'freya-love'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-love-fertility",
+      "detail": "parallel_facets references missing facet 'hathor-love'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-love-fertility",
+      "detail": "parallel_facets references missing facet 'parvati-erotic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-war",
+      "detail": "parallel_facets references missing facet 'athena-war'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-war",
+      "detail": "parallel_facets references missing facet 'morrigan-war'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-war",
+      "detail": "parallel_facets references missing facet 'kali-destroyer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-war",
+      "detail": "parallel_facets references missing facet 'anat-war'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-war",
+      "detail": "parallel_facets references missing facet 'sekhmet-war'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-descended-goddess",
+      "detail": "parallel_facets references missing facet 'persephone-descent'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-descended-goddess",
+      "detail": "parallel_facets references missing facet 'dionysus-zagreus-descent'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-descended-goddess",
+      "detail": "parallel_facets references missing facet 'christ-harrowing-of-hell'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-descended-goddess",
+      "detail": "parallel_facets references missing facet 'osiris-dismembered'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-queen-of-heaven",
+      "detail": "parallel_facets references missing facet 'mary-queen-of-heaven'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-queen-of-heaven",
+      "detail": "parallel_facets references missing facet 'hera-queen'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-queen-of-heaven",
+      "detail": "parallel_facets references missing facet 'isis-queen'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "inanna-queen-of-heaven",
+      "detail": "parallel_facets references missing facet 'frigg-queen'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-sky-father",
+      "detail": "parallel_facets references missing facet 'anu-sky-council'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-sky-father",
+      "detail": "parallel_facets references missing facet 'dyaus-pita'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-sky-father",
+      "detail": "parallel_facets references missing facet 'jupiter-sky'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-oath-keeper",
+      "detail": "parallel_facets references missing facet 'mithra-oath-keeper'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-oath-keeper",
+      "detail": "parallel_facets references missing facet 'varuna-oath-keeper'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-storm-god",
+      "detail": "parallel_facets references missing facet 'thor-storm'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-storm-god",
+      "detail": "parallel_facets references missing facet 'indra-storm-king'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-storm-god",
+      "detail": "parallel_facets references missing facet 'baal-hadad-storm'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "zeus-storm-god",
+      "detail": "parallel_facets references missing facet 'perun-storm'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "prometheus-fire-bringer",
+      "detail": "parallel_facets references missing facet 'enki-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "prometheus-fire-bringer",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "prometheus-fire-bringer",
+      "detail": "parallel_facets references missing facet 'lucifer-light-bringer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "prometheus-fire-bringer",
+      "detail": "parallel_facets references missing facet 'ophite-serpent-of-eden'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-all-father",
+      "detail": "parallel_facets references missing facet 'anu-sky-council'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-all-father",
+      "detail": "parallel_facets references missing facet 'dyaus-pita'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-wanderer",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-wanderer",
+      "detail": "parallel_facets references missing facet 'khidr-green-guide'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-wanderer",
+      "detail": "parallel_facets references missing facet 'christ-disguised-stranger'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-wisdom-seeker",
+      "detail": "parallel_facets references missing facet 'enki-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-wisdom-seeker",
+      "detail": "parallel_facets references missing facet 'thoth-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-sacrificed-on-yggdrasil",
+      "detail": "parallel_facets references missing facet 'christ-crucifixion'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-sacrificed-on-yggdrasil",
+      "detail": "parallel_facets references missing facet 'dionysus-zagreus-descent'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-sacrificed-on-yggdrasil",
+      "detail": "parallel_facets references missing facet 'osiris-dismembered'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-psychopomp",
+      "detail": "parallel_facets references missing facet 'hermes-psychopomp'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-psychopomp",
+      "detail": "parallel_facets references missing facet 'anubis-judge'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "odin-psychopomp",
+      "detail": "parallel_facets references missing facet 'yama-death'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-trickster-liberator",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-trickster-liberator",
+      "detail": "parallel_facets references missing facet 'enki-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-trickster-liberator",
+      "detail": "parallel_facets references missing facet 'coyote-trickster'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-trickster-liberator",
+      "detail": "parallel_facets references missing facet 'anansi-spider'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-trickster-liberator",
+      "detail": "parallel_facets references missing facet 'sun-wukong'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-betrayer",
+      "detail": "parallel_facets references missing facet 'judas-betrayer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-betrayer",
+      "detail": "parallel_facets references missing facet 'mara-buddha-tempter'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-bound",
+      "detail": "parallel_facets references missing facet 'fenrir-bound'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-bound",
+      "detail": "parallel_facets references missing facet 'azazel-bound'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "loki-bound",
+      "detail": "parallel_facets references missing facet 'satan-chained-revelation'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-destroyer",
+      "detail": "parallel_facets references missing facet 'kali-destroyer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-destroyer",
+      "detail": "parallel_facets references missing facet 'yama-death'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-destroyer",
+      "detail": "parallel_facets references missing facet 'thanatos-death'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-destroyer",
+      "detail": "parallel_facets references missing facet 'hel-underworld'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-ascetic",
+      "detail": "parallel_facets references missing facet 'buddha-meditation'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-ascetic",
+      "detail": "parallel_facets references missing facet 'christ-desert-fast'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-teacher",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-teacher",
+      "detail": "parallel_facets references missing facet 'thoth-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-teacher",
+      "detail": "parallel_facets references missing facet 'manjushri-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-teacher",
+      "detail": "parallel_facets references missing facet 'khidr-green-guide'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-teacher",
+      "detail": "parallel_facets references missing facet 'enki-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-erotic",
+      "detail": "parallel_facets references missing facet 'dionysus-fertility'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-bhairava",
+      "detail": "parallel_facets references missing facet 'kali-destroyer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-bhairava",
+      "detail": "parallel_facets references missing facet 'yamantaka'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "shiva-bhairava",
+      "detail": "parallel_facets references missing facet 'hekate-night'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-teacher",
+      "detail": "parallel_facets references missing facet 'christ-logos-descended'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-teacher",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-cosmic-form",
+      "detail": "parallel_facets references missing facet 'brahman-saguna-as-cosmos'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-cosmic-form",
+      "detail": "parallel_facets references missing facet 'christ-cosmic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-divine-lover",
+      "detail": "parallel_facets references missing facet 'dionysus-fertility'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-trickster-child",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "krishna-trickster-child",
+      "detail": "parallel_facets references missing facet 'coyote-trickster'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'enki-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'hermes-trismegistus'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'thoth-wisdom'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'osiris-civilizer'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'christ-logos-descended'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-culture-hero",
+      "detail": "parallel_facets references missing facet 'viracocha'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-wind",
+      "detail": "parallel_facets references missing facet 'ruach-elohim'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-wind",
+      "detail": "parallel_facets references missing facet 'pneuma-spirit'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-wind",
+      "detail": "parallel_facets references missing facet 'vayu-wind'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-creator",
+      "detail": "parallel_facets references missing facet 'christ-harrowing-of-hell'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-creator",
+      "detail": "parallel_facets references missing facet 'orpheus-underworld'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-prophet-returning",
+      "detail": "parallel_facets references missing facet 'maitreya-returning'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-prophet-returning",
+      "detail": "parallel_facets references missing facet 'saoshyant'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-prophet-returning",
+      "detail": "parallel_facets references missing facet 'christ-second-coming'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-prophet-returning",
+      "detail": "parallel_facets references missing facet 'mahdi'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "quetzalcoatl-prophet-returning",
+      "detail": "parallel_facets references missing facet 'kalki-avatar'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-night-sky",
+      "detail": "parallel_facets references missing facet 'nyx-night'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-night-sky",
+      "detail": "parallel_facets references missing facet 'ratri-night'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-night-sky",
+      "detail": "parallel_facets references missing facet 'nut-sky'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-fate-sorcery",
+      "detail": "parallel_facets references missing facet 'odin-magician'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-fate-sorcery",
+      "detail": "parallel_facets references missing facet 'hecate-magic'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-adversary",
+      "detail": "parallel_facets references missing facet 'mara-buddha-tempter'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-adversary",
+      "detail": "parallel_facets references missing facet 'satan-job'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "tezcatlipoca-king-maker",
+      "detail": "parallel_facets references missing facet 'odin-king-maker'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-fallen-aeon",
+      "detail": "parallel_facets references missing facet 'persephone-descent'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-fallen-aeon",
+      "detail": "parallel_facets references missing facet 'shekhinah-exile'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-fallen-aeon",
+      "detail": "parallel_facets references missing facet 'izanami-yomi'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-redemptive",
+      "detail": "parallel_facets references missing facet 'shekhinah-redemptive'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-redemptive",
+      "detail": "parallel_facets references missing facet 'shakti-redemptive'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-redemptive",
+      "detail": "parallel_facets references missing facet 'isis-recovering-osiris'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-redemptive",
+      "detail": "parallel_facets references missing facet 'demeter-recovering-persephone'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facets_dangling",
+      "ref": "sophia-redemptive",
+      "detail": "parallel_facets references missing facet 'mary-mediatrix'"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facet_missing",
+      "ref": "p002",
+      "detail": "facet_b_id 'persephone-descent' not in facets"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facet_missing",
+      "ref": "p003",
+      "detail": "facet_b_id 'christ-crucifixion' not in facets"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facet_missing",
+      "ref": "p006",
+      "detail": "facet_b_id 'kali-destroyer' not in facets"
+    },
+    {
+      "severity": "SEVERITY-1",
+      "code": "parallel_facet_missing",
+      "ref": "p008",
+      "detail": "facet_b_id 'hermes-trismegistus' not in facets"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "strength_not_discriminating",
+      "ref": "strong-parallel",
+      "detail": "'strong-parallel' is 6/8 (75%) of all parallels"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "type_vocabulary_uncontrolled",
+      "ref": "8",
+      "detail": "8 distinct 'type' values across 8 parallels (free text, not a controlled taxonomy)"
+    },
+    {
+      "severity": "SEVERITY-3",
+      "code": "facets_mostly_unsourced",
+      "ref": "0/48",
+      "detail": "only 0/48 (0.0%) facets carry a scholarly_note"
+    }
+  ]
+}

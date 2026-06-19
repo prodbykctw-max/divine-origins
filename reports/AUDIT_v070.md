@@ -13,7 +13,7 @@ python3 tools/validate_seed_data.py data/source_map_seed_data_v070.json \
 
 | Code | Count | Severity | Meaning |
 |---|---:|---|---|
-| `parallel_facets_dangling` | 136 | SEV1 | A facet's `parallel_facets` points at a facet id that does not exist (unreconciled v0.5.0 merge). |
+| `parallel_facets_dangling` | 136 | SEV1 | A facet's `parallel_facets` points at a facet id that does not exist. Original to the seed design (v0.1.0 already had 98 such targets, 74 of which persist here); `parallel_facets` were always forward-references that expansion never reconciled. |
 | `deity_bad_tradition_fk` | 7 | SEV1 | A deity's `tradition_id` does not exist in the traditions table (orphaned). |
 | `parallel_same_deity` | 3 | SEV1 | Both facets of a parallel belong to the same deity (self-comparison or mislink). |
 | `parallel_self_facet` | 1 | SEV1 | Both sides of a parallel are literally the same facet id. |
