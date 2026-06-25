@@ -5,6 +5,17 @@ across the original chat sessions, migrated here for version control. Earlier
 audit notes in this repo stated "no UI code exists" — that was wrong; it existed
 in the uploads and is now committed here.
 
+## Runnable app & build pipeline (added from the full chat export)
+
+- **`vite/`** — the **maintained, runnable** React + Vite build (`npm install &&
+  npm run dev`). This is the canonical app going forward; the loose `.tsx` and the
+  standalone HTML below are earlier artifacts kept for provenance. It embeds the
+  v0.1.0 seed but its upload button loads any dataset — point it at
+  `../data/source_map_seed_data_v080.json`.
+- **`build-v050/`** — the Python pipeline (`build_v050.py`, `build_html.py`,
+  `v050_data_a.py`, `v050_data_b.py`) that generates `parallels-of-the-gods-v050.html`
+  from source. This is the source-of-truth for the v0.5.0 standalone build.
+
 ## Artifacts
 
 | File | What it is | Embedded data | State |

@@ -109,9 +109,18 @@ regression:
 | Version | Traditions | Deities | Facets | Parallels | Cited | **Total defects** | Sev-1 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | v0.1.0 | 8 | 16 | 48 | 8 | 0 | 142 | 139 |
+| v0.3.0 | 14 | 63 | 146 | 60 | 0 | 158 | 156 |
+| v0.4.0 | 17 | 104 | 214 | 99 | 0 | 166 | 164 |
+| v0.5.0 | 24 | 193 | 392 | 160 | 0 | 153 | 150 |
 | v0.6.0-PREMERGE | 152 | 800 | 3637 | 289 | 0 | **1975** | 1963 |
 | v0.6.5-PRE_V050 | 152 | 643 | 934 | 270 | 0 | **19** | 7 |
-| **v0.7.0 (current)** | 152 | 673 | 1326 | 329 | 35 | **196** | 147 |
+| v0.7.0 | 152 | 673 | 1326 | 329 | 35 | **196** | 147 |
+| **v0.8.0 (canonical)** | 152 | 643 | 934 | 259 | 56 | **2** | **0** |
+
+(The v0.3.0–v0.5.0 rows were added when the original chats' full export arrived;
+they fill the lineage gap. All carry the same by-design dangling-`parallel_facets`
+forward-references. v0.8.0 is the clean canonical seed produced by the
+forward-port — see `reports/FORWARD_PORT_v080.md`.)
 
 **Read the v0.6.5 → v0.7.0 transition carefully. It is the headline.**
 
