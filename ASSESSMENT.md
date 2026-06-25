@@ -299,8 +299,12 @@ In dependency order. Each step has a concrete, checkable exit condition.
 
 **P3 — Build the app the spec describes.**
 11. The canvas UI (`docs/00` §4 is the fuller reference; `docs/01` §4 the
-    maintained one — reconcile the four vs three view modes). **No UI code
-    exists anywhere in this corpus yet.**
+    maintained one — reconcile the four vs three view modes). **A working UI
+    already exists** in `app/` (a React component + two standalone HTML builds,
+    "Parallels of the Gods" and the "Divine Origins" library) — but it ships
+    stale embedded data (v0.1.0 / v0.5.0) and implements only part of the spec.
+    The next step is wiring the React app to the canonical `v0.8.0` seed and
+    closing the spec gaps (view modes, My Map). See `app/README.md`.
 
 ---
 
