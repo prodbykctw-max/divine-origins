@@ -189,13 +189,19 @@ mythology.** Specifically:
 - It treats the four-tier frame as "one interpretive lens, not objective truth."
 
 **Where the spec is still exposed (conceptual, not bugs):**
-1. **No null model / baseline.** The spec asserts structural matches are
-   meaningful but never defines how to show a match exceeds chance given how
-   loosely a "function" can be drawn. Universal motifs (clay-creation,
-   spider-trickster, sky-father) will always produce matches. A defensible
-   project needs a frequency/specificity weighting so "common motif" and
-   "specific shared structure" are distinguishable. *This is the single biggest
-   open methodological gap.*
+1. **Specificity weighting — NOW IMPLEMENTED (was the single biggest gap).**
+   The spec asserted structural matches are meaningful but never showed how a
+   match exceeds chance given how loosely a "function" can be drawn. Universal
+   motifs (dying-rising-god, culture-hero, sky-father) will always produce
+   matches. `tools/specificity.py` now weights every canonical parallel by the
+   **IDF (rarity) of the function-tags its two facets share**, and bands each as
+   `specific` / `moderate` / `universal-motif` / `tag-divergent`. The
+   parallelomania-risk parallels are auto-flagged: e.g. Enki↔Prometheus,
+   Osiris↔Dionysus, Mithras↔Indra land in `universal-motif`; PIE cognates and
+   rare shared roles (Danu↔Diti, Kali↔Zurvan) score highest. Scores are baked
+   into the canonical seed (by `forward_port.py`), surfaced in the app, and
+   reported in `reports/SPECIFICITY_v080.md`. A true randomized null model is the
+   remaining refinement, but the corpus-relative weighting is in place.
 2. **The four-tier frame is Gnostic-normative.** Mapping Yahweh→Demiurge,
    Brahma→"egoic," etc., is a specific theological reading. The spec
    acknowledges this, but every node inherits the stance; the "scholarly mode"
@@ -300,8 +306,9 @@ In dependency order. Each step has a concrete, checkable exit condition.
    implies (`docs/06`'s 8 evidence types) + a free-text `descriptor`.
 
 **P2 — Earn the rigor the spec promises (ongoing).**
-8. Add a **specificity/frequency weight** so universal motifs are down-ranked.
-   This is the missing methodological piece (§5.1).
+8. ~~Add a **specificity/frequency weight** so universal motifs are down-ranked.~~
+   **DONE** — `tools/specificity.py` (§5.1). Next refinement: a randomized null
+   model that shuffles tags to establish a chance baseline per band.
 9. Build the **120 missing facet sets**; backfill `scholarly_note` on facets.
 10. Only then run **P0 of the backlog** (validate the 47), with a real
     literature check and a *discard* path, not just promote.

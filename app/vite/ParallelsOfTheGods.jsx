@@ -48,6 +48,15 @@ const TRADITION_COLORS = {
 
 const DEFAULT_TRADITION_COLOR = { bg: '#666', ink: '#333', label: 'Unset' };
 
+// Specificity band → badge color (parallelomania control, see tools/specificity.py).
+// Green = rare shared structure (strong); red = common-motif (weak); gray = no shared tag.
+const SPECIFICITY_COLORS = {
+  specific: '#3f6e5e',
+  moderate: '#a67c2f',
+  'universal-motif': '#9c4a3a',
+  'tag-divergent': '#5a5d5c',
+};
+
 // Stable, manuscript-muted color derived from the tradition id, so the 150+
 // traditions in v0.8.0 that aren't in the hand-picked palette above still read
 // as visually distinct instead of all collapsing to one gray.
@@ -937,6 +946,25 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                         fontSize: '9px',
                       }}>
                         {explicit.strength}
+                      </span>
+                    )}
+                    {explicit?.specificity_band && (
+                      <span
+                        className="marginalia"
+                        title={`Specificity ${explicit.specificity_score ?? ''} — ${
+                          explicit.specificity_shared_tags?.length
+                            ? 'shared: ' + explicit.specificity_shared_tags.join(', ')
+                            : 'no shared function-tags'
+                        }`}
+                        style={{
+                          padding: '1px 5px',
+                          background: SPECIFICITY_COLORS[explicit.specificity_band] || '#8a7340',
+                          color: '#faf5e7',
+                          borderRadius: '2px',
+                          fontSize: '9px',
+                        }}
+                      >
+                        {explicit.specificity_band}
                       </span>
                     )}
                   </div>

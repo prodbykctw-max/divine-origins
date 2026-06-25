@@ -1,0 +1,2975 @@
+{
+  "summary": {
+    "facets": 934,
+    "parallels": 259,
+    "bands": {
+      "specific": 49,
+      "moderate": 53,
+      "tag-divergent": 112,
+      "universal-motif": 45
+    },
+    "tertile_lo_idf": 3.011,
+    "tertile_hi_idf": 4.351
+  },
+  "tag_idf": {
+    "self-generated": 6.839,
+    "ineffable": 6.839,
+    "ground-of-being": 6.839,
+    "pre-creation": 6.839,
+    "created-by-error": 6.839,
+    "demanding-exclusive-worship": 6.839,
+    "blood-sacrifice": 6.839,
+    "father-of-nation": 6.839,
+    "night-defender": 6.839,
+    "fratricide": 6.839,
+    "false-king": 6.839,
+    "desert-sterility": 6.839,
+    "desert": 6.839,
+    "foreign-lands": 6.839,
+    "warrior-maiden": 6.839,
+    "sacrificed-and-returned": 6.839,
+    "punished-for-helping-humans": 6.839,
+    "wanderer": 6.839,
+    "tester-of-mortals": 6.839,
+    "disguised-god": 6.839,
+    "magician": 6.839,
+    "self-sacrifice-for-knowledge": 6.839,
+    "self-offering": 6.839,
+    "knowledge-by-sacrifice": 6.839,
+    "host-of-valhalla": 6.839,
+    "culture-hero-ambivalent": 6.839,
+    "wisdom-thief": 6.839,
+    "false-friend": 6.839,
+    "fratricide-by-proxy": 6.839,
+    "imprisoned-titan": 6.839,
+    "awaiting-release": 6.839,
+    "dissolver": 6.839,
+    "wisdom-through-stillness": 6.839,
+    "renunciate": 6.839,
+    "meditation-master": 6.839,
+    "silent-transmission": 6.839,
+    "south-facing": 6.839,
+    "guru": 6.839,
+    "creator-destroyer-united": 6.839,
+    "cosmic-dance": 6.839,
+    "protector-fierce": 6.839,
+    "cremation-ground": 6.839,
+    "revealer-of-self-as-source": 6.839,
+    "divine-lover": 6.839,
+    "child-god": 6.839,
+    "exiled-god": 6.839,
+    "corn-giver": 6.839,
+    "opposes-sacrifice": 6.839,
+    "calendar-giver": 6.839,
+    "spirit": 6.839,
+    "descended-into-underworld-for-bones": 6.839,
+    "co-creator": 6.839,
+    "exiled-and-promised-return": 6.839,
+    "stars": 6.839,
+    "memory": 6.839,
+    "obsidian-mirror": 6.839,
+    "shadow-twin": 6.839,
+    "usurper-of-civilizing-god": 6.839,
+    "testing-power": 6.839,
+    "tester-of-rulers": 6.839,
+    "king-maker": 6.839,
+    "lord-of-rulership": 6.839,
+    "descended-goddess": 6.839,
+    "fallen-emanation": 6.839,
+    "mother-of-demiurge": 6.839,
+    "great-mother-returning": 6.839,
+    "maiden-to-queen": 6.839,
+    "consort-of-death-god": 6.839,
+    "wisdom-incarnate": 6.839,
+    "sacrificed-on-tree": 6.839,
+    "atoning-sacrifice": 6.839,
+    "pierced-by-spear": 6.839,
+    "harrowing-of-hell": 6.839,
+    "victory-over-death": 6.839,
+    "rising-god": 6.839,
+    "unmanifest-source-manifest": 6.839,
+    "judge-at-end-of-age": 6.839,
+    "syncretic-figure": 6.839,
+    "alchemy-tradition": 6.839,
+    "as-above-so-below": 6.839,
+    "revealer-of-gnosis": 6.839,
+    "guide-between-worlds": 6.839,
+    "axe-wielder": 6.839,
+    "maiden": 6.839,
+    "daily-rebirth": 6.839,
+    "establisher-of-warrior-right": 6.839,
+    "warrior-hero": 6.839,
+    "cattle-recoverer": 6.839,
+    "trimurti-member": 6.839,
+    "incarnation": 6.839,
+    "dreamer-of-worlds": 6.839,
+    "rain-bringer": 6.839,
+    "warrior-strengthened-by-ritual-substance": 6.839,
+    "intoxicant-drinker": 6.839,
+    "humbled-by-greater-deity": 6.839,
+    "jealous-king": 6.839,
+    "fallen-from-position": 6.839,
+    "demoted-high-god": 6.839,
+    "punitive-just": 6.839,
+    "binder-of-the-false": 6.839,
+    "rta": 6.839,
+    "omniscient": 6.839,
+    "sky-encompassing": 6.839,
+    "friend-of-the-just": 6.839,
+    "alliance": 6.839,
+    "contract": 6.839,
+    "mystery-cult-center": 6.839,
+    "solar": 6.839,
+    "underworld-king": 6.839,
+    "dharmaraja": 6.839,
+    "first-to-die": 6.839,
+    "first-being": 6.839,
+    "primordial-twin": 6.839,
+    "path-finder": 6.839,
+    "priest-archetype": 6.839,
+    "hearth": 6.839,
+    "altar": 6.839,
+    "domestic-cult": 6.839,
+    "blood-drinker": 6.839,
+    "terrible-mother": 6.839,
+    "tantric-supreme": 6.839,
+    "moksha-bringer": 6.839,
+    "primordial-feminine": 6.839,
+    "warrior-on-white-horse": 6.839,
+    "fallen-angel": 6.839,
+    "transgressor": 6.839,
+    "bound-spirit": 6.839,
+    "boundary-violator": 6.839,
+    "prometheus-type": 6.839,
+    "culture-bringer": 6.839,
+    "teacher-of-forbidden-knowledge": 6.839,
+    "ambivalent-civilizer": 6.839,
+    "fall-via-knowledge": 6.839,
+    "weapon-teacher": 6.839,
+    "smith-god": 6.839,
+    "ambivalent-teacher": 6.839,
+    "civilizer-via-craft": 6.839,
+    "metallurgist": 6.839,
+    "fallen-rebel": 6.839,
+    "awaiting-judgment": 6.839,
+    "wilderness-power": 6.839,
+    "sin-eater": 6.839,
+    "ritual-recipient": 6.839,
+    "hybrid-being": 6.839,
+    "pre-flood-race": 6.839,
+    "primordial-monster": 6.839,
+    "trigger-of-cosmic-reset": 6.839,
+    "pre-flood-corruption": 6.839,
+    "consumed-creation": 6.839,
+    "unclean-spirit": 6.839,
+    "disembodied-evil": 6.839,
+    "afflicter-of-humanity": 6.839,
+    "demon-origin": 6.839,
+    "heavenly-tour": 6.839,
+    "scribe-of-heaven": 6.839,
+    "non-death-translation": 6.839,
+    "ascended-human": 6.839,
+    "throne-bearer": 6.839,
+    "highest-angel": 6.839,
+    "intermediary": 6.839,
+    "transformed-human": 6.839,
+    "lesser-yhwh": 6.839,
+    "wisdom-grantor": 6.839,
+    "withdrawn-high-god": 6.839,
+    "patriarchal-father": 6.839,
+    "withdrawn-creator": 6.839,
+    "kingship-granting": 6.839,
+    "fatherhood-grantor": 6.839,
+    "consort-of-high-god": 6.839,
+    "fertility-pillar": 6.839,
+    "tree-of-life": 6.839,
+    "axis-mundi": 6.839,
+    "rain-giver": 6.839,
+    "cloud-rider": 6.839,
+    "thunderbolt": 6.839,
+    "kingship-by-combat": 6.839,
+    "descent": 6.839,
+    "devourer": 6.839,
+    "underworld-power": 6.839,
+    "to-be-defeated": 6.839,
+    "primordial-serpent": 6.839,
+    "chaos-waters": 6.839,
+    "violent-fertility": 6.839,
+    "underworld-descender": 6.839,
+    "warrior-goddess": 6.839,
+    "marziḥu-cult": 6.839,
+    "warrior-shades": 6.839,
+    "blessing-ancestors": 6.839,
+    "pre-Israelite-inhabitant": 6.839,
+    "Bashan": 6.839,
+    "geographic-cult": 6.839,
+    "Mt-Hermon": 6.839,
+    "Watcher-territory": 6.839,
+    "river-mother": 6.839,
+    "mother-of-divine-race": 6.839,
+    "pre-historic-mother": 6.839,
+    "all-father": 6.839,
+    "abundance-grantor": 6.839,
+    "cosmic-balance": 6.839,
+    "ambivalent-power": 6.839,
+    "death-and-life": 6.839,
+    "polymath": 6.839,
+    "youth-hero": 6.839,
+    "many-skilled": 6.839,
+    "grandson-slays-tyrant": 6.839,
+    "fate-weaver": 6.839,
+    "raven": 6.839,
+    "war-goddess": 6.839,
+    "tester-of-kings": 6.839,
+    "ambivalent-lover": 6.839,
+    "chaos-power": 6.839,
+    "monstrous": 6.839,
+    "pre-divine-race": 6.839,
+    "monstrous-form": 6.839,
+    "sea-dwellers": 6.839,
+    "grandfather-slain-by-grandson": 6.839,
+    "monstrous-king": 6.839,
+    "progenitor": 6.839,
+    "father-of-contending-races": 6.839,
+    "rishi-tradition-founder": 6.839,
+    "primordial-seer": 6.839,
+    "wisdom-source": 6.839,
+    "sky-mother": 6.839,
+    "unbounded": 6.839,
+    "unbounded-source": 6.839,
+    "infinite": 6.839,
+    "tier-1-aspect": 6.839,
+    "bound-mother": 6.839,
+    "wronged-mother": 6.839,
+    "mother-of-dragon": 6.839,
+    "mother-of-the-coiled-one": 6.839,
+    "mother-of-asura-clan": 6.839,
+    "prajapati": 6.839,
+    "father-of-mothers": 6.839,
+    "shared-grandfather-of-races": 6.839,
+    "rival-of-devas": 6.839,
+    "moral-ambivalence": 6.839,
+    "Prahlada-Bali-tradition": 6.839,
+    "great-ascetics": 6.839,
+    "mighty-warriors": 6.839,
+    "subterranean-power": 6.839,
+    "master-architects": 6.839,
+    "mystic-power": 6.839,
+    "subterranean": 6.839,
+    "to-be-slain": 6.839,
+    "dragon": 6.839,
+    "withholder-of-waters": 6.839,
+    "obstacle-to-life": 6.839,
+    "chaos-stagnation": 6.839,
+    "withholder": 6.839,
+    "pre-Israelite-inhabitants": 6.839,
+    "warriors": 6.839,
+    "Hebron-territory": 6.839,
+    "Hebron-rulers": 6.839,
+    "specific-individuals": 6.839,
+    "Egyptian-evidence": 6.839,
+    "Middle-Kingdom": 6.839,
+    "extra-biblical-attestation": 6.839,
+    "Iy-anaq": 6.839,
+    "last-survivor": 6.839,
+    "Bashan-territory": 6.839,
+    "giant-king": 6.839,
+    "king-of-Bashan": 6.839,
+    "Watcher-geography": 6.839,
+    "Mt-Hermon-territory": 6.839,
+    "named-by-each-people": 6.839,
+    "pre-Israelite": 6.839,
+    "Sheol-inhabitants": 6.839,
+    "shades-of-dead": 6.839,
+    "founder-of-sacrifice": 6.839,
+    "first-man": 6.839,
+    "first-priest": 6.839,
+    "sacrificed-primordial-being": 6.839,
+    "underworld-ruler": 6.839,
+    "king-of-dead": 6.839,
+    "first-mortal": 6.839,
+    "sacrificed-cosmic-being": 6.839,
+    "varna-origin": 6.839,
+    "non-active-witness": 6.839,
+    "metaphysical-principle": 6.839,
+    "above-the-gods": 6.839,
+    "impersonal-cosmic-order": 6.839,
+    "truth-as-fittingness": 6.839,
+    "withdrawn-source": 6.839,
+    "stellar": 6.839,
+    "active-creator": 6.839,
+    "first-cause-of-earth": 6.839,
+    "creator-of-first-humans": 6.839,
+    "covenant-establisher": 6.839,
+    "mediator-between-tiers": 6.839,
+    "lightning": 6.839,
+    "cyclonic-storm": 6.839,
+    "fertility-bringer": 6.839,
+    "law-enforcer": 6.839,
+    "direct-act-of-will": 6.839,
+    "mouthless-power": 6.839,
+    "primordial-power": 6.839,
+    "rainbow": 6.839,
+    "creator-serpent": 6.839,
+    "deep-pools": 6.839,
+    "waters": 6.839,
+    "punisher-of-earlier-race": 6.839,
+    "law-of-treatment": 6.839,
+    "red-haired": 6.839,
+    "tule-eaters": 6.839,
+    "Lovelock-Cave": 6.839,
+    "cannibals": 6.839,
+    "war-of-extermination": 6.839,
+    "destruction-of-prior-race": 6.839,
+    "trapped-and-burned": 6.839,
+    "oath-binder": 6.839,
+    "instigator-of-descent": 6.839,
+    "herbal-magic": 6.839,
+    "enchantments": 6.839,
+    "father-of-giants": 6.839,
+    "cosmetics": 6.839,
+    "corruption-by-technology": 6.839,
+    "metallurgy": 6.839,
+    "weapons-making": 6.839,
+    "judgement-deferred": 6.839,
+    "cosmic-rebel-bound": 6.839,
+    "teacher-of-arts-punished": 6.839,
+    "structural-inversion": 6.839,
+    "gift-to-humanity": 6.839,
+    "earth-signs": 6.839,
+    "geomancy": 6.839,
+    "stellar-divination": 6.839,
+    "astrology": 6.839,
+    "lightning-divination": 6.839,
+    "father-of-giant": 6.839,
+    "spell-undoing": 6.839,
+    "lunar-astrology": 6.839,
+    "solar-astrology": 6.839,
+    "chief-of-tens": 6.839,
+    "self-aware-doomed": 6.839,
+    "throne-vision": 6.839,
+    "noah-foretold": 6.839,
+    "garden-allegory": 6.839,
+    "winged": 6.839,
+    "intermediary-to-the-ascended": 6.839,
+    "cross-tradition-transmission": 6.839,
+    "giant-warrior": 6.839,
+    "slain-by-the-king": 6.839,
+    "champion-of-the-enemy": 6.839,
+    "named-individual": 6.839,
+    "rephaim-line": 6.839,
+    "post-flood-giant": 6.839,
+    "specific-clan": 6.839,
+    "Hurrian-name-affinities": 6.839,
+    "philistine-remnant": 6.839,
+    "rephaim-descended": 6.839,
+    "mighty-hunter": 6.839,
+    "post-flood-tyrant": 6.839,
+    "tower-builder": 6.839,
+    "aspirer-to-divine": 6.839,
+    "punished-by-confusion": 6.839,
+    "tyrant-king": 6.839,
+    "rebel-against-most-high": 6.839,
+    "previous-cosmic-age": 6.839,
+    "elder-race": 6.839,
+    "megalithic-builders": 6.839,
+    "civilization-builders": 6.839,
+    "destroyed-elder-race": 6.839,
+    "sin-as-cause": 6.839,
+    "flood-or-cataclysm": 6.839,
+    "creation-of-humans-from-prior-substance": 6.839,
+    "bones-of-elder-race": 6.839,
+    "megalithic-builder": 6.839,
+    "founder-of-cities": 6.839,
+    "20-foot-giant": 6.839,
+    "near-contemporary-attestation": 6.839,
+    "historical-named-giant": 6.839,
+    "defeated-by-younger-gods": 6.839,
+    "titanomachy": 6.839,
+    "cosmic-prison": 6.839,
+    "judgment-deferred": 6.839,
+    "sky-and-earth-parents": 6.839,
+    "primordial-coupling": 6.839,
+    "succession-by-violence": 6.839,
+    "son-castrates-father": 6.839,
+    "fear-of-succession-prophecy": 6.839,
+    "father-devours-children": 6.839,
+    "succession-completes": 6.839,
+    "overthrown-by-grandson": 6.839,
+    "progenitor-of-prometheus": 6.839,
+    "japheth-parallel": 6.839,
+    "sky-bearer": 6.839,
+    "punished-by-cosmic-burden": 6.839,
+    "savior-of-Zeus": 6.839,
+    "rival-of-aesir": 6.839,
+    "predate-the-gods": 6.839,
+    "Jotunheim": 6.839,
+    "mountain-giants": 6.839,
+    "frost-giants": 6.839,
+    "fire-and-ice": 6.839,
+    "eschatological-destroyers": 6.839,
+    "end-of-cosmos": 6.839,
+    "PIE-yemo-reflex": 6.839,
+    "primordial-being": 6.839,
+    "linguistic-descent": 6.839,
+    "flaming-sword": 6.839,
+    "eschatological-figure": 6.839,
+    "fire-bringer-of-end": 6.839,
+    "mother-of-aesir-chief": 6.839,
+    "bnei-elohim-pattern": 6.839,
+    "theft-of-divine-weapon": 6.839,
+    "demands-goddess-as-bride": 6.839,
+    "jotunn-becomes-aesir": 6.839,
+    "white-horse-rider": 6.839,
+    "end-of-age-warrior": 6.839,
+    "above-twin-spirits": 6.839,
+    "righteousness": 6.839,
+    "creator-of-matter": 6.839,
+    "exiled-from-heaven": 6.839,
+    "trickster-warrior": 6.839,
+    "death-of-all-mortals": 6.839,
+    "death-goddess": 6.839,
+    "land-sovereignty": 6.839,
+    "judge-of-dead": 6.839,
+    "feminine-savior": 6.839,
+    "savior-goddess": 6.839,
+    "writing": 6.839,
+    "without-partners": 6.839,
+    "divine-attributes": 6.839,
+    "rebel-against-heaven": 6.839,
+    "eschatological-defeat": 6.839,
+    "antinomian": 6.839,
+    "divine-reflection": 6.839,
+    "living-divine-pole": 6.839,
+    "virgin-born": 6.839,
+    "word-logos": 6.839,
+    "eschatological-adversary": 6.839,
+    "goddess-continuity": 6.839,
+    "lesser-divine": 6.839,
+    "enthroned": 6.839,
+    "world-soul": 6.839,
+    "exalted-human": 6.839,
+    "pre-existence-of-souls": 6.839,
+    "silent-ground": 6.839,
+    "spark-of-god": 6.839,
+    "soul-divine-identity": 6.839,
+    "ford-maker": 6.839,
+    "eternal-cosmos": 6.839,
+    "self-existing-universe": 6.839,
+    "one-without-second": 6.839,
+    "formless": 6.839,
+    "divine-will": 6.839,
+    "divine-word": 6.839,
+    "living-scripture": 6.839,
+    "withdrawn-elder": 6.839,
+    "tablets-of-destiny": 6.839,
+    "annoyed-by-humanity": 6.839,
+    "subverts-divine-decree": 6.839,
+    "earth-mother": 6.839,
+    "formless-source": 6.839,
+    "anti-hero": 6.839,
+    "returns": 6.839,
+    "restorer-of-order": 6.839,
+    "divine-son": 6.839,
+    "wrathful-feminine": 6.839,
+    "ambivalent-destroyer-healer": 6.839,
+    "death-welcomer": 6.839,
+    "nurturer": 6.839,
+    "lunar": 6.839,
+    "arbiter": 6.839,
+    "defender": 6.839,
+    "chaos-champion": 6.839,
+    "lunar-deity": 6.839,
+    "pantheistic": 6.839,
+    "world-creator": 6.839,
+    "creation-from-body": 6.839,
+    "primordial-egg": 6.839,
+    "purifier": 6.839,
+    "weaver-of-time": 6.839,
+    "magic-singer": 6.839,
+    "magic-word": 6.839,
+    "hoarding": 6.839,
+    "consort": 6.839,
+    "father-god-overthrown": 6.839,
+    "resurrected": 6.839,
+    "absolute": 6.839,
+    "beginnings": 6.839,
+    "solar-monotheism": 6.839,
+    "human-divine-continuity": 6.839,
+    "fall-from-divine": 6.839,
+    "geometric-cosmos": 6.839,
+    "cosmic-beauty": 6.839,
+    "terrifying": 6.839,
+    "widow": 6.839,
+    "void": 6.839,
+    "silencer": 6.839,
+    "social-inversion": 6.839,
+    "feminine-divine": 6.839,
+    "dance": 6.839,
+    "non-judgment": 6.839,
+    "mirror": 6.839,
+    "equality": 6.839,
+    "pure-land-sovereign": 6.839,
+    "action": 6.839,
+    "discriminating-wisdom": 6.839,
+    "destroyer-of-ignorance": 6.839,
+    "change": 6.839,
+    "new-age": 6.839,
+    "silence": 6.839,
+    "earth-shaker": 6.839,
+    "protection": 6.839,
+    "violence": 6.839,
+    "smith": 6.839,
+    "creator-of-objects": 6.839,
+    "seasonal-renewal": 6.839,
+    "deus-otiosus": 6.839,
+    "living-earth": 6.839,
+    "releases-waters": 6.839,
+    "sacred-substance": 6.839,
+    "creates-from-trauma": 6.839,
+    "cosmic-separation": 6.839,
+    "violence-creates-order": 6.839,
+    "ambivalent-trickster": 6.839,
+    "exile": 6.839,
+    "hierarchical-cosmos": 6.839,
+    "multi-form": 6.839,
+    "cosmic-aid": 6.839,
+    "creates-from-doubt": 6.839,
+    "beyond-duality": 6.839,
+    "shamanic-center": 6.839,
+    "emanatory-realm": 6.839,
+    "creator-from-ignorance": 6.839,
+    "theological-statement": 6.839,
+    "apophatic": 6.839,
+    "emanatory-structure": 6.839,
+    "human-divine-unity": 6.839,
+    "thief": 6.839,
+    "political-legitimacy": 6.839,
+    "city-guardian": 6.839,
+    "born-from-head": 6.839,
+    "civilization": 6.839,
+    "meditation": 6.839,
+    "filial-piety": 6.839,
+    "reborn": 6.839,
+    "complement": 6.839,
+    "divine-agent": 6.839,
+    "too-powerful": 6.839,
+    "divine-protector": 6.839,
+    "moral-warning": 6.839,
+    "consumption": 6.839,
+    "demoness": 6.839,
+    "autonomous": 6.839,
+    "refuser": 6.839,
+    "correspondence": 6.839,
+    "sudden-realization": 6.839,
+    "impersonal-supreme": 6.839,
+    "triple-goddess": 6.839,
+    "feminine-supreme": 6.839,
+    "diasporic-transformation": 6.839,
+    "source-of-disorder": 6.839,
+    "serpent-power": 6.839,
+    "mistress-of-animals": 6.839,
+    "syncretic": 6.839,
+    "beyond-image": 6.839,
+    "royal-spirit": 6.839,
+    "divine-patron": 6.839,
+    "sister": 6.839,
+    "cosmic-violence": 6.839,
+    "star-demon": 6.839,
+    "progenitor-deity": 6.839,
+    "flood-survivor": 6.839,
+    "cosmic-support": 6.839,
+    "earth-rescuer": 6.839,
+    "cosmic-stride": 6.839,
+    "moral-perfection": 6.839,
+    "controversial-absorption": 6.839,
+    "rivers": 6.839,
+    "servant-divine": 6.839,
+    "life-force": 6.839,
+    "active-principle": 6.839,
+    "long-life": 6.839,
+    "sacred-geography": 6.839,
+    "music-magic": 6.839,
+    "separation": 6.839,
+    "warrior-frenzy": 6.839,
+    "evil-eye": 6.839,
+    "bodily-perfection": 6.839,
+    "cauldron-plenty": 6.839,
+    "odin-rune-master": 6.839,
+    "herald": 6.839,
+    "world-tree": 6.839,
+    "winter": 6.839,
+    "independence": 6.839,
+    "martyr": 6.839,
+    "anti-divine": 6.839,
+    "faith-alone": 6.839,
+    "radical-grace": 6.839,
+    "primal-ground": 6.839,
+    "bliss-emptiness": 6.839,
+    "three-mysteries": 6.839,
+    "divine-justice": 6.839,
+    "sacred-food": 6.839,
+    "death-receiver": 6.839,
+    "divine-priest": 6.839,
+    "divine-avatar": 6.839,
+    "oldest-deity": 6.839,
+    "civilization-builder": 6.839,
+    "revolutionary": 6.839,
+    "shamanic-vision": 6.839,
+    "shamanic-gateway": 6.839,
+    "power": 6.839,
+    "ferocity": 6.839,
+    "victory": 6.839,
+    "beyond-gods": 6.839,
+    "wine": 6.839,
+    "traveler-guide": 6.839,
+    "grain": 6.839,
+    "friendship": 6.839,
+    "oracle-establisher": 6.839,
+    "animal-form": 6.839,
+    "initiator": 6.839,
+    "divine-bureaucracy": 6.839,
+    "ascending-prophet": 6.839,
+    "divine-human": 6.839,
+    "demon-king": 6.839,
+    "community": 6.839,
+    "household": 6.839,
+    "supreme": 6.839,
+    "revenge": 6.839,
+    "mother-of-adversaries": 6.839,
+    "fate-subject": 6.839,
+    "cosmic-generativity": 6.839,
+    "approachable-terrible": 6.839,
+    "death-rebirth": 6.839,
+    "invincible": 6.839,
+    "son-of-wind": 6.839,
+    "sacred-mark": 6.839,
+    "turning-point": 6.839,
+    "cosmic-event": 6.839,
+    "divine-court": 6.839,
+    "regeneration": 6.839,
+    "cosmic-wealth": 6.839,
+    "battle": 6.839,
+    "cosmic-parenthood": 6.839,
+    "cosmic-birth": 6.839,
+    "divine-wisdom": 6.839,
+    "disability-power": 6.839,
+    "fate-bound": 6.839,
+    "self-generation": 6.839,
+    "cosmic-surveyor": 6.839,
+    "royal-symbol": 6.839,
+    "restoration-of-order": 6.839,
+    "cultural-anchor": 6.839,
+    "divine-pride": 6.839,
+    "miraculous-birth": 6.839,
+    "cosmic-demotion": 6.839,
+    "divine-feast": 6.839,
+    "ancient-form": 6.839,
+    "divine-messenger": 6.839,
+    "fractal-cosmos": 6.839,
+    "divine-covenant": 6.839,
+    "journey": 6.839,
+    "cosmic-form": 6.839,
+    "dark-counterpart": 6.839,
+    "cosmic-flow": 6.839,
+    "divine-energy": 6.839,
+    "cosmic-stability": 6.839,
+    "death-resurrection": 6.839,
+    "divine-mother": 6.839,
+    "eternity": 6.839,
+    "cosmic-tree": 6.839,
+    "sacred-craft": 6.839,
+    "creation-drama": 6.839,
+    "cosmic-home": 6.839,
+    "activity-principle": 6.839,
+    "play": 6.839,
+    "teaching": 6.839,
+    "salvation": 6.839,
+    "born-from-violence": 6.839,
+    "beauty-from-chaos": 6.839,
+    "threshold": 6.839,
+    "three-roads": 6.839,
+    "liminal": 6.839,
+    "divine-birth": 6.839,
+    "cosmic-punishment": 6.839,
+    "martyrdom": 6.839,
+    "skill": 6.839,
+    "reach": 6.839,
+    "cosmic-restoration": 6.839,
+    "death-omen": 6.839,
+    "divine-weapon": 6.839,
+    "language": 6.839,
+    "future-buddha": 6.839,
+    "vow": 6.839,
+    "universal-compassion": 6.839,
+    "born-of-emanation": 6.146,
+    "ignorant-of-source": 6.146,
+    "chaos-against-greater-chaos": 6.146,
+    "guardian": 6.146,
+    "betrayer": 6.146,
+    "chaos-against-order": 6.146,
+    "cosmic-orderer": 6.146,
+    "father-of-gods": 6.146,
+    "terrible": 6.146,
+    "wisdom-through-suffering": 6.146,
+    "underworld-journey": 6.146,
+    "tyrant": 6.146,
+    "wisdom-seeker": 6.146,
+    "ascetic": 6.146,
+    "time-as-destroyer": 6.146,
+    "all-encompassing": 6.146,
+    "playful": 6.146,
+    "breath": 6.146,
+    "wind": 6.146,
+    "fate": 6.146,
+    "fertility-cycle": 6.146,
+    "judge-of-the-dead": 6.146,
+    "underworld-queen": 6.146,
+    "logos": 6.146,
+    "dying-god": 6.146,
+    "messiah-type": 6.146,
+    "returning-savior": 6.146,
+    "cosmic-order-restorer": 6.146,
+    "releaser-of-the-waters": 6.146,
+    "dharma-restorer": 6.146,
+    "warrior-king": 6.146,
+    "patriarch": 6.146,
+    "chaos-defeater": 6.146,
+    "resurrection": 6.146,
+    "mourner": 6.146,
+    "ancestral-dead": 6.146,
+    "river-goddess": 6.146,
+    "triple-form": 6.146,
+    "mother-of-rebel-race": 6.146,
+    "first-king": 6.146,
+    "pure-consciousness": 6.146,
+    "law-giver": 6.146,
+    "law-bringer": 6.146,
+    "watcher-chief": 6.146,
+    "specific-named-offspring": 6.146,
+    "prophetic-dream": 6.146,
+    "Mesopotamian-borrowing": 6.146,
+    "named-giants": 6.146,
+    "ruler-of-samsara": 6.146,
+    "crossroads": 6.146,
+    "pride-sin": 6.146,
+    "living-messianic-presence": 6.146,
+    "prophet": 6.146,
+    "divine-longing": 6.146,
+    "liberated-being": 6.146,
+    "no-creator": 6.146,
+    "solar-deity": 6.146,
+    "messianic": 6.146,
+    "earth-diver": 6.146,
+    "dual-divine": 6.146,
+    "first-ancestor": 6.146,
+    "birth": 6.146,
+    "emanatory-principle": 6.146,
+    "cosmic-grief": 6.146,
+    "wilderness": 6.146,
+    "virgin": 6.146,
+    "paradise": 6.146,
+    "cosmic-union": 6.146,
+    "grief": 6.146,
+    "forest": 6.146,
+    "volcanic": 6.146,
+    "strength": 6.146,
+    "peace": 6.146,
+    "divine-sibling": 6.146,
+    "withdrawn": 6.146,
+    "solar-ancestor": 6.146,
+    "reciprocity": 6.146,
+    "divine-presence": 6.146,
+    "divine-plant": 6.146,
+    "purification": 6.146,
+    "regional-deity": 6.146,
+    "primordial": 6.146,
+    "arts": 6.146,
+    "cosmic-force": 6.146,
+    "faith": 6.146,
+    "divine-child": 6.146,
+    "divine-animal": 6.146,
+    "spirit-world": 6.146,
+    "first-mother": 6.146,
+    "feminine-dark": 6.146,
+    "syncretic-supreme": 6.146,
+    "astral": 6.146,
+    "youth": 6.146,
+    "devotion": 6.146,
+    "judge": 6.146,
+    "marriage": 6.146,
+    "sacred-plant": 6.146,
+    "deified-mortal": 6.146,
+    "divine-physician": 6.146,
+    "inspiration": 6.146,
+    "commerce": 6.146,
+    "cosmic-irony": 6.146,
+    "solar-hero": 6.146,
+    "agricultural": 6.146,
+    "sacred-tree": 6.146,
+    "divine-warrior": 6.146,
+    "great-father": 6.146,
+    "symbol": 6.146,
+    "jealous": 5.741,
+    "punitive": 5.741,
+    "wild": 5.741,
+    "erotic": 5.741,
+    "sacrificed-god": 5.741,
+    "end-of-aeon": 5.741,
+    "teacher": 5.741,
+    "savior": 5.741,
+    "preserver": 5.741,
+    "cosmic-order": 5.741,
+    "imprisoned-in-pit": 5.741,
+    "giant": 5.741,
+    "mother-of-gods": 5.741,
+    "PIE-cognate": 5.741,
+    "sovereignty": 5.741,
+    "defeated-titans": 5.741,
+    "rain-maker": 5.741,
+    "son-of-watcher": 5.741,
+    "divine-mortal-mixing": 5.741,
+    "time-itself": 5.741,
+    "law": 5.741,
+    "queen-of-heaven": 5.741,
+    "bound-adversary": 5.741,
+    "immortal": 5.741,
+    "record-keeper": 5.741,
+    "mortality": 5.741,
+    "champion": 5.741,
+    "cosmic-duality": 5.741,
+    "displaced-divine": 5.741,
+    "cosmic-body": 5.741,
+    "abundance": 5.741,
+    "light": 5.741,
+    "divination": 5.741,
+    "purity": 5.741,
+    "prosperity": 5.741,
+    "horse": 5.741,
+    "spring": 5.741,
+    "oracle": 5.741,
+    "grace": 5.741,
+    "divine-twin": 5.741,
+    "tantric-union": 5.741,
+    "intoxication": 5.741,
+    "weaving": 5.741,
+    "craft": 5.741,
+    "covenantal": 5.453,
+    "truth": 5.453,
+    "wisdom-teacher": 5.453,
+    "transformer": 5.453,
+    "cosmic-totality": 5.453,
+    "tempter": 5.453,
+    "dawn": 5.453,
+    "sustainer": 5.453,
+    "time": 5.453,
+    "archon": 5.453,
+    "primordial-waters": 5.453,
+    "elder-divine-race": 5.453,
+    "cosmos-from-body": 5.453,
+    "cosmic-judge": 5.453,
+    "plague": 5.453,
+    "logos-word": 5.453,
+    "beauty": 5.453,
+    "fire-stealer": 5.453,
+    "cosmic-memory": 5.453,
+    "mountain": 5.453,
+    "non-dual": 5.453,
+    "hunt": 5.453,
+    "otherworld": 5.453,
+    "feminine-power": 5.453,
+    "divine-love": 5.453,
+    "ancestor-spirits": 5.453,
+    "state-religion": 5.453,
+    "syncretism": 5.453,
+    "rebel": 5.453,
+    "wealth": 5.453,
+    "liberation": 5.453,
+    "beyond-being": 5.23,
+    "lawgiver": 5.23,
+    "oath-keeper": 5.23,
+    "father": 5.23,
+    "first-among-gods": 5.23,
+    "boundary-crosser": 5.23,
+    "descended-god": 5.23,
+    "justice": 5.23,
+    "thunder": 5.23,
+    "bound-god": 5.23,
+    "wrathful": 5.23,
+    "night": 5.23,
+    "intercessor": 5.23,
+    "chaoskampf": 5.23,
+    "all-seeing": 5.23,
+    "giants": 5.23,
+    "named-giant": 5.23,
+    "crafts": 5.23,
+    "hidden-divine": 5.23,
+    "scribe-of-gods": 5.23,
+    "divine-parent": 5.23,
+    "divine-council": 5.23,
+    "music": 5.23,
+    "ambivalent": 5.23,
+    "vegetation-deity": 5.23,
+    "moral-guardian": 5.23,
+    "immortality": 5.23,
+    "divine-couple": 5.23,
+    "water": 5.23,
+    "usurper": 5.048,
+    "warrior": 5.048,
+    "messenger": 5.048,
+    "indo-european-root": 5.048,
+    "ecstatic": 5.048,
+    "liminality": 5.048,
+    "descends-to-underworld": 5.048,
+    "shaman": 5.048,
+    "craftsman": 5.048,
+    "divine-champion": 5.048,
+    "tradition-marker": 5.048,
+    "divine-domain": 5.048,
+    "false-most-high": 4.894,
+    "wisdom": 4.894,
+    "threshold-guardian": 4.894,
+    "healing": 4.894,
+    "self-sacrifice": 4.894,
+    "paradox": 4.894,
+    "deified-ancestor": 4.894,
+    "transformation": 4.894,
+    "rain": 4.76,
+    "sacrifice": 4.76,
+    "liberator": 4.76,
+    "cosmic-serpent": 4.76,
+    "taught-forbidden-arts": 4.76,
+    "dismembered": 4.76,
+    "compassion": 4.76,
+    "immanent": 4.76,
+    "cosmic-shadow": 4.76,
+    "first-cause": 4.642,
+    "healer": 4.642,
+    "spiritual-founder": 4.642,
+    "demiurge": 4.537,
+    "creator": 4.537,
+    "returning-god": 4.537,
+    "agriculture": 4.537,
+    "eschatological": 4.442,
+    "moon": 4.442,
+    "divine-power": 4.442,
+    "light-bringer": 4.355,
+    "shape-shifter": 4.355,
+    "mystery-center": 4.355,
+    "love": 4.275,
+    "fire": 4.275,
+    "chaos": 4.275,
+    "sea": 4.275,
+    "seasonal-cycle": 4.275,
+    "nature": 4.275,
+    "dragon-slayer": 4.2,
+    "cosmic-axis": 4.2,
+    "moral-law": 4.2,
+    "divine-council-head": 4.131,
+    "first-emanation": 4.131,
+    "cosmic-cycle": 4.067,
+    "magic": 4.067,
+    "sky-father": 4.067,
+    "earth": 4.067,
+    "sun": 4.067,
+    "psychopomp": 4.006,
+    "redeemer": 3.795,
+    "divine-feminine": 3.795,
+    "dying-rising-god": 3.748,
+    "sky": 3.661,
+    "protector": 3.621,
+    "death": 3.581,
+    "underworld": 3.581,
+    "divine-queen": 3.544,
+    "adversary": 3.544,
+    "civilizing-god": 3.544,
+    "fate-governor": 3.544,
+    "storm": 3.472,
+    "war": 3.472,
+    "trickster": 3.229,
+    "destroyer": 3.176,
+    "mediator": 3.102,
+    "unmanifest-source": 3.011,
+    "transcendent": 3.011,
+    "craftsman-creator": 2.888,
+    "culture-hero": 2.696,
+    "fertility": 2.681,
+    "divine-king": 2.483,
+    "great-mother": 2.445,
+    "wisdom-bringer": 2.433,
+    "cosmic-source": 2.186,
+    "cosmic-order-maintainer": 1.884,
+    "cross-tier": 1.376
+  },
+  "parallels": [
+    {
+      "id": "p001",
+      "score": 0.814,
+      "band": "specific",
+      "shared": [
+        "jealous",
+        "lawgiver",
+        "punitive"
+      ]
+    },
+    {
+      "id": "p002",
+      "score": 0.744,
+      "band": "specific",
+      "shared": [
+        "boundary-crosser",
+        "descended-god",
+        "dying-rising-god",
+        "underworld-journey"
+      ]
+    },
+    {
+      "id": "p003",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "sacrificed-god"
+      ]
+    },
+    {
+      "id": "p004",
+      "score": 0.472,
+      "band": "moderate",
+      "shared": [
+        "trickster"
+      ]
+    },
+    {
+      "id": "p005",
+      "score": 0.609,
+      "band": "moderate",
+      "shared": [
+        "culture-hero",
+        "light-bringer",
+        "wisdom-teacher"
+      ]
+    },
+    {
+      "id": "p006",
+      "score": 0.464,
+      "band": "moderate",
+      "shared": [
+        "destroyer"
+      ]
+    },
+    {
+      "id": "p007",
+      "score": 0.899,
+      "band": "specific",
+      "shared": [
+        "betrayer"
+      ]
+    },
+    {
+      "id": "p008",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p101",
+      "score": 0.667,
+      "band": "specific",
+      "shared": [
+        "divine-council-head",
+        "father",
+        "first-among-gods",
+        "sky"
+      ]
+    },
+    {
+      "id": "p102",
+      "score": 0.667,
+      "band": "specific",
+      "shared": [
+        "divine-council-head",
+        "father",
+        "first-among-gods",
+        "sky"
+      ]
+    },
+    {
+      "id": "p103",
+      "score": 0.636,
+      "band": "specific",
+      "shared": [
+        "storm",
+        "thunder"
+      ]
+    },
+    {
+      "id": "p104",
+      "score": 0.794,
+      "band": "specific",
+      "shared": [
+        "chaoskampf",
+        "cosmic-order-restorer",
+        "dragon-slayer",
+        "releaser-of-the-waters"
+      ]
+    },
+    {
+      "id": "p105",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p106",
+      "score": 0.676,
+      "band": "specific",
+      "shared": [
+        "dragon-slayer",
+        "indo-european-root"
+      ]
+    },
+    {
+      "id": "p107",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p108",
+      "score": 0.781,
+      "band": "specific",
+      "shared": [
+        "covenantal",
+        "oath-keeper"
+      ]
+    },
+    {
+      "id": "p109",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "oath-keeper"
+      ]
+    },
+    {
+      "id": "p110",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p111",
+      "score": 0.628,
+      "band": "moderate",
+      "shared": [
+        "fire",
+        "mediator",
+        "messenger",
+        "sacrifice"
+      ]
+    },
+    {
+      "id": "p112",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p113",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p114",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p115",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p116",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p117",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p118",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p119",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "bound-god"
+      ]
+    },
+    {
+      "id": "p120",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p121",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p122",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p200",
+      "score": 0.845,
+      "band": "specific",
+      "shared": [
+        "PIE-cognate",
+        "primordial-waters",
+        "river-goddess"
+      ]
+    },
+    {
+      "id": "p201",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p202",
+      "score": 0.899,
+      "band": "specific",
+      "shared": [
+        "mother-of-rebel-race"
+      ]
+    },
+    {
+      "id": "p203",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "mother-of-gods"
+      ]
+    },
+    {
+      "id": "p204",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p205",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p206",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p207",
+      "score": 0.614,
+      "band": "moderate",
+      "shared": [
+        "dragon-slayer"
+      ]
+    },
+    {
+      "id": "p208",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "defeated-titans"
+      ]
+    },
+    {
+      "id": "p209",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p210",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p211",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p212",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "giants"
+      ]
+    },
+    {
+      "id": "p213",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p215",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p216",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p217",
+      "score": 0.899,
+      "band": "specific",
+      "shared": [
+        "ancestral-dead"
+      ]
+    },
+    {
+      "id": "p218",
+      "score": 0.548,
+      "band": "moderate",
+      "shared": [
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p219",
+      "score": 0.723,
+      "band": "specific",
+      "shared": [
+        "dying-rising-god",
+        "fertility-cycle"
+      ]
+    },
+    {
+      "id": "p220",
+      "score": 0.604,
+      "band": "moderate",
+      "shared": [
+        "divine-council-head"
+      ]
+    },
+    {
+      "id": "p221",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "cosmos-from-body"
+      ]
+    },
+    {
+      "id": "p222",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p223",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p224",
+      "score": 0.356,
+      "band": "universal-motif",
+      "shared": [
+        "wisdom-bringer"
+      ]
+    },
+    {
+      "id": "p225",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p226",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p227",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p228",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p229",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p300",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p301",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p302",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p303",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p304",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p305",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p306",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p307",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "imprisoned-in-pit"
+      ]
+    },
+    {
+      "id": "p308",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p309",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p310",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p311",
+      "score": 0.899,
+      "band": "specific",
+      "shared": [
+        "Mesopotamian-borrowing"
+      ]
+    },
+    {
+      "id": "p312",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "elder-divine-race"
+      ]
+    },
+    {
+      "id": "p313",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "elder-divine-race"
+      ]
+    },
+    {
+      "id": "p314",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p315",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p316",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p317",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p318",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "giants"
+      ]
+    },
+    {
+      "id": "p319",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "giants"
+      ]
+    },
+    {
+      "id": "p320",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "cosmos-from-body"
+      ]
+    },
+    {
+      "id": "p321",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p322",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p323",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p324",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p325",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p326",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p327",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p328",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p329",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p330",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p331",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p332",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p333",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "mother-of-gods"
+      ]
+    },
+    {
+      "id": "p334",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "mother-of-gods"
+      ]
+    },
+    {
+      "id": "p335",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p336",
+      "score": 0.696,
+      "band": "specific",
+      "shared": [
+        "taught-forbidden-arts"
+      ]
+    },
+    {
+      "id": "p337",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p338",
+      "score": 0.696,
+      "band": "specific",
+      "shared": [
+        "taught-forbidden-arts"
+      ]
+    },
+    {
+      "id": "p_thor_perun",
+      "score": 0.435,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sky-father",
+        "storm"
+      ]
+    },
+    {
+      "id": "p_perun_indra",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_susanoo_perkwunos",
+      "score": 0.689,
+      "band": "specific",
+      "shared": [
+        "chaoskampf",
+        "dragon-slayer"
+      ]
+    },
+    {
+      "id": "p_marduk_tiamat_thor",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_osiris_christ",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_osiris_dionysus",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_maitreya_kalki",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_maitreya_saoshyant",
+      "score": 0.618,
+      "band": "moderate",
+      "shared": [
+        "light-bringer",
+        "redeemer",
+        "returning-god"
+      ]
+    },
+    {
+      "id": "p_saoshyant_christ",
+      "score": 0.454,
+      "band": "moderate",
+      "shared": [
+        "mediator"
+      ]
+    },
+    {
+      "id": "p_eshu_hermes",
+      "score": 0.472,
+      "band": "moderate",
+      "shared": [
+        "trickster"
+      ]
+    },
+    {
+      "id": "p_maui_prometheus",
+      "score": 0.433,
+      "band": "universal-motif",
+      "shared": [
+        "culture-hero",
+        "trickster"
+      ]
+    },
+    {
+      "id": "p_sun_wukong_loki",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_viracocha_enki",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_nuwa_enki",
+      "score": 0.422,
+      "band": "universal-motif",
+      "shared": [
+        "craftsman-creator"
+      ]
+    },
+    {
+      "id": "p_obatala_nuwa",
+      "score": 0.381,
+      "band": "universal-motif",
+      "shared": [
+        "civilizing-god",
+        "craftsman-creator",
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_pachamama_gaia",
+      "score": 0.416,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "earth",
+        "fertility",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_olodumare_monad",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_zurvan_ein_sof",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_tao_brahman",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_avalokiteshvara_sophia",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_tara_mary",
+      "score": 0.454,
+      "band": "moderate",
+      "shared": [
+        "mediator"
+      ]
+    },
+    {
+      "id": "p_maat_asha",
+      "score": 0.818,
+      "band": "specific",
+      "shared": [
+        "cosmic-order",
+        "truth"
+      ]
+    },
+    {
+      "id": "p_thoth_hermes",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_osiris_judge_yama",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_allah_monad",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_iblis_angra",
+      "score": 0.738,
+      "band": "specific",
+      "shared": [
+        "usurper"
+      ]
+    },
+    {
+      "id": "p_iblis_satan",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "archon"
+      ]
+    },
+    {
+      "id": "p_mahdi_maitreya",
+      "score": 0.609,
+      "band": "moderate",
+      "shared": [
+        "redeemer",
+        "returning-god"
+      ]
+    },
+    {
+      "id": "p_mahdi_saoshyant",
+      "score": 0.473,
+      "band": "moderate",
+      "shared": [
+        "cross-tier",
+        "redeemer",
+        "returning-god"
+      ]
+    },
+    {
+      "id": "p_khidr_hermes",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_insan_kamil_purusha",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_mary_isis",
+      "score": 0.679,
+      "band": "specific",
+      "shared": [
+        "divine-queen",
+        "queen-of-heaven"
+      ]
+    },
+    {
+      "id": "p_gottheit_ein_sof",
+      "score": 0.602,
+      "band": "moderate",
+      "shared": [
+        "beyond-being",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_metatron_enoch",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_jain_no_creator_sunyata",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_waheguru_allah",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_waheguru_ein_sof",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "transcendent",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_hukam_maat",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_anu_el",
+      "score": 0.604,
+      "band": "moderate",
+      "shared": [
+        "divine-council-head"
+      ]
+    },
+    {
+      "id": "p_enlil_yahweh",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_enki_prometheus",
+      "score": 0.298,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "culture-hero"
+      ]
+    },
+    {
+      "id": "p_ereshkigal_izanami",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_shamash_maat",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "law"
+      ]
+    },
+    {
+      "id": "p_ra_inti",
+      "score": 0.411,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
+    },
+    {
+      "id": "p_set_iblis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_horus_christ",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_hero_twins_inanna",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_hun_hunahpu_osiris",
+      "score": 0.482,
+      "band": "moderate",
+      "shared": [
+        "cross-tier",
+        "dismembered",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_chaac_indra",
+      "score": 0.508,
+      "band": "moderate",
+      "shared": [
+        "storm"
+      ]
+    },
+    {
+      "id": "p_white_buffalo_maitreya",
+      "score": 0.663,
+      "band": "specific",
+      "shared": [
+        "returning-god"
+      ]
+    },
+    {
+      "id": "p_raven_prometheus",
+      "score": 0.464,
+      "band": "moderate",
+      "shared": [
+        "cross-tier",
+        "culture-hero",
+        "fire-stealer"
+      ]
+    },
+    {
+      "id": "p_sky_woman_ranginui",
+      "score": 0.357,
+      "band": "universal-motif",
+      "shared": [
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_sky_woman_twins_angra",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_anansi_hermes",
+      "score": 0.356,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "culture-hero",
+        "trickster"
+      ]
+    },
+    {
+      "id": "p_nommo_osiris",
+      "score": 0.482,
+      "band": "moderate",
+      "shared": [
+        "cross-tier",
+        "dismembered",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_cagn_maui",
+      "score": 0.337,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "trickster"
+      ]
+    },
+    {
+      "id": "p_dangun_viracocha",
+      "score": 0.371,
+      "band": "universal-motif",
+      "shared": [
+        "civilizing-god",
+        "cross-tier",
+        "culture-hero"
+      ]
+    },
+    {
+      "id": "p_erlik_veles",
+      "score": 0.524,
+      "band": "moderate",
+      "shared": [
+        "death",
+        "underworld"
+      ]
+    },
+    {
+      "id": "p_perkunas_perkwunos",
+      "score": 0.508,
+      "band": "moderate",
+      "shared": [
+        "storm"
+      ]
+    },
+    {
+      "id": "p_laima_norns",
+      "score": 0.397,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "fate-governor"
+      ]
+    },
+    {
+      "id": "p_saule_amaterasu",
+      "score": 0.435,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "sun"
+      ]
+    },
+    {
+      "id": "p_vainamoinen_orpheus",
+      "score": 0.298,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "culture-hero"
+      ]
+    },
+    {
+      "id": "p_mari_pachamama",
+      "score": 0.424,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "earth",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_sugaar_veles",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_teshub_zeus",
+      "score": 0.508,
+      "band": "moderate",
+      "shared": [
+        "storm"
+      ]
+    },
+    {
+      "id": "p_melqart_osiris",
+      "score": 0.375,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_the_one_ein_sof",
+      "score": 0.602,
+      "band": "moderate",
+      "shared": [
+        "beyond-being",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_janus_eshu",
+      "score": 0.727,
+      "band": "specific",
+      "shared": [
+        "liminality",
+        "threshold-guardian"
+      ]
+    },
+    {
+      "id": "p_sol_invictus_ra",
+      "score": 0.411,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
+    },
+    {
+      "id": "p_kali_time_zurvan",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "time-itself"
+      ]
+    },
+    {
+      "id": "p_durga_athena",
+      "score": 0.392,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "war"
+      ]
+    },
+    {
+      "id": "p_chhinnamasta_osiris",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_ganesha_janus",
+      "score": 0.275,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer"
+      ]
+    },
+    {
+      "id": "p_baldur_osiris",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_baldur_christ",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_xipe_totec_osiris",
+      "score": 0.375,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_orunmila_thoth",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_yemoja_isis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_freya_inanna",
+      "score": 0.508,
+      "band": "moderate",
+      "shared": [
+        "fertility",
+        "love"
+      ]
+    },
+    {
+      "id": "p_tlaloc_chaac",
+      "score": 0.544,
+      "band": "moderate",
+      "shared": [
+        "fertility",
+        "rain"
+      ]
+    },
+    {
+      "id": "p_vairochana_ptah",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_papatuanuku_gaia",
+      "score": 0.424,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "earth",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_pele_kali",
+      "score": 0.464,
+      "band": "moderate",
+      "shared": [
+        "destroyer"
+      ]
+    },
+    {
+      "id": "p_altjira_anu",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "transcendent",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_viracocha_yahweh_flood",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_varuna_ahura",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_indra_perkwunos",
+      "score": 0.689,
+      "band": "specific",
+      "shared": [
+        "chaoskampf",
+        "dragon-slayer"
+      ]
+    },
+    {
+      "id": "p_agni_hermes",
+      "score": 0.327,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "mediator"
+      ]
+    },
+    {
+      "id": "p_amesha_sefirot",
+      "score": 0.548,
+      "band": "moderate",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-council",
+        "first-emanation"
+      ]
+    },
+    {
+      "id": "p_guanyin_tara",
+      "score": 0.403,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "mediator",
+        "redeemer"
+      ]
+    },
+    {
+      "id": "p_jade_emperor_el",
+      "score": 0.604,
+      "band": "moderate",
+      "shared": [
+        "divine-council-head"
+      ]
+    },
+    {
+      "id": "p_inari_eshu",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_izanagi_ranginui",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_susanoo_teshub",
+      "score": 0.527,
+      "band": "moderate",
+      "shared": [
+        "chaoskampf",
+        "cross-tier",
+        "dragon-slayer"
+      ]
+    },
+    {
+      "id": "p_perun_perkunas",
+      "score": 0.42,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sky",
+        "storm"
+      ]
+    },
+    {
+      "id": "p_jarilo_osiris",
+      "score": 0.375,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_brigid_vesta",
+      "score": 0.625,
+      "band": "moderate",
+      "shared": [
+        "fire"
+      ]
+    },
+    {
+      "id": "p_adam_kadmon_purusha",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_pleroma_sefirot",
+      "score": 0.604,
+      "band": "moderate",
+      "shared": [
+        "first-emanation"
+      ]
+    },
+    {
+      "id": "p_barbelo_sophia",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_legba_eshu",
+      "score": 0.715,
+      "band": "specific",
+      "shared": [
+        "threshold-guardian"
+      ]
+    },
+    {
+      "id": "p_quetzalcoatl_viracocha",
+      "score": 0.367,
+      "band": "universal-motif",
+      "shared": [
+        "civilizing-god",
+        "cross-tier",
+        "culture-hero",
+        "wisdom-bringer"
+      ]
+    },
+    {
+      "id": "p_io_ein_sof",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "transcendent",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_nareau_anansi",
+      "score": 0.472,
+      "band": "moderate",
+      "shared": [
+        "trickster"
+      ]
+    },
+    {
+      "id": "p_varuna_varuna_ahura_confirmed",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_cybele_kali",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_attis_osiris",
+      "score": 0.375,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_mithras_indra",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_amun_ra_ein_sof",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_amaterasu_cave_ra",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_spider_grandmother_ptah",
+      "score": 0.371,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "craftsman-creator"
+      ]
+    },
+    {
+      "id": "p_hekate_eshu",
+      "score": 0.715,
+      "band": "specific",
+      "shared": [
+        "threshold-guardian"
+      ]
+    },
+    {
+      "id": "p_apollo_thoth",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_demeter_changing_woman",
+      "score": 0.491,
+      "band": "moderate",
+      "shared": [
+        "great-mother",
+        "seasonal-cycle"
+      ]
+    },
+    {
+      "id": "p_tezcatlipoca_angra",
+      "score": 0.464,
+      "band": "moderate",
+      "shared": [
+        "destroyer"
+      ]
+    },
+    {
+      "id": "p_waaqa_nyame",
+      "score": 0.38,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "transcendent"
+      ]
+    },
+    {
+      "id": "p_tabiti_vesta",
+      "score": 0.45,
+      "band": "moderate",
+      "shared": [
+        "cosmic-order-maintainer",
+        "fire"
+      ]
+    },
+    {
+      "id": "p_zeus_varuna",
+      "score": 0.445,
+      "band": "moderate",
+      "shared": [
+        "cosmic-order-maintainer",
+        "moral-law"
+      ]
+    },
+    {
+      "id": "p_selu_hun_hunahpu",
+      "score": 0.505,
+      "band": "moderate",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god",
+        "vegetation-deity"
+      ]
+    },
+    {
+      "id": "p_inktomi_anansi",
+      "score": 0.356,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "culture-hero",
+        "trickster",
+        "wisdom-bringer"
+      ]
+    },
+    {
+      "id": "p_isis_universal_mary",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_hermes_trismegistus_thoth",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_ogo_iblis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_lilith_iblis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_ishtar_inanna",
+      "score": 0.508,
+      "band": "moderate",
+      "shared": [
+        "fertility",
+        "love"
+      ]
+    },
+    {
+      "id": "p_tian_maat",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_cao_dai_serapis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_kachinas_lares",
+      "score": 0.797,
+      "band": "specific",
+      "shared": [
+        "ancestor-spirits"
+      ]
+    },
+    {
+      "id": "p_huitzilopochtli_ra",
+      "score": 0.411,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
+    },
+    {
+      "id": "p_coyolxauhqui_chhinnamasta",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_si_moon_ix_chel",
+      "score": 0.503,
+      "band": "moderate",
+      "shared": [
+        "great-mother",
+        "moon"
+      ]
+    },
+    {
+      "id": "p_olmec_dragon_quetzalcoatl",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_amma_taiowa",
+      "score": 0.38,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_bachue_atabey",
+      "score": 0.339,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-source",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_windigo_mara",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_kalki_mahdi",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_yama_ymir_pie",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_pangu_purusha",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_anubis_yama",
+      "score": 0.524,
+      "band": "moderate",
+      "shared": [
+        "death"
+      ]
+    },
+    {
+      "id": "p_apophis_jormungandr",
+      "score": 0.595,
+      "band": "moderate",
+      "shared": [
+        "chaos",
+        "cosmic-serpent",
+        "destroyer"
+      ]
+    },
+    {
+      "id": "p_loki_iblis",
+      "score": 0.839,
+      "band": "specific",
+      "shared": [
+        "bound-adversary"
+      ]
+    },
+    {
+      "id": "p_norns_moirai",
+      "score": 0.384,
+      "band": "universal-motif",
+      "shared": [
+        "cosmic-order-maintainer",
+        "fate-governor",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_dionysus_attis",
+      "score": 0.375,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
+    },
+    {
+      "id": "p_prometheus_lilith_iblis",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_ushas_eostre",
+      "score": 0.711,
+      "band": "specific",
+      "shared": [
+        "dawn",
+        "seasonal-cycle"
+      ]
+    },
+    {
+      "id": "p_mitra_tyr",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "oath-keeper"
+      ]
+    },
+    {
+      "id": "p_eight_immortals_amesha",
+      "score": 0.765,
+      "band": "specific",
+      "shared": [
+        "divine-council"
+      ]
+    },
+    {
+      "id": "p_sun_wukong_hanuman",
+      "score": 0.201,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier"
+      ]
+    },
+    {
+      "id": "p_lakshmi_kamala",
+      "score": 0.53,
+      "band": "moderate",
+      "shared": [
+        "abundance",
+        "fertility",
+        "great-mother"
+      ]
+    },
+    {
+      "id": "p_odin_self_sacrifice_christ",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_morrigan_kali",
+      "score": 0.464,
+      "band": "moderate",
+      "shared": [
+        "destroyer"
+      ]
+    },
+    {
+      "id": "p_ceridwen_soma",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_asclepius_dian_cecht",
+      "score": 0.789,
+      "band": "specific",
+      "shared": [
+        "divine-physician",
+        "healer"
+      ]
+    },
+    {
+      "id": "p_husayn_christ",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_eos_ushas",
+      "score": 0.593,
+      "band": "moderate",
+      "shared": [
+        "dawn",
+        "great-mother",
+        "seasonal-cycle"
+      ]
+    },
+    {
+      "id": "p_nephthys_izanami",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_mercury_eshu",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_ritamasatmaat",
+      "score": 0.0,
+      "band": "tag-divergent",
+      "shared": []
+    },
+    {
+      "id": "p_erzulie_oshun_diaspora",
+      "score": 0.413,
+      "band": "universal-motif",
+      "shared": [
+        "cross-tier",
+        "love"
+      ]
+    },
+    {
+      "id": "p_atman_gottheit",
+      "score": 0.44,
+      "band": "moderate",
+      "shared": [
+        "unmanifest-source"
+      ]
+    },
+    {
+      "id": "p_ravana_loki",
+      "score": 0.518,
+      "band": "moderate",
+      "shared": [
+        "adversary"
+      ]
+    }
+  ]
+}

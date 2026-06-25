@@ -31333,7 +31333,14 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.814,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "jealous",
+        "lawgiver",
+        "punitive"
+      ]
     },
     {
       "id": "p002",
@@ -31350,7 +31357,15 @@
       "user_drawn": false,
       "scholarly_note": "Structural parallel; documented transmission debated",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.744,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "boundary-crosser",
+        "descended-god",
+        "dying-rising-god",
+        "underworld-journey"
+      ]
     },
     {
       "id": "p003",
@@ -31367,7 +31382,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "sacrificed-god"
+      ]
     },
     {
       "id": "p004",
@@ -31385,7 +31405,12 @@
       "user_drawn": false,
       "suggested_citation": "trickster/culture-hero archetype (Radin 1956; Hyde 1998)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.472,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "trickster"
+      ]
     },
     {
       "id": "p005",
@@ -31401,7 +31426,14 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.609,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "culture-hero",
+        "light-bringer",
+        "wisdom-teacher"
+      ]
     },
     {
       "id": "p006",
@@ -31417,7 +31449,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.464,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "destroyer"
+      ]
     },
     {
       "id": "p007",
@@ -31433,7 +31470,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.899,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "betrayer"
+      ]
     },
     {
       "id": "p008",
@@ -31450,7 +31492,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p101",
@@ -31474,7 +31519,15 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.667,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "divine-council-head",
+        "father",
+        "first-among-gods",
+        "sky"
+      ]
     },
     {
       "id": "p102",
@@ -31497,7 +31550,15 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.667,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "divine-council-head",
+        "father",
+        "first-among-gods",
+        "sky"
+      ]
     },
     {
       "id": "p103",
@@ -31519,7 +31580,13 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.636,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "storm",
+        "thunder"
+      ]
     },
     {
       "id": "p104",
@@ -31541,7 +31608,15 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.794,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "chaoskampf",
+        "cosmic-order-restorer",
+        "dragon-slayer",
+        "releaser-of-the-waters"
+      ]
     },
     {
       "id": "p105",
@@ -31564,7 +31639,10 @@
       "user_drawn": false,
       "suggested_citation": "PIE dragon-slayer formula (Watkins 1995; Lincoln; West 2007)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p106",
@@ -31582,7 +31660,13 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.676,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "dragon-slayer",
+        "indo-european-root"
+      ]
     },
     {
       "id": "p107",
@@ -31602,7 +31686,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p108",
@@ -31624,7 +31711,13 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.781,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "covenantal",
+        "oath-keeper"
+      ]
     },
     {
       "id": "p109",
@@ -31644,7 +31737,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "oath-keeper"
+      ]
     },
     {
       "id": "p110",
@@ -31663,7 +31761,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p111",
@@ -31680,7 +31781,15 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.628,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "fire",
+        "mediator",
+        "messenger",
+        "sacrifice"
+      ]
     },
     {
       "id": "p112",
@@ -31698,7 +31807,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p113",
@@ -31715,7 +31827,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p114",
@@ -31737,7 +31852,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p115",
@@ -31754,7 +31872,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p116",
@@ -31772,7 +31893,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p117",
@@ -31794,7 +31918,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p118",
@@ -31812,7 +31939,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p119",
@@ -31830,7 +31960,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "bound-god"
+      ]
     },
     {
       "id": "p120",
@@ -31849,7 +31984,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p121",
@@ -31868,7 +32006,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p122",
@@ -31886,7 +32027,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p200",
@@ -31905,7 +32049,14 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.845,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "PIE-cognate",
+        "primordial-waters",
+        "river-goddess"
+      ]
     },
     {
       "id": "p201",
@@ -31921,7 +32072,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p202",
@@ -31938,7 +32092,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.899,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "mother-of-rebel-race"
+      ]
     },
     {
       "id": "p203",
@@ -31955,7 +32114,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "mother-of-gods"
+      ]
     },
     {
       "id": "p204",
@@ -31972,7 +32136,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p205",
@@ -31991,7 +32158,10 @@
       "user_drawn": false,
       "suggested_citation": "PIE dragon-slayer formula (Watkins 1995; Lincoln; West 2007)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p206",
@@ -32007,7 +32177,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p207",
@@ -32024,7 +32197,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.614,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "dragon-slayer"
+      ]
     },
     {
       "id": "p208",
@@ -32042,7 +32220,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "defeated-titans"
+      ]
     },
     {
       "id": "p209",
@@ -32059,7 +32242,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p210",
@@ -32077,7 +32263,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p211",
@@ -32094,7 +32283,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p212",
@@ -32111,7 +32303,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "giants"
+      ]
     },
     {
       "id": "p213",
@@ -32127,7 +32324,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p215",
@@ -32145,7 +32345,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p216",
@@ -32161,7 +32364,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p217",
@@ -32178,7 +32384,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.899,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "ancestral-dead"
+      ]
     },
     {
       "id": "p218",
@@ -32198,7 +32409,12 @@
       "user_drawn": false,
       "suggested_citation": "dying-rising-god (Frazer 1890; Mettinger 2001; M.S.Smith)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.548,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p219",
@@ -32215,7 +32431,13 @@
       "user_drawn": false,
       "suggested_citation": "dying-rising-god (Frazer 1890; Mettinger 2001; M.S.Smith)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.723,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "dying-rising-god",
+        "fertility-cycle"
+      ]
     },
     {
       "id": "p220",
@@ -32233,7 +32455,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.604,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "divine-council-head"
+      ]
     },
     {
       "id": "p221",
@@ -32250,7 +32477,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "cosmos-from-body"
+      ]
     },
     {
       "id": "p222",
@@ -32267,7 +32499,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p223",
@@ -32284,7 +32519,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p224",
@@ -32300,7 +32538,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.356,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "wisdom-bringer"
+      ]
     },
     {
       "id": "p225",
@@ -32317,7 +32560,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p226",
@@ -32333,7 +32579,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p227",
@@ -32350,7 +32599,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p228",
@@ -32367,7 +32619,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p229",
@@ -32383,7 +32638,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p300",
@@ -32400,7 +32658,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p301",
@@ -32416,7 +32677,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p302",
@@ -32432,7 +32696,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p303",
@@ -32448,7 +32715,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p304",
@@ -32464,7 +32734,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p305",
@@ -32481,7 +32754,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p306",
@@ -32496,7 +32772,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p307",
@@ -32511,7 +32790,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "imprisoned-in-pit"
+      ]
     },
     {
       "id": "p308",
@@ -32525,7 +32809,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p309",
@@ -32541,7 +32828,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p310",
@@ -32555,7 +32845,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p311",
@@ -32570,7 +32863,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.899,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "Mesopotamian-borrowing"
+      ]
     },
     {
       "id": "p312",
@@ -32586,7 +32884,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "elder-divine-race"
+      ]
     },
     {
       "id": "p313",
@@ -32601,7 +32904,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "elder-divine-race"
+      ]
     },
     {
       "id": "p314",
@@ -32616,7 +32924,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p315",
@@ -32632,7 +32943,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p316",
@@ -32648,7 +32962,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p317",
@@ -32663,7 +32980,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p318",
@@ -32680,7 +33000,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "giants"
+      ]
     },
     {
       "id": "p319",
@@ -32697,7 +33022,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "giants"
+      ]
     },
     {
       "id": "p320",
@@ -32713,7 +33043,12 @@
       "user_drawn": false,
       "suggested_citation": "PIE cosmic-body cosmogony (Lincoln 1986; B.Lincoln)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "cosmos-from-body"
+      ]
     },
     {
       "id": "p321",
@@ -32728,7 +33063,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p322",
@@ -32743,7 +33081,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p323",
@@ -32759,7 +33100,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p324",
@@ -32775,7 +33119,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p325",
@@ -32791,7 +33138,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p326",
@@ -32807,7 +33157,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p327",
@@ -32823,7 +33176,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p328",
@@ -32839,7 +33195,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p329",
@@ -32854,7 +33213,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p330",
@@ -32869,7 +33231,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p331",
@@ -32884,7 +33249,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p332",
@@ -32899,7 +33267,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p333",
@@ -32914,7 +33285,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "mother-of-gods"
+      ]
     },
     {
       "id": "p334",
@@ -32929,7 +33305,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "mother-of-gods"
+      ]
     },
     {
       "id": "p335",
@@ -32946,7 +33327,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p336",
@@ -32960,7 +33344,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.696,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "taught-forbidden-arts"
+      ]
     },
     {
       "id": "p337",
@@ -32974,7 +33363,10 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p338",
@@ -32988,7 +33380,12 @@
       "canonical": true,
       "user_drawn": false,
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.696,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "taught-forbidden-arts"
+      ]
     },
     {
       "id": "p_thor_perun",
@@ -33005,7 +33402,15 @@
         "Primary Chronicle"
       ],
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.435,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sky-father",
+        "storm"
+      ]
     },
     {
       "id": "p_perun_indra",
@@ -33019,7 +33424,10 @@
       ],
       "scholarly_note": "Calvert Watkins, How to Kill a Dragon (Oxford 1995)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_susanoo_perkwunos",
@@ -33033,7 +33441,13 @@
       ],
       "scholarly_note": "Structural parallel; Japanese tradition not PIE but shares the formula",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.689,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "chaoskampf",
+        "dragon-slayer"
+      ]
     },
     {
       "id": "p_marduk_tiamat_thor",
@@ -33045,7 +33459,10 @@
         "Chaoskampf — storm deity slays primordial serpent/dragon"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_osiris_christ",
@@ -33060,7 +33477,10 @@
       ],
       "scholarly_note": "Documented cultural contact via Isis mystery cult in Hellenistic period",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_osiris_dionysus",
@@ -33075,7 +33495,12 @@
       ],
       "scholarly_note": "Plutarch, On Isis and Osiris — documents ancient identification",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_maitreya_kalki",
@@ -33088,7 +33513,10 @@
         "both close the current degraded age"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_maitreya_saoshyant",
@@ -33101,7 +33529,14 @@
       ],
       "scholarly_note": "Probable documented transmission; both arise in same geographic area",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.618,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "light-bringer",
+        "redeemer",
+        "returning-god"
+      ]
     },
     {
       "id": "p_saoshyant_christ",
@@ -33115,7 +33550,12 @@
       ],
       "scholarly_note": "Mary Boyce, History of Zoroastrianism; documented Persian influence on Second Temple Judaism",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.454,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "mediator"
+      ]
     },
     {
       "id": "p_eshu_hermes",
@@ -33129,7 +33569,12 @@
         "both crossroads/threshold guardians"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.472,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "trickster"
+      ]
     },
     {
       "id": "p_maui_prometheus",
@@ -33144,7 +33589,13 @@
       ],
       "scholarly_note": "Structural parallel; independent development in separate traditions",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.433,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "culture-hero",
+        "trickster"
+      ]
     },
     {
       "id": "p_sun_wukong_loki",
@@ -33158,7 +33609,10 @@
         "both have complex redemption"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_viracocha_enki",
@@ -33172,7 +33626,10 @@
         "both ultimately depart/recede"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_nuwa_enki",
@@ -33185,7 +33642,12 @@
         "both friends of humanity within the divine order"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.422,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "craftsman-creator"
+      ]
     },
     {
       "id": "p_obatala_nuwa",
@@ -33197,7 +33659,14 @@
         "Both shape human bodies from clay under delegation from a higher deity"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.381,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "civilizing-god",
+        "craftsman-creator",
+        "cross-tier"
+      ]
     },
     {
       "id": "p_pachamama_gaia",
@@ -33211,7 +33680,15 @@
         "both receive the dead"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.416,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "earth",
+        "fertility",
+        "great-mother"
+      ]
     },
     {
       "id": "p_olodumare_monad",
@@ -33225,7 +33702,12 @@
         "both beyond direct prayer"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_zurvan_ein_sof",
@@ -33237,7 +33719,10 @@
         "Both are impersonal infinite principles above all personal divine beings"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_tao_brahman",
@@ -33251,7 +33736,10 @@
         "both generate manifestation spontaneously"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_avalokiteshvara_sophia",
@@ -33264,7 +33752,10 @@
         "both delay their own liberation to help beings"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_tara_mary",
@@ -33278,7 +33769,12 @@
         "both approached for practical aid"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.454,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "mediator"
+      ]
     },
     {
       "id": "p_maat_asha",
@@ -33292,7 +33788,13 @@
       ],
       "scholarly_note": "Cognate concepts; possible common Indo-European stratum via Egyptian contact with PIE-influenced cultures",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.818,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "cosmic-order",
+        "truth"
+      ]
     },
     {
       "id": "p_thoth_hermes",
@@ -33306,7 +33808,10 @@
       ],
       "scholarly_note": "Garth Fowden, The Egyptian Hermes (Cambridge 1986) — full documentation",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_osiris_judge_yama",
@@ -33319,7 +33824,10 @@
         "both preside over the realm of the dead"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_allah_monad",
@@ -33332,7 +33840,12 @@
       ],
       "scholarly_note": "The via negativa runs through all apophatic traditions. The 99 names parallel emanatory theology.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_iblis_angra",
@@ -33345,7 +33858,12 @@
       ],
       "scholarly_note": "Persian Zoroastrian influence on Islam documented through Sasanian cultural transmission.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.738,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "usurper"
+      ]
     },
     {
       "id": "p_iblis_satan",
@@ -33357,7 +33875,12 @@
         "Both lords of a realm of illusion/desire who test humanity until the final eschaton"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "archon"
+      ]
     },
     {
       "id": "p_mahdi_maitreya",
@@ -33369,7 +33892,13 @@
         "Both awaited future saviors who will restore justice and inaugurate a new age"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.609,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "redeemer",
+        "returning-god"
+      ]
     },
     {
       "id": "p_mahdi_saoshyant",
@@ -33382,7 +33911,14 @@
       ],
       "scholarly_note": "Mary Boyce, A History of Zoroastrianism; Al-Biruni on Iranian-Islamic parallels.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.473,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "redeemer",
+        "returning-god"
+      ]
     },
     {
       "id": "p_khidr_hermes",
@@ -33394,7 +33930,10 @@
         "Both immortal wandering guides who initiate prophets and mystics outside normal transmission chains"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_insan_kamil_purusha",
@@ -33406,7 +33945,10 @@
         "Both are the Cosmic Man — the being whose totality encompasses and generates the cosmos"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_mary_isis",
@@ -33419,7 +33961,13 @@
       ],
       "scholarly_note": "Marina Warner, Alone of All Her Sex (1976); iconographic parallels thoroughly documented.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.679,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "divine-queen",
+        "queen-of-heaven"
+      ]
     },
     {
       "id": "p_gottheit_ein_sof",
@@ -33432,7 +33980,13 @@
       ],
       "scholarly_note": "Eckhart's Gottheit and Kabbalah's Ein Sof are independent developments of the same apophatic insight.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.602,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "beyond-being",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_metatron_enoch",
@@ -33445,7 +33999,10 @@
       ],
       "scholarly_note": "3 Enoch 4: \"This is Enoch son of Jared... He was taken up to the heavenly heights.\"",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_jain_no_creator_sunyata",
@@ -33458,7 +34015,10 @@
       ],
       "scholarly_note": "Theravada Buddhism and Jainism are the two most philosophically developed critiques of creator-god theology in Indian religion.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_waheguru_allah",
@@ -33471,7 +34031,12 @@
       ],
       "scholarly_note": "Sikhism explicitly engaged with both Hindu and Muslim theology in its synthesis.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_waheguru_ein_sof",
@@ -33483,7 +34048,13 @@
         "Both are the formless infinite from which all manifestation proceeds"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "transcendent",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_hukam_maat",
@@ -33495,7 +34066,10 @@
         "Both are the divine cosmic order that pervades all reality and to which all beings must align"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_anu_el",
@@ -33507,7 +34081,12 @@
         "Both are sky-father heads of the divine council who become increasingly withdrawn — the deus otiosus pattern"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.604,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "divine-council-head"
+      ]
     },
     {
       "id": "p_enlil_yahweh",
@@ -33520,7 +34099,10 @@
       ],
       "scholarly_note": "Mark S. Smith, The Origins of Biblical Monotheism. Enlil's assembly parallels the divine council of Psalm 82.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_enki_prometheus",
@@ -33532,7 +34114,13 @@
         "Both subvert the divine council's decrees against humanity — one warns of the flood, the other steals fire"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.298,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "culture-hero"
+      ]
     },
     {
       "id": "p_ereshkigal_izanami",
@@ -33544,7 +34132,10 @@
         "Both are queens of the underworld who became so after death/change; both kingdoms are irreversible"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_shamash_maat",
@@ -33556,7 +34147,12 @@
         "Both are the cosmic principle of justice manifest — one as the sun's revealing light, one as cosmic order-truth"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "law"
+      ]
     },
     {
       "id": "p_ra_inti",
@@ -33568,7 +34164,14 @@
         "Both are supreme solar deities who are simultaneously the cosmic king and the ancestor of the royal line"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.411,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
     },
     {
       "id": "p_set_iblis",
@@ -33580,7 +34183,10 @@
         "Both are necessary adversaries within the divine system — chaos used to fight chaos, the adversary permitted to test"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_horus_christ",
@@ -33593,7 +34199,10 @@
       ],
       "scholarly_note": "The parallel is structural (son vindicates/restores father). Direct influence claims (Horus born Dec 25, virgin birth) are largely discredited; the structural parallel stands.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_hero_twins_inanna",
@@ -33605,7 +34214,10 @@
         "Both descend to the underworld and return by defeating its lords through cunning"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_hun_hunahpu_osiris",
@@ -33617,7 +34229,14 @@
         "Both are dying-and-rising gods whose resurrection is tied to agricultural/vegetative cycle"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.482,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dismembered",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_chaac_indra",
@@ -33629,7 +34248,12 @@
         "Both are the primary rain-storm deity whose favor determines agricultural survival"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.508,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "storm"
+      ]
     },
     {
       "id": "p_white_buffalo_maitreya",
@@ -33641,7 +34265,12 @@
         "Both are expected to return at the end of a declining age to restore sacred order"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.663,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "returning-god"
+      ]
     },
     {
       "id": "p_raven_prometheus",
@@ -33653,7 +34282,14 @@
         "Both steal light/fire from a hoarding power and give it to humanity — culture-hero theft of the sacred"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.464,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "culture-hero",
+        "fire-stealer"
+      ]
     },
     {
       "id": "p_sky_woman_ranginui",
@@ -33665,7 +34301,12 @@
         "Both involve a sky-being whose falling/separation creates the conditions for human life"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.357,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "great-mother"
+      ]
     },
     {
       "id": "p_sky_woman_twins_angra",
@@ -33677,7 +34318,10 @@
         "Both represent a cosmic dualism of good and evil born from one source"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_anansi_hermes",
@@ -33689,7 +34333,14 @@
         "Both win through intelligence against stronger opponents; both are associated with communication and wisdom"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.356,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "culture-hero",
+        "trickster"
+      ]
     },
     {
       "id": "p_nommo_osiris",
@@ -33701,7 +34352,14 @@
         "Both are divine beings whose sacrifice and resurrection restores cosmic order"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.482,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dismembered",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_cagn_maui",
@@ -33713,7 +34371,13 @@
         "Both trickster-creators die and return in their own tradition's narrative"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.337,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "trickster"
+      ]
     },
     {
       "id": "p_dangun_viracocha",
@@ -33725,7 +34389,14 @@
         "Both found civilization through descent of heaven to earth, mixing divine and human elements"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.371,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "civilizing-god",
+        "cross-tier",
+        "culture-hero"
+      ]
     },
     {
       "id": "p_erlik_veles",
@@ -33737,7 +34408,13 @@
         "Both are the underworld adversary who opposes the sky god in a cosmic dyad"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.524,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "death",
+        "underworld"
+      ]
     },
     {
       "id": "p_perkunas_perkwunos",
@@ -33750,7 +34427,12 @@
       ],
       "scholarly_note": "Perkunas is etymologically identical to PIE *Perkwunos — the most direct Baltic reflex.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.508,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "storm"
+      ]
     },
     {
       "id": "p_laima_norns",
@@ -33762,7 +34444,13 @@
         "Both are fate-at-birth goddesses who determine the course of human lives"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.397,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "fate-governor"
+      ]
     },
     {
       "id": "p_saule_amaterasu",
@@ -33774,7 +34462,13 @@
         "Both are feminine solar deities — structurally rare, each the supreme deity of their tradition"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.435,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "sun"
+      ]
     },
     {
       "id": "p_vainamoinen_orpheus",
@@ -33786,7 +34480,13 @@
         "Both are master singers who use song as the primary magical and creative force"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.298,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "culture-hero"
+      ]
     },
     {
       "id": "p_mari_pachamama",
@@ -33798,7 +34498,14 @@
         "Both ARE the mountain/earth — not goddesses of the land but the land itself as divine"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.424,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "earth",
+        "great-mother"
+      ]
     },
     {
       "id": "p_sugaar_veles",
@@ -33810,7 +34517,10 @@
         "Both are cosmic serpent consorts of an earth/mountain goddess in archaic European tradition"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_teshub_zeus",
@@ -33823,7 +34533,12 @@
       ],
       "scholarly_note": "Burkert, The Orientalizing Revolution. The structural and mythological parallels are extensively documented.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.508,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "storm"
+      ]
     },
     {
       "id": "p_melqart_osiris",
@@ -33836,7 +34551,13 @@
       ],
       "scholarly_note": "Bonnet, Melqart. The Tyrian Herakles identification with Greek Heracles is documented in Herodotus.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.375,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_the_one_ein_sof",
@@ -33849,7 +34570,13 @@
       ],
       "scholarly_note": "Katz, Jewish Philosophers and the New Age. The Kabbalistic Ein Sof is a transformation of Plotinian thought through Jewish mysticism.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.602,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "beyond-being",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_janus_eshu",
@@ -33861,7 +34588,13 @@
         "Both are threshold guardians who must be propitiated first before any other deity is approached"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.727,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "liminality",
+        "threshold-guardian"
+      ]
     },
     {
       "id": "p_sol_invictus_ra",
@@ -33873,7 +34606,14 @@
         "Both are the sun as supreme cosmic king — Sol Invictus as Rome's late attempt at solar monotheism parallels Ra's supremacy in Egypt"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.411,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
     },
     {
       "id": "p_kali_time_zurvan",
@@ -33885,7 +34625,12 @@
         "Both personify time as the ultimate devourer — Kali as Mahakala, Zurvan as Boundless Time"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "time-itself"
+      ]
     },
     {
       "id": "p_durga_athena",
@@ -33897,7 +34642,13 @@
         "Both are autonomous warrior goddesses who fight for cosmic order — neither is a consort"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.392,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "war"
+      ]
     },
     {
       "id": "p_chhinnamasta_osiris",
@@ -33909,7 +34660,12 @@
         "Both undergo violent dismemberment that generates cosmic abundance"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_ganesha_janus",
@@ -33921,7 +34677,12 @@
         "Both must be invoked/propitiated before all other deities — lords of beginnings"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.275,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer"
+      ]
     },
     {
       "id": "p_baldur_osiris",
@@ -33933,7 +34694,12 @@
         "Both are the most beloved deity whose violent death triggers cosmic catastrophe"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_baldur_christ",
@@ -33946,7 +34712,10 @@
       ],
       "suggested_citation": "dying-rising-god (Frazer 1890; Mettinger 2001; M.S.Smith)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_xipe_totec_osiris",
@@ -33958,7 +34727,13 @@
         "Both are killed to generate agricultural renewal — the dying-god cycle in its most explicit agricultural form"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.375,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_orunmila_thoth",
@@ -33970,7 +34745,10 @@
         "Both are the divine wisdom figure who knows all destinies and transmits this knowledge through an oracle/writing system"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_yemoja_isis",
@@ -33982,7 +34760,10 @@
         "Both are the great mother of the divine family who protects and nurtures through dangerous waters"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_freya_inanna",
@@ -33994,7 +34775,13 @@
         "Both are the supreme goddess of both love and war — the same divine feminine encompasses erotic power and martial fury"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.508,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "fertility",
+        "love"
+      ]
     },
     {
       "id": "p_tlaloc_chaac",
@@ -34006,7 +34793,13 @@
         "Tlaloc (Aztec) and Chaac (Maya) are the Mesoamerican rain-god — same functional role, shared iconographic tradition, different peoples"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.544,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "fertility",
+        "rain"
+      ]
     },
     {
       "id": "p_vairochana_ptah",
@@ -34018,7 +34811,10 @@
         "Both are the supreme illuminating wisdom that transforms ignorance — Ptah through the divine word, Vairochana through primordial light"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_papatuanuku_gaia",
@@ -34030,7 +34826,14 @@
         "Both ARE the earth — not rulers of it but the earth itself as a living divine body"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.424,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "earth",
+        "great-mother"
+      ]
     },
     {
       "id": "p_pele_kali",
@@ -34042,7 +34845,12 @@
         "Both destroy to create — their annihilating power is inseparable from their generative force"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.464,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "destroyer"
+      ]
     },
     {
       "id": "p_altjira_anu",
@@ -34054,7 +34862,13 @@
         "Both are supreme creators who completely withdrew from their creation — the deus otiosus pattern at its most extreme"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "transcendent",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_viracocha_yahweh_flood",
@@ -34066,7 +34880,10 @@
         "Both destroy a failed human creation with a flood and recreate — the reset cosmogony"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_varuna_ahura",
@@ -34079,7 +34896,10 @@
       ],
       "scholarly_note": "Dumezil demonstrated the Mitra-Varuna / Ahura-Mazda structural parallel. The PIE cosmic law (*h₂rtos) survives as Sanskrit rita, Avestan asha.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_indra_perkwunos",
@@ -34092,7 +34912,13 @@
       ],
       "scholarly_note": "West, Indo-European Poetry and Myth (2007). The Vritra myth shares deep structural and etymological features with the Baltic Perkunas/Velnias conflict.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.689,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "chaoskampf",
+        "dragon-slayer"
+      ]
     },
     {
       "id": "p_agni_hermes",
@@ -34104,7 +34930,13 @@
         "Both are the divine messenger who carries communications between the human and divine realms"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.327,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "mediator"
+      ]
     },
     {
       "id": "p_amesha_sefirot",
@@ -34117,7 +34949,14 @@
       ],
       "scholarly_note": "Boyce, History of Zoroastrianism. The transmission through Babylonian exile is documented.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.548,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-council",
+        "first-emanation"
+      ]
     },
     {
       "id": "p_guanyin_tara",
@@ -34129,7 +34968,14 @@
         "Guanyin IS the feminized Avalokitesvara, who is structurally identical to Tara — both are the compassionate bodhisattva of liberation"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.403,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "mediator",
+        "redeemer"
+      ]
     },
     {
       "id": "p_jade_emperor_el",
@@ -34141,7 +34987,12 @@
         "Both are the high god who rules the divine council through authority and delegation rather than direct action"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.604,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "divine-council-head"
+      ]
     },
     {
       "id": "p_inari_eshu",
@@ -34153,7 +35004,10 @@
         "Both are the most widely practically worshipped deity — present at every gate, every beginning, every transaction"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_izanagi_ranginui",
@@ -34165,7 +35019,10 @@
         "Both are sky fathers whose union with earth mothers creates the world; both lose their consort to the underworld"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_susanoo_teshub",
@@ -34177,7 +35034,14 @@
         "Both are storm gods who slay a multi-headed cosmic serpent — the Japanese instance and the Hittite instance of the same dragon-slayer formula"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.527,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "chaoskampf",
+        "cross-tier",
+        "dragon-slayer"
+      ]
     },
     {
       "id": "p_perun_perkunas",
@@ -34190,7 +35054,15 @@
       ],
       "scholarly_note": "The etymological identity is established. Both preserve the PIE thunder-god + cosmic serpent combat formula.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.42,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sky",
+        "storm"
+      ]
     },
     {
       "id": "p_jarilo_osiris",
@@ -34202,7 +35074,13 @@
         "Both are dying-rising gods whose annual death and return marks the agricultural cycle"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.375,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_brigid_vesta",
@@ -34214,7 +35092,12 @@
         "Both are goddesses of the sacred eternal fire tended by virgin/consecrated women"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.625,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "fire"
+      ]
     },
     {
       "id": "p_adam_kadmon_purusha",
@@ -34226,7 +35109,10 @@
         "Both are the Cosmic Human whose body/form is the structural template of the universe"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_pleroma_sefirot",
@@ -34238,7 +35124,12 @@
         "Both are the structured divine realm of emanations through which the Absolute creates — 30 Aeons vs 10 Sefirot"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.604,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "first-emanation"
+      ]
     },
     {
       "id": "p_barbelo_sophia",
@@ -34250,7 +35141,10 @@
         "Barbelo and Sophia are the same divine feminine principle in different Gnostic systems — the highest feminine Aeon"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_legba_eshu",
@@ -34263,7 +35157,12 @@
       ],
       "scholarly_note": "The Yoruba Elegba became Haitian Legba through the Middle Passage. Deren, Divine Horsemen.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.715,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "threshold-guardian"
+      ]
     },
     {
       "id": "p_quetzalcoatl_viracocha",
@@ -34275,7 +35174,15 @@
         "Both are the Mesoamerican/Andean divine civilizer who departs eastward/into the sea and is expected to return"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.367,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "civilizing-god",
+        "cross-tier",
+        "culture-hero",
+        "wisdom-bringer"
+      ]
     },
     {
       "id": "p_io_ein_sof",
@@ -34287,7 +35194,13 @@
         "Both are hidden supreme deities known only to initiates, preceding all creation and description"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "transcendent",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_nareau_anansi",
@@ -34299,7 +35212,12 @@
         "Both are spider creator-tricksters — the spider as cosmic weaver appears independently in Oceanic and African traditions"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.472,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "trickster"
+      ]
     },
     {
       "id": "p_varuna_varuna_ahura_confirmed",
@@ -34312,7 +35230,10 @@
       ],
       "scholarly_note": "Dumezil, Mitra-Varuna (1948). The Mitra/Mithra correspondence completes the pair.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_cybele_kali",
@@ -34324,7 +35245,10 @@
         "Both are ecstatic great mother goddesses whose rites involve dissolution of ego and conventional limits"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_attis_osiris",
@@ -34337,7 +35261,13 @@
       ],
       "scholarly_note": "Frazer, The Golden Bough, documents the Attis-Osiris-Adonis dying-rising complex explicitly.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.375,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_mithras_indra",
@@ -34349,7 +35279,12 @@
         "Both perform a cosmic slaying from which life springs — Mithras the bull, Indra the dragon"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_amun_ra_ein_sof",
@@ -34361,7 +35296,12 @@
         "Both are the hidden absolute that manifests through a visible form — Amun (hidden) + Ra (sun), Ein Sof + Sefirot"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_amaterasu_cave_ra",
@@ -34373,7 +35313,12 @@
         "Both are solar deities whose disappearance brings cosmic darkness and whose return brings light"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_spider_grandmother_ptah",
@@ -34385,7 +35330,13 @@
         "Both create through thought/word — the mind as the primary creative instrument"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.371,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "craftsman-creator"
+      ]
     },
     {
       "id": "p_hekate_eshu",
@@ -34397,7 +35348,12 @@
         "Both govern the crossroads as the sacred threshold — propitiated first, intermediary between worlds"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.715,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "threshold-guardian"
+      ]
     },
     {
       "id": "p_apollo_thoth",
@@ -34409,7 +35365,12 @@
         "Both are the divine principle of ordered wisdom expressed through oracular speech and writing"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_demeter_changing_woman",
@@ -34421,7 +35382,13 @@
         "Both goddesses embody the seasons — their emotional/physical state IS the seasonal cycle"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.491,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "great-mother",
+        "seasonal-cycle"
+      ]
     },
     {
       "id": "p_tezcatlipoca_angra",
@@ -34433,7 +35400,12 @@
         "Both are the dark destroyer who opposes the light-bringer in a cosmic dualism"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.464,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "destroyer"
+      ]
     },
     {
       "id": "p_waaqa_nyame",
@@ -34445,7 +35417,13 @@
         "Both are the withdrawn sky creator of East and West African peoples respectively"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.38,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "transcendent"
+      ]
     },
     {
       "id": "p_tabiti_vesta",
@@ -34457,7 +35435,13 @@
         "Both are the sacred fire goddess who is the supreme deity of her tradition"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.45,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "fire"
+      ]
     },
     {
       "id": "p_zeus_varuna",
@@ -34470,7 +35454,13 @@
       ],
       "scholarly_note": "Dumezil, Indo-European Heritage in Rome and India.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.445,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "moral-law"
+      ]
     },
     {
       "id": "p_selu_hun_hunahpu",
@@ -34482,7 +35472,14 @@
         "Both are corn deities whose death-and-resurrection is the origin of agricultural abundance — Cherokee and Mayan independent developments"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.505,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god",
+        "vegetation-deity"
+      ]
     },
     {
       "id": "p_inktomi_anansi",
@@ -34495,7 +35492,15 @@
       ],
       "suggested_citation": "trickster/culture-hero archetype (Radin 1956; Hyde 1998)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.356,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "culture-hero",
+        "trickster",
+        "wisdom-bringer"
+      ]
     },
     {
       "id": "p_isis_universal_mary",
@@ -34507,7 +35512,10 @@
         "Late Hellenistic Isis as universal Queen of Heaven directly shaped early Marian theology, especially in Egypt"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_hermes_trismegistus_thoth",
@@ -34519,7 +35527,10 @@
         "Hermes Trismegistus IS Thoth in the Hellenistic syncretism — the Egyptian wisdom god in Greek dress"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_ogo_iblis",
@@ -34531,7 +35542,10 @@
         "Both are the rebellious first creation whose disobedience corrupts subsequent reality"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_lilith_iblis",
@@ -34543,7 +35557,10 @@
         "Both refuse divine command — Iblis refuses to prostrate before Adam, Lilith refuses to lie beneath Adam. The rebellion of created equality."
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_ishtar_inanna",
@@ -34556,7 +35573,13 @@
       ],
       "suggested_citation": "dying-rising-god (Frazer 1890; Mettinger 2001; M.S.Smith)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.508,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "fertility",
+        "love"
+      ]
     },
     {
       "id": "p_tian_maat",
@@ -34568,7 +35591,10 @@
         "Both are the impersonal cosmic moral order that legitimizes rulers and structures reality"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_cao_dai_serapis",
@@ -34580,7 +35606,10 @@
         "Both are deliberately constructed syncretic supreme beings — explicit synthesis of multiple religious traditions"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_kachinas_lares",
@@ -34592,7 +35621,12 @@
         "Both are the ancestral spirit beings who maintain household and community well-being"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.797,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "ancestor-spirits"
+      ]
     },
     {
       "id": "p_huitzilopochtli_ra",
@@ -34604,7 +35638,14 @@
         "Both are the sun whose daily victory over darkness/chaos requires sustained ritual support to continue"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.411,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "divine-king",
+        "sun"
+      ]
     },
     {
       "id": "p_coyolxauhqui_chhinnamasta",
@@ -34616,7 +35657,10 @@
         "Both involve dismemberment of the feminine divine — though in opposite valences (victim vs. self-sacrifice)"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_si_moon_ix_chel",
@@ -34628,7 +35672,13 @@
         "Both are powerful lunar deities in Mesoamerican-Andean coastal cultures"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.503,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "great-mother",
+        "moon"
+      ]
     },
     {
       "id": "p_olmec_dragon_quetzalcoatl",
@@ -34640,7 +35690,12 @@
         "The Olmec Dragon is the iconographic ancestor of Quetzalcoatl — Mesoamerican religious continuity over 2000+ years"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_amma_taiowa",
@@ -34652,7 +35707,13 @@
         "Both are supreme creators who exist alone before creation — Hopi and Dogon independent developments of the apophatic supreme"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.38,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_bachue_atabey",
@@ -34664,7 +35725,13 @@
         "Both are Caribbean/northern South American water-mother goddesses who emerge from sacred bodies of water"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.339,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-source",
+        "great-mother"
+      ]
     },
     {
       "id": "p_windigo_mara",
@@ -34676,7 +35743,10 @@
         "Both embody the destructive force of insatiable consumption/desire that traps and devours souls"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_kalki_mahdi",
@@ -34688,7 +35758,10 @@
         "Both are the eschatological warrior-savior who appears at the end of a corrupt age"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_yama_ymir_pie",
@@ -34701,7 +35774,10 @@
       ],
       "scholarly_note": "Bruce Lincoln, Myth, Cosmos, and Society. The PIE first-twin cosmogony is preserved in Indo-Iranian Yama-Yima and Norse Ymir.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_pangu_purusha",
@@ -34714,7 +35790,10 @@
       ],
       "suggested_citation": "PIE cosmic-body cosmogony (Lincoln 1986; B.Lincoln)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_anubis_yama",
@@ -34726,7 +35805,12 @@
         "Both are the divine judge who determines the fate of the dead by weighing/measuring their lives"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.524,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "death"
+      ]
     },
     {
       "id": "p_apophis_jormungandr",
@@ -34738,7 +35822,14 @@
         "Both are the cosmic serpent of chaos that threatens the cosmos and is eternally opposed by the divine champion"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.595,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "chaos",
+        "cosmic-serpent",
+        "destroyer"
+      ]
     },
     {
       "id": "p_loki_iblis",
@@ -34750,7 +35841,12 @@
         "Both are the bound divine adversary who will break free at the eschatological climax"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.839,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "bound-adversary"
+      ]
     },
     {
       "id": "p_norns_moirai",
@@ -34763,7 +35859,14 @@
       ],
       "scholarly_note": "The triple Fates appear across IE traditions — Norse Norns, Greek Moirai, Roman Parcae, Baltic Laimas. PIE origin probable.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.384,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cosmic-order-maintainer",
+        "fate-governor",
+        "great-mother"
+      ]
     },
     {
       "id": "p_dionysus_attis",
@@ -34776,7 +35879,13 @@
       ],
       "suggested_citation": "dying-rising-god (Frazer 1890; Mettinger 2001; M.S.Smith)",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.375,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "dying-rising-god"
+      ]
     },
     {
       "id": "p_prometheus_lilith_iblis",
@@ -34788,7 +35897,10 @@
         "Both are the divine rebel against the supreme deity for the sake of humanity (or against humanity's elevation)"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_ushas_eostre",
@@ -34801,7 +35913,13 @@
       ],
       "scholarly_note": "The most direct PIE etymological survival — both names derive from *h₂éwsōs.",
       "provenance": "established",
-      "triage_status": "established"
+      "triage_status": "established",
+      "specificity_score": 0.711,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "dawn",
+        "seasonal-cycle"
+      ]
     },
     {
       "id": "p_mitra_tyr",
@@ -34813,7 +35931,12 @@
         "Both are the god of oaths who maintains the human bonds that sustain society"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "oath-keeper"
+      ]
     },
     {
       "id": "p_eight_immortals_amesha",
@@ -34825,7 +35948,12 @@
         "Both are collectives of divine emanations each representing a path/aspect of spiritual fulfillment"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.765,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "divine-council"
+      ]
     },
     {
       "id": "p_sun_wukong_hanuman",
@@ -34837,7 +35965,12 @@
         "Sun Wukong's monkey-form and powers are influenced by Indian Hanuman through Buddhist transmission"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.201,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier"
+      ]
     },
     {
       "id": "p_lakshmi_kamala",
@@ -34849,7 +35982,14 @@
         "Kamala IS Lakshmi in her tantric Mahavidya form — direct identification"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.53,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "abundance",
+        "fertility",
+        "great-mother"
+      ]
     },
     {
       "id": "p_odin_self_sacrifice_christ",
@@ -34861,7 +36001,10 @@
         "Both hang on a cosmic tree/cross as self-sacrifice to obtain redemptive power"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_morrigan_kali",
@@ -34873,7 +36016,12 @@
         "Both are fierce feminine war-death goddesses who hover over the battlefield as ravens/skulls"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.464,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "destroyer"
+      ]
     },
     {
       "id": "p_ceridwen_soma",
@@ -34885,7 +36033,10 @@
         "Both are sacred vessels/plants whose consumption grants divine inspiration or immortality"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_asclepius_dian_cecht",
@@ -34897,7 +36048,13 @@
         "Both are divine physicians whose power to heal extends to raising the dead — causing theological crisis"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.789,
+      "specificity_band": "specific",
+      "specificity_shared_tags": [
+        "divine-physician",
+        "healer"
+      ]
     },
     {
       "id": "p_husayn_christ",
@@ -34909,7 +36066,10 @@
         "Both are martyred sons of the divine whose death becomes the redemptive center of their faith tradition"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_eos_ushas",
@@ -34921,7 +36081,14 @@
         "Direct PIE cognates — *h2ewsos in Greek (Eos) and Sanskrit (Ushas)"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.593,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "dawn",
+        "great-mother",
+        "seasonal-cycle"
+      ]
     },
     {
       "id": "p_nephthys_izanami",
@@ -34933,7 +36100,10 @@
         "Both are creator goddesses who become queens of the dead — the feminine who governs both creation and death"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_mercury_eshu",
@@ -34945,7 +36115,10 @@
         "Mercury was identified with Celtic Lugus (= Lugh) and Germanic Wotan — the universal messenger-trickster"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_ritamasatmaat",
@@ -34957,7 +36130,10 @@
         "Rita (Sanskrit), Asha (Avestan), and Maat (Egyptian) are independent expressions of the same archaic truth-order concept"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.0,
+      "specificity_band": "tag-divergent",
+      "specificity_shared_tags": []
     },
     {
       "id": "p_erzulie_oshun_diaspora",
@@ -34969,7 +36145,13 @@
         "Erzulie Freda is the Haitian transformation of Oshun — direct diaspora transmission"
       ],
       "provenance": "candidate",
-      "triage_status": "known-uncited"
+      "triage_status": "known-uncited",
+      "specificity_score": 0.413,
+      "specificity_band": "universal-motif",
+      "specificity_shared_tags": [
+        "cross-tier",
+        "love"
+      ]
     },
     {
       "id": "p_atman_gottheit",
@@ -34981,7 +36163,12 @@
         "Both are the mystical identity of individual soul with the divine absolute — Eckhart and Advaita independently arrive at the same insight"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.44,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "unmanifest-source"
+      ]
     },
     {
       "id": "p_ravana_loki",
@@ -34993,7 +36180,12 @@
         "Both are the adversary with genuine greatness — Ravana the devoted Shiva worshipper, Loki the gods' companion who turns"
       ],
       "provenance": "candidate",
-      "triage_status": "genuine-novel"
+      "triage_status": "genuine-novel",
+      "specificity_score": 0.518,
+      "specificity_band": "moderate",
+      "specificity_shared_tags": [
+        "adversary"
+      ]
     }
   ],
   "cosmological_frameworks": [
