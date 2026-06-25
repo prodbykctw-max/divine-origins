@@ -1,6 +1,13 @@
 # Parallels of the Gods — The App
 
-This is the working application built from the spec package. It's a **single-file React artifact** (`ParallelsOfTheGods.jsx`) that renders the four-tier comparative cosmology canvas, with the seed dataset embedded inline.
+This is the working application built from the spec package. It's a **single-file React artifact** (`ParallelsOfTheGods.jsx`) that renders the four-tier comparative cosmology canvas.
+
+> **Data:** the app now imports `seed-data.json`, which is the **canonical clean
+> v0.8.0** dataset (152 traditions, 643 deities, 934 facets, 259 parallels — a
+> copy of `../../data/source_map_seed_data_v080.json`). Earlier it embedded the
+> 16-deity v0.1.0 stub inline. To change datasets, swap `seed-data.json` or use
+> the in-app upload. Traditions outside the hand-picked palette get a stable
+> hash-derived color so all 152 stay visually distinct.
 
 ## What it does
 
