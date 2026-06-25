@@ -877,6 +877,7 @@ function EssenceTab({ facet, deity }) {
 
 function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById, traditionById, scholarlyMode, onSelectFacet, c }) {
   const [specFilter, setSpecFilter] = useState('all'); // all | significant | specific
+  const [typeFilter, setTypeFilter] = useState(() => new Set()); // empty = all evidence types
   if (relatedFacetIds.length === 0) {
     return (
       <div style={{ padding: '24px 0', textAlign: 'center', color: '#8a7340', fontStyle: 'italic' }}>
@@ -912,19 +913,40 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
   // `significant` = beats the randomized null model (p<0.05); `specific` = shares
   // rare structural tags. Items with no explicit canonical record are hidden when
   // a filter is active (they carry no specificity signal).
+  // Evidence types present among this facet's explicit parallels (docs/06 taxonomy).
+  const evidenceTypes = Array.from(
+    new Set(items.map(it => it.explicit?.type).filter(Boolean))
+  ).sort();
+
   const shown = items.filter(it => {
-    if (specFilter === 'all') return true;
-    if (!it.explicit) return false;
-    if (specFilter === 'significant') return it.explicit.specificity_significant === true;
-    if (specFilter === 'specific') return it.explicit.specificity_band === 'specific';
+    // specificity dimension
+    if (specFilter !== 'all') {
+      if (!it.explicit) return false;
+      if (specFilter === 'significant' && it.explicit.specificity_significant !== true) return false;
+      if (specFilter === 'specific' && it.explicit.specificity_band !== 'specific') return false;
+    }
+    // evidence-type dimension (empty set = all)
+    if (typeFilter.size > 0) {
+      if (!it.explicit?.type || !typeFilter.has(it.explicit.type)) return false;
+    }
     return true;
   });
+
+  function toggleType(t) {
+    setTypeFilter(prev => {
+      const next = new Set(prev);
+      if (next.has(t)) next.delete(t); else next.add(t);
+      return next;
+    });
+  }
 
   const FILTERS = [
     { id: 'all', label: 'All' },
     { id: 'significant', label: 'Significant (p<.05)' },
     { id: 'specific', label: 'Specific only' },
   ];
+
+  const filterActive = specFilter !== 'all' || typeFilter.size > 0;
 
   return (
     <div>
@@ -949,9 +971,36 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
           </button>
         ))}
       </div>
+      {evidenceTypes.length > 1 && (
+        <div style={{ display: 'flex', gap: 4, marginBottom: 8, flexWrap: 'wrap' }}>
+          {evidenceTypes.map(t => {
+            const on = typeFilter.has(t);
+            return (
+              <button
+                key={t}
+                onClick={() => toggleType(t)}
+                title={`Filter by evidence type: ${t}`}
+                className="marginalia"
+                style={{
+                  padding: '2px 7px',
+                  fontSize: '10px',
+                  borderRadius: '2px',
+                  cursor: 'pointer',
+                  fontFamily: 'inherit',
+                  border: `1px solid ${on ? '#6b5223' : 'rgba(176,134,72,0.4)'}`,
+                  background: on ? '#6b5223' : 'transparent',
+                  color: on ? '#faf5e7' : '#6b5223',
+                }}
+              >
+                {t.replace(/-/g, ' ')}
+              </button>
+            );
+          })}
+        </div>
+      )}
       <div className="marginalia mb-2" style={{ marginBottom: 10 }}>
         {shown.length} of {items.length} parallel{items.length === 1 ? '' : 's'}
-        {specFilter !== 'all' ? ' (filtered)' : ' across traditions'}
+        {filterActive ? ' (filtered)' : ' across traditions'}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {shown.length === 0 && (
@@ -1011,6 +1060,33 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                         }}
                       >
                         {explicit.specificity_band}
+                      </span>
+                    )}
+                    {explicit?.specificity_significant === false && (
+                      <span
+                        className="marginalia"
+                        title="Not statistically significant vs. the randomized null model (p ≥ 0.05)"
+                        style={{
+                          padding: '1px 5px',
+                          background: 'transparent',
+                          border: '1px solid #9c4a3a',
+                          color: '#9c4a3a',
+                          borderRadius: '2px',
+                          fontSize: '9px',
+                        }}
+                      >
+                        n.s.
+                      </span>
+                    )}
+                    {explicit?.type && (
+                      <span className="marginalia" title={explicit.descriptor || explicit.type} style={{
+                        padding: '1px 5px',
+                        background: 'rgba(176,134,72,0.18)',
+                        color: '#6b5223',
+                        borderRadius: '2px',
+                        fontSize: '9px',
+                      }}>
+                        {explicit.type.replace(/-/g, ' ')}
                       </span>
                     )}
                   </div>
@@ -1198,6 +1274,40 @@ function AboutModal({ meta, onClose }) {
             <li style={{ marginBottom: 6 }}>Filter traditions on or off with the funnel icon.</li>
             <li>Upload a larger JSON dataset with the ⬆ icon — the schema is documented in the spec package.</li>
           </ol>
+
+          <div className="codex-rule" style={{ margin: '18px 0' }} />
+
+          <div className="marginalia mb-2">Reading the badges</div>
+          <div style={{ fontSize: '13px', color: '#3a322a', lineHeight: 1.5, marginBottom: 8 }}>
+            Each parallel is weighted by how <em>rare</em> the structural function it
+            shares is across the whole dataset — the guard against "everything
+            resembles everything". A badge shows the band:
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 10 }}>
+            {[
+              ['specific', 'Shares rare structural tags — the strongest match'],
+              ['moderate', 'Shares mid-frequency tags'],
+              ['universal-motif', 'Shares only common tags (e.g. “dying-rising god”) — weak'],
+              ['tag-divergent', 'Shares no function-tag — rests on its written basis'],
+            ].map(([band, desc]) => (
+              <div key={band} style={{ display: 'flex', gap: 8, alignItems: 'baseline' }}>
+                <span className="marginalia" style={{
+                  padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
+                  background: SPECIFICITY_COLORS[band] || '#8a7340', color: '#faf5e7', whiteSpace: 'nowrap',
+                }}>{band}</span>
+                <span style={{ fontSize: '12.5px', color: '#3a322a' }}>{desc}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ fontSize: '12.5px', color: '#3a322a', lineHeight: 1.5, marginBottom: 4 }}>
+            <span className="marginalia" style={{
+              padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
+              border: '1px solid #9c4a3a', color: '#9c4a3a',
+            }}>n.s.</span> marks a parallel that a randomized null model can't
+            distinguish from two random figures (p ≥ 0.05). Use the
+            <em> Significant</em> / <em>Specific</em> filters on the Parallels tab to
+            hide the weak ones.
+          </div>
 
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
