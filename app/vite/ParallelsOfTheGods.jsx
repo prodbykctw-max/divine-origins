@@ -876,6 +876,7 @@ function EssenceTab({ facet, deity }) {
 }
 
 function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById, traditionById, scholarlyMode, onSelectFacet, c }) {
+  const [specFilter, setSpecFilter] = useState('all'); // all | significant | specific
   if (relatedFacetIds.length === 0) {
     return (
       <div style={{ padding: '24px 0', textAlign: 'center', color: '#8a7340', fontStyle: 'italic' }}>
@@ -907,13 +908,58 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
       return a.deity.primary_name.localeCompare(b.deity.primary_name);
     });
 
+  // Specificity filter — surfaces the parallelomania control from the data layer.
+  // `significant` = beats the randomized null model (p<0.05); `specific` = shares
+  // rare structural tags. Items with no explicit canonical record are hidden when
+  // a filter is active (they carry no specificity signal).
+  const shown = items.filter(it => {
+    if (specFilter === 'all') return true;
+    if (!it.explicit) return false;
+    if (specFilter === 'significant') return it.explicit.specificity_significant === true;
+    if (specFilter === 'specific') return it.explicit.specificity_band === 'specific';
+    return true;
+  });
+
+  const FILTERS = [
+    { id: 'all', label: 'All' },
+    { id: 'significant', label: 'Significant (p<.05)' },
+    { id: 'specific', label: 'Specific only' },
+  ];
+
   return (
     <div>
+      <div style={{ display: 'flex', gap: 4, marginBottom: 8, flexWrap: 'wrap' }}>
+        {FILTERS.map(f => (
+          <button
+            key={f.id}
+            onClick={() => setSpecFilter(f.id)}
+            className="marginalia"
+            style={{
+              padding: '2px 7px',
+              fontSize: '10px',
+              borderRadius: '2px',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+              border: `1px solid ${specFilter === f.id ? '#3f6e5e' : 'rgba(176,134,72,0.4)'}`,
+              background: specFilter === f.id ? '#3f6e5e' : 'transparent',
+              color: specFilter === f.id ? '#faf5e7' : '#6b5223',
+            }}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
       <div className="marginalia mb-2" style={{ marginBottom: 10 }}>
-        {items.length} structural parallel{items.length === 1 ? '' : 's'} across traditions
+        {shown.length} of {items.length} parallel{items.length === 1 ? '' : 's'}
+        {specFilter !== 'all' ? ' (filtered)' : ' across traditions'}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {items.map(({ facet, deity, tradition, explicit }) => {
+        {shown.length === 0 && (
+          <div style={{ padding: '14px 0', textAlign: 'center', color: '#8a7340', fontStyle: 'italic', fontSize: 13 }}>
+            No parallels match this filter.
+          </div>
+        )}
+        {shown.map(({ facet, deity, tradition, explicit }) => {
           const tc = colorFor(deity.tradition_id);
           return (
             <div key={facet.id} style={{
