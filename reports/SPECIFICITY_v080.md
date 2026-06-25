@@ -9,6 +9,16 @@ scholarship invented.
 **Corpus:** 934 facets · 259 parallels  
 **Bands:** moderate: 53 · specific: 49 · tag-divergent: 112 · universal-motif: 45
 
+## Significance — randomized null model
+
+A Monte-Carlo test (19,981 random facet pairs, seeded) asks, per parallel: do these two figures share *rarer* function-tags than two **random** figures would by chance? Two random facets usually share nothing (null mean shared-IDF ≈ 0.359), so a real shared structure stands out.
+
+**136 / 259 parallels are significant at p < 0.05** (their tag-sharing beats chance). The rest — the `tag-divergent` set plus any `universal-motif` parallel whose only shared tag is common enough to arise randomly — are **not** statistically distinguishable from two random figures, and are exactly the claims a reviewer would attack.
+
+Notable non-significant parallels carry `specificity_significant: false` in the
+seed; see the per-parallel `specificity_pvalue` / `specificity_z` fields and the
+JSON sidecar for the full list.
+
 | Band | Meaning |
 |---|---|
 | `specific` | Shared tags are rare — strongest structural homology |
