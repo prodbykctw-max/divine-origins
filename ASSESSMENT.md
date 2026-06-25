@@ -200,8 +200,13 @@ mythology.** Specifically:
    Osiris↔Dionysus, Mithras↔Indra land in `universal-motif`; PIE cognates and
    rare shared roles (Danu↔Diti, Kali↔Zurvan) score highest. Scores are baked
    into the canonical seed (by `forward_port.py`), surfaced in the app, and
-   reported in `reports/SPECIFICITY_v080.md`. A true randomized null model is the
-   remaining refinement, but the corpus-relative weighting is in place.
+   reported in `reports/SPECIFICITY_v080.md`. A **randomized null model** (seeded
+   Monte-Carlo over ~20k random facet pairs) now also gives each parallel a
+   p-value: **136/259 are significant at p<0.05**; the other 123 (every
+   `tag-divergent` parallel plus 11 `universal-motif`, including Osiris↔Dionysus
+   at p≈0.14) are **not statistically distinguishable from two random figures** —
+   the precise list a reviewer would attack. This is now a significance test, not
+   just a ranking.
 2. **The four-tier frame is Gnostic-normative.** Mapping Yahweh→Demiurge,
    Brahma→"egoic," etc., is a specific theological reading. The spec
    acknowledges this, but every node inherits the stance; the "scholarly mode"
@@ -307,8 +312,8 @@ In dependency order. Each step has a concrete, checkable exit condition.
 
 **P2 — Earn the rigor the spec promises (ongoing).**
 8. ~~Add a **specificity/frequency weight** so universal motifs are down-ranked.~~
-   **DONE** — `tools/specificity.py` (§5.1). Next refinement: a randomized null
-   model that shuffles tags to establish a chance baseline per band.
+   **DONE** — `tools/specificity.py` (§5.1), including a seeded randomized null
+   model giving each parallel a p-value (136/259 significant at p<0.05).
 9. Build the **120 missing facet sets**; backfill `scholarly_note` on facets.
 10. Only then run **P0 of the backlog** (validate the 47), with a real
     literature check and a *discard* path, not just promote.

@@ -31340,7 +31340,10 @@
         "jealous",
         "lawgiver",
         "punitive"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 15.49,
+      "specificity_significant": true
     },
     {
       "id": "p002",
@@ -31365,7 +31368,10 @@
         "descended-god",
         "dying-rising-god",
         "underworld-journey"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 18.93,
+      "specificity_significant": true
     },
     {
       "id": "p003",
@@ -31387,7 +31393,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "sacrificed-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p004",
@@ -31410,7 +31419,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.0307,
+      "specificity_z": 2.72,
+      "specificity_significant": true
     },
     {
       "id": "p005",
@@ -31433,7 +31445,10 @@
         "culture-hero",
         "light-bringer",
         "wisdom-teacher"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 11.5,
+      "specificity_significant": true
     },
     {
       "id": "p006",
@@ -31454,7 +31469,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "destroyer"
-      ]
+      ],
+      "specificity_pvalue": 0.0319,
+      "specificity_z": 2.67,
+      "specificity_significant": true
     },
     {
       "id": "p007",
@@ -31475,7 +31493,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "betrayer"
-      ]
+      ],
+      "specificity_pvalue": 0.0048,
+      "specificity_z": 5.48,
+      "specificity_significant": true
     },
     {
       "id": "p008",
@@ -31495,7 +31516,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p101",
@@ -31527,7 +31551,10 @@
         "father",
         "first-among-gods",
         "sky"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 16.94,
+      "specificity_significant": true
     },
     {
       "id": "p102",
@@ -31558,7 +31585,10 @@
         "father",
         "first-among-gods",
         "sky"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 16.94,
+      "specificity_significant": true
     },
     {
       "id": "p103",
@@ -31586,7 +31616,10 @@
       "specificity_shared_tags": [
         "storm",
         "thunder"
-      ]
+      ],
+      "specificity_pvalue": 0.0011,
+      "specificity_z": 7.9,
+      "specificity_significant": true
     },
     {
       "id": "p104",
@@ -31616,7 +31649,10 @@
         "cosmic-order-restorer",
         "dragon-slayer",
         "releaser-of-the-waters"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 20.23,
+      "specificity_significant": true
     },
     {
       "id": "p105",
@@ -31642,7 +31678,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p106",
@@ -31666,7 +31705,10 @@
       "specificity_shared_tags": [
         "dragon-slayer",
         "indo-european-root"
-      ]
+      ],
+      "specificity_pvalue": 0.0009,
+      "specificity_z": 8.42,
+      "specificity_significant": true
     },
     {
       "id": "p107",
@@ -31689,7 +31731,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p108",
@@ -31717,7 +31762,10 @@
       "specificity_shared_tags": [
         "covenantal",
         "oath-keeper"
-      ]
+      ],
+      "specificity_pvalue": 0.0005,
+      "specificity_z": 9.78,
+      "specificity_significant": true
     },
     {
       "id": "p109",
@@ -31742,7 +31790,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "oath-keeper"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p110",
@@ -31764,7 +31815,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p111",
@@ -31789,7 +31843,10 @@
         "mediator",
         "messenger",
         "sacrifice"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 15.93,
+      "specificity_significant": true
     },
     {
       "id": "p112",
@@ -31810,7 +31867,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p113",
@@ -31830,7 +31890,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p114",
@@ -31855,7 +31918,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p115",
@@ -31875,7 +31941,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p116",
@@ -31896,7 +31965,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p117",
@@ -31921,7 +31993,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p118",
@@ -31942,7 +32017,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p119",
@@ -31965,7 +32043,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "bound-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p120",
@@ -31987,7 +32068,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p121",
@@ -32009,7 +32093,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p122",
@@ -32030,7 +32117,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p200",
@@ -32056,7 +32146,10 @@
         "PIE-cognate",
         "primordial-waters",
         "river-goddess"
-      ]
+      ],
+      "specificity_pvalue": 0.0001,
+      "specificity_z": 16.08,
+      "specificity_significant": true
     },
     {
       "id": "p201",
@@ -32075,7 +32168,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p202",
@@ -32097,7 +32193,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "mother-of-rebel-race"
-      ]
+      ],
+      "specificity_pvalue": 0.0048,
+      "specificity_z": 5.48,
+      "specificity_significant": true
     },
     {
       "id": "p203",
@@ -32119,7 +32218,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "mother-of-gods"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p204",
@@ -32139,7 +32241,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p205",
@@ -32161,7 +32266,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p206",
@@ -32180,7 +32288,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p207",
@@ -32202,7 +32313,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "dragon-slayer"
-      ]
+      ],
+      "specificity_pvalue": 0.0173,
+      "specificity_z": 3.64,
+      "specificity_significant": true
     },
     {
       "id": "p208",
@@ -32225,7 +32339,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "defeated-titans"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p209",
@@ -32245,7 +32362,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p210",
@@ -32266,7 +32386,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p211",
@@ -32286,7 +32409,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p212",
@@ -32308,7 +32434,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "giants"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p213",
@@ -32327,7 +32456,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p215",
@@ -32348,7 +32480,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p216",
@@ -32367,7 +32502,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p217",
@@ -32389,7 +32527,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "ancestral-dead"
-      ]
+      ],
+      "specificity_pvalue": 0.0048,
+      "specificity_z": 5.48,
+      "specificity_significant": true
     },
     {
       "id": "p218",
@@ -32414,7 +32555,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0234,
+      "specificity_z": 3.21,
+      "specificity_significant": true
     },
     {
       "id": "p219",
@@ -32437,7 +32581,10 @@
       "specificity_shared_tags": [
         "dying-rising-god",
         "fertility-cycle"
-      ]
+      ],
+      "specificity_pvalue": 0.0007,
+      "specificity_z": 9.03,
+      "specificity_significant": true
     },
     {
       "id": "p220",
@@ -32460,7 +32607,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "divine-council-head"
-      ]
+      ],
+      "specificity_pvalue": 0.0175,
+      "specificity_z": 3.57,
+      "specificity_significant": true
     },
     {
       "id": "p221",
@@ -32482,7 +32632,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "cosmos-from-body"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p222",
@@ -32502,7 +32655,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p223",
@@ -32522,7 +32678,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p224",
@@ -32543,7 +32702,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "wisdom-bringer"
-      ]
+      ],
+      "specificity_pvalue": 0.0592,
+      "specificity_z": 1.96,
+      "specificity_significant": false
     },
     {
       "id": "p225",
@@ -32563,7 +32725,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p226",
@@ -32582,7 +32747,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p227",
@@ -32602,7 +32770,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p228",
@@ -32622,7 +32793,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p229",
@@ -32641,7 +32815,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p300",
@@ -32661,7 +32838,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p301",
@@ -32680,7 +32860,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p302",
@@ -32699,7 +32882,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p303",
@@ -32718,7 +32904,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p304",
@@ -32737,7 +32926,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p305",
@@ -32757,7 +32949,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p306",
@@ -32775,7 +32970,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p307",
@@ -32795,7 +32993,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "imprisoned-in-pit"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p308",
@@ -32812,7 +33013,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p309",
@@ -32831,7 +33035,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p310",
@@ -32848,7 +33055,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p311",
@@ -32868,7 +33078,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "Mesopotamian-borrowing"
-      ]
+      ],
+      "specificity_pvalue": 0.0048,
+      "specificity_z": 5.48,
+      "specificity_significant": true
     },
     {
       "id": "p312",
@@ -32889,7 +33102,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "elder-divine-race"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p313",
@@ -32909,7 +33125,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "elder-divine-race"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p314",
@@ -32927,7 +33146,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p315",
@@ -32946,7 +33168,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p316",
@@ -32965,7 +33190,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p317",
@@ -32983,7 +33211,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p318",
@@ -33005,7 +33236,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "giants"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p319",
@@ -33027,7 +33261,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "giants"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p320",
@@ -33048,7 +33285,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "cosmos-from-body"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p321",
@@ -33066,7 +33306,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p322",
@@ -33084,7 +33327,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p323",
@@ -33103,7 +33349,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p324",
@@ -33122,7 +33371,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p325",
@@ -33141,7 +33393,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p326",
@@ -33160,7 +33415,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p327",
@@ -33179,7 +33437,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p328",
@@ -33198,7 +33459,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p329",
@@ -33216,7 +33480,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p330",
@@ -33234,7 +33501,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p331",
@@ -33252,7 +33522,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p332",
@@ -33270,7 +33543,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p333",
@@ -33290,7 +33566,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "mother-of-gods"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p334",
@@ -33310,7 +33589,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "mother-of-gods"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p335",
@@ -33330,7 +33612,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p336",
@@ -33349,7 +33634,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "taught-forbidden-arts"
-      ]
+      ],
+      "specificity_pvalue": 0.0112,
+      "specificity_z": 4.17,
+      "specificity_significant": true
     },
     {
       "id": "p337",
@@ -33366,7 +33654,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p338",
@@ -33385,7 +33676,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "taught-forbidden-arts"
-      ]
+      ],
+      "specificity_pvalue": 0.0112,
+      "specificity_z": 4.17,
+      "specificity_significant": true
     },
     {
       "id": "p_thor_perun",
@@ -33410,7 +33704,10 @@
         "divine-king",
         "sky-father",
         "storm"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 10.93,
+      "specificity_significant": true
     },
     {
       "id": "p_perun_indra",
@@ -33427,7 +33724,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_susanoo_perkwunos",
@@ -33447,7 +33747,10 @@
       "specificity_shared_tags": [
         "chaoskampf",
         "dragon-slayer"
-      ]
+      ],
+      "specificity_pvalue": 0.0009,
+      "specificity_z": 8.59,
+      "specificity_significant": true
     },
     {
       "id": "p_marduk_tiamat_thor",
@@ -33462,7 +33765,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_osiris_christ",
@@ -33480,7 +33786,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_osiris_dionysus",
@@ -33500,7 +33809,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_maitreya_kalki",
@@ -33516,7 +33828,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_maitreya_saoshyant",
@@ -33536,7 +33851,10 @@
         "light-bringer",
         "redeemer",
         "returning-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 11.67,
+      "specificity_significant": true
     },
     {
       "id": "p_saoshyant_christ",
@@ -33555,7 +33873,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "mediator"
-      ]
+      ],
+      "specificity_pvalue": 0.0329,
+      "specificity_z": 2.6,
+      "specificity_significant": true
     },
     {
       "id": "p_eshu_hermes",
@@ -33574,7 +33895,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.0307,
+      "specificity_z": 2.72,
+      "specificity_significant": true
     },
     {
       "id": "p_maui_prometheus",
@@ -33595,7 +33919,10 @@
       "specificity_shared_tags": [
         "culture-hero",
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.006,
+      "specificity_z": 5.27,
+      "specificity_significant": true
     },
     {
       "id": "p_sun_wukong_loki",
@@ -33612,7 +33939,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_viracocha_enki",
@@ -33629,7 +33959,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_nuwa_enki",
@@ -33647,7 +33980,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "craftsman-creator"
-      ]
+      ],
+      "specificity_pvalue": 0.0386,
+      "specificity_z": 2.39,
+      "specificity_significant": true
     },
     {
       "id": "p_obatala_nuwa",
@@ -33666,7 +34002,10 @@
         "civilizing-god",
         "craftsman-creator",
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.0021,
+      "specificity_z": 7.05,
+      "specificity_significant": true
     },
     {
       "id": "p_pachamama_gaia",
@@ -33688,7 +34027,10 @@
         "earth",
         "fertility",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 10.43,
+      "specificity_significant": true
     },
     {
       "id": "p_olodumare_monad",
@@ -33707,7 +34049,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0355,
+      "specificity_z": 2.51,
+      "specificity_significant": true
     },
     {
       "id": "p_zurvan_ein_sof",
@@ -33722,7 +34067,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_tao_brahman",
@@ -33739,7 +34087,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_avalokiteshvara_sophia",
@@ -33755,7 +34106,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_tara_mary",
@@ -33774,7 +34128,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "mediator"
-      ]
+      ],
+      "specificity_pvalue": 0.0329,
+      "specificity_z": 2.6,
+      "specificity_significant": true
     },
     {
       "id": "p_maat_asha",
@@ -33794,7 +34151,10 @@
       "specificity_shared_tags": [
         "cosmic-order",
         "truth"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 10.26,
+      "specificity_significant": true
     },
     {
       "id": "p_thoth_hermes",
@@ -33811,7 +34171,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_osiris_judge_yama",
@@ -33827,7 +34190,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_allah_monad",
@@ -33845,7 +34211,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0355,
+      "specificity_z": 2.51,
+      "specificity_significant": true
     },
     {
       "id": "p_iblis_angra",
@@ -33863,7 +34232,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "usurper"
-      ]
+      ],
+      "specificity_pvalue": 0.0099,
+      "specificity_z": 4.44,
+      "specificity_significant": true
     },
     {
       "id": "p_iblis_satan",
@@ -33880,7 +34252,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "archon"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p_mahdi_maitreya",
@@ -33898,7 +34273,10 @@
       "specificity_shared_tags": [
         "redeemer",
         "returning-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0016,
+      "specificity_z": 7.55,
+      "specificity_significant": true
     },
     {
       "id": "p_mahdi_saoshyant",
@@ -33918,7 +34296,10 @@
         "cross-tier",
         "redeemer",
         "returning-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 8.85,
+      "specificity_significant": true
     },
     {
       "id": "p_khidr_hermes",
@@ -33933,7 +34314,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_insan_kamil_purusha",
@@ -33948,7 +34332,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_mary_isis",
@@ -33967,7 +34354,10 @@
       "specificity_shared_tags": [
         "divine-queen",
         "queen-of-heaven"
-      ]
+      ],
+      "specificity_pvalue": 0.0009,
+      "specificity_z": 8.45,
+      "specificity_significant": true
     },
     {
       "id": "p_gottheit_ein_sof",
@@ -33986,7 +34376,10 @@
       "specificity_shared_tags": [
         "beyond-being",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0017,
+      "specificity_z": 7.46,
+      "specificity_significant": true
     },
     {
       "id": "p_metatron_enoch",
@@ -34002,7 +34395,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_jain_no_creator_sunyata",
@@ -34018,7 +34414,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_waheguru_allah",
@@ -34036,7 +34435,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0355,
+      "specificity_z": 2.51,
+      "specificity_significant": true
     },
     {
       "id": "p_waheguru_ein_sof",
@@ -34054,7 +34456,10 @@
       "specificity_shared_tags": [
         "transcendent",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0054,
+      "specificity_z": 5.36,
+      "specificity_significant": true
     },
     {
       "id": "p_hukam_maat",
@@ -34069,7 +34474,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_anu_el",
@@ -34086,7 +34494,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "divine-council-head"
-      ]
+      ],
+      "specificity_pvalue": 0.0175,
+      "specificity_z": 3.57,
+      "specificity_significant": true
     },
     {
       "id": "p_enlil_yahweh",
@@ -34102,7 +34513,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_enki_prometheus",
@@ -34120,7 +34534,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "culture-hero"
-      ]
+      ],
+      "specificity_pvalue": 0.0192,
+      "specificity_z": 3.52,
+      "specificity_significant": true
     },
     {
       "id": "p_ereshkigal_izanami",
@@ -34135,7 +34552,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_shamash_maat",
@@ -34152,7 +34572,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "law"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p_ra_inti",
@@ -34171,7 +34594,10 @@
         "cosmic-order-maintainer",
         "divine-king",
         "sun"
-      ]
+      ],
+      "specificity_pvalue": 0.0016,
+      "specificity_z": 7.65,
+      "specificity_significant": true
     },
     {
       "id": "p_set_iblis",
@@ -34186,7 +34612,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_horus_christ",
@@ -34202,7 +34631,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_hero_twins_inanna",
@@ -34217,7 +34649,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_hun_hunahpu_osiris",
@@ -34236,7 +34671,10 @@
         "cross-tier",
         "dismembered",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 9.02,
+      "specificity_significant": true
     },
     {
       "id": "p_chaac_indra",
@@ -34253,7 +34691,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "storm"
-      ]
+      ],
+      "specificity_pvalue": 0.0294,
+      "specificity_z": 2.95,
+      "specificity_significant": true
     },
     {
       "id": "p_white_buffalo_maitreya",
@@ -34270,7 +34711,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "returning-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0133,
+      "specificity_z": 3.96,
+      "specificity_significant": true
     },
     {
       "id": "p_raven_prometheus",
@@ -34289,7 +34733,10 @@
         "cross-tier",
         "culture-hero",
         "fire-stealer"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 8.68,
+      "specificity_significant": true
     },
     {
       "id": "p_sky_woman_ranginui",
@@ -34306,7 +34753,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0548,
+      "specificity_z": 1.97,
+      "specificity_significant": false
     },
     {
       "id": "p_sky_woman_twins_angra",
@@ -34321,7 +34771,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_anansi_hermes",
@@ -34340,7 +34793,10 @@
         "cross-tier",
         "culture-hero",
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.0027,
+      "specificity_z": 6.57,
+      "specificity_significant": true
     },
     {
       "id": "p_nommo_osiris",
@@ -34359,7 +34815,10 @@
         "cross-tier",
         "dismembered",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 9.02,
+      "specificity_significant": true
     },
     {
       "id": "p_cagn_maui",
@@ -34377,7 +34836,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.013,
+      "specificity_z": 4.02,
+      "specificity_significant": true
     },
     {
       "id": "p_dangun_viracocha",
@@ -34396,7 +34858,10 @@
         "civilizing-god",
         "cross-tier",
         "culture-hero"
-      ]
+      ],
+      "specificity_pvalue": 0.0022,
+      "specificity_z": 6.87,
+      "specificity_significant": true
     },
     {
       "id": "p_erlik_veles",
@@ -34414,7 +34879,10 @@
       "specificity_shared_tags": [
         "death",
         "underworld"
-      ]
+      ],
+      "specificity_pvalue": 0.0029,
+      "specificity_z": 6.44,
+      "specificity_significant": true
     },
     {
       "id": "p_perkunas_perkwunos",
@@ -34432,7 +34900,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "storm"
-      ]
+      ],
+      "specificity_pvalue": 0.0294,
+      "specificity_z": 2.95,
+      "specificity_significant": true
     },
     {
       "id": "p_laima_norns",
@@ -34450,7 +34921,10 @@
       "specificity_shared_tags": [
         "cosmic-order-maintainer",
         "fate-governor"
-      ]
+      ],
+      "specificity_pvalue": 0.0072,
+      "specificity_z": 4.8,
+      "specificity_significant": true
     },
     {
       "id": "p_saule_amaterasu",
@@ -34468,7 +34942,10 @@
       "specificity_shared_tags": [
         "cosmic-order-maintainer",
         "sun"
-      ]
+      ],
+      "specificity_pvalue": 0.006,
+      "specificity_z": 5.29,
+      "specificity_significant": true
     },
     {
       "id": "p_vainamoinen_orpheus",
@@ -34486,7 +34963,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "culture-hero"
-      ]
+      ],
+      "specificity_pvalue": 0.0192,
+      "specificity_z": 3.52,
+      "specificity_significant": true
     },
     {
       "id": "p_mari_pachamama",
@@ -34505,7 +34985,10 @@
         "cosmic-source",
         "earth",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0012,
+      "specificity_z": 7.9,
+      "specificity_significant": true
     },
     {
       "id": "p_sugaar_veles",
@@ -34520,7 +35003,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_teshub_zeus",
@@ -34538,7 +35024,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "storm"
-      ]
+      ],
+      "specificity_pvalue": 0.0294,
+      "specificity_z": 2.95,
+      "specificity_significant": true
     },
     {
       "id": "p_melqart_osiris",
@@ -34557,7 +35046,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0094,
+      "specificity_z": 4.51,
+      "specificity_significant": true
     },
     {
       "id": "p_the_one_ein_sof",
@@ -34576,7 +35068,10 @@
       "specificity_shared_tags": [
         "beyond-being",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0017,
+      "specificity_z": 7.46,
+      "specificity_significant": true
     },
     {
       "id": "p_janus_eshu",
@@ -34594,7 +35089,10 @@
       "specificity_shared_tags": [
         "liminality",
         "threshold-guardian"
-      ]
+      ],
+      "specificity_pvalue": 0.0007,
+      "specificity_z": 9.07,
+      "specificity_significant": true
     },
     {
       "id": "p_sol_invictus_ra",
@@ -34613,7 +35111,10 @@
         "cosmic-order-maintainer",
         "divine-king",
         "sun"
-      ]
+      ],
+      "specificity_pvalue": 0.0016,
+      "specificity_z": 7.65,
+      "specificity_significant": true
     },
     {
       "id": "p_kali_time_zurvan",
@@ -34630,7 +35131,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "time-itself"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p_durga_athena",
@@ -34648,7 +35152,10 @@
       "specificity_shared_tags": [
         "cosmic-order-maintainer",
         "war"
-      ]
+      ],
+      "specificity_pvalue": 0.0076,
+      "specificity_z": 4.73,
+      "specificity_significant": true
     },
     {
       "id": "p_chhinnamasta_osiris",
@@ -34665,7 +35172,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_ganesha_janus",
@@ -34682,7 +35192,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cosmic-order-maintainer"
-      ]
+      ],
+      "specificity_pvalue": 0.0896,
+      "specificity_z": 1.44,
+      "specificity_significant": false
     },
     {
       "id": "p_baldur_osiris",
@@ -34699,7 +35212,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_baldur_christ",
@@ -34715,7 +35231,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_xipe_totec_osiris",
@@ -34733,7 +35252,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0094,
+      "specificity_z": 4.51,
+      "specificity_significant": true
     },
     {
       "id": "p_orunmila_thoth",
@@ -34748,7 +35270,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_yemoja_isis",
@@ -34763,7 +35288,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_freya_inanna",
@@ -34781,7 +35309,10 @@
       "specificity_shared_tags": [
         "fertility",
         "love"
-      ]
+      ],
+      "specificity_pvalue": 0.0032,
+      "specificity_z": 6.25,
+      "specificity_significant": true
     },
     {
       "id": "p_tlaloc_chaac",
@@ -34799,7 +35330,10 @@
       "specificity_shared_tags": [
         "fertility",
         "rain"
-      ]
+      ],
+      "specificity_pvalue": 0.0024,
+      "specificity_z": 6.71,
+      "specificity_significant": true
     },
     {
       "id": "p_vairochana_ptah",
@@ -34814,7 +35348,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_papatuanuku_gaia",
@@ -34833,7 +35370,10 @@
         "cosmic-source",
         "earth",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0012,
+      "specificity_z": 7.9,
+      "specificity_significant": true
     },
     {
       "id": "p_pele_kali",
@@ -34850,7 +35390,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "destroyer"
-      ]
+      ],
+      "specificity_pvalue": 0.0319,
+      "specificity_z": 2.67,
+      "specificity_significant": true
     },
     {
       "id": "p_altjira_anu",
@@ -34868,7 +35411,10 @@
       "specificity_shared_tags": [
         "transcendent",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0054,
+      "specificity_z": 5.36,
+      "specificity_significant": true
     },
     {
       "id": "p_viracocha_yahweh_flood",
@@ -34883,7 +35429,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_varuna_ahura",
@@ -34899,7 +35448,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_indra_perkwunos",
@@ -34918,7 +35470,10 @@
       "specificity_shared_tags": [
         "chaoskampf",
         "dragon-slayer"
-      ]
+      ],
+      "specificity_pvalue": 0.0009,
+      "specificity_z": 8.59,
+      "specificity_significant": true
     },
     {
       "id": "p_agni_hermes",
@@ -34936,7 +35491,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "mediator"
-      ]
+      ],
+      "specificity_pvalue": 0.014,
+      "specificity_z": 3.9,
+      "specificity_significant": true
     },
     {
       "id": "p_amesha_sefirot",
@@ -34956,7 +35514,10 @@
         "cosmic-order-maintainer",
         "divine-council",
         "first-emanation"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 10.31,
+      "specificity_significant": true
     },
     {
       "id": "p_guanyin_tara",
@@ -34975,7 +35536,10 @@
         "cross-tier",
         "mediator",
         "redeemer"
-      ]
+      ],
+      "specificity_pvalue": 0.0017,
+      "specificity_z": 7.49,
+      "specificity_significant": true
     },
     {
       "id": "p_jade_emperor_el",
@@ -34992,7 +35556,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "divine-council-head"
-      ]
+      ],
+      "specificity_pvalue": 0.0175,
+      "specificity_z": 3.57,
+      "specificity_significant": true
     },
     {
       "id": "p_inari_eshu",
@@ -35007,7 +35574,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_izanagi_ranginui",
@@ -35022,7 +35592,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_susanoo_teshub",
@@ -35041,7 +35614,10 @@
         "chaoskampf",
         "cross-tier",
         "dragon-slayer"
-      ]
+      ],
+      "specificity_pvalue": 0.0005,
+      "specificity_z": 9.89,
+      "specificity_significant": true
     },
     {
       "id": "p_perun_perkunas",
@@ -35062,7 +35638,10 @@
         "divine-king",
         "sky",
         "storm"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 10.55,
+      "specificity_significant": true
     },
     {
       "id": "p_jarilo_osiris",
@@ -35080,7 +35659,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0094,
+      "specificity_z": 4.51,
+      "specificity_significant": true
     },
     {
       "id": "p_brigid_vesta",
@@ -35097,7 +35679,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "fire"
-      ]
+      ],
+      "specificity_pvalue": 0.0169,
+      "specificity_z": 3.71,
+      "specificity_significant": true
     },
     {
       "id": "p_adam_kadmon_purusha",
@@ -35112,7 +35697,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_pleroma_sefirot",
@@ -35129,7 +35717,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "first-emanation"
-      ]
+      ],
+      "specificity_pvalue": 0.0175,
+      "specificity_z": 3.57,
+      "specificity_significant": true
     },
     {
       "id": "p_barbelo_sophia",
@@ -35144,7 +35735,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_legba_eshu",
@@ -35162,7 +35756,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "threshold-guardian"
-      ]
+      ],
+      "specificity_pvalue": 0.0106,
+      "specificity_z": 4.29,
+      "specificity_significant": true
     },
     {
       "id": "p_quetzalcoatl_viracocha",
@@ -35182,7 +35779,10 @@
         "cross-tier",
         "culture-hero",
         "wisdom-bringer"
-      ]
+      ],
+      "specificity_pvalue": 0.0007,
+      "specificity_z": 9.18,
+      "specificity_significant": true
     },
     {
       "id": "p_io_ein_sof",
@@ -35200,7 +35800,10 @@
       "specificity_shared_tags": [
         "transcendent",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0054,
+      "specificity_z": 5.36,
+      "specificity_significant": true
     },
     {
       "id": "p_nareau_anansi",
@@ -35217,7 +35820,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "trickster"
-      ]
+      ],
+      "specificity_pvalue": 0.0307,
+      "specificity_z": 2.72,
+      "specificity_significant": true
     },
     {
       "id": "p_varuna_varuna_ahura_confirmed",
@@ -35233,7 +35839,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_cybele_kali",
@@ -35248,7 +35857,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_attis_osiris",
@@ -35267,7 +35879,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0094,
+      "specificity_z": 4.51,
+      "specificity_significant": true
     },
     {
       "id": "p_mithras_indra",
@@ -35284,7 +35899,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_amun_ra_ein_sof",
@@ -35301,7 +35919,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0355,
+      "specificity_z": 2.51,
+      "specificity_significant": true
     },
     {
       "id": "p_amaterasu_cave_ra",
@@ -35318,7 +35939,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_spider_grandmother_ptah",
@@ -35336,7 +35960,10 @@
       "specificity_shared_tags": [
         "cosmic-source",
         "craftsman-creator"
-      ]
+      ],
+      "specificity_pvalue": 0.0098,
+      "specificity_z": 4.46,
+      "specificity_significant": true
     },
     {
       "id": "p_hekate_eshu",
@@ -35353,7 +35980,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "threshold-guardian"
-      ]
+      ],
+      "specificity_pvalue": 0.0106,
+      "specificity_z": 4.29,
+      "specificity_significant": true
     },
     {
       "id": "p_apollo_thoth",
@@ -35370,7 +36000,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_demeter_changing_woman",
@@ -35388,7 +36021,10 @@
       "specificity_shared_tags": [
         "great-mother",
         "seasonal-cycle"
-      ]
+      ],
+      "specificity_pvalue": 0.0036,
+      "specificity_z": 6.02,
+      "specificity_significant": true
     },
     {
       "id": "p_tezcatlipoca_angra",
@@ -35405,7 +36041,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "destroyer"
-      ]
+      ],
+      "specificity_pvalue": 0.0319,
+      "specificity_z": 2.67,
+      "specificity_significant": true
     },
     {
       "id": "p_waaqa_nyame",
@@ -35423,7 +36062,10 @@
       "specificity_shared_tags": [
         "cosmic-source",
         "transcendent"
-      ]
+      ],
+      "specificity_pvalue": 0.0086,
+      "specificity_z": 4.58,
+      "specificity_significant": true
     },
     {
       "id": "p_tabiti_vesta",
@@ -35441,7 +36083,10 @@
       "specificity_shared_tags": [
         "cosmic-order-maintainer",
         "fire"
-      ]
+      ],
+      "specificity_pvalue": 0.0045,
+      "specificity_z": 5.49,
+      "specificity_significant": true
     },
     {
       "id": "p_zeus_varuna",
@@ -35460,7 +36105,10 @@
       "specificity_shared_tags": [
         "cosmic-order-maintainer",
         "moral-law"
-      ]
+      ],
+      "specificity_pvalue": 0.005,
+      "specificity_z": 5.42,
+      "specificity_significant": true
     },
     {
       "id": "p_selu_hun_hunahpu",
@@ -35479,7 +36127,10 @@
         "cross-tier",
         "dying-rising-god",
         "vegetation-deity"
-      ]
+      ],
+      "specificity_pvalue": 0.0007,
+      "specificity_z": 9.46,
+      "specificity_significant": true
     },
     {
       "id": "p_inktomi_anansi",
@@ -35500,7 +36151,10 @@
         "culture-hero",
         "trickster",
         "wisdom-bringer"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 8.88,
+      "specificity_significant": true
     },
     {
       "id": "p_isis_universal_mary",
@@ -35515,7 +36169,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_hermes_trismegistus_thoth",
@@ -35530,7 +36187,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_ogo_iblis",
@@ -35545,7 +36205,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_lilith_iblis",
@@ -35560,7 +36223,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_ishtar_inanna",
@@ -35579,7 +36245,10 @@
       "specificity_shared_tags": [
         "fertility",
         "love"
-      ]
+      ],
+      "specificity_pvalue": 0.0032,
+      "specificity_z": 6.25,
+      "specificity_significant": true
     },
     {
       "id": "p_tian_maat",
@@ -35594,7 +36263,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_cao_dai_serapis",
@@ -35609,7 +36281,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_kachinas_lares",
@@ -35626,7 +36301,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "ancestor-spirits"
-      ]
+      ],
+      "specificity_pvalue": 0.0068,
+      "specificity_z": 4.82,
+      "specificity_significant": true
     },
     {
       "id": "p_huitzilopochtli_ra",
@@ -35645,7 +36323,10 @@
         "cosmic-order-maintainer",
         "divine-king",
         "sun"
-      ]
+      ],
+      "specificity_pvalue": 0.0016,
+      "specificity_z": 7.65,
+      "specificity_significant": true
     },
     {
       "id": "p_coyolxauhqui_chhinnamasta",
@@ -35660,7 +36341,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_si_moon_ix_chel",
@@ -35678,7 +36362,10 @@
       "specificity_shared_tags": [
         "great-mother",
         "moon"
-      ]
+      ],
+      "specificity_pvalue": 0.0033,
+      "specificity_z": 6.18,
+      "specificity_significant": true
     },
     {
       "id": "p_olmec_dragon_quetzalcoatl",
@@ -35695,7 +36382,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_amma_taiowa",
@@ -35713,7 +36403,10 @@
       "specificity_shared_tags": [
         "cosmic-source",
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0086,
+      "specificity_z": 4.58,
+      "specificity_significant": true
     },
     {
       "id": "p_bachue_atabey",
@@ -35731,7 +36424,10 @@
       "specificity_shared_tags": [
         "cosmic-source",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0121,
+      "specificity_z": 4.04,
+      "specificity_significant": true
     },
     {
       "id": "p_windigo_mara",
@@ -35746,7 +36442,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_kalki_mahdi",
@@ -35761,7 +36460,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_yama_ymir_pie",
@@ -35777,7 +36479,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_pangu_purusha",
@@ -35793,7 +36498,10 @@
       "triage_status": "established",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_anubis_yama",
@@ -35810,7 +36518,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "death"
-      ]
+      ],
+      "specificity_pvalue": 0.0255,
+      "specificity_z": 3.05,
+      "specificity_significant": true
     },
     {
       "id": "p_apophis_jormungandr",
@@ -35829,7 +36540,10 @@
         "chaos",
         "cosmic-serpent",
         "destroyer"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 11.22,
+      "specificity_significant": true
     },
     {
       "id": "p_loki_iblis",
@@ -35846,7 +36560,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "bound-adversary"
-      ]
+      ],
+      "specificity_pvalue": 0.0063,
+      "specificity_z": 5.1,
+      "specificity_significant": true
     },
     {
       "id": "p_norns_moirai",
@@ -35866,7 +36583,10 @@
         "cosmic-order-maintainer",
         "fate-governor",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0021,
+      "specificity_z": 7.11,
+      "specificity_significant": true
     },
     {
       "id": "p_dionysus_attis",
@@ -35885,7 +36605,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "dying-rising-god"
-      ]
+      ],
+      "specificity_pvalue": 0.0094,
+      "specificity_z": 4.51,
+      "specificity_significant": true
     },
     {
       "id": "p_prometheus_lilith_iblis",
@@ -35900,7 +36623,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_ushas_eostre",
@@ -35919,7 +36645,10 @@
       "specificity_shared_tags": [
         "dawn",
         "seasonal-cycle"
-      ]
+      ],
+      "specificity_pvalue": 0.0008,
+      "specificity_z": 8.87,
+      "specificity_significant": true
     },
     {
       "id": "p_mitra_tyr",
@@ -35936,7 +36665,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "oath-keeper"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p_eight_immortals_amesha",
@@ -35953,7 +36685,10 @@
       "specificity_band": "specific",
       "specificity_shared_tags": [
         "divine-council"
-      ]
+      ],
+      "specificity_pvalue": 0.0078,
+      "specificity_z": 4.61,
+      "specificity_significant": true
     },
     {
       "id": "p_sun_wukong_hanuman",
@@ -35970,7 +36705,10 @@
       "specificity_band": "universal-motif",
       "specificity_shared_tags": [
         "cross-tier"
-      ]
+      ],
+      "specificity_pvalue": 0.1436,
+      "specificity_z": 0.96,
+      "specificity_significant": false
     },
     {
       "id": "p_lakshmi_kamala",
@@ -35989,7 +36727,10 @@
         "abundance",
         "fertility",
         "great-mother"
-      ]
+      ],
+      "specificity_pvalue": 0.0005,
+      "specificity_z": 9.95,
+      "specificity_significant": true
     },
     {
       "id": "p_odin_self_sacrifice_christ",
@@ -36004,7 +36745,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_morrigan_kali",
@@ -36021,7 +36765,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "destroyer"
-      ]
+      ],
+      "specificity_pvalue": 0.0319,
+      "specificity_z": 2.67,
+      "specificity_significant": true
     },
     {
       "id": "p_ceridwen_soma",
@@ -36036,7 +36783,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_asclepius_dian_cecht",
@@ -36054,7 +36804,10 @@
       "specificity_shared_tags": [
         "divine-physician",
         "healer"
-      ]
+      ],
+      "specificity_pvalue": 0.0005,
+      "specificity_z": 9.88,
+      "specificity_significant": true
     },
     {
       "id": "p_husayn_christ",
@@ -36069,7 +36822,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_eos_ushas",
@@ -36088,7 +36844,10 @@
         "dawn",
         "great-mother",
         "seasonal-cycle"
-      ]
+      ],
+      "specificity_pvalue": 0.0004,
+      "specificity_z": 11.19,
+      "specificity_significant": true
     },
     {
       "id": "p_nephthys_izanami",
@@ -36103,7 +36862,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_mercury_eshu",
@@ -36118,7 +36880,10 @@
       "triage_status": "genuine-novel",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_ritamasatmaat",
@@ -36133,7 +36898,10 @@
       "triage_status": "known-uncited",
       "specificity_score": 0.0,
       "specificity_band": "tag-divergent",
-      "specificity_shared_tags": []
+      "specificity_shared_tags": [],
+      "specificity_pvalue": 1.0,
+      "specificity_z": -0.34,
+      "specificity_significant": false
     },
     {
       "id": "p_erzulie_oshun_diaspora",
@@ -36151,7 +36919,10 @@
       "specificity_shared_tags": [
         "cross-tier",
         "love"
-      ]
+      ],
+      "specificity_pvalue": 0.0064,
+      "specificity_z": 5.01,
+      "specificity_significant": true
     },
     {
       "id": "p_atman_gottheit",
@@ -36168,7 +36939,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "unmanifest-source"
-      ]
+      ],
+      "specificity_pvalue": 0.0355,
+      "specificity_z": 2.51,
+      "specificity_significant": true
     },
     {
       "id": "p_ravana_loki",
@@ -36185,7 +36959,10 @@
       "specificity_band": "moderate",
       "specificity_shared_tags": [
         "adversary"
-      ]
+      ],
+      "specificity_pvalue": 0.0281,
+      "specificity_z": 3.02,
+      "specificity_significant": true
     }
   ],
   "cosmological_frameworks": [
