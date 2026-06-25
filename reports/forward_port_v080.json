@@ -92,5 +92,11 @@
   ],
   "citations_ported": 14,
   "triage_ported": 267,
-  "triage_corrected": 46
+  "triage_corrected": 46,
+  "specificity_bands": {
+    "specific": 49,
+    "moderate": 53,
+    "tag-divergent": 112,
+    "universal-motif": 45
+  }
 }

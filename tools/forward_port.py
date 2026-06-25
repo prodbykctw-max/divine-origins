@@ -154,6 +154,12 @@ def main():
         deduped.append(p)
     base["canonical_parallels"] = deduped
 
+    # --- 4b. annotate each parallel with a specificity weight ----------
+    # (parallelomania control — see tools/specificity.py / ASSESSMENT §5.1)
+    import specificity
+    spec_summary = specificity.annotate(base)
+    report["specificity_bands"] = spec_summary["bands"]
+
     # --- 5. metadata ---------------------------------------------------
     est = sum(1 for p in deduped if p.get("provenance") == "established")
     tri = collections.Counter(p.get("triage_status") for p in deduped)
