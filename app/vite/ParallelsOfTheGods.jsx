@@ -161,6 +161,7 @@ function SourceMapApp({ data, onReload }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [scholarlyMode, setScholarlyMode] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [compareOpen, setCompareOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   // Reset selection if data reloaded
@@ -345,6 +346,7 @@ function SourceMapApp({ data, onReload }) {
       <Header
         meta={meta}
         onAboutClick={() => setAboutOpen(true)}
+        onCompareClick={() => setCompareOpen(true)}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         scholarlyMode={scholarlyMode}
@@ -406,6 +408,17 @@ function SourceMapApp({ data, onReload }) {
       )}
 
       {aboutOpen && <AboutModal meta={meta} onClose={() => setAboutOpen(false)} />}
+
+      {compareOpen && (
+        <CompareModal
+          facets={facets}
+          deityById={deityById}
+          traditionById={traditionById}
+          parallels={parallels}
+          initialFacetId={selectedFacetId}
+          onClose={() => setCompareOpen(false)}
+        />
+      )}
     </div>
   );
 }
@@ -413,7 +426,7 @@ function SourceMapApp({ data, onReload }) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Header
 // ─────────────────────────────────────────────────────────────────────────────
-function Header({ meta, onAboutClick, searchQuery, setSearchQuery, scholarlyMode, setScholarlyMode, filtersOpen, setFiltersOpen, visibleCount, totalCount, onFileUpload }) {
+function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuery, scholarlyMode, setScholarlyMode, filtersOpen, setFiltersOpen, visibleCount, totalCount, onFileUpload }) {
   const fileRef = useRef(null);
 
   return (
@@ -435,20 +448,38 @@ function Header({ meta, onAboutClick, searchQuery, setSearchQuery, scholarlyMode
               {visibleCount} of {totalCount} facets shown
             </div>
           </div>
-          <button
-            onClick={onAboutClick}
-            className="smallcaps"
-            style={{
-              fontSize: '10px',
-              padding: '6px 10px',
-              border: '1px solid #b08648',
-              borderRadius: '2px',
-              color: '#6b5223',
-              background: 'transparent',
-            }}
-          >
-            About
-          </button>
+          <div style={{ display: 'flex', gap: 6 }}>
+            <button
+              onClick={onCompareClick}
+              className="smallcaps"
+              style={{
+                fontSize: '10px',
+                padding: '6px 10px',
+                border: '1px solid #b08648',
+                borderRadius: '2px',
+                color: '#6b5223',
+                background: 'transparent',
+                cursor: 'pointer',
+              }}
+            >
+              Compare
+            </button>
+            <button
+              onClick={onAboutClick}
+              className="smallcaps"
+              style={{
+                fontSize: '10px',
+                padding: '6px 10px',
+                border: '1px solid #b08648',
+                borderRadius: '2px',
+                color: '#6b5223',
+                background: 'transparent',
+                cursor: 'pointer',
+              }}
+            >
+              About
+            </button>
+          </div>
         </div>
 
         <div className="mt-3 flex items-center gap-2">
@@ -1319,6 +1350,158 @@ function AboutModal({ meta, onClose }) {
             <p style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
               {meta.description}
             </p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CompareModal — side-by-side comparison of any two facets (docs/00 §4)
+// ─────────────────────────────────────────────────────────────────────────────
+function CompareModal({ facets, deityById, traditionById, parallels, initialFacetId, onClose }) {
+  // facet options sorted by deity name for the two pickers
+  const options = useMemo(() => {
+    return facets
+      .map(f => {
+        const d = deityById[f.parent_deity_id];
+        if (!d) return null;
+        const t = traditionById[d.tradition_id];
+        return { id: f.id, label: `${d.primary_name} · ${f.facet_name} (${t?.name || d.tradition_id})` };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.label.localeCompare(b.label));
+  }, [facets, deityById, traditionById]);
+
+  const facetById = useMemo(() => Object.fromEntries(facets.map(f => [f.id, f])), [facets]);
+  const [aId, setAId] = useState(initialFacetId || (options[0] && options[0].id) || '');
+  const [bId, setBId] = useState((options[1] && options[1].id) || '');
+
+  const a = facetById[aId];
+  const b = facetById[bId];
+  const da = a && deityById[a.parent_deity_id];
+  const db = b && deityById[b.parent_deity_id];
+
+  // shared function-tags (the raw material of the specificity weight)
+  const sharedTags = (a && b)
+    ? (a.function_tags || []).filter(t => (b.function_tags || []).includes(t))
+    : [];
+
+  // is there a canonical parallel between these two facets?
+  const link = (a && b) ? parallels.find(p =>
+    (p.facet_a_id === aId && p.facet_b_id === bId) ||
+    (p.facet_a_id === bId && p.facet_b_id === aId)) : null;
+
+  const Picker = ({ value, onChange }) => (
+    <select
+      value={value}
+      onChange={e => onChange(e.target.value)}
+      style={{
+        width: '100%', padding: '6px 8px', fontFamily: 'inherit', fontSize: '13px',
+        background: '#fbf7ea', border: '1px solid rgba(176,134,72,0.5)', borderRadius: '2px',
+        color: '#1d2030',
+      }}
+    >
+      {options.map(o => <option key={o.id} value={o.id}>{o.label}</option>)}
+    </select>
+  );
+
+  const Column = ({ facet, deity }) => {
+    if (!facet || !deity) return <div style={{ flex: 1, color: '#8a7340', fontStyle: 'italic' }}>—</div>;
+    const tc = colorFor(deity.tradition_id);
+    const t = traditionById[deity.tradition_id];
+    return (
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div className="marginalia" style={{ padding: '2px 6px', background: tc.bg, color: '#faf5e7', borderRadius: '2px', display: 'inline-block' }}>
+          {t?.name || deity.tradition_id}
+        </div>
+        <div style={{ fontSize: '18px', fontWeight: 600, color: '#1d2030', marginTop: 4 }}>{deity.primary_name}</div>
+        <div className="marginalia" style={{ color: tc.bg }}>{facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}</div>
+        {facet.valence && <div style={{ fontSize: 12, color: '#3a322a', marginTop: 4, textTransform: 'capitalize' }}>{facet.valence}</div>}
+        <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Function tags</div>
+        <div className="flex flex-wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+          {(facet.function_tags || []).map(tag => (
+            <span key={tag} style={{
+              padding: '2px 6px', fontSize: 11, borderRadius: 2,
+              background: sharedTags.includes(tag) ? '#3f6e5e' : 'rgba(176,134,72,0.12)',
+              color: sharedTags.includes(tag) ? '#faf5e7' : '#3a322a',
+              fontFamily: 'JetBrains Mono, ui-monospace, monospace',
+            }}>{tag}</span>
+          ))}
+        </div>
+        {facet.core_claim && (
+          <>
+            <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Core claim</div>
+            <div style={{ fontSize: 13, color: '#3a322a', fontStyle: 'italic', lineHeight: 1.45 }}>{facet.core_claim}</div>
+          </>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <>
+      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
+      <div className="fade-in" style={{
+        position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+        width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px)', zIndex: 70,
+        background: '#faf5e7', borderRadius: '4px', boxShadow: '0 12px 40px rgba(29,32,48,0.3)',
+        border: '1px solid #b08648', display: 'flex', flexDirection: 'column',
+      }}>
+        <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(176,134,72,0.3)' }}>
+          <div className="flex items-start justify-between" style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div>
+              <div className="marginalia">Compare two figures</div>
+              <h2 style={{ fontSize: '20px', fontWeight: 600, color: '#1d2030', lineHeight: 1.1 }}>Side by side</h2>
+            </div>
+            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8a7340' }}><X size={18} /></button>
+          </div>
+          <div style={{ display: 'flex', gap: 12, marginTop: 12 }}>
+            <div style={{ flex: 1 }}><Picker value={aId} onChange={setAId} /></div>
+            <div style={{ flex: 1 }}><Picker value={bId} onChange={setBId} /></div>
+          </div>
+        </div>
+        <div className="scrollbar-thin" style={{ overflowY: 'auto', padding: '16px 20px 20px' }}>
+          <div style={{ display: 'flex', gap: 16 }}>
+            <Column facet={a} deity={da} />
+            <Column facet={b} deity={db} />
+          </div>
+
+          <div className="codex-rule" style={{ margin: '16px 0' }} />
+
+          <div className="marginalia mb-1">Shared structural tags</div>
+          {sharedTags.length ? (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+              {sharedTags.map(t => (
+                <span key={t} style={{ padding: '2px 6px', fontSize: 11, borderRadius: 2, background: '#3f6e5e', color: '#faf5e7', fontFamily: 'JetBrains Mono, ui-monospace, monospace' }}>{t}</span>
+              ))}
+            </div>
+          ) : (
+            <div style={{ fontSize: 13, color: '#8a7340', fontStyle: 'italic' }}>
+              No shared function-tags — any parallel between these two rests on its written basis, not tag overlap.
+            </div>
+          )}
+
+          <div className="marginalia mb-1" style={{ marginTop: 12 }}>Canonical parallel</div>
+          {link ? (
+            <div style={{ border: '1px solid rgba(176,134,72,0.3)', borderRadius: 2, padding: '10px 12px', background: '#fbf7ea' }}>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
+                {link.strength && <span className="marginalia" style={{ padding: '1px 5px', background: '#b08648', color: '#faf5e7', borderRadius: 2, fontSize: 9 }}>{link.strength}</span>}
+                {link.specificity_band && <span className="marginalia" style={{ padding: '1px 5px', background: SPECIFICITY_COLORS[link.specificity_band] || '#8a7340', color: '#faf5e7', borderRadius: 2, fontSize: 9 }}>{link.specificity_band}</span>}
+                {link.specificity_significant === false && <span className="marginalia" style={{ padding: '1px 5px', border: '1px solid #9c4a3a', color: '#9c4a3a', borderRadius: 2, fontSize: 9 }}>n.s.</span>}
+                {link.type && <span className="marginalia" style={{ padding: '1px 5px', background: 'rgba(176,134,72,0.18)', color: '#6b5223', borderRadius: 2, fontSize: 9 }}>{link.type.replace(/-/g, ' ')}</span>}
+              </div>
+              {Array.isArray(link.basis) && (
+                <ul style={{ fontSize: 12.5, color: '#3a322a', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
+                  {link.basis.map((bb, i) => <li key={i} style={{ marginBottom: 3 }}>{bb}</li>)}
+                </ul>
+              )}
+            </div>
+          ) : (
+            <div style={{ fontSize: 13, color: '#8a7340', fontStyle: 'italic' }}>
+              No canonical parallel is recorded between these two facets.
+            </div>
           )}
         </div>
       </div>
