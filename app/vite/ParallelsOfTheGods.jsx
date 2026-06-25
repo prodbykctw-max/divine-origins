@@ -407,7 +407,7 @@ function SourceMapApp({ data, onReload }) {
         />
       )}
 
-      {aboutOpen && <AboutModal meta={meta} onClose={() => setAboutOpen(false)} />}
+      {aboutOpen && <AboutModal meta={meta} parallels={parallels} onClose={() => setAboutOpen(false)} />}
 
       {compareOpen && (
         <CompareModal
@@ -1228,7 +1228,13 @@ function TagsTab({ facet }) {
 // ─────────────────────────────────────────────────────────────────────────────
 // AboutModal — explanation of the framework
 // ─────────────────────────────────────────────────────────────────────────────
-function AboutModal({ meta, onClose }) {
+function AboutModal({ meta, parallels = [], onClose }) {
+  const stats = useMemo(() => {
+    const total = parallels.length;
+    const sig = parallels.filter(p => p.specificity_significant === true).length;
+    const cited = parallels.filter(p => p.provenance === 'established').length;
+    return { total, sig, cited };
+  }, [parallels]);
   return (
     <>
       <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
@@ -1346,6 +1352,12 @@ function AboutModal({ meta, onClose }) {
           <div style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4 }}>
             Schema v{meta.schema_version || '—'} · Dataset v{meta.version || '—'}
           </div>
+          {stats.total > 0 && (
+            <div style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4 }}>
+              {stats.total} parallels · <strong>{stats.sig} statistically significant</strong> (p&lt;.05
+              vs a randomized null model) · {stats.cited} citation-backed
+            </div>
+          )}
           {meta.description && (
             <p style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
               {meta.description}
