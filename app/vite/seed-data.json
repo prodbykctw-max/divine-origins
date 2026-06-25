@@ -1,0 +1,824 @@
+{
+  "_meta": {
+    "version": "0.1.0-seed",
+    "description": "Seed data for The Source Map comparative cosmology feature. Demonstrates the deity/facet/parallel schema with worked examples across 8 traditions. The next chat should expand this to 100+ deities using these as templates.",
+    "schema_version": 2,
+    "tier_definitions": {
+      "1": "Unmanifest Source (Monad, Ein Sof, Brahman-Nirguna, Tao, The One)",
+      "2": "True Most High / Divine Council (El Elyon, Pleroma, Aeons)",
+      "3": "Demiurge / Flawed Creator (Yaldabaoth, Yahweh-OT-Gnostic, Marduk)",
+      "4": "Archons / Planetary Rulers (Seven Archons, Watchers, Olympians-as-rulers)",
+      "cross-tier": "Mediators / Light-Bringers / Sacrificed Gods (Christ, Sophia, Prometheus, Hermes, Quetzalcoatl)"
+    }
+  },
+
+  "traditions": [
+    {"id": "gnostic", "name": "Gnostic", "earliest_attestation": "1st–2nd c. CE", "regions": ["Egypt", "Syria", "Mesopotamia"]},
+    {"id": "hebrew-ot", "name": "Hebrew / Old Testament", "earliest_attestation": "c. 10th c. BCE (oral roots earlier)", "regions": ["Canaan", "Israel"]},
+    {"id": "egyptian", "name": "Egyptian", "earliest_attestation": "c. 3200 BCE", "regions": ["Nile valley"]},
+    {"id": "mesopotamian", "name": "Mesopotamian (Sumerian/Akkadian/Babylonian)", "earliest_attestation": "c. 3500 BCE", "regions": ["Mesopotamia"]},
+    {"id": "greek", "name": "Greek", "earliest_attestation": "c. 1200 BCE (Mycenaean)", "regions": ["Greece", "Aegean"]},
+    {"id": "norse", "name": "Norse / Germanic", "earliest_attestation": "Roman era; Eddic material 13th c. CE", "regions": ["Scandinavia", "Germania"]},
+    {"id": "hindu", "name": "Hindu (Vedic / Puranic / Tantric)", "earliest_attestation": "c. 1500 BCE", "regions": ["Indian subcontinent"]},
+    {"id": "aztec", "name": "Aztec / Mesoamerican", "earliest_attestation": "c. 13th c. CE (earlier in Toltec, Teotihuacan)", "regions": ["Central Mexico"]}
+  ],
+
+  "deities": [
+    {
+      "id": "monad",
+      "primary_name": "The Monad",
+      "alternate_names": ["Bythos", "The Invisible Spirit", "The One", "The Father of All", "The Pleroma (as totality)"],
+      "tradition_id": "gnostic",
+      "earliest_attestation": "1st–2nd c. CE Gnostic texts",
+      "primary_sources": ["Apocryphon of John", "Allogenes", "Trimorphic Protennoia", "Eugnostos the Blessed"],
+      "etymology": "Greek 'monas' — unity, oneness",
+      "summary": "The unknowable, ineffable Source beyond all categories. Not a creator-being but the ground of being itself, from which all emanation proceeds.",
+      "facets": ["monad-unmanifest"]
+    },
+    {
+      "id": "yaldabaoth",
+      "primary_name": "Yaldabaoth",
+      "alternate_names": ["Ialdabaoth", "Saklas", "Samael", "The Demiurge", "The Chief Archon"],
+      "tradition_id": "gnostic",
+      "earliest_attestation": "2nd c. CE",
+      "primary_sources": ["Apocryphon of John (NHC II,1)", "Hypostasis of the Archons (NHC II,4)", "On the Origin of the World (NHC II,5)"],
+      "etymology": "Possibly 'child of chaos' or 'begetter of Sabaoth'",
+      "iconography": ["lion-faced serpent", "throne", "seven Archons surrounding"],
+      "summary": "Abortive offspring of Sophia, the Demiurge who fashioned the material cosmos in ignorance of the Pleroma above him. Declares himself the only God; rebuked by the voice from above as 'Samael, blind god.'",
+      "facets": ["yaldabaoth-demiurge", "yaldabaoth-usurper"]
+    },
+    {
+      "id": "yahweh",
+      "primary_name": "Yahweh",
+      "alternate_names": ["YHWH", "Adonai", "Elohim (in some contexts)", "the Lord of Hosts"],
+      "tradition_id": "hebrew-ot",
+      "earliest_attestation": "c. 13th–10th c. BCE",
+      "primary_sources": ["Torah", "Prophets", "Psalms"],
+      "etymology": "From Hebrew root H-W-H, 'to be'; 'He causes to be' or 'I AM'",
+      "summary": "The covenantal God of Israel. In orthodox reading: the one true God, creator and lawgiver. In Gnostic reading: the Demiurge mistaken for the Most High.",
+      "facets": ["yahweh-creator", "yahweh-jealous-god", "yahweh-covenantal"]
+    },
+    {
+      "id": "el-elyon",
+      "primary_name": "El Elyon",
+      "alternate_names": ["El", "El Shaddai", "God Most High"],
+      "tradition_id": "hebrew-ot",
+      "earliest_attestation": "Older Canaanite layer; pre-1200 BCE",
+      "primary_sources": ["Genesis 14:18-20", "Deuteronomy 32:8-9 (older textual tradition)", "Psalm 82", "Ugaritic Baal Cycle"],
+      "etymology": "Hebrew/Canaanite: 'God Most High'",
+      "summary": "In the older Canaanite-Hebrew layer, El Elyon is the head of the divine council who divides the nations among his sons. Yahweh is one of those sons, assigned to Israel. Later orthodoxy collapses El Elyon and Yahweh into one being; Gnostics keep them distinct, mapping El Elyon to the true Father and Yahweh to the Demiurge.",
+      "facets": ["el-elyon-council-head"]
+    },
+    {
+      "id": "set",
+      "primary_name": "Set",
+      "alternate_names": ["Seth", "Sutekh", "Suty"],
+      "tradition_id": "egyptian",
+      "earliest_attestation": "c. 3200 BCE",
+      "primary_sources": ["Pyramid Texts", "Coffin Texts", "Book of the Dead", "Contendings of Horus and Seth", "Plutarch's On Isis and Osiris"],
+      "etymology": "Possibly 'pillar' or 'instigator'",
+      "iconography": ["Set-animal (composite creature)", "red color", "was-scepter"],
+      "summary": "Morally ambivalent Egyptian god. Early periods: protector of Ra against Apophis. Later periods: murderer of Osiris, emblem of chaos.",
+      "facets": ["set-protector-of-ra", "set-usurper-murderer", "set-storm-desert"]
+    },
+    {
+      "id": "marduk",
+      "primary_name": "Marduk",
+      "alternate_names": ["Bel", "Merodach"],
+      "tradition_id": "mesopotamian",
+      "earliest_attestation": "c. 2000 BCE (Babylonian)",
+      "primary_sources": ["Enuma Elish", "Code of Hammurabi prologue"],
+      "etymology": "Sumerian AMAR.UTU — 'calf of the sun'",
+      "iconography": ["spade", "dragon Mušḫuššu", "fifty names"],
+      "summary": "Chief god of Babylon. Slays Tiamat, the primordial chaos-mother, and fashions the world from her dismembered body. Establishes cosmic order and is exalted above all other gods.",
+      "facets": ["marduk-cosmic-orderer", "marduk-warrior"]
+    },
+    {
+      "id": "inanna",
+      "primary_name": "Inanna",
+      "alternate_names": ["Ishtar (Akkadian)", "Astarte (Phoenician)", "Queen of Heaven"],
+      "tradition_id": "mesopotamian",
+      "earliest_attestation": "c. 4th millennium BCE",
+      "primary_sources": ["Inanna's Descent to the Netherworld", "Inanna and Enki", "Epic of Gilgamesh", "Hymns of Enheduanna"],
+      "etymology": "Sumerian Nin-an-ak, 'Lady of Heaven'",
+      "iconography": ["eight-pointed star", "lions", "reed-bundle"],
+      "summary": "Goddess of love and war, of fertility and destruction. Crosses every boundary including life/death; descends to the underworld and returns transformed.",
+      "facets": ["inanna-love-fertility", "inanna-war", "inanna-descended-goddess", "inanna-queen-of-heaven"]
+    },
+    {
+      "id": "zeus",
+      "primary_name": "Zeus",
+      "alternate_names": ["Jupiter (Roman)", "Dyaus Pita (Vedic cognate)", "Zeus Pater"],
+      "tradition_id": "greek",
+      "earliest_attestation": "Mycenaean Linear B, c. 1400 BCE",
+      "primary_sources": ["Iliad", "Odyssey", "Hesiod's Theogony", "Orphic Hymns"],
+      "etymology": "From PIE *dyḗws — 'sky', 'shining heaven'",
+      "iconography": ["thunderbolt", "eagle", "oak", "throne"],
+      "summary": "King of the Olympian gods. Sky-father, storm-god, lawgiver, oath-keeper, philanderer. Carries the contradictions of cosmic kingship.",
+      "facets": ["zeus-sky-father", "zeus-tyrant", "zeus-oath-keeper", "zeus-storm-god"]
+    },
+    {
+      "id": "prometheus",
+      "primary_name": "Prometheus",
+      "alternate_names": ["The Forethinker"],
+      "tradition_id": "greek",
+      "earliest_attestation": "Hesiod, c. 700 BCE",
+      "primary_sources": ["Hesiod's Theogony", "Hesiod's Works and Days", "Aeschylus's Prometheus Bound"],
+      "etymology": "Greek 'forethought'",
+      "iconography": ["fennel-stalk torch", "chains", "eagle at liver"],
+      "summary": "Titan who steals fire from the gods to give to humanity, against Zeus's will. Punished by being chained to a rock where an eagle eats his liver daily.",
+      "facets": ["prometheus-fire-bringer"]
+    },
+    {
+      "id": "odin",
+      "primary_name": "Odin",
+      "alternate_names": ["Óðinn", "Woden", "Wodan", "Wotan", "Gangleri", "Hárr"],
+      "tradition_id": "norse",
+      "earliest_attestation": "Roman-era Germanic; Eddic material 13th c. CE",
+      "primary_sources": ["Poetic Edda (Völuspá, Hávamál, Grímnismál)", "Prose Edda", "Gesta Danorum"],
+      "etymology": "Proto-Germanic *Wōðanaz, 'fury / inspiration / poetic frenzy'",
+      "iconography": ["one eye", "wide-brimmed hat", "spear Gungnir", "ravens Huginn and Muninn", "Sleipnir"],
+      "summary": "All-Father of the Norse pantheon. Restless wisdom-seeker who sacrifices himself to himself on Yggdrasil. Wanderer in disguise. Carries knowledge of his own doom at Ragnarök.",
+      "facets": ["odin-all-father", "odin-wanderer", "odin-wisdom-seeker", "odin-sacrificed-on-yggdrasil", "odin-psychopomp"]
+    },
+    {
+      "id": "loki",
+      "primary_name": "Loki",
+      "alternate_names": ["Loptr", "Hveðrungr"],
+      "tradition_id": "norse",
+      "earliest_attestation": "Eddic material; possibly older",
+      "primary_sources": ["Poetic Edda (Lokasenna, Þrymskviða)", "Prose Edda", "Loka Táttur"],
+      "iconography": ["bound serpent above him", "shape-shifter"],
+      "summary": "Trickster of the Norse pantheon. Helper and adversary of the gods. Father of Hel, Fenrir, and Jörmungandr. Eventually bound for the killing of Baldr; will break free at Ragnarök.",
+      "facets": ["loki-trickster-liberator", "loki-betrayer", "loki-bound"]
+    },
+    {
+      "id": "shiva",
+      "primary_name": "Shiva",
+      "alternate_names": ["Śiva", "Mahadeva", "Rudra (Vedic precursor)", "Hara", "Shankara"],
+      "tradition_id": "hindu",
+      "earliest_attestation": "Rudra in Rigveda, c. 1500–1200 BCE",
+      "primary_sources": ["Rigveda (as Rudra)", "Shvetashvatara Upanishad", "Shiva Purana", "Linga Purana"],
+      "etymology": "Sanskrit 'auspicious'",
+      "iconography": ["third eye", "crescent moon", "trident", "serpent around neck", "tiger skin", "blue throat", "ashes"],
+      "summary": "Destroyer-transformer of the Hindu trimurti. Encompasses contradictions: ascetic and erotic, creator and destroyer, terrible and benevolent.",
+      "facets": ["shiva-destroyer", "shiva-ascetic", "shiva-teacher", "shiva-erotic", "shiva-bhairava"]
+    },
+    {
+      "id": "krishna",
+      "primary_name": "Krishna",
+      "alternate_names": ["Kṛṣṇa", "Govinda", "Vasudeva"],
+      "tradition_id": "hindu",
+      "earliest_attestation": "Mahabharata; full theological development by c. 1st millennium CE",
+      "primary_sources": ["Mahabharata (esp. Bhagavad Gita)", "Bhagavata Purana", "Harivamsa"],
+      "etymology": "Sanskrit 'dark', 'black'",
+      "iconography": ["blue skin", "flute", "peacock feather", "cows"],
+      "summary": "Eighth avatar of Vishnu. Cosmic teacher (Bhagavad Gita), divine lover (Vrindavan), warrior-counselor (Mahabharata). Reveals himself as the supreme Source.",
+      "facets": ["krishna-teacher", "krishna-cosmic-form", "krishna-divine-lover", "krishna-trickster-child"]
+    },
+    {
+      "id": "quetzalcoatl",
+      "primary_name": "Quetzalcoatl",
+      "alternate_names": ["Kukulkan (Maya)", "Gukumatz (K'iche')", "Ehecatl"],
+      "tradition_id": "aztec",
+      "earliest_attestation": "c. 1st c. CE (Teotihuacan)",
+      "primary_sources": ["Florentine Codex", "Codex Chimalpopoca", "Popol Vuh"],
+      "etymology": "'Feathered serpent' — quetzal feathers + coatl",
+      "iconography": ["feathered serpent", "conch shell", "wind-jewel"],
+      "summary": "Feathered serpent. Union of sky and earth. Civilizing teacher who gave humans corn, calendar, writing. Opposes blood sacrifice. Exiled by Tezcatlipoca; prophesies his return.",
+      "facets": ["quetzalcoatl-culture-hero", "quetzalcoatl-wind", "quetzalcoatl-creator", "quetzalcoatl-prophet-returning"]
+    },
+    {
+      "id": "tezcatlipoca",
+      "primary_name": "Tezcatlipoca",
+      "alternate_names": ["Black Tezcatlipoca", "Smoking Mirror"],
+      "tradition_id": "aztec",
+      "earliest_attestation": "c. 13th–14th c. CE",
+      "primary_sources": ["Florentine Codex", "Codex Borgia", "Codex Telleriano-Remensis"],
+      "etymology": "'Smoking Mirror'",
+      "iconography": ["obsidian mirror foot", "black face-paint", "jaguar"],
+      "summary": "Most complex god of the Aztec pantheon. Night sky, sorcery, memory, fate, war, rulership. Quetzalcoatl's shadow-twin and adversary.",
+      "facets": ["tezcatlipoca-night-sky", "tezcatlipoca-fate-sorcery", "tezcatlipoca-adversary", "tezcatlipoca-king-maker"]
+    },
+    {
+      "id": "sophia",
+      "primary_name": "Sophia",
+      "alternate_names": ["Hokhmah", "Wisdom"],
+      "tradition_id": "gnostic",
+      "earliest_attestation": "1st–2nd c. CE",
+      "primary_sources": ["Apocryphon of John", "Pistis Sophia", "Hypostasis of the Archons", "Valentinian Exposition"],
+      "etymology": "Greek 'wisdom'",
+      "summary": "Wisdom — the last and youngest of the Aeons. Acts without her consort and produces Yaldabaoth. Descends into matter to recover the divine sparks. Both the cause of the fall and the means of return.",
+      "facets": ["sophia-fallen-aeon", "sophia-redemptive"]
+    }
+  ],
+
+  "facets": [
+    {
+      "id": "monad-unmanifest",
+      "parent_deity_id": "monad",
+      "facet_name": "The Unmanifest Source",
+      "tier_assignment": 1,
+      "function_tags": ["unmanifest-source", "ineffable", "ground-of-being", "pre-creation", "beyond-being", "self-generated"],
+      "valence": "transcendent",
+      "core_claim": "The Monad is beyond name, form, gender, and category. It does not create directly; it self-contemplates, and from that contemplation the Aeons emerge. It is the silence before the first word.",
+      "parallel_facets": ["ein-sof", "brahman-nirguna", "tao-unnamed", "the-one-plotinus", "nun-primordial", "ginnungagap", "sunyata", "al-haqq"]
+    },
+    {
+      "id": "yaldabaoth-demiurge",
+      "parent_deity_id": "yaldabaoth",
+      "facet_name": "The Demiurge (craftsman of matter)",
+      "tier_assignment": 3,
+      "function_tags": ["demiurge", "craftsman-creator", "ignorant-of-source", "born-of-emanation", "created-by-error", "false-most-high"],
+      "valence": "negative",
+      "core_claim": "Yaldabaoth, hidden away in a cloud by Sophia, fashions the material cosmos in imitation of the Pleroma he has never seen. He populates it with seven Archons and rules as if he were alone.",
+      "parallel_facets": ["yahweh-creator", "marduk-cosmic-orderer", "brahma-egoic", "tezcatlipoca-adversary"]
+    },
+    {
+      "id": "yaldabaoth-usurper",
+      "parent_deity_id": "yaldabaoth",
+      "facet_name": "The False Most High (Lucifer-as-usurper)",
+      "tier_assignment": 3,
+      "function_tags": ["usurper", "false-most-high", "jealous", "ignorant-of-source", "lawgiver", "punitive"],
+      "valence": "negative",
+      "core_claim": "Declares 'I am God and there is no other.' Rebuked from above: 'You are wrong, Samael — blind god.' This is the figure mainstream religion has mistaken for the Most High.",
+      "parallel_facets": ["yahweh-jealous-god", "set-usurper-murderer", "lucifer-usurper", "zeus-tyrant", "tezcatlipoca-adversary"]
+    },
+    {
+      "id": "yahweh-creator",
+      "parent_deity_id": "yahweh",
+      "facet_name": "Creator of the heavens and the earth",
+      "tier_assignment": 3,
+      "function_tags": ["craftsman-creator", "lawgiver", "covenantal", "demiurge", "sky"],
+      "valence": "ambivalent-positive-in-orthodox-reading-negative-in-gnostic",
+      "core_claim": "In Genesis 1, Yahweh-Elohim fashions the cosmos from formless void. In orthodox reading, this is the ultimate God creating from nothing. In Gnostic reading, it is the Demiurge ordering pre-existing chaos in ignorance of the Pleroma.",
+      "parallel_facets": ["yaldabaoth-demiurge", "marduk-cosmic-orderer", "brahma-egoic"]
+    },
+    {
+      "id": "yahweh-jealous-god",
+      "parent_deity_id": "yahweh",
+      "facet_name": "The Jealous God of Sinai",
+      "tier_assignment": 3,
+      "function_tags": ["jealous", "lawgiver", "punitive", "demanding-exclusive-worship", "covenantal", "blood-sacrifice"],
+      "valence": "ambivalent",
+      "core_claim": "'I am the Lord thy God; thou shalt have no other gods before me. For I the Lord thy God am a jealous God.' (Exodus 20). Demands exclusive worship, blood sacrifice, and unflinching obedience.",
+      "parallel_facets": ["yaldabaoth-usurper", "marduk-cosmic-orderer", "zeus-tyrant"]
+    },
+    {
+      "id": "yahweh-covenantal",
+      "parent_deity_id": "yahweh",
+      "facet_name": "The Covenantal Lord",
+      "tier_assignment": 3,
+      "function_tags": ["covenantal", "oath-keeper", "father-of-nation", "lawgiver"],
+      "valence": "positive",
+      "core_claim": "Yahweh enters into covenant with Abraham, Isaac, Jacob; gives Torah to Moses; binds himself to Israel as their God.",
+      "parallel_facets": ["zeus-oath-keeper", "mithra-oath-keeper"]
+    },
+    {
+      "id": "el-elyon-council-head",
+      "parent_deity_id": "el-elyon",
+      "facet_name": "Head of the Divine Council",
+      "tier_assignment": 2,
+      "function_tags": ["divine-council-head", "sky", "father", "first-emanation", "first-among-gods"],
+      "valence": "positive",
+      "core_claim": "El Elyon presides over the divine council and apportions the nations among the sons of God (Deut 32:8-9 in the older textual tradition). He is the true Most High in the Gnostic and older-Canaanite reading.",
+      "parallel_facets": ["anu-sky-council", "zeus-sky-father", "odin-all-father", "brahma-saguna", "barbelo-first-aeon"]
+    },
+    {
+      "id": "set-protector-of-ra",
+      "parent_deity_id": "set",
+      "facet_name": "Protector of Ra's solar barque",
+      "tier_assignment": 4,
+      "function_tags": ["guardian", "warrior", "storm", "chaos-against-greater-chaos", "night-defender"],
+      "valence": "positive",
+      "core_claim": "Each night Set stands at the prow of Ra's barque and spears Apophis, the chaos-serpent. He is necessary chaos in service of cosmic order.",
+      "parallel_facets": ["marduk-warrior", "thor-mjolnir", "indra-vajra", "michael-archangel"]
+    },
+    {
+      "id": "set-usurper-murderer",
+      "parent_deity_id": "set",
+      "facet_name": "Murderer of Osiris, usurper of the throne",
+      "tier_assignment": 3,
+      "function_tags": ["usurper", "fratricide", "chaos-against-order", "desert-sterility", "betrayer", "false-king"],
+      "valence": "negative",
+      "core_claim": "Set murders his brother Osiris out of jealousy, dismembers him, claims the throne. Embodies disorder and the violation of ma'at.",
+      "parallel_facets": ["yaldabaoth-usurper", "loki-betrayer", "tezcatlipoca-adversary", "lucifer-usurper", "cain-genesis"]
+    },
+    {
+      "id": "set-storm-desert",
+      "parent_deity_id": "set",
+      "facet_name": "Lord of storms and the red desert",
+      "tier_assignment": 4,
+      "function_tags": ["storm", "desert", "foreign-lands", "wild"],
+      "valence": "ambivalent",
+      "core_claim": "Set rules the red lands beyond the cultivated Nile valley — the desert, foreign nations, the wild places.",
+      "parallel_facets": ["baal-hadad-storm", "thor-storm", "indra-storm-king"]
+    },
+    {
+      "id": "marduk-cosmic-orderer",
+      "parent_deity_id": "marduk",
+      "facet_name": "Cosmic orderer (slayer of Tiamat)",
+      "tier_assignment": 3,
+      "function_tags": ["craftsman-creator", "demiurge", "warrior", "cosmic-orderer", "father-of-gods", "born-of-emanation"],
+      "valence": "ambivalent-positive",
+      "core_claim": "Marduk slays Tiamat, the primordial chaos-mother, splits her body to form heaven and earth, and is exalted by the gods with fifty names.",
+      "parallel_facets": ["yaldabaoth-demiurge", "yahweh-creator", "brahma-egoic"]
+    },
+    {
+      "id": "marduk-warrior",
+      "parent_deity_id": "marduk",
+      "facet_name": "Champion against chaos",
+      "tier_assignment": 4,
+      "function_tags": ["warrior", "guardian", "chaos-against-greater-chaos"],
+      "valence": "positive",
+      "core_claim": "Marduk takes up arms when no other god will face Tiamat. Armed with thunderbolt and the four winds, he defeats her.",
+      "parallel_facets": ["set-protector-of-ra", "thor-mjolnir", "indra-vajra", "michael-archangel"]
+    },
+    {
+      "id": "inanna-love-fertility",
+      "parent_deity_id": "inanna",
+      "facet_name": "Goddess of love and fertility",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["love", "fertility", "erotic", "great-mother"],
+      "valence": "positive",
+      "core_claim": "Inanna is the bride of Dumuzi, the principle of erotic and fertile love that drives the renewal of the world.",
+      "parallel_facets": ["aphrodite-love", "venus-love", "freya-love", "hathor-love", "parvati-erotic"]
+    },
+    {
+      "id": "inanna-war",
+      "parent_deity_id": "inanna",
+      "facet_name": "Goddess of war",
+      "tier_assignment": 4,
+      "function_tags": ["war", "warrior-maiden", "terrible"],
+      "valence": "ambivalent",
+      "core_claim": "Inanna rides into battle on lions; her hymns celebrate her as the destroyer of cities and the breaker of armies.",
+      "parallel_facets": ["athena-war", "morrigan-war", "kali-destroyer", "anat-war", "sekhmet-war"]
+    },
+    {
+      "id": "inanna-descended-goddess",
+      "parent_deity_id": "inanna",
+      "facet_name": "The Descended One",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["descended-god", "dying-rising-god", "underworld-journey", "sacrificed-and-returned", "boundary-crosser", "wisdom-through-suffering"],
+      "valence": "ambivalent-positive",
+      "core_claim": "Inanna descends through seven gates of the underworld, stripped at each gate of a divine attribute, until she stands naked before Ereshkigal. Killed and hung on a hook; revived by Enki's intervention; returns transformed.",
+      "parallel_facets": ["persephone-descent", "dionysus-zagreus-descent", "christ-harrowing-of-hell", "osiris-dismembered", "sophia-fallen-aeon", "quetzalcoatl-creator", "odin-sacrificed-on-yggdrasil"]
+    },
+    {
+      "id": "inanna-queen-of-heaven",
+      "parent_deity_id": "inanna",
+      "facet_name": "Queen of Heaven",
+      "tier_assignment": 2,
+      "function_tags": ["sky", "divine-queen", "first-among-gods", "great-mother"],
+      "valence": "positive",
+      "core_claim": "Inanna is the Queen of Heaven, ruler over the morning and evening star, present at the divine council.",
+      "parallel_facets": ["mary-queen-of-heaven", "hera-queen", "isis-queen", "frigg-queen"]
+    },
+    {
+      "id": "zeus-sky-father",
+      "parent_deity_id": "zeus",
+      "facet_name": "Sky-Father",
+      "tier_assignment": 2,
+      "function_tags": ["sky", "father", "divine-council-head", "first-among-gods", "storm"],
+      "valence": "positive",
+      "core_claim": "Zeus is the bright sky personified — the Indo-European Dyaus, the shining father. He presides over the council of the gods on Olympus.",
+      "parallel_facets": ["el-elyon-council-head", "anu-sky-council", "odin-all-father", "dyaus-pita", "jupiter-sky"]
+    },
+    {
+      "id": "zeus-tyrant",
+      "parent_deity_id": "zeus",
+      "facet_name": "Zeus the Tyrant (Prometheus Bound)",
+      "tier_assignment": 3,
+      "function_tags": ["tyrant", "punitive", "jealous", "lawgiver", "false-most-high"],
+      "valence": "negative",
+      "core_claim": "In Aeschylus's Prometheus Bound, Zeus is depicted as a recent tyrant who seized the throne from Kronos and punishes Prometheus for giving fire to humans. This is the Demiurge-aspect of Zeus.",
+      "parallel_facets": ["yaldabaoth-usurper", "yahweh-jealous-god", "set-usurper-murderer"]
+    },
+    {
+      "id": "zeus-oath-keeper",
+      "parent_deity_id": "zeus",
+      "facet_name": "Zeus Horkios (Keeper of Oaths)",
+      "tier_assignment": 4,
+      "function_tags": ["oath-keeper", "justice", "truth"],
+      "valence": "positive",
+      "core_claim": "Zeus enforces oaths. Those who swear falsely by Zeus are struck by his thunderbolt or pursued by the Furies.",
+      "parallel_facets": ["yahweh-covenantal", "mithra-oath-keeper", "varuna-oath-keeper"]
+    },
+    {
+      "id": "zeus-storm-god",
+      "parent_deity_id": "zeus",
+      "facet_name": "Storm-bringer",
+      "tier_assignment": 4,
+      "function_tags": ["storm", "thunder", "rain", "warrior"],
+      "valence": "ambivalent",
+      "core_claim": "Zeus wields the thunderbolt forged by the Cyclopes. Storm and rain are his domain.",
+      "parallel_facets": ["thor-storm", "indra-storm-king", "baal-hadad-storm", "perun-storm", "set-storm-desert"]
+    },
+    {
+      "id": "prometheus-fire-bringer",
+      "parent_deity_id": "prometheus",
+      "facet_name": "Fire-bringer / Light-bringer",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["light-bringer", "culture-hero", "trickster", "punished-for-helping-humans", "bound-god", "sacrificed-god", "wisdom-teacher"],
+      "valence": "positive",
+      "core_claim": "Prometheus steals fire from the gods in a fennel-stalk and gives it to humanity. For this he is chained to a rock in the Caucasus, where an eagle eats his liver each day — and it regrows each night.",
+      "parallel_facets": ["loki-trickster-liberator", "enki-wisdom", "quetzalcoatl-culture-hero", "hermes-trismegistus", "lucifer-light-bringer", "ophite-serpent-of-eden"]
+    },
+    {
+      "id": "odin-all-father",
+      "parent_deity_id": "odin",
+      "facet_name": "All-Father",
+      "tier_assignment": 2,
+      "function_tags": ["sky", "father", "divine-council-head", "first-among-gods"],
+      "valence": "positive",
+      "core_claim": "Odin is All-Father, head of the Aesir, ruler from Hliðskjálf where he sees all the worlds.",
+      "parallel_facets": ["zeus-sky-father", "el-elyon-council-head", "anu-sky-council", "dyaus-pita"]
+    },
+    {
+      "id": "odin-wanderer",
+      "parent_deity_id": "odin",
+      "facet_name": "The Wanderer",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["wanderer", "disguised-god", "wisdom-seeker", "tester-of-mortals"],
+      "valence": "ambivalent",
+      "core_claim": "Odin walks the worlds in disguise — wide-brimmed hat, blue cloak, single eye — testing kings, learning wisdom, gathering knowledge.",
+      "parallel_facets": ["hermes-trismegistus", "khidr-green-guide", "christ-disguised-stranger"]
+    },
+    {
+      "id": "odin-wisdom-seeker",
+      "parent_deity_id": "odin",
+      "facet_name": "Seeker of Wisdom",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["wisdom-seeker", "self-sacrifice-for-knowledge", "magician"],
+      "valence": "positive",
+      "core_claim": "Odin sacrifices an eye at Mimir's well to drink and gain wisdom. He learns the nine songs and seizes the mead of poetry.",
+      "parallel_facets": ["enki-wisdom", "thoth-wisdom", "shiva-teacher", "krishna-teacher"]
+    },
+    {
+      "id": "odin-sacrificed-on-yggdrasil",
+      "parent_deity_id": "odin",
+      "facet_name": "The Self-Sacrificed (Hung on the World Tree)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["sacrificed-god", "dying-rising-god", "wisdom-through-suffering", "self-offering", "knowledge-by-sacrifice"],
+      "valence": "positive",
+      "core_claim": "'I know that I hung on a windswept tree nine long nights, wounded by spear, given to Odin, myself to myself.' (Hávamál 138). He seizes the runes.",
+      "parallel_facets": ["christ-crucifixion", "prometheus-fire-bringer", "inanna-descended-goddess", "dionysus-zagreus-descent", "osiris-dismembered", "krishna-cosmic-form"]
+    },
+    {
+      "id": "odin-psychopomp",
+      "parent_deity_id": "odin",
+      "facet_name": "Lord of the Slain / Psychopomp",
+      "tier_assignment": 4,
+      "function_tags": ["psychopomp", "war", "death", "host-of-valhalla"],
+      "valence": "ambivalent",
+      "core_claim": "Odin gathers half the slain warriors to Valhalla, where they feast and fight and prepare for Ragnarök.",
+      "parallel_facets": ["hermes-psychopomp", "anubis-judge", "yama-death"]
+    },
+    {
+      "id": "loki-trickster-liberator",
+      "parent_deity_id": "loki",
+      "facet_name": "Trickster / Liberator",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["trickster", "boundary-crosser", "wisdom-thief", "shape-shifter", "culture-hero-ambivalent"],
+      "valence": "ambivalent",
+      "core_claim": "Loki repeatedly extracts the Aesir from disasters of their own making — and sometimes creates them. He brings them Mjölnir, Sleipnir, Gungnir, and other treasures, often through cunning theft.",
+      "parallel_facets": ["prometheus-fire-bringer", "hermes-trismegistus", "enki-wisdom", "coyote-trickster", "anansi-spider", "sun-wukong"]
+    },
+    {
+      "id": "loki-betrayer",
+      "parent_deity_id": "loki",
+      "facet_name": "The Betrayer (Killer of Baldr)",
+      "tier_assignment": 3,
+      "function_tags": ["betrayer", "fratricide-by-proxy", "adversary", "false-friend"],
+      "valence": "negative",
+      "core_claim": "Loki contrives Baldr's death by tricking blind Höðr into throwing the mistletoe-dart. For this he is bound beneath a venom-dripping serpent.",
+      "parallel_facets": ["set-usurper-murderer", "tezcatlipoca-adversary", "judas-betrayer", "mara-buddha-tempter"]
+    },
+    {
+      "id": "loki-bound",
+      "parent_deity_id": "loki",
+      "facet_name": "The Bound One",
+      "tier_assignment": 4,
+      "function_tags": ["bound-god", "imprisoned-titan", "awaiting-release"],
+      "valence": "negative-pending-eschaton",
+      "core_claim": "Bound beneath a serpent whose venom drips on his face. At Ragnarök he breaks free and leads the forces of chaos against the gods.",
+      "parallel_facets": ["prometheus-fire-bringer", "fenrir-bound", "azazel-bound", "satan-chained-revelation"]
+    },
+    {
+      "id": "shiva-destroyer",
+      "parent_deity_id": "shiva",
+      "facet_name": "The Destroyer (Cosmic Dissolver)",
+      "tier_assignment": 2,
+      "function_tags": ["destroyer", "transformer", "cosmic-cycle", "dissolver", "end-of-aeon"],
+      "valence": "ambivalent-positive",
+      "core_claim": "Shiva dissolves the manifest universe at the end of each cosmic cycle. Destruction is the precondition for renewal.",
+      "parallel_facets": ["kali-destroyer", "yama-death", "thanatos-death", "hel-underworld"]
+    },
+    {
+      "id": "shiva-ascetic",
+      "parent_deity_id": "shiva",
+      "facet_name": "The Great Ascetic (Mahayogi)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["ascetic", "renunciate", "meditation-master", "wisdom-through-stillness"],
+      "valence": "positive",
+      "core_claim": "Shiva sits in eternal meditation on Mount Kailash, ash-smeared, withdrawn from the world, the prototype of all yogis.",
+      "parallel_facets": ["buddha-meditation", "christ-desert-fast"]
+    },
+    {
+      "id": "shiva-teacher",
+      "parent_deity_id": "shiva",
+      "facet_name": "Dakshinamurti (The Silent Teacher)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["teacher", "silent-transmission", "wisdom-bringer", "guru", "south-facing"],
+      "valence": "positive",
+      "core_claim": "Shiva as Dakshinamurti faces south, sits beneath a banyan tree, and transmits the highest knowledge through silence to aged sages.",
+      "parallel_facets": ["hermes-trismegistus", "thoth-wisdom", "manjushri-wisdom", "khidr-green-guide", "odin-wisdom-seeker", "enki-wisdom"]
+    },
+    {
+      "id": "shiva-erotic",
+      "parent_deity_id": "shiva",
+      "facet_name": "The Erotic Principle (Linga / Nataraja)",
+      "tier_assignment": 2,
+      "function_tags": ["erotic", "fertility", "cosmic-dance", "creator-destroyer-united"],
+      "valence": "positive",
+      "core_claim": "Shiva as Linga is the generative principle of the cosmos. As Nataraja, he dances the universe into being and out of being simultaneously.",
+      "parallel_facets": ["dionysus-fertility", "krishna-divine-lover", "inanna-love-fertility"]
+    },
+    {
+      "id": "shiva-bhairava",
+      "parent_deity_id": "shiva",
+      "facet_name": "Bhairava (The Terrible)",
+      "tier_assignment": 4,
+      "function_tags": ["terrible", "wrathful", "protector-fierce", "cremation-ground"],
+      "valence": "ambivalent",
+      "core_claim": "Shiva in his terrible aspect, haunting cremation grounds, attended by dogs, embodying the fearsome necessity of dissolution.",
+      "parallel_facets": ["kali-destroyer", "yamantaka", "hekate-night"]
+    },
+    {
+      "id": "krishna-teacher",
+      "parent_deity_id": "krishna",
+      "facet_name": "Cosmic Teacher (Bhagavad Gita)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["teacher", "wisdom-bringer", "revealer-of-self-as-source", "descended-god"],
+      "valence": "positive",
+      "core_claim": "On the battlefield of Kurukshetra, Krishna reveals to Arjuna that he is the supreme Self, the source of all gods and worlds. He teaches the paths of action, devotion, and knowledge.",
+      "parallel_facets": ["christ-logos-descended", "shiva-teacher", "hermes-trismegistus", "quetzalcoatl-culture-hero"]
+    },
+    {
+      "id": "krishna-cosmic-form",
+      "parent_deity_id": "krishna",
+      "facet_name": "The Cosmic Form (Vishvarupa)",
+      "tier_assignment": 1,
+      "function_tags": ["unmanifest-source", "all-encompassing", "cosmic-totality", "time-as-destroyer"],
+      "valence": "transcendent",
+      "core_claim": "Krishna reveals to Arjuna his Vishvarupa — the cosmic form containing all beings, all worlds, all time. 'I am become Time, the destroyer of worlds.'",
+      "parallel_facets": ["monad-unmanifest", "brahman-saguna-as-cosmos", "christ-cosmic"]
+    },
+    {
+      "id": "krishna-divine-lover",
+      "parent_deity_id": "krishna",
+      "facet_name": "The Divine Lover (of Vrindavan)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["erotic", "divine-lover", "fertility", "playful"],
+      "valence": "positive",
+      "core_claim": "Krishna of Vrindavan plays his flute and the gopis come; Radha is his eternal beloved. The lila of divine love is the deepest theology.",
+      "parallel_facets": ["shiva-erotic", "inanna-love-fertility", "dionysus-fertility"]
+    },
+    {
+      "id": "krishna-trickster-child",
+      "parent_deity_id": "krishna",
+      "facet_name": "The Trickster Child (Butter-Thief)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["trickster", "child-god", "playful", "boundary-crosser"],
+      "valence": "positive",
+      "core_claim": "Baby Krishna steals butter, mounts the hood of Kaliya the serpent, plays pranks on his mother. The trickster aspect of the supreme.",
+      "parallel_facets": ["hermes-trismegistus", "loki-trickster-liberator", "coyote-trickster"]
+    },
+    {
+      "id": "quetzalcoatl-culture-hero",
+      "parent_deity_id": "quetzalcoatl",
+      "facet_name": "Bringer of Civilization",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["light-bringer", "culture-hero", "wisdom-teacher", "civilizing-god", "corn-giver", "calendar-giver", "opposes-sacrifice", "exiled-god"],
+      "valence": "positive",
+      "core_claim": "Quetzalcoatl descended to give humans corn, calendar, writing, the arts. He opposed blood sacrifice and was exiled by Tezcatlipoca.",
+      "parallel_facets": ["prometheus-fire-bringer", "enki-wisdom", "hermes-trismegistus", "thoth-wisdom", "osiris-civilizer", "krishna-teacher", "christ-logos-descended", "viracocha"]
+    },
+    {
+      "id": "quetzalcoatl-wind",
+      "parent_deity_id": "quetzalcoatl",
+      "facet_name": "Ehecatl (The Wind)",
+      "tier_assignment": 4,
+      "function_tags": ["wind", "breath", "spirit", "sky"],
+      "valence": "positive",
+      "core_claim": "Quetzalcoatl as Ehecatl is the wind that precedes the rains, the breath of the divine in the world.",
+      "parallel_facets": ["ruach-elohim", "pneuma-spirit", "vayu-wind"]
+    },
+    {
+      "id": "quetzalcoatl-creator",
+      "parent_deity_id": "quetzalcoatl",
+      "facet_name": "Co-Creator (with Tezcatlipoca)",
+      "tier_assignment": 2,
+      "function_tags": ["creator", "co-creator", "descended-into-underworld-for-bones"],
+      "valence": "positive",
+      "core_claim": "Quetzalcoatl descends to Mictlan to retrieve the bones of past humanity and restores them to life with his own blood.",
+      "parallel_facets": ["christ-harrowing-of-hell", "inanna-descended-goddess", "orpheus-underworld"]
+    },
+    {
+      "id": "quetzalcoatl-prophet-returning",
+      "parent_deity_id": "quetzalcoatl",
+      "facet_name": "The Returning Prophet",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["returning-god", "eschatological", "exiled-and-promised-return"],
+      "valence": "positive",
+      "core_claim": "Sailing east on his raft of serpents, Quetzalcoatl prophesied his return in a One Reed year.",
+      "parallel_facets": ["maitreya-returning", "saoshyant", "christ-second-coming", "mahdi", "kalki-avatar"]
+    },
+    {
+      "id": "tezcatlipoca-night-sky",
+      "parent_deity_id": "tezcatlipoca",
+      "facet_name": "Lord of the Night Sky",
+      "tier_assignment": 2,
+      "function_tags": ["night", "sky", "stars", "fate"],
+      "valence": "ambivalent",
+      "core_claim": "Tezcatlipoca rules the night sky and the stars. From this vantage he sees all and judges kings.",
+      "parallel_facets": ["nyx-night", "ratri-night", "nut-sky"]
+    },
+    {
+      "id": "tezcatlipoca-fate-sorcery",
+      "parent_deity_id": "tezcatlipoca",
+      "facet_name": "Sorcerer and Fate-Knower",
+      "tier_assignment": 4,
+      "function_tags": ["magic", "fate", "memory", "obsidian-mirror"],
+      "valence": "ambivalent",
+      "core_claim": "Through his smoking obsidian mirror, Tezcatlipoca sees the inner thoughts of all beings and the unfolding of fate.",
+      "parallel_facets": ["odin-magician", "hecate-magic", "loki-trickster-liberator"]
+    },
+    {
+      "id": "tezcatlipoca-adversary",
+      "parent_deity_id": "tezcatlipoca",
+      "facet_name": "The Adversary / Shadow-Twin",
+      "tier_assignment": 3,
+      "function_tags": ["adversary", "shadow-twin", "tempter", "testing-power", "chaos-against-order", "usurper-of-civilizing-god"],
+      "valence": "ambivalent-negative",
+      "core_claim": "Tezcatlipoca exiled Quetzalcoatl from Tula through trickery — sending him away with a mirror in which Quetzalcoatl saw his own face and was shamed.",
+      "parallel_facets": ["set-usurper-murderer", "loki-betrayer", "yaldabaoth-usurper", "mara-buddha-tempter", "satan-job"]
+    },
+    {
+      "id": "tezcatlipoca-king-maker",
+      "parent_deity_id": "tezcatlipoca",
+      "facet_name": "King-Maker",
+      "tier_assignment": 4,
+      "function_tags": ["king-maker", "lord-of-rulership", "tester-of-rulers"],
+      "valence": "ambivalent",
+      "core_claim": "Tezcatlipoca grants and revokes the right to rule. Tezcatlipoca-priests examined and tested new kings.",
+      "parallel_facets": ["odin-king-maker", "el-elyon-council-head"]
+    },
+    {
+      "id": "sophia-fallen-aeon",
+      "parent_deity_id": "sophia",
+      "facet_name": "The Fallen Aeon (Mother of the Demiurge)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["wisdom", "fallen-emanation", "mother-of-demiurge", "descended-goddess"],
+      "valence": "ambivalent",
+      "core_claim": "Sophia, last of the Aeons, attempts to create without her consort. Her error produces Yaldabaoth. She falls into the lower regions and must be recovered.",
+      "parallel_facets": ["inanna-descended-goddess", "persephone-descent", "shekhinah-exile", "izanami-yomi"]
+    },
+    {
+      "id": "sophia-redemptive",
+      "parent_deity_id": "sophia",
+      "facet_name": "The Redeemer (Wisdom Returning)",
+      "tier_assignment": "cross-tier",
+      "function_tags": ["redeemer", "wisdom-teacher", "intercessor", "great-mother-returning"],
+      "valence": "positive",
+      "core_claim": "Sophia descends to recover the divine sparks trapped in humanity. With the Christ-Aeon, she effects the return of the lost light to the Pleroma.",
+      "parallel_facets": ["shekhinah-redemptive", "shakti-redemptive", "isis-recovering-osiris", "demeter-recovering-persephone", "mary-mediatrix"]
+    }
+  ],
+
+  "canonical_parallels": [
+    {
+      "id": "p001",
+      "facet_a_id": "yaldabaoth-usurper",
+      "facet_b_id": "yahweh-jealous-god",
+      "strength": "identity",
+      "type": "gnostic-canonical-identification",
+      "basis": [
+        "Both declare 'I am God and there is no other' (Isaiah 45:5, Apocryphon of John II,1)",
+        "Both demand exclusive worship and blood sacrifice",
+        "Both are jealous, punitive, lawgiving",
+        "Gnostic primary texts explicitly identify them"
+      ],
+      "source_tradition": "Gnostic (Sethian, Valentinian, Marcionite)",
+      "primary_text_evidence": [
+        "Apocryphon of John II,1",
+        "Hypostasis of the Archons II,4",
+        "Marcion's Antitheses (lost; preserved in Tertullian Adv. Marc.)"
+      ],
+      "scholarly_caveat": "The identification is a Gnostic interpretive move; mainstream Jewish and Christian theology rejects it.",
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p002",
+      "facet_a_id": "inanna-descended-goddess",
+      "facet_b_id": "persephone-descent",
+      "strength": "strong-parallel",
+      "type": "archetypal-and-structural",
+      "basis": [
+        "Both descend into the underworld",
+        "Both are connected to fertility cycles",
+        "Both involve a substitution-and-return arrangement"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p003",
+      "facet_a_id": "odin-sacrificed-on-yggdrasil",
+      "facet_b_id": "christ-crucifixion",
+      "strength": "strong-parallel",
+      "type": "archetypal",
+      "basis": [
+        "Both are self-sacrifice on a tree/cross",
+        "Both are pierced by a spear",
+        "Both involve sacrifice 'of myself to myself' (Hávamál) / 'God offering God' (Trinitarian theology)",
+        "Both result in acquisition of cosmic knowledge or redemption"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p004",
+      "facet_a_id": "prometheus-fire-bringer",
+      "facet_b_id": "loki-trickster-liberator",
+      "strength": "strong-parallel",
+      "type": "archetypal-trickster-liberator",
+      "basis": [
+        "Both are trickster figures who benefit humanity",
+        "Both are punished by being bound",
+        "Both will be released at the cosmic crisis",
+        "Both bring fire/transformation"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p005",
+      "facet_a_id": "quetzalcoatl-culture-hero",
+      "facet_b_id": "prometheus-fire-bringer",
+      "strength": "strong-parallel",
+      "type": "archetypal-civilizing-teacher",
+      "basis": [
+        "Both descend/come to humanity with civilizing gifts",
+        "Both oppose the dominant divine order",
+        "Both are exiled or bound for their action"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p006",
+      "facet_a_id": "shiva-destroyer",
+      "facet_b_id": "kali-destroyer",
+      "strength": "identity",
+      "type": "same-tradition-paired-aspects",
+      "basis": [
+        "Within Hindu cosmology, Shiva and Kali are consorts embodying the same destroyer-principle",
+        "Both dance the cosmic dance of dissolution",
+        "Both are paradoxically generative through destruction"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p007",
+      "facet_a_id": "set-usurper-murderer",
+      "facet_b_id": "loki-betrayer",
+      "strength": "strong-parallel",
+      "type": "archetypal-betrayer",
+      "basis": [
+        "Both betray and kill a brother-figure (Osiris, Baldr)",
+        "Both are subsequently bound/imprisoned",
+        "Both represent disorder against cosmic order"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    },
+    {
+      "id": "p008",
+      "facet_a_id": "shiva-teacher",
+      "facet_b_id": "hermes-trismegistus",
+      "strength": "strong-parallel",
+      "type": "archetypal-silent-wisdom-teacher",
+      "basis": [
+        "Both transmit highest wisdom",
+        "Both are associated with silence and direct understanding",
+        "Both are gurus to aged sages",
+        "Both bridge tiers (cross-tier teachers)"
+      ],
+      "canonical": true,
+      "user_drawn": false
+    }
+  ]
+}

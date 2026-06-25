@@ -1,0 +1,20 @@
+{
+  "name": "parallels-of-the-gods",
+  "version": "1.0.0",
+  "description": "The Source Map — comparative cosmology canvas. Renders a four-tier Gnostic framework with every documented deity placed by structural function.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.383.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.1"
+  }
+}
