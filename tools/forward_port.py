@@ -106,6 +106,15 @@ def main():
                                facet_b_id=p["facet_b_id"])})
         kept.append(p)
 
+    # --- 2b. collapse free-text `type` onto the docs/06 evidence taxonomy --
+    # (before triage, so `documented-historical-transmission` rows feed it)
+    import normalize_types
+    for p in kept:
+        canon, _ = normalize_types.classify(p.get("type"))
+        if p.get("type") and p["type"] != canon and not p.get("descriptor"):
+            p["descriptor"] = p["type"]
+        p["type"] = canon
+
     # --- 3. port citations + triage from donor, derive triage ----------
     def best_donor(matches):
         # prefer an established row, then the one with the most citation fields

@@ -256,7 +256,8 @@ severity model:
   carries little information.
 - **147 distinct `type` values** for 329 parallels — free text, not a controlled
   taxonomy (135 are the generic `structural-function-match`; the rest a
-  long singleton tail).
+  long singleton tail). *(Resolved in v0.8.0: `tools/normalize_types.py` collapses
+  these to the 4 canonical evidence types in use, original kept in `descriptor`.)*
 - **47 / 1326 facets carry a `scholarly_note`** (3.6%). The parallels are built
   on facets that are 96% unsourced.
 
@@ -307,8 +308,14 @@ In dependency order. Each step has a concrete, checkable exit condition.
    contradictions). Exit: 0 `novel_but_*` defects.
 5. Fix the 7 tradition FKs; delete/remap the 3 mislinked parallels.
 6. Reconcile or delete the 136 dangling `parallel_facets`.
-7. Collapse the 147 `type` values onto the controlled taxonomy the spec already
-   implies (`docs/06`'s 8 evidence types) + a free-text `descriptor`.
+7. ~~Collapse the `type` values onto the controlled taxonomy the spec already
+   implies (`docs/06`'s evidence types) + a free-text `descriptor`.~~ **DONE** —
+   `tools/normalize_types.py` collapsed v0.8.0's 96 `type` values to 4 canonical
+   evidence types (structural-function / documented-historical-transmission /
+   narrative-pattern / etymological-link), preserving the original in
+   `descriptor`. Removes the `type_vocabulary_uncontrolled` Severity-3; the
+   canonical seed now has **1** Sev-3 left (`facets_mostly_unsourced`, which
+   needs human sourcing).
 
 **P2 — Earn the rigor the spec promises (ongoing).**
 8. ~~Add a **specificity/frequency weight** so universal motifs are down-ranked.~~

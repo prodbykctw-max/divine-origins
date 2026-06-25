@@ -111,44 +111,44 @@ is unverified by the tag layer and must be checked against its `basis`.
 
 | Parallel | Type | Strength |
 |---|---|---|
-| Shiva (full theology) (Dakshinamurti (The Silent Teacher)) ↔ Hermes Trismegistus (The Thrice-Greatest Wisdom-Teacher) | archetypal-silent-wisdom-teacher | strong-parallel |
-| Indra (Slayer of Vritra) ↔ Marduk (Cosmic orderer (slayer of Tiamat)) | chaoskampf-cross-cultural | strong-parallel |
-| Indra (Demoted Indra (Puranic / Archonic)) ↔ Yaldabaoth (full theology) (The False Most High (Lucifer-as-usurper)) | demoted-high-god-cross-cultural | partial-parallel |
-| Agni (Priest of the Gods (Hotr)) ↔ Prometheus (Fire-bringer / Light-bringer) | fire-as-divine-mediator | partial-parallel |
-| Yama (Lord of the Dead, Judge of Souls) ↔ Shiva (full theology) (The Destroyer (Cosmic Dissolver)) | death-and-dissolution | partial-parallel |
-| Kali (Kali Ma — The Liberating Mother) ↔ Sophia (Orthodox / Hagia Sophia) (The Redeemer (Wisdom Returning)) | redemptive-feminine-cross-cultural | strong-parallel |
-| Kalki (The Returning Savior (End of the Kali Yuga)) ↔ Quetzalcoatl (The Returning Prophet) | returning-savior-archetype | strong-parallel |
-| Vishnu (full theology) (Cosmic Preserver) ↔ El Elyon (Head of the Divine Council) | high-god-as-preserver | partial-parallel |
-| The Watchers (The Fallen Angels (Descenders to Hermon)) ↔ Yaldabaoth (full theology) (The False Most High (Lucifer-as-usurper)) | fallen-rulers | partial-parallel |
-| The Watchers (Teachers of Forbidden Arts) ↔ Prometheus (Fire-bringer / Light-bringer) | transgressive-culture-bringer | strong-parallel |
-| The Watchers (Teachers of Forbidden Arts) ↔ Sophia (Orthodox / Hagia Sophia) (The Fallen Aeon (Mother of the Demiurge)) | fall-via-overreach | partial-parallel |
-| The Nephilim (The Giants) ↔ Tezcatlipoca (The Adversary / Shadow-Twin) | pre-current-age-corruption | partial-parallel |
-| Enoch (Metatron — The Lesser YHWH) ↔ El Elyon (Head of the Divine Council) | elevated-intermediary | partial-parallel |
-| The Nephilim (The Giants) ↔ *Tritós (The Third Man / Cattle-Recoverer) | giant-vs-giant-slayer | contrast |
-| Danu (Old Irish) (Mother of the Tuatha Dé Danann) ↔ Dānu (Vedic) (Mother of the Dānavas) | mother-of-divine-race | strong-parallel |
-| Kashyapa (Prajāpati / Progenitor of All Races) ↔ El (Creator of Creatures) | withdrawn-progenitor-father | strong-parallel |
-| Vṛtra (The Cosmic Serpent) ↔ Yam (Prince Sea / Judge River (Primordial Chaos)) | cosmic-serpent-chaos | strong-parallel |
-| Vṛtra (The Cosmic Serpent) ↔ Balor (The Evil Eye King) | chaos-tyrant-slain-by-hero | partial-parallel |
-| The Daityas (The Defeated Older Race) ↔ The Rpum / Rephaim (Ugaritic) (The Rephaim as Giant Warrior-Kings) | defeated-giant-warrior-race | strong-parallel |
-| The Dānavas (The Children of Dānu (Defeated Race)) ↔ The Nephilim (The Giants) | defeated-giant-race-divine-mixed-parentage | strong-parallel |
-| The Fomorians (Giant Chaos-Warriors) ↔ The Nephilim (The Giants) | monstrous-giants-defeated | strong-parallel |
-| The Anakim (Giant Warrior-Clan of Canaan) ↔ The Nephilim (The Giants) | biblical-internal-identification | identity |
-| Og of Bashan (Giant King at Mt Hermon / Bashan) ↔ The Rpum / Rephaim (Ugaritic) (The Rephaim of Bashan) | single-religious-complex-three-angles | identity |
-| Og of Bashan (Last of the Rephaim) ↔ The Watchers (The Fallen Angels (Descenders to Hermon)) | talmudic-genealogical-link | strong-parallel |
-| *Manu and *Yemo (*Yemo — First King of the Dead) ↔ Yama (Lord of the Dead, Judge of Souls) | linguistic-cognate-deity | derivation |
-| Lugh (Master of All Skills (Samildánach)) ↔ Hermes Trismegistus (The Thrice-Greatest Wisdom-Teacher) | polymath-cross-tier-figure | strong-parallel |
-| The Morrígan (Triple Goddess of War and Fate) ↔ Anat (Warrior-Maiden and Mourner of Baal) | war-goddess-with-erotic-aspect | strong-parallel |
-| The Morrígan (Triple Goddess of War and Fate) ↔ Kali (The Destroyer (Mahakali)) | fierce-mother-war-goddess | strong-parallel |
-| Ṛta (Cosmic Order) (The Cosmic Order Itself) ↔ The Monad (The Unmanifest Source) | impersonal-supreme-principle | partial-parallel |
-| The Dagda (All-Father / Eochaid Ollathair) ↔ *Dyḗus Ph₂tḗr (Shining Sky-Father (PIE root)) | IE-all-father-archetype | strong-parallel |
-| The Dagda (All-Father / Eochaid Ollathair) ↔ Odin (full theology) (All-Father) | all-father-with-wisdom-aspect | strong-parallel |
-| Idjair (Father in the Milky Way) ↔ El (Head of the Divine Council on Mount Lel) | withdrawn-sky-father | partial-parallel |
-| Wallungunder (Creator of Earth and First Humans (the Gyorn Gyorn)) ↔ El (Creator of Creatures) | active-son-of-withdrawn-father | partial-parallel |
-| Namarali (Rain-Maker and Fertility-Giver of the Worrorra) ↔ Baal Hadad (The Storm-God / Rider of Clouds) | rain-and-lightning-fertility-god | partial-parallel |
-| Namarali (Rain-Maker and Fertility-Giver of the Worrorra) ↔ Indra (Storm-King) | lightning-and-rain-god | partial-parallel |
-| Wunggurr (Rainbow-Serpent Creator-Being) ↔ Dānu (Vedic) (Goddess of Primordial Waters) | primordial-water-being | partial-parallel |
-| Azazel (Watcher) (Teacher of Metallurgy, Weapons, and Cosmetics) ↔ Prometheus (Fire-bringer / Light-bringer) | teacher-of-arts-bound-by-the-gods | strong-parallel |
-| Azazel (Watcher) (Bound by Raphael in Dudael) ↔ Loki (The Bound One) | cosmic-rebel-bound-until-end | strong-parallel |
-| Semyaza (Father of Ohyah and Hahyah) ↔ Ohyah (Son of Shemhazai (the Watcher Chief)) | father-son-relationship | identity |
-| Semyaza (Father of Ohyah and Hahyah) ↔ Og of Bashan (Last of the Rephaim) | genealogical-line | derivation |
+| Shiva (full theology) (Dakshinamurti (The Silent Teacher)) ↔ Hermes Trismegistus (The Thrice-Greatest Wisdom-Teacher) | structural-function-match | strong-parallel |
+| Indra (Slayer of Vritra) ↔ Marduk (Cosmic orderer (slayer of Tiamat)) | narrative-pattern-match | strong-parallel |
+| Indra (Demoted Indra (Puranic / Archonic)) ↔ Yaldabaoth (full theology) (The False Most High (Lucifer-as-usurper)) | structural-function-match | partial-parallel |
+| Agni (Priest of the Gods (Hotr)) ↔ Prometheus (Fire-bringer / Light-bringer) | structural-function-match | partial-parallel |
+| Yama (Lord of the Dead, Judge of Souls) ↔ Shiva (full theology) (The Destroyer (Cosmic Dissolver)) | structural-function-match | partial-parallel |
+| Kali (Kali Ma — The Liberating Mother) ↔ Sophia (Orthodox / Hagia Sophia) (The Redeemer (Wisdom Returning)) | structural-function-match | strong-parallel |
+| Kalki (The Returning Savior (End of the Kali Yuga)) ↔ Quetzalcoatl (The Returning Prophet) | narrative-pattern-match | strong-parallel |
+| Vishnu (full theology) (Cosmic Preserver) ↔ El Elyon (Head of the Divine Council) | structural-function-match | partial-parallel |
+| The Watchers (The Fallen Angels (Descenders to Hermon)) ↔ Yaldabaoth (full theology) (The False Most High (Lucifer-as-usurper)) | structural-function-match | partial-parallel |
+| The Watchers (Teachers of Forbidden Arts) ↔ Prometheus (Fire-bringer / Light-bringer) | structural-function-match | strong-parallel |
+| The Watchers (Teachers of Forbidden Arts) ↔ Sophia (Orthodox / Hagia Sophia) (The Fallen Aeon (Mother of the Demiurge)) | narrative-pattern-match | partial-parallel |
+| The Nephilim (The Giants) ↔ Tezcatlipoca (The Adversary / Shadow-Twin) | structural-function-match | partial-parallel |
+| Enoch (Metatron — The Lesser YHWH) ↔ El Elyon (Head of the Divine Council) | structural-function-match | partial-parallel |
+| The Nephilim (The Giants) ↔ *Tritós (The Third Man / Cattle-Recoverer) | narrative-pattern-match | contrast |
+| Danu (Old Irish) (Mother of the Tuatha Dé Danann) ↔ Dānu (Vedic) (Mother of the Dānavas) | structural-function-match | strong-parallel |
+| Kashyapa (Prajāpati / Progenitor of All Races) ↔ El (Creator of Creatures) | structural-function-match | strong-parallel |
+| Vṛtra (The Cosmic Serpent) ↔ Yam (Prince Sea / Judge River (Primordial Chaos)) | structural-function-match | strong-parallel |
+| Vṛtra (The Cosmic Serpent) ↔ Balor (The Evil Eye King) | narrative-pattern-match | partial-parallel |
+| The Daityas (The Defeated Older Race) ↔ The Rpum / Rephaim (Ugaritic) (The Rephaim as Giant Warrior-Kings) | narrative-pattern-match | strong-parallel |
+| The Dānavas (The Children of Dānu (Defeated Race)) ↔ The Nephilim (The Giants) | narrative-pattern-match | strong-parallel |
+| The Fomorians (Giant Chaos-Warriors) ↔ The Nephilim (The Giants) | narrative-pattern-match | strong-parallel |
+| The Anakim (Giant Warrior-Clan of Canaan) ↔ The Nephilim (The Giants) | documented-historical-transmission | identity |
+| Og of Bashan (Giant King at Mt Hermon / Bashan) ↔ The Rpum / Rephaim (Ugaritic) (The Rephaim of Bashan) | documented-historical-transmission | identity |
+| Og of Bashan (Last of the Rephaim) ↔ The Watchers (The Fallen Angels (Descenders to Hermon)) | documented-historical-transmission | strong-parallel |
+| *Manu and *Yemo (*Yemo — First King of the Dead) ↔ Yama (Lord of the Dead, Judge of Souls) | etymological-link | derivation |
+| Lugh (Master of All Skills (Samildánach)) ↔ Hermes Trismegistus (The Thrice-Greatest Wisdom-Teacher) | structural-function-match | strong-parallel |
+| The Morrígan (Triple Goddess of War and Fate) ↔ Anat (Warrior-Maiden and Mourner of Baal) | structural-function-match | strong-parallel |
+| The Morrígan (Triple Goddess of War and Fate) ↔ Kali (The Destroyer (Mahakali)) | structural-function-match | strong-parallel |
+| Ṛta (Cosmic Order) (The Cosmic Order Itself) ↔ The Monad (The Unmanifest Source) | structural-function-match | partial-parallel |
+| The Dagda (All-Father / Eochaid Ollathair) ↔ *Dyḗus Ph₂tḗr (Shining Sky-Father (PIE root)) | structural-function-match | strong-parallel |
+| The Dagda (All-Father / Eochaid Ollathair) ↔ Odin (full theology) (All-Father) | structural-function-match | strong-parallel |
+| Idjair (Father in the Milky Way) ↔ El (Head of the Divine Council on Mount Lel) | structural-function-match | partial-parallel |
+| Wallungunder (Creator of Earth and First Humans (the Gyorn Gyorn)) ↔ El (Creator of Creatures) | structural-function-match | partial-parallel |
+| Namarali (Rain-Maker and Fertility-Giver of the Worrorra) ↔ Baal Hadad (The Storm-God / Rider of Clouds) | structural-function-match | partial-parallel |
+| Namarali (Rain-Maker and Fertility-Giver of the Worrorra) ↔ Indra (Storm-King) | structural-function-match | partial-parallel |
+| Wunggurr (Rainbow-Serpent Creator-Being) ↔ Dānu (Vedic) (Goddess of Primordial Waters) | structural-function-match | partial-parallel |
+| Azazel (Watcher) (Teacher of Metallurgy, Weapons, and Cosmetics) ↔ Prometheus (Fire-bringer / Light-bringer) | structural-function-match | strong-parallel |
+| Azazel (Watcher) (Bound by Raphael in Dudael) ↔ Loki (The Bound One) | narrative-pattern-match | strong-parallel |
+| Semyaza (Father of Ohyah and Hahyah) ↔ Ohyah (Son of Shemhazai (the Watcher Chief)) | structural-function-match | identity |
+| Semyaza (Father of Ohyah and Hahyah) ↔ Og of Bashan (Last of the Rephaim) | documented-historical-transmission | derivation |
 | … and 72 more (see JSON) | | |
