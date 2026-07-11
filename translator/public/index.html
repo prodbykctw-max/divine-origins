@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Dialect Translator</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%A3%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Dialect&nbsp;Translator</h1>
+      <p class="app__tagline">Real regional varieties — not neutral textbook language.</p>
+    </header>
+
+    <!-- Language pair -->
+    <section class="pair" aria-label="Languages">
+      <div class="lang-card" id="fromCard">
+        <span class="lang-card__tag">From</span>
+        <div class="lang-card__selects">
+          <label class="sr-only" for="fromLang">From language</label>
+          <select id="fromLang" class="select select--lang"></select>
+          <label class="sr-only" for="fromVariant">From variant</label>
+          <select id="fromVariant" class="select select--variant"></select>
+        </div>
+      </div>
+
+      <button id="swapBtn" class="swap" type="button" title="Swap languages" aria-label="Swap languages and move output to input">
+        <span aria-hidden="true">⇅</span>
+      </button>
+
+      <div class="lang-card" id="toCard">
+        <span class="lang-card__tag">To</span>
+        <div class="lang-card__selects">
+          <label class="sr-only" for="toLang">To language</label>
+          <select id="toLang" class="select select--lang"></select>
+          <label class="sr-only" for="toVariant">To variant</label>
+          <select id="toVariant" class="select select--variant"></select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <section class="register" aria-label="Register">
+      <div class="register__group" role="radiogroup" aria-label="Translation register">
+        <button class="register__btn is-active" data-register="everyday" role="radio" aria-checked="true" type="button">Everyday</button>
+        <button class="register__btn" data-register="formal" role="radio" aria-checked="false" type="button">Formal</button>
+        <button class="register__btn" data-register="street" role="radio" aria-checked="false" type="button">Street&#8209;slang</button>
+      </div>
+    </section>
+
+    <!-- Input -->
+    <section class="io io--input" aria-label="Input">
+      <textarea id="inputText" class="io__text" rows="3" placeholder="Type or tap the mic to speak…" autocomplete="off"></textarea>
+      <div class="io__bar">
+        <button id="micBtn" class="iconbtn" type="button" title="Speak" aria-label="Speak input">
+          <span class="iconbtn__glyph" aria-hidden="true">🎙️</span>
+        </button>
+        <button id="speakInputBtn" class="iconbtn" type="button" title="Listen to input" aria-label="Listen to input">
+          <span aria-hidden="true">🔊</span>
+        </button>
+        <span class="io__spacer"></span>
+        <button id="translateBtn" class="btn btn--primary" type="button">Translate</button>
+      </div>
+    </section>
+
+    <!-- Error banner -->
+    <div id="errorBar" class="errorbar" role="alert" hidden></div>
+
+    <!-- Output -->
+    <section class="io io--output" aria-label="Output" id="outputSection" hidden>
+      <div id="outputText" class="io__text io__text--output" aria-live="polite"></div>
+      <p id="romanization" class="romanization" hidden></p>
+      <p id="dialectNote" class="note" hidden></p>
+      <div class="io__bar">
+        <button id="speakOutputBtn" class="iconbtn" type="button" title="Listen to translation" aria-label="Listen to translation">
+          <span aria-hidden="true">🔊</span>
+        </button>
+        <button id="copyBtn" class="iconbtn" type="button" title="Copy translation" aria-label="Copy translation">
+          <span aria-hidden="true">📋</span>
+        </button>
+        <span class="io__spacer"></span>
+        <span id="outputPairLabel" class="io__pairlabel"></span>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="history" aria-label="History" id="historySection" hidden>
+      <div class="history__head">
+        <h2>Recent</h2>
+        <button id="clearHistoryBtn" class="btn btn--ghost" type="button">Clear</button>
+      </div>
+      <ul id="historyList" class="history__list"></ul>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
