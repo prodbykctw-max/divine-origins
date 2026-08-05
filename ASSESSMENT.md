@@ -328,11 +328,13 @@ In dependency order. Each step has a concrete, checkable exit condition.
 **P3 — Build the app the spec describes.**
 11. The canvas UI (`docs/00` §4 is the fuller reference; `docs/01` §4 the
     maintained one — reconcile the four vs three view modes). **A working UI
-    already exists** in `app/` (a React component + two standalone HTML builds,
-    "Parallels of the Gods" and the "Divine Origins" library) — but it ships
-    stale embedded data (v0.1.0 / v0.5.0) and implements only part of the spec.
-    The next step is wiring the React app to the canonical `v0.8.0` seed and
-    closing the spec gaps (view modes, My Map). See `app/README.md`.
+    already exists** in `app/` and is now wired to the canonical `v0.8.0` seed,
+    with **two of the four spec view modes live**: Structural (tier bands) and
+    **Network** (a radial constellation graph — `computeNetworkLayout` in
+    `ParallelsOfTheGods.jsx`; edges colored/weighted by the specificity
+    significance work). Compare-Two-Nodes also shipped. Still open: Timeline
+    view and "My Map" (personal overlay, drag-to-connect, evidence-typed
+    connections per `docs/05`–`06`). See `app/README.md`.
 
 ### 8b. Content orphaned in `divine-origins-library-v050.html` — partially recovered
 

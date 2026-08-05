@@ -163,6 +163,7 @@ function SourceMapApp({ data, onReload }) {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [compareOpen, setCompareOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [viewMode, setViewMode] = useState('tiers'); // 'tiers' | 'network'
 
   // Reset selection if data reloaded
   useEffect(() => {
@@ -368,8 +369,30 @@ function SourceMapApp({ data, onReload }) {
         />
       )}
 
+      <div className="px-4" style={{ padding: '10px 16px 0', display: 'flex', gap: 4 }}>
+        {[['tiers', 'Tiers'], ['network', 'Network']].map(([id, label]) => (
+          <button
+            key={id}
+            onClick={() => setViewMode(id)}
+            className="marginalia"
+            style={{
+              padding: '4px 10px',
+              fontSize: '11px',
+              borderRadius: '2px',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+              border: `1px solid ${viewMode === id ? '#b08648' : 'rgba(176,134,72,0.4)'}`,
+              background: viewMode === id ? '#b08648' : 'transparent',
+              color: viewMode === id ? '#faf5e7' : '#6b5223',
+            }}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       <main className="paper-texture" style={{ paddingBottom: sheetOpen ? '60vh' : '24px' }}>
-        {TIER_ORDER.map((tier, idx) => (
+        {viewMode === 'tiers' && TIER_ORDER.map((tier, idx) => (
           <TierBand
             key={tier}
             tier={tier}
@@ -386,6 +409,21 @@ function SourceMapApp({ data, onReload }) {
             isLast={idx === TIER_ORDER.length - 1}
           />
         ))}
+
+        {viewMode === 'network' && (
+          <div className="px-4" style={{ padding: '10px 16px' }}>
+            <NetworkView
+              facets={facets}
+              deityById={deityById}
+              traditionById={traditionById}
+              parallels={parallels}
+              isFacetVisible={isFacetVisible}
+              selectedFacetId={selectedFacetId}
+              selectedRelated={selectedRelated}
+              onSelect={selectFacet}
+            />
+          </div>
+        )}
 
         <Footer meta={meta} totalDeities={totalDeities} totalFacets={facets.length} totalParallels={parallels.length} />
       </main>
@@ -1518,6 +1556,312 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
         </div>
       </div>
     </>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Network layout — pure function, no DOM/canvas dependency.
+//
+// Deliberately separated from NetworkView's canvas drawing below so it can be
+// unit-tested directly in plain Node (no browser, no happy-dom — which does not
+// implement canvas.getContext at all). This is the part most likely to hide a
+// bug (angle math, tier-ring assignment); the drawing code is comparatively
+// mechanical. Exported as a named export for exactly that purpose.
+//
+// Deterministic: no Math.random(), no Date.now() — same input always produces
+// the same layout, so it's reproducible and testable.
+//
+// Radial "constellation" layout (docs/00 §4 names this view mode explicitly):
+// Tier 1 at the center, then Tier 2, Cross-Tier, Tier 3, Tier 4 outward, one
+// ring per tier. Within a ring, nodes start evenly spaced by angle (sorted by
+// id for a stable order), then a few cheap relaxation passes (a) pull each
+// node's angle toward the circular mean of its edge-neighbors' angles, so
+// connected nodes cluster together, and (b) push apart any same-ring nodes
+// that end up closer than a minimum angular gap, so labels/dots don't stack.
+// ─────────────────────────────────────────────────────────────────────────────
+export function computeNetworkLayout(nodes, edges, opts = {}) {
+  const ringGap = opts.ringGap ?? 100;
+  const baseRadius = opts.baseRadius ?? 70;
+  const passes = opts.passes ?? 4;
+  const pull = opts.pull ?? 0.25;
+  const minSpacingPx = opts.minSpacingPx ?? 14;
+
+  const ringIndex = {};
+  TIER_ORDER.forEach((t, i) => { ringIndex[t] = i; });
+
+  const rings = {}; // ringIdx -> [nodeId,...]
+  const tierOf = {};
+  nodes.forEach((n) => {
+    const idx = ringIndex[n.tier] ?? TIER_ORDER.length - 1;
+    tierOf[n.id] = idx;
+    (rings[idx] = rings[idx] || []).push(n.id);
+  });
+  Object.values(rings).forEach((ids) => ids.sort()); // stable, deterministic order
+
+  const angle = {};
+  Object.entries(rings).forEach(([idx, ids]) => {
+    const n = ids.length;
+    ids.forEach((id, i) => { angle[id] = (2 * Math.PI * i) / Math.max(1, n); });
+  });
+
+  // adjacency, restricted to nodes actually present (edges to off-screen /
+  // filtered-out nodes are simply not present in `nodes`, so they drop out)
+  const present = new Set(nodes.map((n) => n.id));
+  const neighbors = {};
+  edges.forEach(([a, b]) => {
+    if (!present.has(a) || !present.has(b)) return;
+    (neighbors[a] = neighbors[a] || []).push(b);
+    (neighbors[b] = neighbors[b] || []).push(a);
+  });
+
+  for (let p = 0; p < passes; p++) {
+    // (a) pull toward circular mean of neighbor angles
+    const next = { ...angle };
+    for (const id of present) {
+      const nbrs = neighbors[id];
+      if (!nbrs || !nbrs.length) continue;
+      let sx = 0, sy = 0;
+      for (const nb of nbrs) { sx += Math.cos(angle[nb]); sy += Math.sin(angle[nb]); }
+      const meanAngle = Math.atan2(sy, sx);
+      // shortest angular distance, then damped step toward it
+      let d = meanAngle - angle[id];
+      while (d > Math.PI) d -= 2 * Math.PI;
+      while (d < -Math.PI) d += 2 * Math.PI;
+      next[id] = angle[id] + d * pull;
+    }
+    Object.assign(angle, next);
+
+    // (b) same-ring declutter: sort by angle, push apart neighbors closer
+    // than the minimum gap for that ring's radius
+    Object.entries(rings).forEach(([idx, ids]) => {
+      if (ids.length < 2) return;
+      const radius = baseRadius + Number(idx) * ringGap;
+      const minGap = Math.min(Math.PI / 3, minSpacingPx / radius);
+      const sorted = [...ids].sort((a, b) => angle[a] - angle[b]);
+      for (let i = 1; i < sorted.length; i++) {
+        const prev = sorted[i - 1], cur = sorted[i];
+        const gap = angle[cur] - angle[prev];
+        if (gap < minGap) angle[cur] = angle[prev] + minGap;
+      }
+      // wrap-around pair (last -> first)
+      const first = sorted[0], last = sorted[sorted.length - 1];
+      const wrapGap = angle[first] + 2 * Math.PI - angle[last];
+      if (wrapGap < minGap) angle[first] = angle[last] + minGap - 2 * Math.PI;
+    });
+  }
+
+  const degree = {};
+  edges.forEach(([a, b]) => {
+    if (!present.has(a) || !present.has(b)) return;
+    degree[a] = (degree[a] || 0) + 1;
+    degree[b] = (degree[b] || 0) + 1;
+  });
+
+  const positions = {};
+  nodes.forEach((n) => {
+    const idx = tierOf[n.id];
+    const radius = baseRadius + idx * ringGap;
+    const a = angle[n.id] || 0;
+    positions[n.id] = {
+      x: radius * Math.cos(a),
+      y: radius * Math.sin(a),
+      ring: idx,
+      angle: a,
+      degree: degree[n.id] || 0,
+    };
+  });
+  return positions;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NetworkView — the radial "constellation" graph (docs/00 §4). Renders visible
+// facets as nodes on <canvas>, canonical parallels as edges colored/weighted by
+// the specificity work (band color; faint + thin when not statistically
+// significant). Click selects a facet through the same onSelect callback the
+// tier-band view uses, so the detail sheet behaves identically either way.
+// ─────────────────────────────────────────────────────────────────────────────
+function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisible, selectedFacetId, selectedRelated, onSelect }) {
+  const canvasRef = useRef(null);
+  const wrapRef = useRef(null);
+  const [transform, setTransform] = useState({ x: 0, y: 0, scale: 1 });
+  const dragRef = useRef(null);
+  const posRef = useRef({});
+
+  const visibleFacets = useMemo(() => facets.filter(isFacetVisible), [facets, isFacetVisible]);
+  const nodeList = useMemo(
+    () => visibleFacets.map((f) => ({ id: f.id, tier: f.tier_assignment })),
+    [visibleFacets]
+  );
+  const visibleIds = useMemo(() => new Set(nodeList.map((n) => n.id)), [nodeList]);
+  const edgeList = useMemo(
+    () =>
+      parallels
+        .filter((p) => visibleIds.has(p.facet_a_id) && visibleIds.has(p.facet_b_id))
+        .map((p) => [p.facet_a_id, p.facet_b_id, p]),
+    [parallels, visibleIds]
+  );
+
+  const positions = useMemo(
+    () => computeNetworkLayout(nodeList, edgeList.map(([a, b]) => [a, b])),
+    [nodeList, edgeList]
+  );
+  posRef.current = positions;
+
+  function draw() {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    // Guard rather than assume: real browsers always implement getContext,
+    // but a headless/exotic environment might not (verified happy-dom does
+    // not, during development of this view) — fail quiet, not crash.
+    let ctx = null;
+    try { ctx = typeof canvas.getContext === 'function' ? canvas.getContext('2d') : null; }
+    catch { ctx = null; }
+    if (!ctx) return;
+
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.clientWidth || 600;
+    const h = canvas.clientHeight || 520;
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#faf5e7';
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.save();
+    ctx.translate(w / 2 + transform.x, h / 2 + transform.y);
+    ctx.scale(transform.scale, transform.scale);
+
+    // tier rings (faint)
+    const ringRadii = new Set(Object.values(positions).map((p) => p.ring));
+    ctx.strokeStyle = 'rgba(176,134,72,0.15)';
+    ctx.lineWidth = 1 / transform.scale;
+    ringRadii.forEach((idx) => {
+      const r = 70 + idx * 100;
+      ctx.beginPath();
+      ctx.arc(0, 0, r, 0, Math.PI * 2);
+      ctx.stroke();
+    });
+
+    // edges
+    edgeList.forEach(([a, b, p]) => {
+      const pa = positions[a], pb = positions[b];
+      if (!pa || !pb) return;
+      const isSelectedEdge = selectedFacetId && (a === selectedFacetId || b === selectedFacetId);
+      const band = p.specificity_band;
+      const sig = p.specificity_significant;
+      let color = SPECIFICITY_COLORS[band] || '#a08960';
+      let alpha = sig ? 0.55 : 0.15;
+      let width = sig ? 1.4 : 0.7;
+      if (isSelectedEdge) { alpha = 0.95; width = 2.2; }
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = width / transform.scale;
+      ctx.beginPath();
+      ctx.moveTo(pa.x, pa.y);
+      ctx.lineTo(pb.x, pb.y);
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
+
+    // nodes
+    nodeList.forEach((n) => {
+      const pos = positions[n.id];
+      if (!pos) return;
+      const facet = facets.find((f) => f.id === n.id); // small visible set; fine
+      const deity = facet && deityById[facet.parent_deity_id];
+      const c = deity ? colorFor(deity.tradition_id) : DEFAULT_TRADITION_COLOR;
+      const isSelected = n.id === selectedFacetId;
+      const isRelated = selectedFacetId && selectedRelated.has(n.id);
+      const isDimmed = selectedFacetId && !isSelected && !isRelated;
+      const r = (2.5 + Math.min(6, pos.degree * 0.7)) / Math.sqrt(transform.scale);
+
+      ctx.globalAlpha = isDimmed ? 0.25 : 1;
+      ctx.fillStyle = c.bg;
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
+      ctx.fill();
+      if (isSelected || isRelated) {
+        ctx.strokeStyle = '#b08648';
+        ctx.lineWidth = (isSelected ? 2.5 : 1.5) / transform.scale;
+        ctx.stroke();
+      }
+    });
+    ctx.globalAlpha = 1;
+    ctx.restore();
+  }
+
+  useEffect(() => { draw(); });
+
+  useEffect(() => {
+    function onResize() { draw(); }
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function screenToWorld(clientX, clientY) {
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const w = rect.width, h = rect.height;
+    const x = (clientX - rect.left - w / 2 - transform.x) / transform.scale;
+    const y = (clientY - rect.top - h / 2 - transform.y) / transform.scale;
+    return { x, y };
+  }
+
+  function hitTest(clientX, clientY) {
+    const { x, y } = screenToWorld(clientX, clientY);
+    let best = null, bestDist = 14 / transform.scale; // px hit radius in world units
+    nodeList.forEach((n) => {
+      const pos = positions[n.id];
+      if (!pos) return;
+      const d = Math.hypot(pos.x - x, pos.y - y);
+      if (d < bestDist) { bestDist = d; best = n.id; }
+    });
+    return best;
+  }
+
+  function onPointerDown(e) {
+    dragRef.current = { startX: e.clientX, startY: e.clientY, moved: false, tx: transform.x, ty: transform.y };
+  }
+  function onPointerMove(e) {
+    const drag = dragRef.current;
+    if (!drag) return;
+    const dx = e.clientX - drag.startX, dy = e.clientY - drag.startY;
+    if (Math.hypot(dx, dy) > 3) drag.moved = true;
+    if (drag.moved) setTransform((t) => ({ ...t, x: drag.tx + dx, y: drag.ty + dy }));
+  }
+  function onPointerUp(e) {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (drag && !drag.moved) {
+      const hit = hitTest(e.clientX, e.clientY);
+      if (hit) onSelect(hit);
+    }
+  }
+  function onWheel(e) {
+    e.preventDefault();
+    const factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
+    setTransform((t) => ({ ...t, scale: Math.min(3, Math.max(0.35, t.scale * factor)) }));
+  }
+
+  return (
+    <div ref={wrapRef} className="card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div className="marginalia" style={{ padding: '10px 12px 0' }}>
+        {nodeList.length} figures · {edgeList.length} parallels shown · scroll to zoom, drag to pan, tap a node to open it
+      </div>
+      <canvas
+        ref={canvasRef}
+        style={{ width: '100%', height: '70vh', minHeight: 420, display: 'block', cursor: 'grab', touchAction: 'none' }}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerLeave={onPointerUp}
+        onWheel={onWheel}
+      />
+    </div>
   );
 }
 

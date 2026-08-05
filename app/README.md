@@ -51,9 +51,13 @@ in the uploads and is now committed here.
 - **Only a subset of the spec UI is implemented.** Per `../docs/00 §4`, the spec
   calls for four view modes (Structural / Network / Constellation / Timeline), a
   Compare-Two-Nodes panel, and the personal "My Map" overlay with drag-to-connect
-  persistence (`../docs/05`). The HTML Library has drag wiring; none of the three
-  implement the full personal-overlay / evidence-typed connections from
-  `../docs/06`.
+  persistence (`../docs/05`). **Structural** (the tier bands) and **Network**
+  (a radial constellation graph — Tier 1 at the center outward, edges = canonical
+  parallels colored/weighted by the specificity work) are now both live in
+  `vite/`, toggled from the header. Compare-Two-Nodes also shipped (`CompareModal`).
+  Still missing: Timeline view and "My Map" (personal overlay, evidence-typed
+  user-drawn connections per `../docs/06`). The HTML Library still has drag
+  wiring but is not the maintained build.
 
 ## Recommended next step
 
