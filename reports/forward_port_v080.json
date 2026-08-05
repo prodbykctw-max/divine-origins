@@ -98,5 +98,9 @@
     "moderate": 53,
     "tag-divergent": 112,
     "universal-motif": 45
+  },
+  "library_migration": {
+    "applied_count": 19,
+    "unmatched_count": 4
   }
 }

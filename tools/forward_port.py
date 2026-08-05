@@ -169,6 +169,17 @@ def main():
     spec_summary = specificity.annotate(base)
     report["specificity_bands"] = spec_summary["bands"]
 
+    # --- 4c. migrate Russell-connection / tradition-claim enrichment ----
+    # (from the divine-origins-library-v050.html build — see
+    # tools/migrate_library_data.py for the id-matching rationale)
+    import migrate_library_data
+    lib_summary = migrate_library_data.annotate(base)
+    migrate_library_data.write_report(lib_summary)
+    report["library_migration"] = {
+        "applied_count": lib_summary["applied_count"],
+        "unmatched_count": lib_summary["unmatched_count"],
+    }
+
     # --- 5. metadata ---------------------------------------------------
     est = sum(1 for p in deduped if p.get("provenance") == "established")
     tri = collections.Counter(p.get("triage_status") for p in deduped)
