@@ -334,6 +334,28 @@ In dependency order. Each step has a concrete, checkable exit condition.
     The next step is wiring the React app to the canonical `v0.8.0` seed and
     closing the spec gaps (view modes, My Map). See `app/README.md`.
 
+### 8b. Content orphaned in `divine-origins-library-v050.html` — partially recovered
+
+That standalone build's embedded 23-deity dataset carried two fields absent
+everywhere else: `traditionClaim` (extended proponent-voice prose) and
+`russelConnection` (cross-references to Walter Russell's cosmology — a distinct
+enrichment layer, not part of the core structural-parallel methodology). Neither
+had been migrated forward into the canonical schema.
+
+**Fixed:** `tools/migrate_library_data.py` (wired into `forward_port.py`, so it
+survives every regeneration) ports both fields — renamed `tradition_claim` /
+`russell_connection` — onto **19 of the 23** canonical deities, hand-matched
+rather than fuzzy-matched (several are genuinely ambiguous: "AN / ANU" superficially
+matches both `anu-deity` and the unrelated `danu-irish`; "THE ONE (TO HEN)" is
+Plotinus's Neoplatonic concept, distinct from the Gnostic Monad despite the
+Monad's own alt-names including "The One"). See `reports/LIBRARY_MIGRATION_v080.md`.
+
+**The other 4 (Tammuz, Brahman, Tao, the Aboriginal Dreaming) have no canonical
+deity to attach to** — not a matching failure, those concepts were in the
+*original spec's* Tier-1 node list (`docs/00`–`01`) but were never expanded into
+full deity entries during the data lineage. Their content is preserved in
+`data/library_v050_enrichment.json` for whenever those deities get added.
+
 ---
 
 ## 9. How this repo compiles into GitHub
