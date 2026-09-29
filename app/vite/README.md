@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Opens at http://localhost:5173. Tailwind is loaded via CDN in `index.html` for instant prototyping — swap to a proper Tailwind build pipeline before production.
+Opens at http://localhost:5173. Tailwind is compiled at build time (`tailwind.config.cjs` + `postcss.config.cjs`), and `npm run build` emits a single self-contained `dist/index.html` (via `vite-plugin-singlefile`).
 
 ### Option C — Claude Code
 
@@ -80,7 +80,7 @@ These are in the spec package (`docs/05`, `docs/06`) and can be added in a follo
 ```
 app/
 ├── README.md                    ← this file
-├── index.html                   ← Vite entry, loads Tailwind via CDN
+├── index.html                   ← Vite entry
 ├── package.json                 ← React + Vite + lucide-react
 ├── vite.config.js
 ├── ParallelsOfTheGods.jsx       ← the component (single-file artifact, ready to render)

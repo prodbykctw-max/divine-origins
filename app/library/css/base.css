@@ -1,0 +1,273 @@
+/* =============================================================
+   BASE.CSS — Design Tokens, Reset, Typography, Glass System
+   Divine Origins | Cloudflare Pages Deployment
+   ============================================================= */
+
+/* ── TOKENS ── */
+:root {
+  /* Surface */
+  --void:         #050408;
+  --deep:         #0a0812;
+  --layer:        #110f1e;
+  --surface:      #1c1830;
+  --raised:       #261f3d;
+
+  /* Borders */
+  --border:       rgba(255,255,255,0.07);
+  --border-gold:  rgba(201,168,76,0.25);
+  --border-glass: rgba(255,255,255,0.10);
+
+  /* Brand palette */
+  --gold:         #c9a84c;
+  --gold-light:   #f0d080;
+  --gold-dim:     #7a6330;
+  --teal:         #40a8a0;
+  --violet:       #8840c4;
+  --crimson:      #c44040;
+  --sage:         #608050;
+  --silver:       #a8b8c8;
+
+  /* Confidence tier colors */
+  --tier-documented: var(--teal);
+  --tier-debated:    var(--gold);
+  --tier-tradition:  var(--violet);
+
+  /* Text */
+  --text-primary:   #e8dfc0;
+  --text-secondary: #ada390;
+  --text-dim:       #7d7563;
+  --text-inverse:   #050408;
+
+  /* Typography */
+  --font-display: 'Cinzel', 'Trajan Pro', serif;
+  --font-body:    'Cormorant Garamond', 'Georgia', serif;
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+  --font-ui:      'Inter', system-ui, sans-serif;
+
+  /* Easing */
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-expo:   cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Z-index layers */
+  --z-canvas:  0;
+  --z-content: 1;
+  --z-sticky:  100;
+  --z-overlay: 200;
+  --z-modal:   300;
+  --z-toast:   400;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover { color: var(--gold-light); }
+
+ul, ol { list-style: none; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar        { width: 3px; height: 3px; }
+::-webkit-scrollbar-track  { background: var(--void); }
+::-webkit-scrollbar-thumb  { background: var(--gold-dim); border-radius: 2px; }
+
+/* ── TYPOGRAPHY ── */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  color: var(--text-primary);
+}
+
+.t-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.t-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.t-caption {
+  font-family: var(--font-mono);
+  font-size: 0.713rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.t-label {
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.t-italic {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ── GLASS SYSTEM ── */
+/* Three tiers of glassmorphism for different contexts */
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  border: 1px solid var(--border);
+}
+
+.glass-mid {
+  background: rgba(10, 8, 18, 0.55);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+  border: 1px solid var(--border-glass);
+}
+
+.glass-strong {
+  background: rgba(10, 8, 18, 0.78);
+  backdrop-filter: blur(40px) saturate(1.4);
+  -webkit-backdrop-filter: blur(40px) saturate(1.4);
+  border: 1px solid var(--border-gold);
+}
+
+/* Gold-tinted glass for featured elements */
+.glass-gold {
+  background: rgba(201, 168, 76, 0.06);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  border: 1px solid var(--border-gold);
+}
+
+/* ── CONFIDENCE TIER BADGES ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: var(--font-mono);
+  font-size: 0.667rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.badge--documented {
+  background: rgba(64, 168, 160, 0.12);
+  color: var(--teal);
+  border: 1px solid rgba(64, 168, 160, 0.28);
+}
+
+.badge--debated {
+  background: rgba(201, 168, 76, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+}
+
+.badge--tradition {
+  background: rgba(136, 64, 196, 0.12);
+  color: var(--violet);
+  border: 1px solid rgba(136, 64, 196, 0.28);
+}
+
+/* ── TAGS ── */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.658rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  border-radius: 1px;
+}
+
+/* ── DIVIDERS ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  opacity: 0.25;
+  border: none;
+}
+
+/* ── GLOW UTILITIES ── */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.12),
+              0 0 80px rgba(201, 168, 76, 0.04);
+}
+
+.glow-violet {
+  box-shadow: 0 0 40px rgba(136, 64, 196, 0.15),
+              0 0 80px rgba(136, 64, 196, 0.05);
+}
+
+/* ── FOCUS VISIBLE ── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ── SELECTION ── */
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+  color: var(--text-primary);
+}

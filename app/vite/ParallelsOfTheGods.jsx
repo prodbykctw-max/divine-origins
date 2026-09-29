@@ -46,7 +46,7 @@ const TRADITION_COLORS = {
   chinese: { bg: '#9c3a2a', ink: '#6a221a', label: 'Vermilion' },
 };
 
-const DEFAULT_TRADITION_COLOR = { bg: '#666', ink: '#333', label: 'Unset' };
+const DEFAULT_TRADITION_COLOR = { bg: '#666666', ink: '#333333', label: 'Unset' };
 
 // Specificity band → badge color (parallelomania control, see tools/specificity.py).
 // Green = rare shared structure (strong); red = common-motif (weak); gray = no shared tag.
@@ -67,10 +67,42 @@ function hashColor(id) {
   return { bg: `hsl(${hue} 38% 38%)`, ink: `hsl(${hue} 42% 24%)`, label: id };
 }
 
+// Dark-theme text colours derived from each tradition's pigment: `fg` is a
+// lifted tone for captions, `ink` a light tone for names — both readable on the
+// void background while keeping the tradition's hue.
+function toHsl(c) {
+  const m = /^hsl\((\d+)\s+(\d+)%\s+(\d+)%\)$/.exec(c);
+  if (m) return [+m[1], +m[2], +m[3]];
+  const n = parseInt(c.replace('#', '').padEnd(6, '0'), 16);
+  const r = (n >> 16 & 255) / 255, g = (n >> 8 & 255) / 255, b = (n & 255) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2;
+  let h = 0, sat = 0;
+  if (mx !== mn) {
+    const d = mx - mn;
+    sat = l > 0.5 ? d / (2 - mx - mn) : d / (mx + mn);
+    h = mx === r ? (g - b) / d + (g < b ? 6 : 0) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    h *= 60;
+  }
+  return [Math.round(h), Math.round(sat * 100), Math.round(l * 100)];
+}
+const _darkCache = {};
+function darkTone(base) {
+  const key = base.bg;
+  if (_darkCache[key]) return _darkCache[key];
+  const [h, sat] = toHsl(base.bg);
+  const S = Math.min(Math.max(sat, 30), 60);
+  return (_darkCache[key] = {
+    ...base,
+    fg: `hsl(${h} ${S}% 66%)`,
+    ink: `hsl(${h} ${Math.min(S, 45)}% 86%)`,
+    edge: `hsl(${h} ${S}% 52%)`,
+  });
+}
+
 function colorFor(traditionId) {
-  if (TRADITION_COLORS[traditionId]) return TRADITION_COLORS[traditionId];
-  if (traditionId) return hashColor(traditionId);
-  return DEFAULT_TRADITION_COLOR;
+  if (TRADITION_COLORS[traditionId]) return darkTone(TRADITION_COLORS[traditionId]);
+  if (traditionId) return darkTone(hashColor(traditionId));
+  return darkTone(DEFAULT_TRADITION_COLOR);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -96,7 +128,7 @@ export default function App() {
 
 function LoadingScreen() {
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: '#f1ecdf', color: '#1d2030', fontFamily: 'EB Garamond, Georgia, serif' }}>
+    <div className="min-h-screen flex items-center justify-center" style={{ background: '#050408', color: '#ede3c4', fontFamily: '"Cormorant Garamond", Georgia, serif' }}>
       <div className="text-center">
         <div className="text-2xl italic">Loading the Source Map…</div>
       </div>
@@ -106,8 +138,8 @@ function LoadingScreen() {
 
 function ErrorScreen({ msg }) {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#f1ecdf' }}>
-      <div className="max-w-md text-center" style={{ color: '#7a3325' }}>
+    <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#050408' }}>
+      <div className="max-w-md text-center" style={{ color: '#e8705f' }}>
         <div className="text-xl mb-2 font-semibold">Cannot render</div>
         <div className="text-sm font-mono">{msg}</div>
       </div>
@@ -254,12 +286,12 @@ function SourceMapApp({ data, onReload }) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(180deg, #f5efe1 0%, #ede4cf 100%)',
-      color: '#1d2030',
-      fontFamily: 'EB Garamond, Georgia, "Times New Roman", serif',
+      background: 'radial-gradient(ellipse 120% 60% at 50% 0%, #15112a 0%, #0a0812 45%, #050408 100%)',
+      color: '#ede3c4',
+      fontFamily: '"Cormorant Garamond", Georgia, "Times New Roman", serif',
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
 
         .smallcaps {
           font-variant: small-caps;
@@ -268,11 +300,11 @@ function SourceMapApp({ data, onReload }) {
         .marginalia {
           font-variant: small-caps;
           letter-spacing: 0.12em;
-          font-size: 11px;
-          color: #6b5e3c;
+          font-size: 12px;
+          color: #a3957a;
         }
         .codex-rule {
-          background: linear-gradient(90deg, transparent 0%, #b08648 20%, #b08648 80%, transparent 100%);
+          background: linear-gradient(90deg, transparent 0%, #c9a84c 20%, #c9a84c 80%, transparent 100%);
           height: 1px;
         }
         .tier-band {
@@ -283,21 +315,26 @@ function SourceMapApp({ data, onReload }) {
           position: absolute;
           left: 0; right: 0; top: 0;
           height: 1px;
-          background: linear-gradient(90deg, transparent 0%, rgba(176,134,72,0.4) 20%, rgba(176,134,72,0.4) 80%, transparent 100%);
+          background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.4) 20%, rgba(201,168,76,0.4) 80%, transparent 100%);
         }
         .deity-chip {
           transition: transform 120ms ease, opacity 200ms ease, box-shadow 200ms ease;
           cursor: pointer;
         }
         .deity-chip:hover {
-          transform: translateY(-1px);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,168,76,0.35);
         }
+        .deity-chip:focus-visible { outline: 2px solid #f0d080; outline-offset: 2px; }
+        input[type=search]::placeholder { color: #7d735c; }
+        input[type=search]:focus { border-color: #c9a84c !important; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+        select { color-scheme: dark; }
         .deity-chip.selected {
           transform: translateY(-1px);
-          box-shadow: 0 0 0 2px #b08648, 0 4px 14px rgba(176,134,72,0.35);
+          box-shadow: 0 0 0 2px #c9a84c, 0 4px 14px rgba(201,168,76,0.35);
         }
         .deity-chip.related {
-          box-shadow: 0 0 0 1.5px #d4a85f, 0 0 12px rgba(212,168,95,0.4);
+          box-shadow: 0 0 0 1.5px #f0d080, 0 0 12px rgba(240,208,128,0.4);
         }
         .deity-chip.dim {
           opacity: 0.28;
@@ -310,21 +347,21 @@ function SourceMapApp({ data, onReload }) {
           transition: all 150ms ease;
         }
         .sheet-backdrop {
-          background: rgba(29, 32, 48, 0.45);
+          background: rgba(0,0,0, 0.45);
           backdrop-filter: blur(2px);
           -webkit-backdrop-filter: blur(2px);
         }
         .sheet {
-          background: #faf5e7;
-          box-shadow: 0 -8px 30px rgba(29,32,48,0.25);
-          border-top: 1px solid #b08648;
+          background: rgba(22,18,38,0.62);
+          box-shadow: 0 -8px 30px rgba(0,0,0,0.25);
+          border-top: 1px solid #c9a84c;
         }
         .scrollbar-thin::-webkit-scrollbar {
           height: 6px;
           width: 6px;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb {
-          background: rgba(176,134,72,0.35);
+          background: rgba(201,168,76,0.35);
           border-radius: 999px;
         }
         .scrollbar-thin::-webkit-scrollbar-track {
@@ -332,8 +369,57 @@ function SourceMapApp({ data, onReload }) {
         }
         .paper-texture {
           background-image:
-            radial-gradient(circle at 30% 20%, rgba(176,134,72,0.04) 0%, transparent 50%),
-            radial-gradient(circle at 70% 60%, rgba(176,134,72,0.03) 0%, transparent 50%);
+            radial-gradient(circle at 30% 20%, rgba(201,168,76,0.04) 0%, transparent 50%),
+            radial-gradient(circle at 70% 60%, rgba(201,168,76,0.03) 0%, transparent 50%);
+        }
+        /* ── Apple Liquid Glass + HIG layer (black & gold) ── */
+        .glass, .glass-modal, .sheet {
+          background: rgba(22,18,38,0.62);
+          -webkit-backdrop-filter: blur(24px) saturate(1.7);
+          backdrop-filter: blur(24px) saturate(1.7);
+          border: 1px solid rgba(255,255,255,0.14);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 0 0 1px rgba(0,0,0,0.55), 0 24px 60px -20px rgba(0,0,0,0.85);
+        }
+        .sheet { border-bottom: 0; }
+        .sheet, .glass-modal { background: rgba(16,13,30,0.86); }
+        .segmented {
+          display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px;
+        }
+        .seg-btn {
+          min-height: 36px; padding: 0 18px; border-radius: 999px; border: 1px solid transparent;
+          background: transparent; color: #c9a84c; font-size: 12px; cursor: pointer; font-family: inherit;
+          transition: background .25s, color .25s, box-shadow .25s;
+        }
+        .seg-btn:hover { color: #f0d080; }
+        .seg-btn.is-on {
+          color: #fff4d4;
+          background: linear-gradient(180deg, rgba(201,168,76,0.34), rgba(201,168,76,0.16));
+          border-color: rgba(240,208,128,0.45);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 14px -4px rgba(201,168,76,0.55);
+        }
+        header { box-shadow: inset 0 -1px 0 rgba(255,255,255,0.05), 0 12px 30px -20px rgba(0,0,0,0.9); }
+        button:not(.deity-chip):not(.seg-btn) { border-radius: 999px !important; }
+        button:not(.deity-chip) { transition: transform .15s ease, background .2s, color .2s; }
+        button:not(.deity-chip):active { transform: scale(0.96); }
+        input[type=search] { border-radius: 999px !important; min-height: 44px; }
+        select { border-radius: 12px !important; min-height: 40px; }
+        .deity-chip { border-radius: 14px !important; }
+        .deity-chip.selected { box-shadow: 0 0 0 2px #f0d080, 0 8px 24px -6px rgba(201,168,76,0.55) !important; }
+        .card { border-radius: 22px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,12,25,0.6) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); }
+        .sheet-backdrop { background: rgba(3,2,6,0.5) !important; -webkit-backdrop-filter: blur(6px) !important; backdrop-filter: blur(6px) !important; }
+        @media (pointer: coarse) {
+          .seg-btn { min-height: 44px; }
+          header button { min-width: 44px; min-height: 44px; }
+        }
+        @media (max-width: 600px) { .deity-chip { max-width: none !important; flex: 1 1 100%; } }
+        @media (prefers-reduced-transparency: reduce) {
+          .glass, .glass-modal, .sheet, header { background: #100d1c !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+        }
+        @media (prefers-contrast: more) {
+          .glass, .glass-modal, .sheet, .deity-chip { border-color: rgba(255,255,255,0.45) !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
         }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(8px); }
@@ -369,26 +455,20 @@ function SourceMapApp({ data, onReload }) {
         />
       )}
 
-      <div className="px-4" style={{ padding: '10px 16px 0', display: 'flex', gap: 4 }}>
+      <div style={{ padding: '12px 16px 0' }}>
+       <div className="glass segmented" role="tablist" aria-label="View">
         {[['tiers', 'Tiers'], ['network', 'Network']].map(([id, label]) => (
           <button
             key={id}
+            role="tab"
+            aria-selected={viewMode === id}
             onClick={() => setViewMode(id)}
-            className="marginalia"
-            style={{
-              padding: '4px 10px',
-              fontSize: '11px',
-              borderRadius: '2px',
-              cursor: 'pointer',
-              fontFamily: 'inherit',
-              border: `1px solid ${viewMode === id ? '#b08648' : 'rgba(176,134,72,0.4)'}`,
-              background: viewMode === id ? '#b08648' : 'transparent',
-              color: viewMode === id ? '#faf5e7' : '#6b5223',
-            }}
+            className={'marginalia seg-btn' + (viewMode === id ? ' is-on' : '')}
           >
             {label}
           </button>
         ))}
+       </div>
       </div>
 
       <main className="paper-texture" style={{ paddingBottom: sheetOpen ? '60vh' : '24px' }}>
@@ -469,8 +549,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
 
   return (
     <header style={{
-      borderBottom: '1px solid rgba(176,134,72,0.35)',
-      background: 'linear-gradient(180deg, #faf5e7 0%, #f5efe1 100%)',
+      borderBottom: '1px solid rgba(201,168,76,0.35)',
+      background: 'rgba(8,6,14,0.86)',
+      backdropFilter: 'blur(18px)',
+      WebkitBackdropFilter: 'blur(18px)',
       position: 'sticky',
       top: 0,
       zIndex: 30,
@@ -479,10 +561,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
         <div className="flex items-baseline justify-between gap-2">
           <div>
             <div className="marginalia">Comparative Cosmology</div>
-            <h1 className="font-semibold" style={{ fontSize: '22px', lineHeight: 1.1, color: '#1d2030', letterSpacing: '-0.01em' }}>
+            <h1 style={{ fontFamily: 'Cinzel, serif', fontWeight: 600, fontSize: 'clamp(20px, 3.2vw, 30px)', lineHeight: 1.1, color: '#c9a84c', letterSpacing: '0.06em', textShadow: '0 0 24px rgba(201,168,76,0.25)' }}>
               Parallels of the Gods
             </h1>
-            <div className="marginalia mt-0.5" style={{ color: '#8a7340' }}>
+            <div className="marginalia mt-0.5" style={{ color: '#a8925c' }}>
               {visibleCount} of {totalCount} facets shown
             </div>
           </div>
@@ -493,9 +575,9 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               style={{
                 fontSize: '10px',
                 padding: '6px 10px',
-                border: '1px solid #b08648',
+                border: '1px solid #c9a84c',
                 borderRadius: '2px',
-                color: '#6b5223',
+                color: '#c9a84c',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
@@ -508,9 +590,9 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               style={{
                 fontSize: '10px',
                 padding: '6px 10px',
-                border: '1px solid #b08648',
+                border: '1px solid #c9a84c',
                 borderRadius: '2px',
-                color: '#6b5223',
+                color: '#c9a84c',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
@@ -522,7 +604,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
 
         <div className="mt-3 flex items-center gap-2">
           <div className="flex-1 relative">
-            <Search size={14} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: '#8a7340' }} />
+            <Search size={14} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: '#a8925c' }} />
             <input
               type="search"
               value={searchQuery}
@@ -533,17 +615,17 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
                 padding: '8px 30px 8px 32px',
                 fontSize: '14px',
                 fontFamily: 'inherit',
-                background: '#fbf7ea',
-                border: '1px solid rgba(176,134,72,0.4)',
+                background: '#0e0c19',
+                border: '1px solid rgba(201,168,76,0.4)',
                 borderRadius: '2px',
-                color: '#1d2030',
+                color: '#ede3c4',
                 outline: 'none',
               }}
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#8a7340', cursor: 'pointer' }}
+                style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#a8925c', cursor: 'pointer' }}
               >
                 <X size={14} />
               </button>
@@ -554,10 +636,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Filter traditions"
             style={{
               padding: '8px',
-              border: '1px solid rgba(176,134,72,0.4)',
+              border: '1px solid rgba(201,168,76,0.4)',
               borderRadius: '2px',
-              background: filtersOpen ? '#b08648' : 'transparent',
-              color: filtersOpen ? '#faf5e7' : '#6b5223',
+              background: filtersOpen ? '#c9a84c' : 'transparent',
+              color: filtersOpen ? '#0a0812' : '#c9a84c',
               cursor: 'pointer',
             }}
           >
@@ -568,10 +650,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Scholarly mode"
             style={{
               padding: '8px',
-              border: '1px solid rgba(176,134,72,0.4)',
+              border: '1px solid rgba(201,168,76,0.4)',
               borderRadius: '2px',
-              background: scholarlyMode ? '#b08648' : 'transparent',
-              color: scholarlyMode ? '#faf5e7' : '#6b5223',
+              background: scholarlyMode ? '#c9a84c' : 'transparent',
+              color: scholarlyMode ? '#0a0812' : '#c9a84c',
               cursor: 'pointer',
             }}
           >
@@ -582,10 +664,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Upload dataset"
             style={{
               padding: '8px',
-              border: '1px solid rgba(176,134,72,0.4)',
+              border: '1px solid rgba(201,168,76,0.4)',
               borderRadius: '2px',
               background: 'transparent',
-              color: '#6b5223',
+              color: '#c9a84c',
               cursor: 'pointer',
             }}
           >
@@ -594,7 +676,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
           <input ref={fileRef} type="file" accept=".json,application/json" onChange={onFileUpload} style={{ display: 'none' }} />
         </div>
         {scholarlyMode && (
-          <div className="mt-2 marginalia" style={{ color: '#6b5223' }}>
+          <div className="mt-2 marginalia" style={{ color: '#c9a84c' }}>
             ✶ Scholarly mode active — academic caveats shown on each parallel.
           </div>
         )}
@@ -610,17 +692,17 @@ function FilterBar({ traditions, activeTraditions, onToggle, onAll, onNone }) {
   return (
     <div style={{
       padding: '10px 16px',
-      borderBottom: '1px solid rgba(176,134,72,0.25)',
-      background: '#f5efe1',
+      borderBottom: '1px solid rgba(201,168,76,0.25)',
+      background: '#0e0c19',
     }}>
       <div className="flex items-center justify-between mb-2">
         <div className="marginalia">Traditions</div>
         <div className="flex gap-2">
-          <button onClick={onAll} className="marginalia" style={{ color: '#6b5223', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
+          <button onClick={onAll} className="marginalia" style={{ color: '#c9a84c', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
             All
           </button>
-          <span style={{ color: '#b08648' }}>·</span>
-          <button onClick={onNone} className="marginalia" style={{ color: '#6b5223', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
+          <span style={{ color: '#c9a84c' }}>·</span>
+          <button onClick={onNone} className="marginalia" style={{ color: '#c9a84c', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
             None
           </button>
         </div>
@@ -639,9 +721,9 @@ function FilterBar({ traditions, activeTraditions, onToggle, onAll, onNone }) {
                 fontSize: '12px',
                 fontFamily: 'inherit',
                 borderRadius: '2px',
-                border: `1px solid ${active ? c.bg : 'rgba(0,0,0,0.15)'}`,
+                border: `1px solid ${active ? c.bg : 'rgba(255,255,255,0.14)'}`,
                 background: active ? c.bg : 'transparent',
-                color: active ? '#faf5e7' : '#6b5e3c',
+                color: active ? '#f6ecd0' : '#a3957a',
                 opacity: active ? 1 : 0.6,
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
@@ -666,37 +748,37 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
     <section className="tier-band" style={{
       padding: '20px 0 22px',
       background: isCrossTier
-        ? 'linear-gradient(90deg, rgba(176,134,72,0.07) 0%, rgba(176,134,72,0.12) 50%, rgba(176,134,72,0.07) 100%)'
+        ? 'linear-gradient(90deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.12) 50%, rgba(201,168,76,0.07) 100%)'
         : 'transparent',
     }}>
       <div className="px-4 mb-3 flex items-baseline gap-3">
         <div style={{
-          fontFamily: 'EB Garamond, serif',
+          fontFamily: 'Cinzel, serif',
           fontSize: '28px',
           fontWeight: 600,
-          color: '#b08648',
-          fontStyle: 'italic',
+          color: '#c9a84c',
+          textShadow: '0 0 18px rgba(201,168,76,0.35)',
           lineHeight: 1,
           minWidth: '32px',
         }}>
           {meta.label}
         </div>
         <div className="flex-1">
-          <div className="smallcaps" style={{ fontSize: '13px', fontWeight: 600, color: '#1d2030' }}>
+          <div className="smallcaps" style={{ fontSize: '13px', fontWeight: 600, color: '#ede3c4' }}>
             {meta.name}
           </div>
           <div className="marginalia" style={{ marginTop: '1px' }}>
             {meta.subtitle}
           </div>
         </div>
-        <div className="marginalia" style={{ color: '#a08960' }}>
+        <div className="marginalia" style={{ color: '#8f8263' }}>
           {facets.length} {facets.length === 1 ? 'figure' : 'figures'}
         </div>
       </div>
 
       <div className="px-4 flex flex-wrap gap-2">
         {facets.length === 0 && (
-          <div className="marginalia italic" style={{ color: '#a08960', fontStyle: 'italic', padding: '4px 8px' }}>
+          <div className="marginalia italic" style={{ color: '#8f8263', fontStyle: 'italic', padding: '4px 8px' }}>
             no figures in this tier
           </div>
         )}
@@ -722,10 +804,11 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
               className={cls}
               onClick={() => onSelect(facet.id)}
               style={{
-                padding: '8px 12px 9px',
-                background: '#faf5e7',
-                border: `1.5px solid ${c.bg}`,
-                borderRadius: '2px',
+                padding: '9px 13px 10px 14px',
+                background: 'linear-gradient(160deg, rgba(28,24,48,0.92) 0%, rgba(14,12,25,0.92) 100%)',
+                border: '1px solid rgba(201,168,76,0.16)',
+                borderLeft: `3px solid ${c.edge}`,
+                borderRadius: '3px',
                 fontFamily: 'inherit',
                 textAlign: 'left',
                 maxWidth: '230px',
@@ -733,7 +816,7 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
               }}
             >
               <div style={{
-                fontSize: '14px',
+                fontSize: '16px',
                 fontWeight: 600,
                 color: c.ink,
                 lineHeight: 1.15,
@@ -742,7 +825,7 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
                 {deity.primary_name}
               </div>
               <div className="marginalia" style={{
-                color: c.bg,
+                color: c.fg,
                 fontSize: '10px',
                 fontWeight: 500,
               }}>
@@ -789,8 +872,8 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
         zIndex: 50,
         display: 'flex',
         flexDirection: 'column',
-        borderTopLeftRadius: '12px',
-        borderTopRightRadius: '12px',
+        borderTopLeftRadius: '28px',
+        borderTopRightRadius: '28px',
       }}>
         {/* Drag handle + close */}
         <div style={{
@@ -804,33 +887,33 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}
             aria-label="Close"
           >
-            <div style={{ width: 40, height: 4, background: 'rgba(176,134,72,0.5)', borderRadius: 2 }} />
+            <div style={{ width: 40, height: 4, background: 'rgba(201,168,76,0.5)', borderRadius: 2 }} />
           </button>
         </div>
 
         {/* Header */}
-        <div style={{ padding: '0 18px 12px', flexShrink: 0, borderBottom: '1px solid rgba(176,134,72,0.25)' }}>
+        <div style={{ padding: '0 18px 12px', flexShrink: 0, borderBottom: '1px solid rgba(201,168,76,0.25)' }}>
           <div className="flex items-center justify-between mb-1">
             <span className="marginalia" style={{
               padding: '2px 6px',
               background: c.bg,
-              color: '#faf5e7',
+              color: '#f6ecd0',
               borderRadius: '2px',
             }}>
               {tradition?.name || deity.tradition_id}
             </span>
-            <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8a7340' }} aria-label="Clear selection">
+            <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }} aria-label="Clear selection">
               <X size={16} />
             </button>
           </div>
-          <h2 style={{ fontSize: '24px', fontWeight: 600, lineHeight: 1.1, color: '#1d2030', marginBottom: '3px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 600, lineHeight: 1.1, color: '#ede3c4', marginBottom: '3px' }}>
             {deity.primary_name}
           </h2>
-          <div className="marginalia" style={{ color: c.bg, fontStyle: 'italic', fontVariant: 'small-caps' }}>
+          <div className="marginalia" style={{ color: c.fg, fontStyle: 'italic', fontVariant: 'small-caps' }}>
             {facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}
           </div>
           {deity.alternate_names && deity.alternate_names.length > 0 && (
-            <div className="mt-1" style={{ fontSize: '12px', color: '#6b5e3c', fontStyle: 'italic' }}>
+            <div className="mt-1" style={{ fontSize: '12px', color: '#a3957a', fontStyle: 'italic' }}>
               also: {deity.alternate_names.slice(0, 4).join(' · ')}
               {deity.alternate_names.length > 4 && ' …'}
             </div>
@@ -838,7 +921,7 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
         </div>
 
         {/* Tabs */}
-        <div style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgba(176,134,72,0.2)', flexShrink: 0 }}>
+        <div style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgba(201,168,76,0.2)', flexShrink: 0 }}>
           {[
             { id: 'essence', label: 'Essence', icon: <Sparkles size={12} /> },
             { id: 'parallels', label: `Parallels (${relatedFacetIds.length})`, icon: <ArrowUpRight size={12} /> },
@@ -853,8 +936,8 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
                 padding: '8px 8px',
                 background: 'none',
                 border: 'none',
-                borderBottom: tab === t.id ? '2px solid #b08648' : '2px solid transparent',
-                color: tab === t.id ? '#1d2030' : '#8a7340',
+                borderBottom: tab === t.id ? '2px solid #c9a84c' : '2px solid transparent',
+                color: tab === t.id ? '#ede3c4' : '#a8925c',
                 fontWeight: tab === t.id ? 600 : 400,
                 fontSize: '11px',
                 cursor: 'pointer',
@@ -905,15 +988,15 @@ function EssenceTab({ facet, deity }) {
     <div>
       <div style={{ marginBottom: 14 }}>
         <div className="marginalia mb-1">Summary</div>
-        <p style={{ fontSize: '15px', lineHeight: 1.5, color: '#1d2030' }}>
-          {deity.summary || <em style={{ color: '#8a7340' }}>No summary available.</em>}
+        <p style={{ fontSize: '15px', lineHeight: 1.5, color: '#ede3c4' }}>
+          {deity.summary || <em style={{ color: '#a8925c' }}>No summary available.</em>}
         </p>
       </div>
 
       {facet.core_claim && (
-        <div style={{ marginBottom: 14, padding: '12px 14px', background: '#f5efe1', borderLeft: '3px solid #b08648' }}>
+        <div style={{ marginBottom: 14, padding: '12px 14px', background: '#0e0c19', borderLeft: '3px solid #c9a84c' }}>
           <div className="marginalia mb-1">Core claim · {facet.facet_name}</div>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, fontStyle: 'italic', color: '#3a322a' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, fontStyle: 'italic', color: '#cdc2a3' }}>
             {facet.core_claim}
           </p>
         </div>
@@ -923,13 +1006,13 @@ function EssenceTab({ facet, deity }) {
         {deity.etymology && (
           <div style={{ flex: 1 }}>
             <div className="marginalia mb-1">Etymology</div>
-            <div style={{ fontSize: '13px', color: '#3a322a' }}>{deity.etymology}</div>
+            <div style={{ fontSize: '13px', color: '#cdc2a3' }}>{deity.etymology}</div>
           </div>
         )}
         {deity.earliest_attestation && (
           <div style={{ flex: 1 }}>
             <div className="marginalia mb-1">Earliest attestation</div>
-            <div style={{ fontSize: '13px', color: '#3a322a' }}>{deity.earliest_attestation}</div>
+            <div style={{ fontSize: '13px', color: '#cdc2a3' }}>{deity.earliest_attestation}</div>
           </div>
         )}
       </div>
@@ -937,7 +1020,7 @@ function EssenceTab({ facet, deity }) {
       {facet.valence && (
         <div style={{ marginBottom: 12 }}>
           <div className="marginalia mb-1">Valence</div>
-          <div style={{ fontSize: '13px', color: '#3a322a', textTransform: 'capitalize' }}>{facet.valence}</div>
+          <div style={{ fontSize: '13px', color: '#cdc2a3', textTransform: 'capitalize' }}>{facet.valence}</div>
         </div>
       )}
     </div>
@@ -949,7 +1032,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
   const [typeFilter, setTypeFilter] = useState(() => new Set()); // empty = all evidence types
   if (relatedFacetIds.length === 0) {
     return (
-      <div style={{ padding: '24px 0', textAlign: 'center', color: '#8a7340', fontStyle: 'italic' }}>
+      <div style={{ padding: '24px 0', textAlign: 'center', color: '#a8925c', fontStyle: 'italic' }}>
         No parallels recorded for this facet yet.
       </div>
     );
@@ -1031,9 +1114,9 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
               borderRadius: '2px',
               cursor: 'pointer',
               fontFamily: 'inherit',
-              border: `1px solid ${specFilter === f.id ? '#3f6e5e' : 'rgba(176,134,72,0.4)'}`,
+              border: `1px solid ${specFilter === f.id ? '#3f6e5e' : 'rgba(201,168,76,0.4)'}`,
               background: specFilter === f.id ? '#3f6e5e' : 'transparent',
-              color: specFilter === f.id ? '#faf5e7' : '#6b5223',
+              color: specFilter === f.id ? '#f6ecd0' : '#c9a84c',
             }}
           >
             {f.label}
@@ -1056,9 +1139,9 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                   borderRadius: '2px',
                   cursor: 'pointer',
                   fontFamily: 'inherit',
-                  border: `1px solid ${on ? '#6b5223' : 'rgba(176,134,72,0.4)'}`,
-                  background: on ? '#6b5223' : 'transparent',
-                  color: on ? '#faf5e7' : '#6b5223',
+                  border: `1px solid ${on ? '#c9a84c' : 'rgba(201,168,76,0.4)'}`,
+                  background: on ? '#c9a84c' : 'transparent',
+                  color: on ? '#0a0812' : '#c9a84c',
                 }}
               >
                 {t.replace(/-/g, ' ')}
@@ -1073,7 +1156,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {shown.length === 0 && (
-          <div style={{ padding: '14px 0', textAlign: 'center', color: '#8a7340', fontStyle: 'italic', fontSize: 13 }}>
+          <div style={{ padding: '14px 0', textAlign: 'center', color: '#a8925c', fontStyle: 'italic', fontSize: 13 }}>
             No parallels match this filter.
           </div>
         )}
@@ -1081,10 +1164,10 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
           const tc = colorFor(deity.tradition_id);
           return (
             <div key={facet.id} style={{
-              border: '1px solid rgba(176,134,72,0.3)',
+              border: '1px solid rgba(201,168,76,0.3)',
               borderRadius: 2,
               padding: '10px 12px',
-              background: '#faf5e7',
+              background: '#12101f',
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
                 <button
@@ -1095,7 +1178,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     <span className="marginalia" style={{
                       padding: '1px 5px',
                       background: tc.bg,
-                      color: '#faf5e7',
+                      color: '#f6ecd0',
                       borderRadius: '2px',
                       fontSize: '9px',
                     }}>
@@ -1104,8 +1187,8 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     {explicit && (
                       <span className="marginalia" style={{
                         padding: '1px 5px',
-                        background: '#b08648',
-                        color: '#faf5e7',
+                        background: '#c9a84c',
+                        color: '#f6ecd0',
                         borderRadius: '2px',
                         fontSize: '9px',
                       }}>
@@ -1122,8 +1205,8 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                         }`}
                         style={{
                           padding: '1px 5px',
-                          background: SPECIFICITY_COLORS[explicit.specificity_band] || '#8a7340',
-                          color: '#faf5e7',
+                          background: SPECIFICITY_COLORS[explicit.specificity_band] || '#a8925c',
+                          color: '#f6ecd0',
                           borderRadius: '2px',
                           fontSize: '9px',
                         }}
@@ -1150,8 +1233,8 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     {explicit?.type && (
                       <span className="marginalia" title={explicit.descriptor || explicit.type} style={{
                         padding: '1px 5px',
-                        background: 'rgba(176,134,72,0.18)',
-                        color: '#6b5223',
+                        background: 'rgba(201,168,76,0.18)',
+                        color: '#c9a84c',
                         borderRadius: '2px',
                         fontSize: '9px',
                       }}>
@@ -1162,17 +1245,17 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                   <div style={{ fontSize: '15px', fontWeight: 600, color: tc.ink, lineHeight: 1.2 }}>
                     {deity.primary_name}
                   </div>
-                  <div className="marginalia" style={{ color: tc.bg, marginTop: 1 }}>
+                  <div className="marginalia" style={{ color: tc.fg, marginTop: 1 }}>
                     {facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}
                   </div>
                 </button>
-                <ArrowUpRight size={14} style={{ color: '#8a7340', flexShrink: 0, marginTop: 4 }} />
+                <ArrowUpRight size={14} style={{ color: '#a8925c', flexShrink: 0, marginTop: 4 }} />
               </div>
 
               {explicit?.basis && explicit.basis.length > 0 && (
-                <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px dotted rgba(176,134,72,0.4)' }}>
+                <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px dotted rgba(201,168,76,0.4)' }}>
                   <div className="marginalia mb-1">Why parallel</div>
-                  <ul style={{ fontSize: '12.5px', color: '#3a322a', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
+                  <ul style={{ fontSize: '12.5px', color: '#cdc2a3', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
                     {explicit.basis.map((b, i) => (
                       <li key={i} style={{ marginBottom: 3 }}>{b}</li>
                     ))}
@@ -1181,9 +1264,9 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
               )}
 
               {scholarlyMode && explicit?.scholarly_caveat && (
-                <div style={{ marginTop: 8, padding: '8px 10px', background: '#ede4cf', borderLeft: '2px solid #6b5223' }}>
-                  <div className="marginalia mb-1" style={{ color: '#6b5223' }}>Scholarly note</div>
-                  <div style={{ fontSize: '12px', color: '#3a322a', lineHeight: 1.45, fontStyle: 'italic' }}>
+                <div style={{ marginTop: 8, padding: '8px 10px', background: '#1a1630', borderLeft: '2px solid #c9a84c' }}>
+                  <div className="marginalia mb-1" style={{ color: '#c9a84c' }}>Scholarly note</div>
+                  <div style={{ fontSize: '12px', color: '#cdc2a3', lineHeight: 1.45, fontStyle: 'italic' }}>
                     {explicit.scholarly_caveat}
                   </div>
                 </div>
@@ -1192,7 +1275,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
               {scholarlyMode && explicit?.primary_text_evidence && (
                 <div style={{ marginTop: 6 }}>
                   <div className="marginalia mb-1">Primary text evidence</div>
-                  <div style={{ fontSize: '11.5px', color: '#6b5e3c', fontStyle: 'italic' }}>
+                  <div style={{ fontSize: '11.5px', color: '#a3957a', fontStyle: 'italic' }}>
                     {explicit.primary_text_evidence.join(' · ')}
                   </div>
                 </div>
@@ -1211,15 +1294,15 @@ function SourcesTab({ facet, deity }) {
     <div>
       <div className="marginalia mb-2">Primary sources</div>
       {sources.length === 0 ? (
-        <div style={{ color: '#8a7340', fontStyle: 'italic' }}>No primary sources listed.</div>
+        <div style={{ color: '#a8925c', fontStyle: 'italic' }}>No primary sources listed.</div>
       ) : (
         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           {sources.map((s, i) => (
             <li key={i} style={{
               padding: '8px 0',
-              borderBottom: i < sources.length - 1 ? '1px dotted rgba(176,134,72,0.3)' : 'none',
+              borderBottom: i < sources.length - 1 ? '1px dotted rgba(201,168,76,0.3)' : 'none',
               fontSize: '14px',
-              color: '#1d2030',
+              color: '#ede3c4',
               fontStyle: 'italic',
             }}>
               {s}
@@ -1241,10 +1324,10 @@ function TagsTab({ facet }) {
           <span key={tag} style={{
             padding: '3px 8px',
             fontSize: '12px',
-            background: 'rgba(176,134,72,0.12)',
-            border: '1px solid rgba(176,134,72,0.3)',
+            background: 'rgba(201,168,76,0.12)',
+            border: '1px solid rgba(201,168,76,0.3)',
             borderRadius: '2px',
-            color: '#3a322a',
+            color: '#cdc2a3',
             fontFamily: 'JetBrains Mono, ui-monospace, monospace',
           }}>
             {tag}
@@ -1254,7 +1337,7 @@ function TagsTab({ facet }) {
       {facet.tier_assignment && (
         <div style={{ marginTop: 14 }}>
           <div className="marginalia mb-1">Tier assignment</div>
-          <div style={{ fontSize: '14px', color: '#1d2030' }}>
+          <div style={{ fontSize: '14px', color: '#ede3c4' }}>
             Tier {facet.tier_assignment} — {TIER_META[facet.tier_assignment]?.name}
           </div>
         </div>
@@ -1276,41 +1359,39 @@ function AboutModal({ meta, parallels = [], onClose }) {
   return (
     <>
       <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
-      <div className="fade-in" style={{
+      <div className="fade-in glass-modal" style={{
         position: 'fixed',
         top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 'min(560px, calc(100vw - 32px))',
         maxHeight: 'calc(100vh - 48px)',
         zIndex: 70,
-        background: '#faf5e7',
-        borderRadius: '4px',
-        boxShadow: '0 12px 40px rgba(29,32,48,0.3)',
-        border: '1px solid #b08648',
+        borderRadius: '26px',
+        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
       }}>
-        <div style={{ padding: '18px 20px', borderBottom: '1px solid rgba(176,134,72,0.3)' }}>
+        <div style={{ padding: '18px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
           <div className="flex items-start justify-between">
             <div>
               <div className="marginalia">The framework</div>
-              <h2 style={{ fontSize: '22px', fontWeight: 600, color: '#1d2030', lineHeight: 1.1 }}>
+              <h2 style={{ fontSize: '22px', fontWeight: 600, color: '#ede3c4', lineHeight: 1.1 }}>
                 Parallels of the Gods
               </h2>
             </div>
-            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8a7340' }}>
+            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }}>
               <X size={18} />
             </button>
           </div>
         </div>
         <div className="scrollbar-thin" style={{ overflowY: 'auto', padding: '16px 20px 20px' }}>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#1d2030' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#ede3c4' }}>
             Every culture has named the divine differently — but the structures repeat. The unknowable Source. The Most High and the divine council. The craftsman-god who shaped this world. The rulers who govern it. The light-bringers who descend to wake us up.
           </p>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#1d2030' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#ede3c4' }}>
             This atlas lays every documented deity onto a four-tier framework derived from Gnostic cosmology and verified against Hermetic, Kabbalistic, Vedantic, Platonic, Egyptian, Norse, and Mesopotamian sources.
           </p>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 18, color: '#1d2030', fontStyle: 'italic' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 18, color: '#ede3c4', fontStyle: 'italic' }}>
             The names change. The structure does not.
           </p>
 
@@ -1322,14 +1403,14 @@ function AboutModal({ meta, parallels = [], onClose }) {
               const m = TIER_META[t];
               return (
                 <div key={t} style={{ display: 'flex', gap: 12 }}>
-                  <div style={{ minWidth: 28, fontSize: '20px', fontStyle: 'italic', color: '#b08648', fontWeight: 600, lineHeight: 1 }}>
+                  <div style={{ minWidth: 28, fontSize: '20px', fontStyle: 'italic', color: '#c9a84c', fontWeight: 600, lineHeight: 1 }}>
                     {m.label}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div className="smallcaps" style={{ fontSize: '12px', fontWeight: 600, color: '#1d2030' }}>
+                    <div className="smallcaps" style={{ fontSize: '12px', fontWeight: 600, color: '#ede3c4' }}>
                       {m.name}
                     </div>
-                    <div style={{ fontSize: '13px', color: '#3a322a', marginTop: 1, lineHeight: 1.4 }}>
+                    <div style={{ fontSize: '13px', color: '#cdc2a3', marginTop: 1, lineHeight: 1.4 }}>
                       {m.subtitle} — {(meta.tier_definitions && meta.tier_definitions[t]) || ''}
                     </div>
                   </div>
@@ -1341,7 +1422,7 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia mb-2">How to read this map</div>
-          <ol style={{ fontSize: '13.5px', lineHeight: 1.5, color: '#1d2030', paddingLeft: 18, margin: 0 }}>
+          <ol style={{ fontSize: '13.5px', lineHeight: 1.5, color: '#ede3c4', paddingLeft: 18, margin: 0 }}>
             <li style={{ marginBottom: 6 }}>Tap any figure to open its detail panel.</li>
             <li style={{ marginBottom: 6 }}>Selected figures glow gold. Their parallels across traditions glow softer — others dim.</li>
             <li style={{ marginBottom: 6 }}>Switch to the <em>Parallels</em> tab to see why each match holds.</li>
@@ -1353,7 +1434,7 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia mb-2">Reading the badges</div>
-          <div style={{ fontSize: '13px', color: '#3a322a', lineHeight: 1.5, marginBottom: 8 }}>
+          <div style={{ fontSize: '13px', color: '#cdc2a3', lineHeight: 1.5, marginBottom: 8 }}>
             Each parallel is weighted by how <em>rare</em> the structural function it
             shares is across the whole dataset — the guard against "everything
             resembles everything". A badge shows the band:
@@ -1368,13 +1449,13 @@ function AboutModal({ meta, parallels = [], onClose }) {
               <div key={band} style={{ display: 'flex', gap: 8, alignItems: 'baseline' }}>
                 <span className="marginalia" style={{
                   padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
-                  background: SPECIFICITY_COLORS[band] || '#8a7340', color: '#faf5e7', whiteSpace: 'nowrap',
+                  background: SPECIFICITY_COLORS[band] || '#a8925c', color: '#f6ecd0', whiteSpace: 'nowrap',
                 }}>{band}</span>
-                <span style={{ fontSize: '12.5px', color: '#3a322a' }}>{desc}</span>
+                <span style={{ fontSize: '12.5px', color: '#cdc2a3' }}>{desc}</span>
               </div>
             ))}
           </div>
-          <div style={{ fontSize: '12.5px', color: '#3a322a', lineHeight: 1.5, marginBottom: 4 }}>
+          <div style={{ fontSize: '12.5px', color: '#cdc2a3', lineHeight: 1.5, marginBottom: 4 }}>
             <span className="marginalia" style={{
               padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
               border: '1px solid #9c4a3a', color: '#9c4a3a',
@@ -1387,17 +1468,17 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia">Data</div>
-          <div style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4 }}>
+          <div style={{ fontSize: '12px', color: '#a3957a', marginTop: 4 }}>
             Schema v{meta.schema_version || '—'} · Dataset v{meta.version || '—'}
           </div>
           {stats.total > 0 && (
-            <div style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4 }}>
+            <div style={{ fontSize: '12px', color: '#a3957a', marginTop: 4 }}>
               {stats.total} parallels · <strong>{stats.sig} statistically significant</strong> (p&lt;.05
               vs a randomized null model) · {stats.cited} citation-backed
             </div>
           )}
           {meta.description && (
-            <p style={{ fontSize: '12px', color: '#6b5e3c', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
+            <p style={{ fontSize: '12px', color: '#a3957a', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
               {meta.description}
             </p>
           )}
@@ -1449,8 +1530,8 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
       onChange={e => onChange(e.target.value)}
       style={{
         width: '100%', padding: '6px 8px', fontFamily: 'inherit', fontSize: '13px',
-        background: '#fbf7ea', border: '1px solid rgba(176,134,72,0.5)', borderRadius: '2px',
-        color: '#1d2030',
+        background: '#0e0c19', border: '1px solid rgba(201,168,76,0.5)', borderRadius: '2px',
+        color: '#ede3c4',
       }}
     >
       {options.map(o => <option key={o.id} value={o.id}>{o.label}</option>)}
@@ -1458,24 +1539,24 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
   );
 
   const Column = ({ facet, deity }) => {
-    if (!facet || !deity) return <div style={{ flex: 1, color: '#8a7340', fontStyle: 'italic' }}>—</div>;
+    if (!facet || !deity) return <div style={{ flex: 1, color: '#a8925c', fontStyle: 'italic' }}>—</div>;
     const tc = colorFor(deity.tradition_id);
     const t = traditionById[deity.tradition_id];
     return (
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div className="marginalia" style={{ padding: '2px 6px', background: tc.bg, color: '#faf5e7', borderRadius: '2px', display: 'inline-block' }}>
+        <div className="marginalia" style={{ padding: '2px 6px', background: tc.bg, color: '#f6ecd0', borderRadius: '2px', display: 'inline-block' }}>
           {t?.name || deity.tradition_id}
         </div>
-        <div style={{ fontSize: '18px', fontWeight: 600, color: '#1d2030', marginTop: 4 }}>{deity.primary_name}</div>
-        <div className="marginalia" style={{ color: tc.bg }}>{facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}</div>
-        {facet.valence && <div style={{ fontSize: 12, color: '#3a322a', marginTop: 4, textTransform: 'capitalize' }}>{facet.valence}</div>}
+        <div style={{ fontSize: '18px', fontWeight: 600, color: '#ede3c4', marginTop: 4 }}>{deity.primary_name}</div>
+        <div className="marginalia" style={{ color: tc.fg }}>{facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}</div>
+        {facet.valence && <div style={{ fontSize: 12, color: '#cdc2a3', marginTop: 4, textTransform: 'capitalize' }}>{facet.valence}</div>}
         <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Function tags</div>
         <div className="flex flex-wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
           {(facet.function_tags || []).map(tag => (
             <span key={tag} style={{
               padding: '2px 6px', fontSize: 11, borderRadius: 2,
-              background: sharedTags.includes(tag) ? '#3f6e5e' : 'rgba(176,134,72,0.12)',
-              color: sharedTags.includes(tag) ? '#faf5e7' : '#3a322a',
+              background: sharedTags.includes(tag) ? '#3f6e5e' : 'rgba(201,168,76,0.12)',
+              color: sharedTags.includes(tag) ? '#f6ecd0' : '#cdc2a3',
               fontFamily: 'JetBrains Mono, ui-monospace, monospace',
             }}>{tag}</span>
           ))}
@@ -1483,7 +1564,7 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
         {facet.core_claim && (
           <>
             <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Core claim</div>
-            <div style={{ fontSize: 13, color: '#3a322a', fontStyle: 'italic', lineHeight: 1.45 }}>{facet.core_claim}</div>
+            <div style={{ fontSize: 13, color: '#cdc2a3', fontStyle: 'italic', lineHeight: 1.45 }}>{facet.core_claim}</div>
           </>
         )}
       </div>
@@ -1493,19 +1574,18 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
   return (
     <>
       <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
-      <div className="fade-in" style={{
+      <div className="fade-in glass-modal" style={{
         position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
         width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px)', zIndex: 70,
-        background: '#faf5e7', borderRadius: '4px', boxShadow: '0 12px 40px rgba(29,32,48,0.3)',
-        border: '1px solid #b08648', display: 'flex', flexDirection: 'column',
+        borderRadius: '26px', overflow: 'hidden', display: 'flex', flexDirection: 'column',
       }}>
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(176,134,72,0.3)' }}>
+        <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
           <div className="flex items-start justify-between" style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div>
               <div className="marginalia">Compare two figures</div>
-              <h2 style={{ fontSize: '20px', fontWeight: 600, color: '#1d2030', lineHeight: 1.1 }}>Side by side</h2>
+              <h2 style={{ fontSize: '20px', fontWeight: 600, color: '#ede3c4', lineHeight: 1.1 }}>Side by side</h2>
             </div>
-            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#8a7340' }}><X size={18} /></button>
+            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }}><X size={18} /></button>
           </div>
           <div style={{ display: 'flex', gap: 12, marginTop: 12 }}>
             <div style={{ flex: 1 }}><Picker value={aId} onChange={setAId} /></div>
@@ -1524,32 +1604,32 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
           {sharedTags.length ? (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
               {sharedTags.map(t => (
-                <span key={t} style={{ padding: '2px 6px', fontSize: 11, borderRadius: 2, background: '#3f6e5e', color: '#faf5e7', fontFamily: 'JetBrains Mono, ui-monospace, monospace' }}>{t}</span>
+                <span key={t} style={{ padding: '2px 6px', fontSize: 11, borderRadius: 2, background: '#3f6e5e', color: '#f6ecd0', fontFamily: 'JetBrains Mono, ui-monospace, monospace' }}>{t}</span>
               ))}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: '#8a7340', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 13, color: '#a8925c', fontStyle: 'italic' }}>
               No shared function-tags — any parallel between these two rests on its written basis, not tag overlap.
             </div>
           )}
 
           <div className="marginalia mb-1" style={{ marginTop: 12 }}>Canonical parallel</div>
           {link ? (
-            <div style={{ border: '1px solid rgba(176,134,72,0.3)', borderRadius: 2, padding: '10px 12px', background: '#fbf7ea' }}>
+            <div style={{ border: '1px solid rgba(201,168,76,0.3)', borderRadius: 2, padding: '10px 12px', background: '#0e0c19' }}>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
-                {link.strength && <span className="marginalia" style={{ padding: '1px 5px', background: '#b08648', color: '#faf5e7', borderRadius: 2, fontSize: 9 }}>{link.strength}</span>}
-                {link.specificity_band && <span className="marginalia" style={{ padding: '1px 5px', background: SPECIFICITY_COLORS[link.specificity_band] || '#8a7340', color: '#faf5e7', borderRadius: 2, fontSize: 9 }}>{link.specificity_band}</span>}
+                {link.strength && <span className="marginalia" style={{ padding: '1px 5px', background: '#c9a84c', color: '#0a0812', borderRadius: 2, fontSize: 9 }}>{link.strength}</span>}
+                {link.specificity_band && <span className="marginalia" style={{ padding: '1px 5px', background: SPECIFICITY_COLORS[link.specificity_band] || '#a8925c', color: '#f6ecd0', borderRadius: 2, fontSize: 9 }}>{link.specificity_band}</span>}
                 {link.specificity_significant === false && <span className="marginalia" style={{ padding: '1px 5px', border: '1px solid #9c4a3a', color: '#9c4a3a', borderRadius: 2, fontSize: 9 }}>n.s.</span>}
-                {link.type && <span className="marginalia" style={{ padding: '1px 5px', background: 'rgba(176,134,72,0.18)', color: '#6b5223', borderRadius: 2, fontSize: 9 }}>{link.type.replace(/-/g, ' ')}</span>}
+                {link.type && <span className="marginalia" style={{ padding: '1px 5px', background: 'rgba(201,168,76,0.18)', color: '#c9a84c', borderRadius: 2, fontSize: 9 }}>{link.type.replace(/-/g, ' ')}</span>}
               </div>
               {Array.isArray(link.basis) && (
-                <ul style={{ fontSize: 12.5, color: '#3a322a', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
+                <ul style={{ fontSize: 12.5, color: '#cdc2a3', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
                   {link.basis.map((bb, i) => <li key={i} style={{ marginBottom: 3 }}>{bb}</li>)}
                 </ul>
               )}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: '#8a7340', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 13, color: '#a8925c', fontStyle: 'italic' }}>
               No canonical parallel is recorded between these two facets.
             </div>
           )}
@@ -1727,7 +1807,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
     }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#faf5e7';
+    ctx.fillStyle = '#12101f';
     ctx.fillRect(0, 0, w, h);
 
     ctx.save();
@@ -1736,7 +1816,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
 
     // tier rings (faint)
     const ringRadii = new Set(Object.values(positions).map((p) => p.ring));
-    ctx.strokeStyle = 'rgba(176,134,72,0.15)';
+    ctx.strokeStyle = 'rgba(201,168,76,0.15)';
     ctx.lineWidth = 1 / transform.scale;
     ringRadii.forEach((idx) => {
       const r = 70 + idx * 100;
@@ -1752,8 +1832,8 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
       const isSelectedEdge = selectedFacetId && (a === selectedFacetId || b === selectedFacetId);
       const band = p.specificity_band;
       const sig = p.specificity_significant;
-      let color = SPECIFICITY_COLORS[band] || '#a08960';
-      let alpha = sig ? 0.55 : 0.15;
+      let color = ({ specific: '#5fb39a', moderate: '#d9b25e', 'universal-motif': '#d0715c', 'tag-divergent': '#8d918f' })[band] || '#8f8263';
+      let alpha = sig ? 0.6 : 0.18;
       let width = sig ? 1.4 : 0.7;
       if (isSelectedEdge) { alpha = 0.95; width = 2.2; }
       ctx.strokeStyle = color;
@@ -1772,19 +1852,19 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
       if (!pos) return;
       const facet = facets.find((f) => f.id === n.id); // small visible set; fine
       const deity = facet && deityById[facet.parent_deity_id];
-      const c = deity ? colorFor(deity.tradition_id) : DEFAULT_TRADITION_COLOR;
+      const c = colorFor(deity ? deity.tradition_id : null);
       const isSelected = n.id === selectedFacetId;
       const isRelated = selectedFacetId && selectedRelated.has(n.id);
       const isDimmed = selectedFacetId && !isSelected && !isRelated;
       const r = (2.5 + Math.min(6, pos.degree * 0.7)) / Math.sqrt(transform.scale);
 
       ctx.globalAlpha = isDimmed ? 0.25 : 1;
-      ctx.fillStyle = c.bg;
+      ctx.fillStyle = c.edge;
       ctx.beginPath();
       ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
       ctx.fill();
       if (isSelected || isRelated) {
-        ctx.strokeStyle = '#b08648';
+        ctx.strokeStyle = '#c9a84c';
         ctx.lineWidth = (isSelected ? 2.5 : 1.5) / transform.scale;
         ctx.stroke();
       }
@@ -1871,19 +1951,19 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
 function Footer({ meta, totalDeities, totalFacets, totalParallels }) {
   return (
     <footer style={{
-      borderTop: '1px solid rgba(176,134,72,0.3)',
+      borderTop: '1px solid rgba(201,168,76,0.3)',
       marginTop: 16,
       padding: '14px 18px 22px',
       background: 'transparent',
     }}>
       <div className="codex-rule mb-3" />
-      <div className="marginalia" style={{ textAlign: 'center', color: '#8a7340' }}>
+      <div className="marginalia" style={{ textAlign: 'center', color: '#a8925c' }}>
         {totalDeities} figures · {totalFacets} facets · {totalParallels} canonical parallels
       </div>
-      <div className="marginalia" style={{ textAlign: 'center', color: '#8a7340', marginTop: 6, fontSize: '10px' }}>
+      <div className="marginalia" style={{ textAlign: 'center', color: '#a8925c', marginTop: 6, fontSize: '10px' }}>
         Schema v{meta.schema_version || '—'} · Data v{meta.version || '—'}
       </div>
-      <div style={{ textAlign: 'center', marginTop: 10, fontSize: '11px', color: '#a08960', fontStyle: 'italic' }}>
+      <div style={{ textAlign: 'center', marginTop: 10, fontSize: '11px', color: '#8f8263', fontStyle: 'italic' }}>
         The names change. The structure does not.
       </div>
     </footer>

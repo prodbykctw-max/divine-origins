@@ -1,0 +1,233 @@
+/* =============================================================
+   GLASS.CSS — Apple Liquid Glass + Human Interface Guidelines,
+   applied on top of the Divine Origins black & gold palette.
+
+   HIG principles used here:
+   • Hierarchy — controls float on a glass layer above the content.
+   • Harmony — concentric, capsule and continuous rounded shapes.
+   • Consistency — one control language across every section.
+   • iOS 27 refinements — darker glass edges, brighter specular
+     highlight, better diffusion of busy content, and a uniform bar
+     once content scrolls underneath.
+   • Accessibility — Reduce Transparency, Increase Contrast and
+     Reduce Motion are honoured; touch targets are at least 44px.
+   ============================================================= */
+
+:root {
+  /* Glass material */
+  --glass-fill:      rgba(22, 18, 38, 0.52);
+  --glass-fill-thick:rgba(16, 13, 28, 0.78);
+  --glass-tint-gold: rgba(201, 168, 76, 0.14);
+  --glass-blur:      blur(22px) saturate(1.7);
+  --glass-edge:      rgba(255, 255, 255, 0.14);
+  --glass-edge-dark: rgba(0, 0, 0, 0.55);
+  --glass-specular:  inset 0 1px 0 rgba(255, 255, 255, 0.22),
+                     inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --glass-shadow:    0 10px 30px -10px rgba(0, 0, 0, 0.75),
+                     0 0 0 1px var(--glass-edge-dark);
+
+  /* Concentric radii */
+  --r-outer: 24px;
+  --r-mid:   16px;
+  --r-inner: 10px;
+  --r-pill:  999px;
+
+  --tap: 44px;
+}
+
+/* Reusable glass surface */
+.glass,
+.topnav__inner,
+.modal,
+.book-detail,
+.split-panel {
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--glass-specular), var(--glass-shadow);
+}
+
+/* ── NAVIGATION: floating glass capsule ── */
+.topnav {
+  height: auto;
+  padding: 10px 16px;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: 0;
+  box-shadow: none;
+  transition: background 0.35s ease;
+}
+.topnav::after { display: none; }
+
+/* Uniform bar once content scrolls under it (iOS 27 scroll edge) */
+.topnav.is-scrolled {
+  background: linear-gradient(180deg, rgba(5, 4, 8, 0.92) 0%, rgba(5, 4, 8, 0.7) 70%, rgba(5, 4, 8, 0) 100%);
+}
+
+.topnav__inner {
+  width: auto;
+  max-width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 6px;
+  gap: 2px;
+  border-radius: var(--r-pill);
+  overflow-x: auto;
+}
+.topnav__logo {
+  padding: 0 14px 0 16px;
+  margin-right: 4px;
+}
+.topnav__link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  color: #9a9080;
+  transition: color 0.2s, background 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+.topnav__link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--gold-light);
+}
+/* Selected item: a lighter glass "thumb", like the HIG toggles */
+.topnav__link.active {
+  color: #fff4d4;
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.30), rgba(201, 168, 76, 0.14));
+  border-color: rgba(240, 208, 128, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 14px -4px rgba(201, 168, 76, 0.55);
+}
+.topnav__link:active { transform: scale(0.96); }
+
+/* ── CONTROLS: capsules ── */
+.filter-pill,
+.deity-filter-pill,
+.panel-nav__btn,
+.cta-btn,
+.badge,
+.modal__close {
+  border-radius: var(--r-pill) !important;
+}
+.filter-pill,
+.deity-filter-pill {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.filter-pill--active {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 14px -6px rgba(201, 168, 76, 0.6);
+}
+.cta-btn {
+  min-height: var(--tap);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
+}
+.cta-btn--primary {
+  background: linear-gradient(180deg, #e2c46c 0%, #c9a84c 55%, #b08e3a 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 26px -10px rgba(201, 168, 76, 0.7);
+}
+.cta-btn:active { transform: scale(0.97); }
+
+.panel-nav__btn {
+  min-height: var(--tap);
+  padding: 0 1.1rem;
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-edge);
+}
+
+/* ── RAILS ── */
+.rail__item {
+  border-radius: var(--r-mid);
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.rail__item::after { left: 14px; right: 14px; border-radius: 2px; }
+.rail__item[aria-selected="true"] {
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.18), rgba(201, 168, 76, 0.06));
+  border-color: rgba(240, 208, 128, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* ── PANELS: concentric corners ── */
+.split-panel,
+.book-detail,
+.modal {
+  border-radius: var(--r-outer) !important;
+  overflow: hidden;
+}
+.split-panel__img,
+.book-detail__cover-large img,
+.book-detail__preview img {
+  border-radius: calc(var(--r-outer) - 6px);
+}
+.info-block {
+  border-radius: var(--r-inner);
+  background: rgba(255, 255, 255, 0.025);
+}
+.book__cover,
+.book__cover-face { border-radius: 4px var(--r-inner) var(--r-inner) 4px; }
+
+/* Grids of cards (traditions, calendars, pattern) */
+.cal-card { border-radius: var(--r-mid); }
+[data-trad-nav] { border-radius: var(--r-mid); }
+
+.modal-overlay {
+  background: rgba(3, 2, 6, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Search inputs */
+input[type="search"],
+input[type="text"] {
+  border-radius: var(--r-pill) !important;
+  min-height: var(--tap);
+}
+
+/* ── TOUCH: 44pt minimum targets ── */
+@media (pointer: coarse) {
+  .filter-pill,
+  .deity-filter-pill { min-height: var(--tap); display: inline-flex; align-items: center; }
+  .topnav__link { min-height: var(--tap); }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 720px) {
+  .topnav { padding: 8px 10px; }
+  .topnav__logo { display: none; }
+  .split-panel, .book-detail, .modal { border-radius: 20px !important; }
+}
+
+/* ── ACCESSIBILITY ── */
+@media (prefers-reduced-transparency: reduce) {
+  .glass, .topnav__inner, .modal, .book-detail, .split-panel,
+  .rail__item, .panel-nav__btn, .filter-pill, .deity-filter-pill, .cta-btn {
+    background: var(--glass-fill-thick) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .topnav.is-scrolled { background: #050408; }
+}
+@media (prefers-contrast: more) {
+  :root { --glass-edge: rgba(255, 255, 255, 0.45); }
+  .topnav__link { color: #d8ceb4; }
+  .topnav__link.active { border-color: var(--gold-light); }
+  .filter-pill, .deity-filter-pill { border-color: rgba(255, 255, 255, 0.4) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

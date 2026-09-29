@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A comprehensive comparative theology library examining creator beings, sacred texts, and calendar systems across every world tradition.">
+  <title>Divine Origins — Comparative Theology Library</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets — order matters -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Starfield canvas — sits behind everything -->
+  <canvas id="canvas-bg" aria-hidden="true"></canvas>
+
+  <div class="page">
+
+    <!-- ── TOP NAVIGATION ── -->
+    <nav class="topnav" role="navigation" aria-label="Main navigation">
+      <div class="topnav__inner">
+        <span class="topnav__logo" aria-label="Divine Origins">DIVINE ORIGINS</span>
+        <a href="#home"       class="topnav__link" data-section="home"       aria-current="page">HOME</a>
+        <a href="#traditions" class="topnav__link" data-section="traditions">TRADITIONS</a>
+        <a href="#deities"    class="topnav__link" data-section="deities">DEITIES</a>
+        <a href="#texts"      class="topnav__link topnav__link--cta" data-section="texts">SACRED TEXTS</a>
+        <a href="#calendars"  class="topnav__link" data-section="calendars">CALENDARS</a>
+        <a href="#patterns"   class="topnav__link" data-section="patterns">THE PATTERN</a>
+        <a href="#timeline"   class="topnav__link" data-section="timeline">TIMELINE</a>
+        <a href="#source-map" class="topnav__link topnav__link--cta" data-section="source-map">SOURCE MAP ✦</a>
+      </div>
+    </nav>
+
+    <!-- ── SECTIONS — each section is its own island ── -->
+    <!-- Section markup is injected by render.js -->
+    <!-- Hidden by default; router shows the active one -->
+
+    <main>
+      <section id="section-home"       role="region" aria-label="Home">
+        <!-- Injected by render.js renderHome() -->
+      </section>
+
+      <section id="section-traditions" role="region" aria-label="Traditions" hidden aria-hidden="true">
+        <!-- Injected by render.js renderTraditions() -->
+      </section>
+
+      <section id="section-deities"    role="region" aria-label="Deities" hidden aria-hidden="true">
+        <!-- Injected by render.js renderDeities() -->
+      </section>
+
+      <section id="section-texts"      role="region" aria-label="Sacred Texts" hidden aria-hidden="true">
+        <!-- Injected by render.js renderTexts() -->
+      </section>
+
+      <section id="section-calendars"  role="region" aria-label="Calendar Systems" hidden aria-hidden="true">
+        <!-- Injected by render.js renderCalendars() -->
+      </section>
+
+      <section id="section-patterns"   role="region" aria-label="The Pattern" hidden aria-hidden="true">
+        <!-- Injected by render.js renderPatterns() -->
+      </section>
+
+      <section id="section-timeline"   role="region" aria-label="Timeline" hidden aria-hidden="true">
+        <!-- Injected by render.js renderTimeline() -->
+      </section>
+
+      <section id="section-source-map" role="region" aria-label="The Source Map" hidden aria-hidden="true">
+        <!-- Injected by render.js renderSourceMap() -->
+      </section>
+    </main>
+
+  </div><!-- /.page -->
+
+  <!-- ── MODAL ── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detail view" aria-hidden="true">
+    <div class="modal" id="modal">
+      <button class="modal__close" id="modal-close" aria-label="Close">✕ CLOSE</button>
+      <div class="modal__accent" id="modal-accent"></div>
+      <div class="modal__content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ── ES modules, Cloudflare-ready ── -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

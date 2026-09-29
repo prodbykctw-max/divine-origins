@@ -1,5 +1,21 @@
 # UI applications
 
+## Combined app — `divine-origins-combined.html` (current)
+
+One self-contained file that opens in any browser. It is the Divine Origins
+library (`library/`: Home, Traditions, Deities, Sacred Texts, Calendars, The
+Pattern, Timeline) with the **Source Map** section running the Vite app below on
+the canonical v0.8.0 seed. Styled in black & gold using Apple's Liquid Glass
+materials and Human Interface Guidelines (floating glass nav, capsule controls,
+concentric corners, 44 px touch targets, Reduce Transparency / Increase
+Contrast / Reduce Motion support).
+
+Rebuild after editing `library/` or `vite/`:
+
+```bash
+bash app/build_combined.sh
+```
+
 The actual front-end of The Source Map / Divine Origins. Three artifacts built
 across the original chat sessions, migrated here for version control. Earlier
 audit notes in this repo stated "no UI code exists" — that was wrong; it existed
