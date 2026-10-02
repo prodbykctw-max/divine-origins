@@ -3,7 +3,7 @@
    ============================================================= */
 
 import { CALENDAR_SYSTEMS }  from '../../data/calendars/systems.js';
-import { ARTIFACT_IMAGES }   from '../../data/images.js';
+import { artifact, captionHTML } from '../ui/artifact.js';
 import { cyclePanel, initScrollReveals } from '../animations.js';
 
 let currentIdx = 0;
@@ -63,7 +63,7 @@ function injectCalPanel(idx, dir) {
 }
 
 function buildCalPanel(c, idx) {
-  const imgData = ARTIFACT_IMAGES.sumerian; // generic artifact
+  const art = artifact('calendars', c.id);
 
   const structureRows = Object.entries(c.structure ?? {}).map(([k, v]) =>
     `<tr>
@@ -117,6 +117,10 @@ function buildCalPanel(c, idx) {
 
         <!-- Left summary -->
         <div style="padding:2rem;background:rgba(0,0,0,0.2);border-right:1px solid var(--border)">
+          ${art ? `<figure class="cal-artifact">
+            <img src="${art.large}" srcset="${art.srcset}" sizes="(max-width: 720px) 90vw, 360px" alt="${art.title.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
+            <figcaption class="art-cap">${captionHTML(art)}</figcaption>
+          </figure>` : ''}
           <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.4rem">${c.type.toUpperCase()} CALENDAR</div>
           <h2 class="t-title" style="font-size:1.2rem;color:var(--text-primary);margin-bottom:0.4rem;line-height:1.2">${c.name}</h2>
           ${c.altNames?.length ? `<p class="t-italic" style="font-size:0.8rem;margin-bottom:1rem">${c.altNames.join(' · ')}</p>` : ''}

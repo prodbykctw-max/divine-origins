@@ -4,7 +4,7 @@
    ============================================================= */
 
 import { TRADITION_GROUPS }  from '../../data/traditions/groups.js';
-import { ARTIFACT_IMAGES }   from '../../data/images.js';
+import { artifactPanel }     from '../ui/artifact.js';
 import { state, setState }   from '../state.js';
 import { cyclePanel, scrollRailToItem, initScrollReveals } from '../animations.js';
 
@@ -103,22 +103,12 @@ function injectPanel(idx, dir) {
 }
 
 function buildTradPanel(g) {
-  const imgData = ARTIFACT_IMAGES[g.imgKey] ?? ARTIFACT_IMAGES.sumerian;
 
   return `
     <div class="split-panel glass-subtle" style="border:1px solid ${g.color}22;border-radius:4px;overflow:hidden">
 
       <!-- LEFT: Artifact image -->
-      <div class="split-panel__img">
-        <img src="${imgData.url}" alt="${g.label}" loading="lazy"
-             style="width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0;
-                    filter:saturate(0.8) brightness(0.68) contrast(1.04);
-                    transition:opacity 0.5s ease,transform 1.2s cubic-bezier(0.16,1,0.3,1)"
-             onload="this.style.opacity='1';this.style.transform='scale(1.03)'"
-             onerror="this.style.display='none'">
-        <div class="split-panel__img-overlay"></div>
-        <div class="split-panel__img-trad" style="--item-color:${g.color}">${g.label}</div>
-        <div class="split-panel__img-caption">${imgData.caption}</div>
+      <div class="split-panel__img">${artifactPanel('traditions', g.id, g.label, g.color)}
       </div>
 
       <!-- RIGHT: Scrollable content -->

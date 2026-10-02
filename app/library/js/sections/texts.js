@@ -5,7 +5,7 @@
 
 import { SACRED_TEXTS, getTextsByTradition } from '../../data/texts/sacred-texts.js';
 import { TRADITION_GROUPS }                   from '../../data/traditions/groups.js';
-import { ARTIFACT_IMAGES }                    from '../../data/images.js';
+import { artifact, captionHTML }              from '../ui/artifact.js';
 import { state, setState }                    from '../state.js';
 import { bindBookHover, scrollRailToItem }    from '../animations.js';
 
@@ -112,7 +112,7 @@ function buildBookTrack(filter) {
 function buildBook(text, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
   const color   = group?.color ?? '#c9a84c';
-  const imgData = ARTIFACT_IMAGES[text.imgKey ?? 'sumerian'];
+  const art     = artifact('texts', text.id);
 
   // Spine color is darker version of tradition color
   const spineColor = color + '88';
@@ -137,7 +137,7 @@ function buildBook(text, idx) {
       <!-- Cover -->
       <div class="book__cover">
         <div class="book__cover-face">
-          ${imgData ? `<img class="book__cover-img" src="${imgData.url}" alt="" loading="lazy">` : ''}
+          ${art ? `<img class="book__cover-img" src="${art.small}" alt="" loading="lazy" decoding="async">` : ''}
           <div class="book__meta">
             <span class="book__type" style="color:${color}">${typeLabel}</span>
             <span class="book__title">${text.title}</span>
@@ -157,7 +157,7 @@ function buildBook(text, idx) {
 function buildBookDetail(text) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
   const color   = group?.color ?? '#c9a84c';
-  const imgData = ARTIFACT_IMAGES[text.imgKey ?? 'sumerian'];
+  const art     = artifact('texts', text.id);
 
   const statusColors = {
     canonical:          '#40a8a0',
@@ -179,9 +179,10 @@ function buildBookDetail(text) {
 
   // Preview panel (left)
   const previewHTML = `
-    <div class="book-detail__cover-large">
-      ${imgData ? `<img src="${imgData.url}" alt="${text.title}" loading="lazy">` : ''}
-    </div>
+    <figure class="book-detail__artifact">
+      ${art ? `<img src="${art.large}" srcset="${art.srcset}" sizes="(max-width: 720px) 90vw, 320px" alt="${art.title.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
+      <figcaption class="art-cap">${captionHTML(art)}</figcaption>` : ''}
+    </figure>
     <div style="text-align:center;width:100%">
       <div class="t-label" style="color:${color};margin-bottom:0.4rem">
         ${group?.label ?? text.tradition}

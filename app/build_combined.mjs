@@ -6,7 +6,7 @@
 // Usage (any OS with Node 20+):   node app/build_combined.mjs
 // Steps stop on the first failure; nothing is written unless every step passes.
 import { execSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, writeFileSync, statSync } from 'node:fs';
+import { mkdtempSync, readFileSync, writeFileSync, statSync, rmSync, mkdirSync, cpSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,6 +15,8 @@ const APP = dirname(fileURLToPath(import.meta.url));
 const VITE = join(APP, 'vite');
 const LIB = join(APP, 'library');
 const OUT = join(APP, 'divine-origins-combined.html');
+const SITE = join(APP, 'site');            // deploy folder (gitignored; built by CI)
+const LIVE = 'https://prodbykctw-max.github.io/divine-origins/';
 const run = (cmd, cwd) => execSync(cmd, { cwd, stdio: 'inherit' });
 
 // 1. Exact, locked dependencies (one node_modules for the whole site)
@@ -55,5 +57,14 @@ html = html.replace('<script type="module" src="js/main.js"></script>', () => `<
 if (html === before || html.includes('href="css/') || html.includes('src="js/main.js"')) {
   throw new Error('index.html markers not found — nothing written');
 }
-writeFileSync(OUT, html);
-console.log(`wrote ${OUT} (${(statSync(OUT).size / 1048576).toFixed(2)} MB)`);
+// 6a. Deployable site (GitHub Pages): index.html + img/ (photos load lazily, sized per device)
+rmSync(SITE, { recursive: true, force: true });
+mkdirSync(SITE, { recursive: true });
+writeFileSync(join(SITE, 'index.html'), html);
+cpSync(join(LIB, 'img'), join(SITE, 'img'), { recursive: true });
+writeFileSync(join(SITE, '.nojekyll'), '');
+
+// 6b. Single portable file: same page, photos loaded from the live site
+const single = html.replace('<head>', `<head>\n  <script>window.__IMG_BASE__ = ${JSON.stringify(LIVE + 'img/')};</script>`);
+writeFileSync(OUT, single);
+console.log(`wrote ${SITE}/ (index.html + img/) and ${OUT} (${(statSync(OUT).size / 1048576).toFixed(2)} MB)`);

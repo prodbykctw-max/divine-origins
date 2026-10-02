@@ -5,7 +5,7 @@
 
 import { DEITIES }          from '../../data/deities.js';
 import { TRADITION_GROUPS } from '../../data/traditions/groups.js';
-import { ARTIFACT_IMAGES }  from '../../data/images.js';
+import { artifactPanel }    from '../ui/artifact.js';
 import { SACRED_TEXTS }     from '../../data/texts/sacred-texts.js';
 import { state, setState }  from '../state.js';
 import { cyclePanel, scrollRailToItem, initScrollReveals } from '../animations.js';
@@ -140,8 +140,6 @@ function injectDeityPanel(idx, dir) {
 function buildDeityPanel(d, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === d.tradition);
   const color   = group?.color ?? '#c9a84c';
-  const imgKey  = d.imgKey ?? group?.imgKey ?? 'sumerian';
-  const imgData = ARTIFACT_IMAGES[imgKey] ?? ARTIFACT_IMAGES.sumerian;
 
   const badgeClass = d.confidence === 'documented' ? 'badge--documented'
                    : d.confidence === 'debated'    ? 'badge--debated'
@@ -154,16 +152,7 @@ function buildDeityPanel(d, idx) {
     <div class="split-panel glass-subtle" style="border:1px solid ${color}22;border-radius:4px;overflow:hidden">
 
       <!-- LEFT: Artifact -->
-      <div class="split-panel__img">
-        <img src="${imgData.url}" alt="${d.name}" loading="lazy"
-             style="width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0;
-                    filter:saturate(0.8) brightness(0.68) contrast(1.04);
-                    transition:opacity 0.5s ease,transform 1.2s cubic-bezier(0.16,1,0.3,1)"
-             onload="this.style.opacity='1';this.style.transform='scale(1.03)'"
-             onerror="this.style.display='none'">
-        <div class="split-panel__img-overlay"></div>
-        <div class="split-panel__img-trad" style="--item-color:${color}">${group?.label ?? d.tradition}</div>
-        <div class="split-panel__img-caption">${imgData.caption}</div>
+      <div class="split-panel__img">${artifactPanel('deities', d.id, group?.label ?? d.tradition, color)}
       </div>
 
       <!-- RIGHT: Info -->
