@@ -3,6 +3,7 @@ name: CI
 # Gates the project. Two independent checks, mirroring the two harnesses:
 #   1. self_test.py  — validates the DOCUMENTATION (docs exist, terms, JSON blocks)
 #   2. validate_seed_data.py — validates the canonical SEED DATA (v0.8.0)
+#   3. app build — the Source Map app and the combined single-file site must build
 # The seed validator exits non-zero on any Severity-1 defect, so a structurally
 # broken seed fails the build. Only the canonical seed is gated; historical
 # snapshots (v0.1.0 / v0.6.0 / v0.6.5 / v0.7.0) are kept for provenance and are
@@ -42,3 +43,27 @@ jobs:
           python3 tools/validate_seed_data.py \
             data/source_map_seed_data_v080.json \
             --manifest reports/defect_manifest_v080.json
+
+  app-build:
+    name: App build (Source Map + combined site)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: app/vite/package-lock.json
+      - name: Build (locked deps, standalone app, combined site)
+        run: node app/build_combined.mjs
+      - name: Combined file sanity check
+        run: |
+          f=app/divine-origins-combined.html
+          test -s "$f"
+          grep -q 'id="section-source-map"' "$f"
+          grep -q 'Parallels of the Gods' "$f"
+          ls -l "$f"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: divine-origins-combined
+          path: app/divine-origins-combined.html

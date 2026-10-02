@@ -1,0 +1,166 @@
+/* =============================================================
+   POLISH.CSS — visual refinements layered over the base system
+   ============================================================= */
+
+/* ── NAV: only the current section is boxed ── */
+.topnav {
+  background: linear-gradient(180deg, rgba(8, 6, 14, 0.94), rgba(5, 4, 8, 0.86));
+  border-bottom: 1px solid rgba(201, 168, 76, 0.14);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.9);
+}
+.topnav::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.45), transparent);
+  pointer-events: none;
+}
+.topnav__inner { gap: 0.35rem; }
+.topnav__logo {
+  font-size: 0.8rem;
+  text-shadow: 0 0 18px rgba(201, 168, 76, 0.35);
+  margin-right: 1.25rem;
+}
+.topnav__link {
+  color: #8a8070;
+  padding: 0.4rem 0.75rem;
+  position: relative;
+}
+.topnav__link--cta {
+  color: var(--gold);
+  border-color: transparent;
+  background: transparent;
+}
+.topnav__link:hover {
+  color: var(--gold-light);
+  border-color: transparent;
+  background: rgba(201, 168, 76, 0.06);
+}
+.topnav__link.active {
+  color: var(--gold-light);
+  border-color: rgba(201, 168, 76, 0.7);
+  background: rgba(201, 168, 76, 0.1);
+  box-shadow: 0 0 16px -4px rgba(201, 168, 76, 0.45);
+}
+
+/* ── SECTION HEADERS ── */
+.section__title {
+  background: linear-gradient(180deg, #f3e7c0 0%, #c9a84c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.04em;
+}
+.section__header::after {
+  content: '✦';
+  display: block;
+  margin: 1.4rem auto 0;
+  width: 220px;
+  font-size: 0.7rem;
+  color: var(--gold);
+  text-align: center;
+  background:
+    linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 40%, transparent 40%, transparent 60%, rgba(201,168,76,0.5) 60%, transparent) center / 100% 1px no-repeat;
+}
+
+/* ── FILTER PILLS (Sacred Texts) ── */
+.texts-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 0 auto 2.5rem;
+  max-width: 1100px;
+}
+.filter-pill {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  color: #8a8070;
+  background: rgba(255, 255, 255, 0.02);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.filter-pill:hover { color: var(--gold-light); border-color: rgba(201,168,76,0.4); }
+.filter-pill--active {
+  color: var(--gold-light);
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+/* Deity filter pills: same shape as the text filters */
+.deity-filter-pill {
+  font-size: 0.66rem !important;
+  border-radius: 999px !important;
+  padding: 0.4rem 0.8rem !important;
+}
+
+/* ── CARDS & PANELS: soft depth ── */
+.cal-card { min-height: 108px; }
+.cal-card .t-title { font-size: 0.95rem !important; }
+.cal-card:focus-visible,
+.rail__item:focus-visible,
+.filter-pill:focus-visible,
+.topnav__link:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+.rail__item { border-radius: 6px; }
+.rail__name { font-size: 0.85rem; }
+
+/* ── READING COMFORT ── */
+.section__desc { color: #b3a993; }
+.t-body, .t-italic { line-height: 1.75; }
+
+
+/* ── MOBILE ── */
+@media (max-width: 720px) {
+  .container, .container--narrow { padding: 0 1rem; }
+  .container--wide { padding: 0 0.75rem; }
+  .topnav__inner { padding: 0 0.75rem; }
+  .topnav__logo { font-size: 0.7rem; letter-spacing: 0.25em; margin-right: 0.5rem; }
+  .section { padding: 3.5rem 0; }
+  .section__header { margin-bottom: 2.5rem; }
+  .cal-detail-grid { grid-template-columns: 1fr !important; }
+  .texts-filter { gap: 0.35rem; }
+  .filter-pill { font-size: 0.6rem; padding: 0.38rem 0.7rem; }
+}
+
+/* ── HOME: scroll cue sits below the legend instead of on top of it ── */
+.scroll-indicator {
+  position: relative !important;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 3rem auto 0;
+  width: fit-content;
+  animation: scroll-cue 2.8s ease-in-out infinite !important;
+}
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  55%      { transform: translateY(10px); opacity: 1; }
+}
+
+/* ── SACRED TEXTS: no empty void before a book is chosen ── */
+.book-detail[aria-hidden="true"] { max-height: 0; margin-top: 0; border-color: transparent; }
+.book-hint {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 3rem;
+}
+.container:has(.book-detail[aria-hidden="false"]) .book-hint { display: none; }
+
+/* ── BOOK COVERS: legible titles over artifact photos ── */
+.book__cover-face::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0; height: 70%;
+  background: linear-gradient(to top, rgba(5,4,8,0.92) 0%, rgba(5,4,8,0.55) 55%, transparent 100%);
+  pointer-events: none;
+}
+.book__cover-img { opacity: 0.55; }
+.book__meta { z-index: 2; }
+.book__title { font-size: 0.78rem; }
+.book__date { color: rgba(255, 255, 255, 0.62); }

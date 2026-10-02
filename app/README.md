@@ -1,5 +1,35 @@
 # UI applications
 
+## Combined app — `divine-origins-combined.html` (current)
+
+One self-contained file that opens in any browser. It is the Divine Origins
+library (`library/`: Home, Traditions, Deities, Sacred Texts, Calendars, The
+Pattern, Timeline) with the **Source Map** section running the Vite app below on
+the canonical v0.8.0 seed. Styled in black & gold using Apple's Liquid Glass
+materials and Human Interface Guidelines (floating glass nav, capsule controls,
+concentric corners, 44 px touch targets, Reduce Transparency / Increase
+Contrast / Reduce Motion support).
+
+Immersive 3D (WebGL): React 19 + React Three Fiber 9 + three.js + GSAP.
+- `library/js/universe.jsx` — a live gold galaxy with floating sacred geometry
+  behind every section; follows the pointer, drifts with scroll, and GSAP flies
+  the camera to a new vantage point per section (pauses on the Source Map).
+- `vite/CosmosView.jsx` — the Source Map's default **Cosmos** view: all 934
+  figures as stars on tier shells (Source at the centre, Archons outermost),
+  parallels as light threads; orbit, zoom, hover names, tap to open, GSAP
+  camera fly-to. Falls back to the Tiers view if WebGL is unavailable.
+
+Rebuild after editing `library/` or `vite/` (Node 20+, any OS):
+
+```bash
+node app/build_combined.mjs
+```
+
+The library and the Source Map share one copy of React / three.js: the Source
+Map is mounted directly into the page inside a shadow root (style isolation),
+not an iframe. Both 3D scenes require a hardware GPU; on software rendering the
+site shows the 2D starfield and the Source Map opens in the Tiers view.
+
 The actual front-end of The Source Map / Divine Origins. Three artifacts built
 across the original chat sessions, migrated here for version control. Earlier
 audit notes in this repo stated "no UI code exists" — that was wrong; it existed
