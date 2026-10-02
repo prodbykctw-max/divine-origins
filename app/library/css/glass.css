@@ -247,3 +247,11 @@ input[type="text"] {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+
+/* ── The top navigation is never covered: overlays open beneath it ── */
+.modal-overlay {
+  /* lives outside .page, so start it below the nav instead of relying on z-index */
+  top: var(--nav-h, 64px);
+  padding-top: 1rem;
+}
+.modal { max-height: calc(100vh - var(--nav-h, 64px) - 3rem); }

@@ -102,5 +102,9 @@ function enterSection() {
       { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.1, ease: 'power3.out', stagger: 0.08, overwrite: true, clearProps: 'filter,transform' });
   }
 }
-window.addEventListener('hashchange', () => setTimeout(enterSection, 0));
+window.addEventListener('hashchange', () => {
+  closeModal(); // a nav tap while a detail modal is open closes it (and restores page scroll)
+  window.dispatchEvent(new Event('divine:navigate')); // Source Map closes its sheet / modals
+  setTimeout(enterSection, 0);
+});
 document.addEventListener('DOMContentLoaded', () => setTimeout(enterSection, 60));

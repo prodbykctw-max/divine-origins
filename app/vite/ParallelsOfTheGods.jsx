@@ -201,6 +201,14 @@ function SourceMapApp({ data, onReload }) {
     typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'tiers' : 'cosmos'
   )); // 'cosmos' | 'tiers' | 'network'
 
+  // When the host site navigates to another section, close open panels so
+  // coming back never lands on a stale sheet or modal covering the view.
+  useEffect(() => {
+    const closeAll = () => { setSheetOpen(false); setAboutOpen(false); setCompareOpen(false); };
+    window.addEventListener('divine:navigate', closeAll);
+    return () => window.removeEventListener('divine:navigate', closeAll);
+  }, []);
+
   // Reset selection if data reloaded
   useEffect(() => {
     setSelectedFacetId(null);
@@ -901,12 +909,12 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
 
   return (
     <>
-      {!compact && <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 340 }} onClick={onClose} />}
+      {!compact && <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />}
       <div className="sheet fade-in" style={{
         position: 'fixed',
         bottom: 0, left: 0, right: 0,
         maxHeight: compact ? '55vh' : '78vh',
-        zIndex: 350,
+        zIndex: 95,
         display: 'flex',
         flexDirection: 'column',
         borderTopLeftRadius: '28px',
@@ -1395,14 +1403,14 @@ function AboutModal({ meta, parallels = [], onClose }) {
   }, [parallels]);
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 360 }} onClick={onClose} />
+      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
       <div className="fade-in glass-modal" style={{
         position: 'fixed',
-        top: '50%', left: '50%',
+        top: 'calc(50% + var(--nav-h, 0px) / 2)', left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 'min(560px, calc(100vw - 32px))',
-        maxHeight: 'calc(100vh - 48px)',
-        zIndex: 370,
+        maxHeight: 'calc(100vh - 48px - var(--nav-h, 0px))',
+        zIndex: 96,
         borderRadius: '26px',
         overflow: 'hidden',
         display: 'flex',
@@ -1610,10 +1618,10 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
 
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 360 }} onClick={onClose} />
+      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
       <div className="fade-in glass-modal" style={{
-        position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-        width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px)', zIndex: 370,
+        position: 'fixed', top: 'calc(50% + var(--nav-h, 0px) / 2)', left: '50%', transform: 'translate(-50%, -50%)',
+        width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px - var(--nav-h, 0px))', zIndex: 96,
         borderRadius: '26px', overflow: 'hidden', display: 'flex', flexDirection: 'column',
       }}>
         <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
