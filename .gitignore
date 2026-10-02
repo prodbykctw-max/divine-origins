@@ -34,3 +34,6 @@ Thumbs.db
 .env
 .env.local
 *.local
+
+# Built deploy folder (CI publishes it to GitHub Pages)
+app/site/

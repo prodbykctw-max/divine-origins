@@ -255,3 +255,49 @@ input[type="text"] {
   padding-top: 1rem;
 }
 .modal { max-height: calc(100vh - var(--nav-h, 64px) - 3rem); }
+
+/* ── Real artifact photos ── */
+.split-panel__img { background: #070510; }
+.art-fill {
+  position: absolute; inset: -20px;
+  background-size: cover; background-position: center;
+  filter: blur(22px) brightness(0.45) saturate(1.1);
+  transform: scale(1.1);
+}
+.split-panel__img img.art-img {
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: contain; object-position: center;
+  padding: 2.2rem 1.2rem 4.6rem;
+  filter: none;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.split-panel__img img.art-img.loaded { opacity: 1; transform: none; }
+.art-overlay { z-index: 2; background: linear-gradient(to bottom, rgba(5,4,8,.55) 0%, transparent 18%, transparent 70%, rgba(5,4,8,.88) 100%) !important; }
+.split-panel__img-trad { z-index: 3; }
+.split-panel__img-caption.art-cap { z-index: 3; }
+
+.art-cap { display: flex; flex-direction: column; gap: .15rem; text-align: left; }
+.art-cap__title { font-family: var(--font-body); font-size: .95rem; font-style: italic; color: #efe4c2; letter-spacing: 0; text-transform: none; }
+.art-cap__where { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.art-cap__credit { font-size: .7rem; color: #9a917c; text-decoration: none; letter-spacing: 0; text-transform: none; }
+.art-cap__credit:hover { color: var(--gold-light); text-decoration: underline; }
+
+.book-detail__artifact { margin: 0 0 1rem; width: 100%; }
+.book-detail__artifact img, .cal-artifact img {
+  display: block; width: 100%; max-height: 340px; object-fit: contain;
+  background: #070510; border-radius: var(--r-inner, 10px);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.book-detail__artifact .art-cap, .cal-artifact .art-cap { margin-top: .6rem; }
+.cal-artifact { margin: 0 0 1.4rem; }
+.book__cover-img { object-fit: cover; }
+@media (max-width: 720px) {
+  .split-panel__img img.art-img { padding: 2.4rem .6rem 5.2rem; }
+  .book-detail__artifact img, .cal-artifact img { max-height: 260px; }
+}
+@media (min-width: 769px) { .book-detail__inner { grid-template-columns: 340px 1fr; } }
+@media (max-width: 900px) {
+  .split-panel__img { height: auto !important; min-height: 380px; max-height: none !important; }
+}
