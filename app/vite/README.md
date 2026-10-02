@@ -50,6 +50,7 @@ The design draws from 17th-century Hermetic engravings (Robert Fludd's *Utriusqu
 - **Palette**: black & gold, matching the Divine Origins library (void #050408 → #15112a, ivory text #ede3c4, gold #c9a84c / #f0d080), with Apple Liquid Glass surfaces
 - **Type**: Cinzel for display, Cormorant Garamond for body; small caps for marginalia labels and tradition badges
 - **Cosmos (3D)**: `CosmosView.jsx` — React Three Fiber + drei + GSAP; requires a hardware GPU (software rendering opens the Tiers view instead)
+- **three.js is pinned to 0.182.0**: r183+ deprecates `THREE.Clock`, which React Three Fiber 9.8.1 (latest stable) still creates for every canvas, so newer three logs a console warning. Unpin once R3F moves to `THREE.Timer`.
 - **Tradition colors**: pigment-inspired (lapis, vermilion, ochre, indigo, jade) — muted enough to coexist on the same canvas
 - **One signature element**: when a node is selected, parallel nodes across other tiers glow soft gold while everything else dims. The doctrine of correspondences (*as above, so below*) is the interaction model.
 
