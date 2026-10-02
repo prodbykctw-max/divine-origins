@@ -231,3 +231,9 @@ input[type="text"] {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── WebGL universe backdrop ── */
+#universe { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+#universe canvas { display: block; }
+/* keep reading text crisp over the moving galaxy */
+.has-3d .section__desc, .has-3d .t-body, .has-3d .t-italic { text-shadow: 0 1px 12px rgba(5,4,8,0.9), 0 0 2px rgba(5,4,8,0.9); }

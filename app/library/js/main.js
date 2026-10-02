@@ -3,7 +3,9 @@
    Bootstraps: canvas, router, renders, event delegation
    ============================================================= */
 
-import { initCanvas, initScrollReveals, initBookTilt } from './animations.js';
+import { initScrollReveals, initBookTilt } from './animations.js';
+import { mountUniverse, flyTo } from './universe.jsx';
+import gsap from 'gsap';
 import { initRouter, registerRenderer, navigate }      from './router.js';
 import { state }                                        from './state.js';
 import { renderHome }        from './sections/home.js';
@@ -28,8 +30,9 @@ registerRenderer('source-map',  renderSourceMap);
 
 /* ── BOOT ── */
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Starfield canvas
-  initCanvas();
+  // 1. Immersive WebGL universe (falls back to the plain void if WebGL is missing)
+  const has3D = mountUniverse(document.getElementById('universe'));
+  document.documentElement.classList.toggle('has-3d', has3D);
 
   // 2. 3D book tilt (ambient mouse tracking)
   initBookTilt();
@@ -73,3 +76,23 @@ function syncNavChrome() {
 window.addEventListener('scroll', syncNavChrome, { passive: true });
 window.addEventListener('resize', syncNavChrome);
 document.addEventListener('DOMContentLoaded', syncNavChrome);
+
+/* ── GSAP: camera flight + section entrance on every route change ── */
+const REDUCE = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function currentSection() {
+  return (window.location.hash.replace('#', '') || 'home');
+}
+function enterSection() {
+  const id = currentSection();
+  flyTo(id);
+  if (REDUCE) return;
+  const sec = document.getElementById('section-' + id);
+  if (!sec) return;
+  const heads = sec.querySelectorAll('.section__eyeline, .section__title, .section__desc, .t-display, .hero-symbol');
+  if (heads.length) {
+    gsap.fromTo(heads, { y: 28, opacity: 0, filter: 'blur(6px)' },
+      { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.1, ease: 'power3.out', stagger: 0.08, overwrite: true, clearProps: 'filter,transform' });
+  }
+}
+window.addEventListener('hashchange', () => setTimeout(enterSection, 0));
+document.addEventListener('DOMContentLoaded', () => setTimeout(enterSection, 60));

@@ -10,6 +10,15 @@ materials and Human Interface Guidelines (floating glass nav, capsule controls,
 concentric corners, 44 px touch targets, Reduce Transparency / Increase
 Contrast / Reduce Motion support).
 
+Immersive 3D (WebGL): React 19 + React Three Fiber 9 + three.js + GSAP.
+- `library/js/universe.jsx` — a live gold galaxy with floating sacred geometry
+  behind every section; follows the pointer, drifts with scroll, and GSAP flies
+  the camera to a new vantage point per section (pauses on the Source Map).
+- `vite/CosmosView.jsx` — the Source Map's default **Cosmos** view: all 934
+  figures as stars on tier shells (Source at the centre, Archons outermost),
+  parallels as light threads; orbit, zoom, hover names, tap to open, GSAP
+  camera fly-to. Falls back to the Tiers view if WebGL is unavailable.
+
 Rebuild after editing `library/` or `vite/`:
 
 ```bash

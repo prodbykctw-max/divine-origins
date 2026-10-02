@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { Search, X, Filter, BookOpen, Eye, EyeOff, Info, ChevronUp, ChevronDown, Sparkles, ArrowUpRight, FileText, Upload, Layers } from 'lucide-react';
 import SEED_DATA from './seed-data.json';
+import CosmosView from './CosmosView.jsx';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EMBEDDED SEED DATA
@@ -195,7 +196,7 @@ function SourceMapApp({ data, onReload }) {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [compareOpen, setCompareOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [viewMode, setViewMode] = useState('tiers'); // 'tiers' | 'network'
+  const [viewMode, setViewMode] = useState('cosmos'); // 'cosmos' | 'tiers' | 'network'
 
   // Reset selection if data reloaded
   useEffect(() => {
@@ -372,6 +373,17 @@ function SourceMapApp({ data, onReload }) {
             radial-gradient(circle at 30% 20%, rgba(201,168,76,0.04) 0%, transparent 50%),
             radial-gradient(circle at 70% 60%, rgba(201,168,76,0.03) 0%, transparent 50%);
         }
+        /* ── Cosmos (3D) ── */
+        .cosmos { border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 30px 80px -30px rgba(0,0,0,0.9); }
+        .cosmos-legend { position: absolute; left: 14px; top: 14px; padding: 10px 14px; border-radius: 18px; pointer-events: none; max-width: 70%; }
+        .cosmos-legend__row { font-size: 13px; color: #cdc2a3; line-height: 1.35; }
+        .cosmos-tiers { position: absolute; right: 14px; top: 14px; padding: 10px 14px; border-radius: 18px; pointer-events: none; }
+        .cosmos-tiers__item { font-variant: small-caps; letter-spacing: .1em; font-size: 12px; color: #c9a84c; line-height: 1.6; }
+        .cosmos-reset { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 0 18px; min-height: 44px; color: #fff4d4; font-family: inherit; font-size: 14px; cursor: pointer; }
+        .cosmos-tip { background: rgba(12,10,22,0.86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(240,208,128,0.4); border-radius: 14px; padding: 6px 12px; white-space: nowrap; box-shadow: 0 10px 30px -10px rgba(0,0,0,.9); }
+        .cosmos-tip__name { font-size: 15px; font-weight: 600; color: #fff4d4; font-family: 'Cormorant Garamond', Georgia, serif; }
+        .cosmos-tip__meta { font-size: 11px; color: #c9a84c; font-variant: small-caps; letter-spacing: .08em; font-family: 'Cormorant Garamond', Georgia, serif; }
+        @media (max-width: 600px) { .cosmos-tiers { display: none; } .cosmos-legend { max-width: calc(100% - 28px); } }
         /* ── Apple Liquid Glass + HIG layer (black & gold) ── */
         .glass, .glass-modal, .sheet {
           background: rgba(22,18,38,0.62);
@@ -457,7 +469,7 @@ function SourceMapApp({ data, onReload }) {
 
       <div style={{ padding: '12px 16px 0' }}>
        <div className="glass segmented" role="tablist" aria-label="View">
-        {[['tiers', 'Tiers'], ['network', 'Network']].map(([id, label]) => (
+        {[['cosmos', 'Cosmos'], ['tiers', 'Tiers'], ['network', 'Network']].map(([id, label]) => (
           <button
             key={id}
             role="tab"
@@ -489,6 +501,24 @@ function SourceMapApp({ data, onReload }) {
             isLast={idx === TIER_ORDER.length - 1}
           />
         ))}
+
+        {viewMode === 'cosmos' && (
+          <div style={{ padding: '10px 16px' }}>
+            <CosmosView
+              facets={facets}
+              deityById={deityById}
+              traditionById={traditionById}
+              parallels={parallels}
+              isFacetVisible={isFacetVisible}
+              selectedFacetId={selectedFacetId}
+              selectedRelated={selectedRelated}
+              onSelect={selectFacet}
+              onClear={clearSelection}
+              colorFor={colorFor}
+              onUnavailable={() => setViewMode('tiers')}
+            />
+          </div>
+        )}
 
         {viewMode === 'network' && (
           <div className="px-4" style={{ padding: '10px 16px' }}>

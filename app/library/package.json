@@ -1,0 +1,13 @@
+{
+  "name": "divine-origins-library",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Divine Origins library sections with the immersive WebGL universe (bundled by ../build_combined.sh).",
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "gsap": "3.15.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.1"
+  }
+}
