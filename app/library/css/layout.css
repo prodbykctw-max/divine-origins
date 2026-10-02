@@ -448,13 +448,5 @@
   .section { padding: var(--space-16) 0; }
 }
 
-/* ── SOURCE MAP (embedded Parallels of the Gods app) ── */
+/* ── SOURCE MAP (Parallels of the Gods, mounted in a shadow root) ── */
 #section-source-map { padding: 0; }
-.source-map-frame {
-  display: block;
-  width: 100%;
-  height: calc(100vh - var(--nav-h, 64px));
-  height: calc(100dvh - var(--nav-h, 64px));
-  border: 0;
-  background: #f5efe1;
-}

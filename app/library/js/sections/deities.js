@@ -26,7 +26,7 @@ export function renderDeities() {
     <div class="section">
       <div class="container">
         <header class="section__header">
-          <span class="section__eyeline">150+ Entries · All Traditions</span>
+          <span class="section__eyeline">${DEITIES.length} Entries · All Traditions</span>
           <h2 class="section__title">Creator Beings & Divine Archetypes</h2>
           <p class="section__desc">
             Every documented creator, supreme being, demiurge, and divine council

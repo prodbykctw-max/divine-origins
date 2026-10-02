@@ -11,7 +11,7 @@
 import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { OrbitControls, Stars, Html } from '@react-three/drei';
+import { OrbitControls, Stars, PerformanceMonitor } from '@react-three/drei';
 import gsap from 'gsap';
 
 const SHELLS = {
@@ -117,7 +117,7 @@ function Shells() {
 }
 
 // ── Stars (figures) ──
-function Figures({ facets, positions, colorOf, degree, visible, selectedId, related, onHover, onPick }) {
+function Figures({ facets, positions, colorOf, degree, visible, selectedId, related, onHover, onPick, lite }) {
   const mesh = useRef();
   const pts = useRef();
   const tex = useMemo(glowTexture, []);
@@ -160,16 +160,21 @@ function Figures({ facets, positions, colorOf, degree, visible, selectedId, rela
 
   return (
     <group>
-      <points ref={pts} geometry={glowGeo}>
+      <points ref={pts} geometry={glowGeo} visible={!lite}>
         <pointsMaterial map={tex} size={0.95} sizeAttenuation vertexColors transparent opacity={0.6}
           depthWrite={false} blending={THREE.AdditiveBlending} />
       </points>
       <instancedMesh
         ref={mesh}
         args={[null, null, facets.length]}
-        onPointerMove={(e) => { e.stopPropagation(); onHover(e.instanceId ?? null); }}
+        onPointerMove={(e) => { e.stopPropagation(); onHover(e.instanceId ?? null, e.nativeEvent.offsetX, e.nativeEvent.offsetY); }}
         onPointerOut={() => onHover(null)}
-        onClick={(e) => { e.stopPropagation(); if (e.instanceId != null) onPick(e.instanceId); }}
+        onClick={(e) => {
+          e.stopPropagation();
+          // Ignore the click that ends an orbit drag (R3F reports the pointer travel in px)
+          if (e.delta > 6 || e.instanceId == null) return;
+          onPick(e.instanceId);
+        }}
       >
         <sphereGeometry args={[1, 12, 12]} />
         <meshBasicMaterial toneMapped={false} />
@@ -228,16 +233,51 @@ function Director({ controls, focus }) {
   return null;
 }
 
+// Keep the selected figure in the part of the canvas the detail sheet
+// does not cover: shift the projection up by half the covered height.
+function ViewOffset({ wrapRef }) {
+  const { camera, size } = useThree();
+  const cur = useRef(0);
+  useFrame(() => {
+    let want = 0;
+    const wrap = wrapRef.current;
+    if (wrap) {
+      const sheet = wrap.getRootNode().querySelector('.sheet');
+      if (sheet) {
+        const c = wrap.getBoundingClientRect();
+        const covered = Math.max(0, Math.min(c.bottom, window.innerHeight) - sheet.getBoundingClientRect().top);
+        want = Math.min(covered, size.height * 0.8) / 2;
+      }
+    }
+    cur.current += (want - cur.current) * (reduceMotion ? 1 : 0.12);
+    if (Math.abs(cur.current) < 0.5) { if (camera.view) camera.clearViewOffset(); return; }
+    camera.setViewOffset(size.width, size.height, 0, cur.current, size.width, size.height);
+  });
+  return null;
+}
+
+// Real GPU required: software rendering (failIfMajorPerformanceCaveat) gets
+// the 2D views instead, so slow machines never land in a stuttering 3D scene.
 function webglAvailable() {
   try {
+    if (window.__FORCE_3D__) return true;
     const c = document.createElement('canvas');
-    return !!(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl')));
+    const opts = { failIfMajorPerformanceCaveat: true };
+    return !!(window.WebGLRenderingContext && (c.getContext('webgl2', opts) || c.getContext('webgl', opts)));
   } catch { return false; }
 }
 
-export default function CosmosView({ facets, deityById, traditionById, parallels, isFacetVisible, selectedFacetId, selectedRelated, onSelect, onClear, colorFor, onUnavailable }) {
+export default function CosmosView({ facets, deityById, traditionById, parallels, isFacetVisible, selectedFacetId, selectedRelated, onSelect, onClear, colorFor, onUnavailable, onBrowseList }) {
   const controls = useRef();
-  const [hover, setHover] = useState(null);
+  const wrapRef = useRef();
+  const [hover, setHoverState] = useState(null);
+  const [tip, setTip] = useState({ x: 0, y: 0 });
+  const [dpr, setDpr] = useState(1.5);
+  const [lite, setLite] = useState(false);
+  const setHover = useCallback((id, x, y) => {
+    setHoverState(id);
+    if (id != null && x != null) setTip({ x, y });
+  }, []);
   const [ok] = useState(webglAvailable);
   const [interacted, setInteracted] = useState(false);
 
@@ -264,18 +304,35 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
 
   if (!ok) return null;
 
+  // Tooltip stays inside the canvas: flip left/below near the edges
+  const wrapW = wrapRef.current ? wrapRef.current.clientWidth : 0;
+  const tipLeft = tip.x > wrapW / 2;
+  const tipStyle = {
+    left: tipLeft ? undefined : Math.max(8, tip.x + 14),
+    right: tipLeft ? Math.max(8, wrapW - tip.x + 14) : undefined,
+    top: tip.y < 70 ? tip.y + 18 : tip.y - 58,
+  };
+
   return (
-    <div className="cosmos" style={{ position: 'relative', height: 'calc(100dvh - 210px)', minHeight: 460 }}>
+    <div ref={wrapRef} className={'cosmos' + (selectedFacetId ? ' has-sel' : '')} role="region"
+      aria-label={`3D cosmos of ${facets.length} figures. Use the Tiers view to browse them as a list.`}
+      style={{ position: 'relative', height: 'calc(100dvh - 210px - var(--nav-h, 0px))', minHeight: 420 }}>
       <Canvas
-        dpr={[1, 1.75]}
+        dpr={dpr}
         gl={{ antialias: true, powerPreference: 'high-performance', alpha: false }}
         camera={{ fov: 50, near: 0.1, far: 600, position: [0, 18, 95] }}
         onPointerMissed={() => setHover(null)}
         style={{ cursor: hover != null ? 'pointer' : 'grab', touchAction: 'none' }}
       >
+        <PerformanceMonitor
+          onDecline={() => setDpr(1)}
+          onIncline={() => setDpr(1.5)}
+          flipflops={3}
+          onFallback={() => { setDpr(1); setLite(true); }}
+        />
         <color attach="background" args={['#050408']} />
         <fog attach="fog" args={['#050408', 45, 140]} />
-        <Stars radius={160} depth={60} count={reduceMotion ? 1500 : 4000} factor={4} saturation={0} fade speed={reduceMotion ? 0 : 0.6} />
+        <Stars radius={160} depth={60} count={reduceMotion || lite ? 1200 : 3000} factor={4} saturation={0} fade speed={reduceMotion ? 0 : 0.6} />
         <Shells />
         <Threads edges={edges} positions={positions} selectedId={selectedFacetId} />
         <Figures
@@ -287,16 +344,9 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
           selectedId={selectedFacetId}
           related={selectedRelated}
           onHover={setHover}
-          onPick={(i) => onSelect(facets[i].id)}
+          onPick={(i) => { setHoverState(null); onSelect(facets[i].id); }}
+          lite={lite}
         />
-        {hovered && (
-          <Html position={positions[hovered.id]} center style={{ pointerEvents: 'none', transform: 'translateY(-26px)' }}>
-            <div className="cosmos-tip">
-              <div className="cosmos-tip__name">{hoveredDeity?.primary_name}</div>
-              <div className="cosmos-tip__meta">{hoveredTrad?.name || hoveredDeity?.tradition_id} · {hovered.facet_name}</div>
-            </div>
-          </Html>
-        )}
         <OrbitControls
           ref={controls}
           makeDefault
@@ -309,12 +359,23 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
           onStart={() => setInteracted(true)}
         />
         <Director controls={controls} focus={focus} />
+        <ViewOffset wrapRef={wrapRef} />
       </Canvas>
+
+      {hovered && (
+        <div className="cosmos-tip" style={{ position: 'absolute', pointerEvents: 'none', ...tipStyle }}>
+          <div className="cosmos-tip__name">{hoveredDeity?.primary_name}</div>
+          <div className="cosmos-tip__meta">{hoveredTrad?.name || hoveredDeity?.tradition_id} · {hovered.facet_name}</div>
+        </div>
+      )}
 
       <div className="cosmos-legend glass">
         <div className="marginalia" style={{ color: '#f0d080' }}>The Cosmos</div>
         <div className="cosmos-legend__row">{facets.length} figures · {edges.length} parallels</div>
         <div className="cosmos-legend__row">Drag to orbit · pinch or scroll to zoom · tap a figure</div>
+        {onBrowseList && (
+          <button className="cosmos-list-btn" onClick={onBrowseList}>Browse as a list</button>
+        )}
       </div>
       <div className="cosmos-tiers glass">
         {[1, 2, 'cross-tier', 3, 4].map((k) => (

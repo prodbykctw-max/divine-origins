@@ -19,11 +19,16 @@ Immersive 3D (WebGL): React 19 + React Three Fiber 9 + three.js + GSAP.
   parallels as light threads; orbit, zoom, hover names, tap to open, GSAP
   camera fly-to. Falls back to the Tiers view if WebGL is unavailable.
 
-Rebuild after editing `library/` or `vite/`:
+Rebuild after editing `library/` or `vite/` (Node 20+, any OS):
 
 ```bash
-bash app/build_combined.sh
+node app/build_combined.mjs
 ```
+
+The library and the Source Map share one copy of React / three.js: the Source
+Map is mounted directly into the page inside a shadow root (style isolation),
+not an iframe. Both 3D scenes require a hardware GPU; on software rendering the
+site shows the 2D starfield and the Source Map opens in the Tiers view.
 
 The actual front-end of The Source Map / Divine Origins. Three artifacts built
 across the original chat sessions, migrated here for version control. Earlier

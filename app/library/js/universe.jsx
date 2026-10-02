@@ -17,7 +17,7 @@ import gsap from 'gsap';
 const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const small = Math.min(window.innerWidth, window.innerHeight) < 700;
 const cores = navigator.hardwareConcurrency || 4;
-const COUNT = reduceMotion ? 2500 : small ? 4200 : cores >= 8 ? 9000 : 6500;
+const COUNT = reduceMotion ? 2000 : small ? 3000 : cores >= 8 ? 5000 : 4000;
 
 /* Camera vantage per section: [camera x,y,z], [look x,y,z], galaxy tilt */
 const SHOTS = {
@@ -35,9 +35,10 @@ const rig = { x: 0, y: 13, z: 30, lx: 0, ly: -3, lz: 0, tilt: 0.95 };
 const pointer = { x: 0, y: 0 };
 let scrollV = 0;
 let paused = false;
+let modalOpen = false;
 
 /* ── Galaxy: spiral arms of gold dust (custom shader for twinkle + soft dots) ── */
-function Galaxy() {
+function Galaxy({ geoRef }) {
   const ref = useRef();
   const { geometry, material } = useMemo(() => {
     const pos = new Float32Array(COUNT * 3);
@@ -74,7 +75,7 @@ function Galaxy() {
       depthWrite: false,
       blending: THREE.AdditiveBlending,
       vertexColors: true,
-      uniforms: { uTime: { value: 0 }, uPixel: { value: Math.min(window.devicePixelRatio, 1.75) } },
+      uniforms: { uTime: { value: 0 }, uPixel: { value: Math.min(window.devicePixelRatio, 1.25) } },
       vertexShader: `
         attribute float aSize; attribute float aSeed;
         uniform float uTime; uniform float uPixel;
@@ -97,6 +98,7 @@ function Galaxy() {
     });
     return { geometry: g, material: m };
   }, []);
+  useEffect(() => { if (geoRef) geoRef.current = geometry; }, [geometry, geoRef]);
 
   useFrame((state, dt) => {
     if (!ref.current) return;
@@ -106,6 +108,28 @@ function Galaxy() {
   });
 
   return <points ref={ref} geometry={geometry} material={material} />;
+}
+
+/* ── Adaptive quality: if the frame rate sags, render fewer stars at 1x ── */
+let quality = 1; // 1 = full, 0.6, 0.35
+function QualityGovernor({ galaxyGeo }) {
+  const gl = useThree((s) => s.gl);
+  const acc = useRef({ t: 0, n: 0, settled: 0 });
+  useFrame((_, dt) => {
+    if (quality <= 0.35 || reduceMotion) return;
+    const a = acc.current;
+    a.t += dt; a.n += 1;
+    if (a.t < 2) return;
+    const fps = a.n / a.t;
+    a.t = 0; a.n = 0;
+    if (fps < 45) {
+      quality = quality === 1 ? 0.6 : 0.35;
+      gl.setPixelRatio(1);
+      const g = galaxyGeo.current;
+      if (g) g.setDrawRange(0, Math.floor(COUNT * quality));
+    }
+  });
+  return null;
 }
 
 /* ── Floating sacred geometry ── */
@@ -119,7 +143,7 @@ const SOLIDS = [
 function Solid({ geo, pos, s, speed, i }) {
   const ref = useRef();
   useFrame((state, dt) => {
-    if (!ref.current || reduceMotion) return;
+    if (!ref.current || reduceMotion || quality <= 0.35) return;
     ref.current.rotation.x += dt * speed;
     ref.current.rotation.y += dt * speed * 1.3;
     ref.current.position.y = pos[1] + Math.sin(state.clock.elapsedTime * 0.4 + i) * 0.35;
@@ -184,18 +208,23 @@ function Pauser() {
   const invalidate = useThree((s) => s.invalidate);
   useEffect(() => {
     invalidateRef = invalidate;
-    const h = () => setFrameloop(paused || document.hidden ? 'never' : reduceMotion ? 'demand' : 'always');
+    const h = () => setFrameloop(paused || modalOpen || document.hidden ? 'never' : reduceMotion ? 'demand' : 'always');
     window.addEventListener('universe:pause', h);
     document.addEventListener('visibilitychange', h);
-    return () => { window.removeEventListener('universe:pause', h); document.removeEventListener('visibilitychange', h); };
+    // Freeze the galaxy behind an open detail modal (it is fully covered and blurred)
+    const overlay = document.getElementById('modal-overlay');
+    const mo = overlay && new MutationObserver(() => { modalOpen = overlay.getAttribute('aria-hidden') === 'false'; h(); });
+    if (mo) mo.observe(overlay, { attributes: true, attributeFilter: ['aria-hidden'] });
+    return () => { window.removeEventListener('universe:pause', h); document.removeEventListener('visibilitychange', h); if (mo) mo.disconnect(); };
   }, [setFrameloop, invalidate]);
   return null;
 }
 
 function Universe() {
+  const geoRef = useRef(null);
   return (
     <Canvas
-      dpr={[1, 1.75]}
+      dpr={[1, 1.25]}
       gl={{ antialias: false, alpha: false, powerPreference: 'high-performance' }}
       camera={{ fov: 55, near: 0.1, far: 200, position: [0, 13, 30] }}
       frameloop={reduceMotion ? 'demand' : 'always'}
@@ -203,7 +232,8 @@ function Universe() {
     >
       <color attach="background" args={['#050408']} />
       <fog attach="fog" args={['#050408', 26, 90]} />
-      <Galaxy />
+      <Galaxy geoRef={geoRef} />
+      <QualityGovernor galaxyGeo={geoRef} />
       <Core />
       {SOLIDS.map((s, i) => <Solid key={i} i={i} {...s} />)}
       <CameraRig />
@@ -212,10 +242,13 @@ function Universe() {
   );
 }
 
+/* Real GPU required; software rendering falls back to the light 2D starfield */
 function webglAvailable() {
   try {
+    if (window.__FORCE_3D__) return true;
     const c = document.createElement('canvas');
-    return !!(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl')));
+    const opts = { failIfMajorPerformanceCaveat: true };
+    return !!(window.WebGLRenderingContext && (c.getContext('webgl2', opts) || c.getContext('webgl', opts)));
   } catch { return false; }
 }
 

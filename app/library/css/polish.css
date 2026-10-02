@@ -114,8 +114,6 @@
 .section__desc { color: #b3a993; }
 .t-body, .t-italic { line-height: 1.75; }
 
-/* ── SOURCE MAP FRAME blends into the page ── */
-.source-map-frame { background: #050408; }
 
 /* ── MOBILE ── */
 @media (max-width: 720px) {

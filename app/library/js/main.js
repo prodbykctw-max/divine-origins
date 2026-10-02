@@ -3,7 +3,7 @@
    Bootstraps: canvas, router, renders, event delegation
    ============================================================= */
 
-import { initScrollReveals, initBookTilt } from './animations.js';
+import { initCanvas, initScrollReveals, initBookTilt } from './animations.js';
 import { mountUniverse, flyTo } from './universe.jsx';
 import gsap from 'gsap';
 import { initRouter, registerRenderer, navigate }      from './router.js';
@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Immersive WebGL universe (falls back to the plain void if WebGL is missing)
   const has3D = mountUniverse(document.getElementById('universe'));
   document.documentElement.classList.toggle('has-3d', has3D);
+  if (!has3D) {
+    // No GPU: keep the original lightweight 2D starfield
+    const cv = document.createElement('canvas');
+    cv.id = 'canvas-bg';
+    cv.setAttribute('aria-hidden', 'true');
+    document.body.prepend(cv);
+    initCanvas();
+  }
 
   // 2. 3D book tilt (ambient mouse tracking)
   initBookTilt();

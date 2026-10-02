@@ -23,21 +23,17 @@ This is the working application built from the spec package. It's a **single-fil
 
 ## How to run
 
-### Option A — render as a Claude artifact
-
-Open `ParallelsOfTheGods.jsx` in claude.ai with the artifact renderer; it renders immediately. The seed dataset is embedded so it works with no wiring.
-
-### Option B — run locally with Vite
+### Run locally with Vite
 
 ```bash
-cd app
-npm install
+cd app/vite
+npm ci
 npm run dev
 ```
 
 Opens at http://localhost:5173. Tailwind is compiled at build time (`tailwind.config.cjs` + `postcss.config.cjs`), and `npm run build` emits a single self-contained `dist/index.html` (via `vite-plugin-singlefile`).
 
-### Option C — Claude Code
+### Claude Code
 
 From `source-map-spec/` root:
 
@@ -51,8 +47,9 @@ Claude Code reads `CLAUDE.md` and orients itself. Ask it to add drag-to-connect 
 
 The design draws from 17th-century Hermetic engravings (Robert Fludd's *Utriusque Cosmi*, Athanasius Kircher's *Oedipus Aegyptiacus*) where the cosmos was diagrammed in concentric horizontal layers with the divine correspondences drawn as threads between them.
 
-- **Palette**: aged-vellum background (#f5efe1 → #ede4cf gradient), deep-ink text (#1d2030), single gold accent (#b08648) used only for tier dividers and selected state
-- **Type**: EB Garamond throughout (display + body in the same humanist serif family); small caps used for marginalia labels and tradition badges
+- **Palette**: black & gold, matching the Divine Origins library (void #050408 → #15112a, ivory text #ede3c4, gold #c9a84c / #f0d080), with Apple Liquid Glass surfaces
+- **Type**: Cinzel for display, Cormorant Garamond for body; small caps for marginalia labels and tradition badges
+- **Cosmos (3D)**: `CosmosView.jsx` — React Three Fiber + drei + GSAP; requires a hardware GPU (software rendering opens the Tiers view instead)
 - **Tradition colors**: pigment-inspired (lapis, vermilion, ochre, indigo, jade) — muted enough to coexist on the same canvas
 - **One signature element**: when a node is selected, parallel nodes across other tiers glow soft gold while everything else dims. The doctrine of correspondences (*as above, so below*) is the interaction model.
 

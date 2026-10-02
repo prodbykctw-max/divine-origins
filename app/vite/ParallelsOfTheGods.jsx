@@ -22,6 +22,7 @@ const TIER_META = {
 };
 
 const TIER_ORDER = [1, 2, 'cross-tier', 3, 4];
+const EMPTY_SET = new Set();
 
 // Pigment-inspired tradition palette (muted, manuscript-friendly)
 const TRADITION_COLORS = {
@@ -196,7 +197,9 @@ function SourceMapApp({ data, onReload }) {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [compareOpen, setCompareOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [viewMode, setViewMode] = useState('cosmos'); // 'cosmos' | 'tiers' | 'network'
+  const [viewMode, setViewMode] = useState(() => (
+    typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'tiers' : 'cosmos'
+  )); // 'cosmos' | 'tiers' | 'network'
 
   // Reset selection if data reloaded
   useEffect(() => {
@@ -207,7 +210,7 @@ function SourceMapApp({ data, onReload }) {
 
   const selectedFacet = selectedFacetId ? facetById[selectedFacetId] : null;
   const selectedDeity = selectedFacet ? deityById[selectedFacet.parent_deity_id] : null;
-  const selectedRelated = selectedFacet ? parallelsForFacet[selectedFacet.id] || new Set() : new Set();
+  const selectedRelated = (selectedFacet && parallelsForFacet[selectedFacet.id]) || EMPTY_SET;
 
   // Search match
   const searchMatches = useMemo(() => {
@@ -380,10 +383,12 @@ function SourceMapApp({ data, onReload }) {
         .cosmos-tiers { position: absolute; right: 14px; top: 14px; padding: 10px 14px; border-radius: 18px; pointer-events: none; }
         .cosmos-tiers__item { font-variant: small-caps; letter-spacing: .1em; font-size: 12px; color: #c9a84c; line-height: 1.6; }
         .cosmos-reset { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 0 18px; min-height: 44px; color: #fff4d4; font-family: inherit; font-size: 14px; cursor: pointer; }
-        .cosmos-tip { background: rgba(12,10,22,0.86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(240,208,128,0.4); border-radius: 14px; padding: 6px 12px; white-space: nowrap; box-shadow: 0 10px 30px -10px rgba(0,0,0,.9); }
+.cosmos-list-btn { pointer-events: auto; margin-top: 8px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(240,208,128,0.45); background: rgba(201,168,76,0.14); color: #fff4d4; font-family: inherit; font-size: 13px; cursor: pointer; }
+        @media (pointer: coarse) { .cosmos-list-btn { min-height: 44px; } }
+        .cosmos-tip { max-width: min(300px, calc(100% - 16px)); white-space: normal !important; background: rgba(12,10,22,0.86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(240,208,128,0.4); border-radius: 14px; padding: 6px 12px; white-space: nowrap; box-shadow: 0 10px 30px -10px rgba(0,0,0,.9); }
         .cosmos-tip__name { font-size: 15px; font-weight: 600; color: #fff4d4; font-family: 'Cormorant Garamond', Georgia, serif; }
         .cosmos-tip__meta { font-size: 11px; color: #c9a84c; font-variant: small-caps; letter-spacing: .08em; font-family: 'Cormorant Garamond', Georgia, serif; }
-        @media (max-width: 600px) { .cosmos-tiers { display: none; } .cosmos-legend { max-width: calc(100% - 28px); } }
+        @media (max-width: 600px) { .cosmos.has-sel .cosmos-legend { display: none; } .cosmos-tiers { display: none; } .cosmos-legend { max-width: calc(100% - 28px); } }
         /* ── Apple Liquid Glass + HIG layer (black & gold) ── */
         .glass, .glass-modal, .sheet {
           background: rgba(22,18,38,0.62);
@@ -516,6 +521,7 @@ function SourceMapApp({ data, onReload }) {
               onClear={clearSelection}
               colorFor={colorFor}
               onUnavailable={() => setViewMode('tiers')}
+              onBrowseList={() => setViewMode('tiers')}
             />
           </div>
         )}
@@ -540,6 +546,7 @@ function SourceMapApp({ data, onReload }) {
 
       {sheetOpen && selectedFacet && (
         <DetailSheet
+          compact={viewMode === 'cosmos'}
           facet={selectedFacet}
           deity={selectedDeity}
           tradition={traditionById[selectedDeity.tradition_id]}
@@ -584,7 +591,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
       backdropFilter: 'blur(18px)',
       WebkitBackdropFilter: 'blur(18px)',
       position: 'sticky',
-      top: 0,
+      top: 'var(--nav-h, 0px)',
       zIndex: 30,
     }}>
       <div className="px-4 pt-4 pb-2">
@@ -872,7 +879,7 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
 // ─────────────────────────────────────────────────────────────────────────────
 // DetailSheet — bottom sheet with the node's full data
 // ─────────────────────────────────────────────────────────────────────────────
-function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionById, parallelsForFacet, parallelRecords, scholarlyMode, onClose, onClear, onSelectFacet }) {
+function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionById, parallelsForFacet, parallelRecords, scholarlyMode, onClose, onClear, onSelectFacet, compact }) {
   const [tab, setTab] = useState('essence');
   const c = colorFor(deity?.tradition_id);
   const relatedFacetIds = Array.from(parallelsForFacet[facet.id] || []);
@@ -894,12 +901,12 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
 
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 40 }} onClick={onClose} />
+      {!compact && <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 340 }} onClick={onClose} />}
       <div className="sheet fade-in" style={{
         position: 'fixed',
         bottom: 0, left: 0, right: 0,
-        maxHeight: '78vh',
-        zIndex: 50,
+        maxHeight: compact ? '55vh' : '78vh',
+        zIndex: 350,
         display: 'flex',
         flexDirection: 'column',
         borderTopLeftRadius: '28px',
@@ -1388,14 +1395,14 @@ function AboutModal({ meta, parallels = [], onClose }) {
   }, [parallels]);
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
+      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 360 }} onClick={onClose} />
       <div className="fade-in glass-modal" style={{
         position: 'fixed',
         top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 'min(560px, calc(100vw - 32px))',
         maxHeight: 'calc(100vh - 48px)',
-        zIndex: 70,
+        zIndex: 370,
         borderRadius: '26px',
         overflow: 'hidden',
         display: 'flex',
@@ -1603,10 +1610,10 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
 
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 60 }} onClick={onClose} />
+      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 360 }} onClick={onClose} />
       <div className="fade-in glass-modal" style={{
         position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-        width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px)', zIndex: 70,
+        width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px)', zIndex: 370,
         borderRadius: '26px', overflow: 'hidden', display: 'flex', flexDirection: 'column',
       }}>
         <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
