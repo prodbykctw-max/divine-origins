@@ -62,9 +62,14 @@ rmSync(SITE, { recursive: true, force: true });
 mkdirSync(SITE, { recursive: true });
 writeFileSync(join(SITE, 'index.html'), html);
 cpSync(join(LIB, 'img'), join(SITE, 'img'), { recursive: true });
+// Icons, web manifest and the social sharing image
+mkdirSync(join(SITE, 'icons'), { recursive: true });
+cpSync(join(LIB, 'icons', 'divine-origins', 'web'), join(SITE, 'icons'), { recursive: true });
+rmSync(join(SITE, 'icons', 'head.html'), { force: true });
+cpSync(join(LIB, 'icons', 'og-image.jpg'), join(SITE, 'icons', 'og-image.jpg'));
 writeFileSync(join(SITE, '.nojekyll'), '');
 
 // 6b. Single portable file: same page, photos loaded from the live site
-const single = html.replace('<head>', `<head>\n  <script>window.__IMG_BASE__ = ${JSON.stringify(LIVE + 'img/')};</script>`);
+const single = html.replaceAll('href="icons/', `href="${LIVE}icons/`).replace('<head>', `<head>\n  <script>window.__IMG_BASE__ = ${JSON.stringify(LIVE + 'img/')};</script>`);
 writeFileSync(OUT, single);
 console.log(`wrote ${SITE}/ (index.html + img/) and ${OUT} (${(statSync(OUT).size / 1048576).toFixed(2)} MB)`);
