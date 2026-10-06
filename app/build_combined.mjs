@@ -66,6 +66,30 @@ const HOME_MARK = '<!-- Injected by render.js renderHome() -->';
 if (!html.includes(HOME_MARK)) throw new Error('home section marker not found — nothing written');
 html = html.replace(HOME_MARK, () => staticIndexHTML(lib, seedCounts));
 html = html.replace('<head>', () => "<head>\n  <script>document.documentElement.classList.add('js')</script>");
+// Structured data: the site plus the Source Map dataset, with publish/update dates
+const today = new Date().toISOString().slice(0, 10);
+const LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': LIVE + '#website', name: 'Divine Origins', url: LIVE, inLanguage: 'en',
+      description: "Compare creator gods, sacred texts and calendars across the world's religious traditions, with real photos of the manuscripts and a 3D map of " + seedCounts.deities + ' deities.',
+      creator: { '@type': 'Person', name: 'KCTW', url: 'https://github.com/prodbykctw-max' },
+      datePublished: '2026-09-29', dateModified: today },
+    { '@type': 'Dataset', '@id': LIVE + '#source-map', name: 'The Source Map: Parallels of the Gods',
+      description: 'Deities and divine figures from ' + seedCounts.traditions + ' religious traditions (' + seedCounts.deities + ' deities, ' + seed.facets.length + ' facets, ' + seed.canonical_parallels.length + ' canonical parallels), each placed on a four-tier map: Source, Council, Demiurge, Archons, plus cross-tier figures.',
+      url: LIVE + '#source-map', isAccessibleForFree: true, inLanguage: 'en',
+      keywords: ['comparative religion', 'mythology', 'deities', 'sacred texts', 'cosmology'],
+      creator: { '@type': 'Person', name: 'KCTW', url: 'https://github.com/prodbykctw-max' },
+      dateModified: today,
+      distribution: { '@type': 'DataDownload', encodingFormat: 'application/json',
+        contentUrl: 'https://github.com/prodbykctw-max/divine-origins/blob/main/data/source_map_seed_data_v080.json' } },
+  ],
+};
+const ldRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
+if (!ldRe.test(html)) throw new Error('JSON-LD block not found — nothing written');
+html = html.replace(ldRe, () => '<script type="application/ld+json">' + JSON.stringify(LD) + '</script>');
+// A Markdown copy of the site summary for AI agents
+html = html.replace('<link rel="canonical"', () => '<link rel="alternate" type="text/markdown" href="index.md" title="Divine Origins (Markdown)">\n  <link rel="canonical"');
 // 6a. Deployable site (GitHub Pages): index.html + img/ (photos load lazily, sized per device)
 rmSync(SITE, { recursive: true, force: true });
 mkdirSync(SITE, { recursive: true });
@@ -78,6 +102,7 @@ rmSync(join(SITE, 'icons', 'head.html'), { force: true });
 cpSync(join(LIB, 'icons', 'og-image.jpg'), join(SITE, 'icons', 'og-image.jpg'));
 // AI and search discovery files
 writeFileSync(join(SITE, 'llms.txt'), llmsTxt(lib, seedCounts, LIVE));
+writeFileSync(join(SITE, 'index.md'), llmsTxt(lib, seedCounts, LIVE));
 writeFileSync(join(SITE, 'sitemap.xml'), sitemapXml(LIVE, new Date().toISOString().slice(0, 10)));
 // robots.txt only counts at the domain root (prodbykctw-max.github.io/robots.txt), which this repo doesn't serve.
 writeFileSync(join(SITE, '.nojekyll'), '');
