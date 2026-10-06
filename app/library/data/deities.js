@@ -8,7 +8,7 @@ export const DEITIES = [
   // MESOPOTAMIAN
   // ═══════════════════════════════════════════════════════════
   {
-    id:'an', name:'AN / ANU', aliases:'Father of Gods, Lord of Heaven, King of the Anunnaki',
+    id:'an', name:'An / Anu', aliases:'Father of Gods, Lord of Heaven, King of the Anunnaki',
     tradition:'mesopotamian', region:'Mesopotamia (modern Iraq)', date:'c. 3500 BCE (earliest texts)',
     tier:'Supreme Father', confidence:'documented', color:'#c8a060', imgKey:'sumerian',
     tags:['SUPREME','SKY','FATHER','DISTANT','DIVINE COUNCIL'],
@@ -21,7 +21,7 @@ export const DEITIES = [
     russelConnection:'An as the supreme, still, distant sky god parallels Russell\'s zero-point — the absolute stillness from which all wave-expression radiates, but which itself remains unmoved.',
   },
   {
-    id:'enki', name:'ENKI / EA', aliases:'Lord of the Abzu, God of Wisdom, Friend of Humanity',
+    id:'enki', name:'Enki / Ea', aliases:'Lord of the Abzu, God of Wisdom, Friend of Humanity',
     tradition:'mesopotamian', region:'Mesopotamia (Eridu)', date:'c. 2600 BCE (earliest hymns)',
     tier:'Creator / Craftsman', confidence:'documented', color:'#c8a060', imgKey:'sumerian',
     tags:['CREATOR','WISDOM','WATER','MAGIC','TRICKSTER','HUMANITY\'S FRIEND'],
@@ -34,7 +34,7 @@ export const DEITIES = [
     russelConnection:'Enki\'s Abzu (underground freshwater source) maps to Russell\'s zero-point field — the invisible, still ground of potential from which all creative motion emerges.',
   },
   {
-    id:'inanna', name:'INANNA / ISHTAR', aliases:'Queen of Heaven and Earth, Lady of the Evening Star',
+    id:'inanna', name:'Inanna / Ishtar', aliases:'Queen of Heaven and Earth, Lady of the Evening Star',
     tradition:'mesopotamian', region:'Mesopotamia (Uruk)', date:'c. 3200 BCE (Uruk period)',
     tier:'Death / Resurrection', confidence:'documented', color:'#c8a060', imgKey:'sumerian',
     tags:['LOVE','WAR','DESCENT','RESURRECTION','VENUS','QUEEN'],
@@ -47,7 +47,7 @@ export const DEITIES = [
     russelConnection:'Inanna\'s passage through seven gates, surrendering divine attributes at each level, maps to Russell\'s seven-tone octave — descent through increasing density until reaching the zero point of death.',
   },
   {
-    id:'tammuz', name:'TAMMUZ / DUMUZI', aliases:'The Shepherd, Beloved of Inanna',
+    id:'tammuz', name:'Tammuz / Dumuzi', aliases:'The Shepherd, Beloved of Inanna',
     tradition:'mesopotamian', region:'Mesopotamia', date:'c. 2600 BCE (earliest texts)',
     tier:'Death / Resurrection', confidence:'documented', color:'#c8a060', imgKey:'sumerian',
     tags:['DYING GOD','RESURRECTION','SHEPHERD','SEASONS','VEGETATION'],
@@ -60,7 +60,7 @@ export const DEITIES = [
     russelConnection:'Tammuz\'s annual death and return is Russell\'s cosmic pendulum — the inhalation (descent, winter, death) and exhalation (ascent, spring, resurrection). The rhythm is perfect and eternal.',
   },
   {
-    id:'marduk', name:'MARDUK', aliases:'Bel, Lord of Lords, Son of Enki',
+    id:'marduk', name:'Marduk', aliases:'Bel, Lord of Lords, Son of Enki',
     tradition:'mesopotamian', region:'Mesopotamia (Babylon)', date:'c. 2000 BCE (Old Babylonian texts)',
     tier:'Supreme Father', confidence:'documented', color:'#c8a060', imgKey:'babylonian',
     tags:['SUPREME','DRAGON-SLAYER','CREATOR','CITY GOD','DIVINE COUNCIL'],
@@ -77,7 +77,7 @@ export const DEITIES = [
   // EGYPTIAN
   // ═══════════════════════════════════════════════════════════
   {
-    id:'ra', name:'RA / AMUN-RA / ATUM', aliases:'Lord of the Horizon, Father of All Gods, The Self-Created',
+    id:'ra', name:'Ra / Amun-Ra / Atum', aliases:'Lord of the Horizon, Father of All Gods, The Self-Created',
     tradition:'egyptian', region:'Egypt (Heliopolis)', date:'c. 2400 BCE (Pyramid Texts)',
     tier:'Supreme Father', confidence:'documented', color:'#c9a84c', imgKey:'osiris',
     tags:['SOLAR','SELF-CREATED','SUPREME','CYCLE','KING OF GODS'],
@@ -90,7 +90,7 @@ export const DEITIES = [
     russelConnection:'Ra\'s daily cycle — radiation outward (day, light, expansion) and return inward (night, death, contraction) — is Russell\'s cosmic pendulum expressed as theology.',
   },
   {
-    id:'osiris', name:'OSIRIS', aliases:'Wennefer, Lord of the Dead, The Resurrected King',
+    id:'osiris', name:'Osiris', aliases:'Wennefer, Lord of the Dead, The Resurrected King',
     tradition:'egyptian', region:'Egypt (Abydos)', date:'c. 2400 BCE (Pyramid Texts)',
     tier:'Death / Resurrection', confidence:'documented', color:'#c9a84c', imgKey:'osiris',
     tags:['DEATH','RESURRECTION','JUDGMENT','FERTILITY','UNDERWORLD'],
@@ -103,7 +103,7 @@ export const DEITIES = [
     russelConnection:'Osiris\'s 14-piece dismemberment and reassembly maps to Russell\'s 14-note two-octave system. The death of integration and resurrection of reintegration is the cosmic wave pattern at the scale of divine narrative.',
   },
   {
-    id:'thoth', name:'THOTH / HERMES TRISMEGISTUS', aliases:'Lord of Divine Words, Twice-Great, Thrice-Greatest',
+    id:'thoth', name:'Thoth / Hermes Trismegistus', aliases:'Lord of Divine Words, Twice-Great, Thrice-Greatest',
     tradition:'egyptian', region:'Egypt (Hermopolis) → Mediterranean world', date:'c. 2400 BCE (Egyptian); c. 100-300 CE (Hermetic texts)',
     tier:'Wisdom / Knowledge', confidence:'documented', color:'#c9a84c', imgKey:'egyptian',
     tags:['WISDOM','WRITING','MAGIC','MOON','HERMETIC','AS ABOVE SO BELOW'],
@@ -120,7 +120,7 @@ export const DEITIES = [
   // CANAANITE
   // ═══════════════════════════════════════════════════════════
   {
-    id:'el_canaanite', name:'EL', aliases:'Father of All, Bull El, Creator of Creatures, Ancient of Days',
+    id:'el_canaanite', name:'El', aliases:'Father of All, Bull El, Creator of Creatures, Ancient of Days',
     tradition:'canaanite', region:'Levant (modern Syria, Lebanon, Israel/Palestine)', date:'c. 1400 BCE (Ugaritic texts); earlier oral tradition',
     tier:'Supreme Father', confidence:'documented', color:'#a06828', imgKey:'canaanite',
     tags:['SUPREME','FATHER','CREATOR','DIVINE COUNCIL','BULL','ANCIENT'],
@@ -137,7 +137,7 @@ export const DEITIES = [
   // HEBREW / KABBALISTIC
   // ═══════════════════════════════════════════════════════════
   {
-    id:'el_elyon', name:'EL ELYON', aliases:'The Most High, God Most High, Father of All Nations',
+    id:'el_elyon', name:'El Elyon', aliases:'The Most High, God Most High, Father of All Nations',
     tradition:'hebrew', region:'Levant / Ancient Israel', date:'c. 1200 BCE (earliest Hebrew texts); earlier Canaanite tradition',
     tier:'Supreme Father', confidence:'debated', color:'#c44040', imgKey:'hebrew',
     tags:['MOST HIGH','ABOVE YAHWEH?','DIVINE COUNCIL','ALL NATIONS','EL'],
@@ -150,7 +150,7 @@ export const DEITIES = [
     russelConnection:'El Elyon as the supreme still source above all motion, delegating governance of the dynamic world to intermediate beings, maps to Russell\'s ONE consciousness at the zero-point from which all wave patterns emanate.',
   },
   {
-    id:'yahweh', name:'YAHWEH / YHWH', aliases:'El, Elohim, Adonai, El Shaddai, El Sabaoth, Lord',
+    id:'yahweh', name:'Yahweh / YHWH', aliases:'El, Elohim, Adonai, El Shaddai, El Sabaoth, Lord',
     tradition:'hebrew', region:'Ancient Israel / Judah', date:'c. 1200 BCE (earliest inscriptions); texts from c. 1000-400 BCE',
     tier:'Creator / Supreme', confidence:'documented', color:'#c44040', imgKey:'hebrew',
     tags:['CREATOR','COVENANT','JEALOUS','LAW-GIVER','DIVINE COUNCIL','NATIONAL GOD'],
@@ -163,7 +163,7 @@ export const DEITIES = [
     russelConnection:'Yahweh speaking the world into existence ("Let there be light") and breathing life into Adam maps to Russell\'s description of consciousness (the ONE Mind) expressing itself first as light (electromagnetic wave) and then as organized material form.',
   },
   {
-    id:'ain_soph', name:'AIN SOPH', aliases:'Ein Sof, Without Limit, The Infinite, Ayin (Nothingness)',
+    id:'ain_soph', name:'Ain Soph', aliases:'Ein Sof, Without Limit, The Infinite, Ayin (Nothingness)',
     tradition:'hebrew', region:'Medieval Spain, Southern France, later worldwide', date:'c. 12th-13th century CE (textual Kabbalah); earlier mystical roots',
     tier:'Supreme Source', confidence:'tradition', color:'#c44040', imgKey:'hebrew',
     tags:['INFINITE','BEYOND BEING','EMANATION','TREE OF LIFE','TEN SEFIROT'],
@@ -180,7 +180,7 @@ export const DEITIES = [
   // GNOSTIC
   // ═══════════════════════════════════════════════════════════
   {
-    id:'monad', name:'THE MONAD', aliases:'The Invisible Spirit, The First Father, The True God, Bythos (The Deep)',
+    id:'monad', name:'The Monad', aliases:'The Invisible Spirit, The First Father, The True God, Bythos (The Deep)',
     tradition:'gnostic', region:'Egypt, Syria, Rome (1st-4th century CE)', date:'c. 1st-4th century CE (Gnostic texts)',
     tier:'Supreme Source', confidence:'tradition', color:'#8840c4', imgKey:'hebrew',
     tags:['SUPREME','BEYOND BEING','UNKNOWABLE','PERFECT','PARENT'],
@@ -193,7 +193,7 @@ export const DEITIES = [
     russelConnection:'The Monad as perfect, still, self-knowing consciousness from which all emanation flows is identical to Russell\'s ONE — the zero-point stillness that is the source of all wave motion, the conscious ground of all being.',
   },
   {
-    id:'yaldabaoth', name:'YALDABAOTH', aliases:'Samael (Blind God), Saklas (Foolish One), The Demiurge',
+    id:'yaldabaoth', name:'Yaldabaoth', aliases:'Samael (Blind God), Saklas (Foolish One), The Demiurge',
     tradition:'gnostic', region:'Egypt, Syria (2nd-3rd century CE)', date:'c. 2nd century CE (Apocryphon of John)',
     tier:'Creator / Demiurge', confidence:'tradition', color:'#8840c4', imgKey:'hebrew',
     tags:['DEMIURGE','BLIND GOD','CREATOR','MATERIAL WORLD','FALSE CLAIM','LION-SERPENT'],
@@ -210,7 +210,7 @@ export const DEITIES = [
   // GREEK / NEOPLATONIC
   // ═══════════════════════════════════════════════════════════
   {
-    id:'zeus', name:'ZEUS / JUPITER', aliases:'Father of Gods and Men, Olympian, Cloud-Gatherer, Thunderer',
+    id:'zeus', name:'Zeus / Jupiter', aliases:'Father of Gods and Men, Olympian, Cloud-Gatherer, Thunderer',
     tradition:'greek', region:'Greece / Rome', date:'c. 800 BCE (Homer); earlier oral tradition',
     tier:'Supreme Father', confidence:'documented', color:'#40a8a0', imgKey:'greek',
     tags:['SUPREME','SKY','THUNDER','DIVINE COUNCIL','JUSTICE','LAW'],
@@ -223,7 +223,7 @@ export const DEITIES = [
     russelConnection:'Zeus as law-giver of the divine order maps to Russell\'s universal mathematical ratios — the fixed laws governing all wave motion that no entity, however powerful, can override.',
   },
   {
-    id:'the_one', name:'THE ONE (TO HEN)', aliases:'The Good, The First Principle, The Ineffable',
+    id:'the_one', name:'The One (to Hen)', aliases:'The Good, The First Principle, The Ineffable',
     tradition:'greek', region:'Rome / Egypt (Plotinus)', date:'c. 250 CE (Plotinus, Enneads)',
     tier:'Supreme Source', confidence:'tradition', color:'#40a8a0', imgKey:'greek',
     tags:['SUPREME','INEFFABLE','BEYOND BEING','EMANATION','MYSTICAL UNION'],
@@ -240,7 +240,7 @@ export const DEITIES = [
   // ZOROASTRIAN
   // ═══════════════════════════════════════════════════════════
   {
-    id:'ahura_mazda', name:'AHURA MAZDA', aliases:'Wise Lord, Ohrmazd, Lord of Light and Truth',
+    id:'ahura_mazda', name:'Ahura Mazda', aliases:'Wise Lord, Ohrmazd, Lord of Light and Truth',
     tradition:'zoroastrian', region:'Persia (modern Iran)', date:'c. 1500-1000 BCE (Avestan texts; dating debated)',
     tier:'Supreme Father', confidence:'documented', color:'#d4a020', imgKey:'zoroastrian',
     tags:['SUPREME','LIGHT','TRUTH','UNCREATED','DUALISTIC','ALL-KNOWING'],
@@ -257,7 +257,7 @@ export const DEITIES = [
   // HINDU
   // ═══════════════════════════════════════════════════════════
   {
-    id:'brahman', name:'BRAHMAN', aliases:'Sat-Chit-Ananda, The Absolute, Paramatman, Nirguna Brahman',
+    id:'brahman', name:'Brahman', aliases:'Sat-Chit-Ananda, The Absolute, Paramatman, Nirguna Brahman',
     tradition:'hindu', region:'India', date:'c. 800-500 BCE (early Upanishads)',
     tier:'Supreme Source', confidence:'documented', color:'#c06040', imgKey:'hindu',
     tags:['SUPREME','IMPERSONAL','ABSOLUTE','CONSCIOUSNESS','ATMAN','NON-DUAL'],
@@ -274,7 +274,7 @@ export const DEITIES = [
   // NORSE
   // ═══════════════════════════════════════════════════════════
   {
-    id:'odin', name:'ODIN / ALL-FATHER', aliases:'Allföðr, Yggr, Wanderer, Grimnir, Bolverk',
+    id:'odin', name:'Odin / All-Father', aliases:'Allföðr, Yggr, Wanderer, Grimnir, Bolverk',
     tradition:'norse_celtic', region:'Scandinavia / Germanic world', date:'c. 900-1100 CE (Eddas); earlier oral tradition',
     tier:'Supreme Father', confidence:'documented', color:'#6080c0', imgKey:'norse',
     tags:['ALL-FATHER','WISDOM','SACRIFICE','DEATH','MAGIC','RUNES','FATE'],
@@ -291,7 +291,7 @@ export const DEITIES = [
   // TAOIST
   // ═══════════════════════════════════════════════════════════
   {
-    id:'tao', name:'THE TAO', aliases:'The Way, The Mother of All Things, The Nameless',
+    id:'tao', name:'The Tao', aliases:'The Way, The Mother of All Things, The Nameless',
     tradition:'east_asian', region:'China', date:'c. 500-400 BCE (Laozi\'s Tao Te Ching)',
     tier:'Supreme Source', confidence:'documented', color:'#60a0c0', imgKey:'taoist',
     tags:['SUPREME','NAMELESS','PARADOX','FLOW','NON-DOING','WAY'],
@@ -308,7 +308,7 @@ export const DEITIES = [
   // AFRICAN / YORUBA / DOGON
   // ═══════════════════════════════════════════════════════════
   {
-    id:'olodumare', name:'OLODUMARE / OLORUN', aliases:'Owner of Heaven, Source of All, Almighty, Lord of the Universe',
+    id:'olodumare', name:'Olodumare / Olorun', aliases:'Owner of Heaven, Source of All, Almighty, Lord of the Universe',
     tradition:'african', region:'West Africa (modern Nigeria, Benin)', date:'Oral tradition; documented 19th-20th century CE',
     tier:'Supreme Source', confidence:'documented', color:'#40a040', imgKey:'yoruba',
     tags:['SUPREME','DISTANT','CREATOR','AXE (DIVINE POWER)','ORISHA','IMPERSONAL'],
@@ -325,7 +325,7 @@ export const DEITIES = [
   // INDIGENOUS
   // ═══════════════════════════════════════════════════════════
   {
-    id:'wakan_tanka', name:'WAKAN TANKA', aliases:'The Great Mystery, The Great Spirit, Tunkasila (Grandfather)',
+    id:'wakan_tanka', name:'Wakan Tanka', aliases:'The Great Mystery, The Great Spirit, Tunkasila (Grandfather)',
     tradition:'indigenous', region:'Great Plains (North America)', date:'Oral tradition; documented c. 19th century CE',
     tier:'Supreme Source', confidence:'documented', color:'#807040', imgKey:'native',
     tags:['GREAT MYSTERY','SUPREME','NATURE','SACRED','ORAL TRADITION'],
@@ -338,7 +338,7 @@ export const DEITIES = [
     russelConnection:'"Everything is sacred / everything is related" is Russell\'s field theory in spiritual language: every wave pattern is an expression of the same ONE consciousness, all connected through the universal medium of light/electricity.',
   },
   {
-    id:'dreamtime', name:'THE DREAMING / TJUKURPA', aliases:'Dreamtime, The Law, The Way',
+    id:'dreamtime', name:'The Dreaming / Tjukurpa', aliases:'Dreamtime, The Law, The Way',
     tradition:'indigenous', region:'Australia', date:'Oral tradition; 60,000+ years of continuous culture',
     tier:'Supreme Source', confidence:'documented', color:'#807040', imgKey:'native',
     tags:['DREAMING','SONGLINES','ANCESTOR BEINGS','LAW','CONTINUOUS','SACRED LAND'],

@@ -137,6 +137,11 @@ This project is described by the user as critically important. The standard is n
   (`app/vite/CosmosView.jsx`); a WebGL galaxy (`app/library/js/universe.jsx`)
   runs behind the library. Both need a hardware GPU and fall back to 2D views.
   Rebuild with `node app/build_combined.mjs` (CI runs it on every push/PR).
+- **Theme:** Chola Bronze — dark patinated bronze, one interactive colour
+  (verdigris `#86bba6`), Tiro Devanagari Sanskrit + Hind, no glass blur, no glow,
+  no all-caps labels. Library tokens live in `app/library/css/theme.css` (loaded
+  last); the Source Map's shadow-root CSS is in `ParallelsOfTheGods.jsx`.
+  App icon + share image: `app/library/icons/`.
 - **Spec package** complete and self-tested at 102/102 green.
 - **CI** gates docs + canonical seed + the app build on every push/PR.
 - **Next horizon:** move the library sections onto the v0.8.0 data (they still
