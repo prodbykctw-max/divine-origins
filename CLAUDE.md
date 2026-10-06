@@ -141,8 +141,10 @@ This project is described by the user as critically important. The standard is n
   lapis-on-paper version (light); the page follows the device's colour setting.
   One interactive colour per mode, Amiri + Noto Sans, no glass blur, no glow,
   no all-caps labels. Tokens for both modes live in `app/library/css/theme.css`
-  (loaded last). The Source Map (shadow root, `ParallelsOfTheGods.jsx`) is
-  dark in both modes.
+  (loaded last). The Source Map follows the same setting: its `--sm-*`
+  variables live in the `<style>` block of `ParallelsOfTheGods.jsx`; the
+  Network canvas uses `PAL()` and the 3D Cosmos uses `isLight()` (canvas and
+  WebGL can't read CSS variables).
   App icon + share image: `app/library/icons/`.
 - **Spec package** complete and self-tested at 102/102 green.
 - **CI** gates docs + canonical seed + the app build on every push/PR.
