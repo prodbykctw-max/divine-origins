@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- GitHub Pages ignores _headers, so the security policy ships as meta tags.
+       'unsafe-inline' scripts: the build inlines the bundle and sections use onclick="" handlers.
+       prodbykctw-max.github.io: the single-file build loads photos and icons from the live site. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://prodbykctw-max.github.io; manifest-src 'self' https://prodbykctw-max.github.io; media-src 'self'; connect-src 'self' data: blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Divine Origins: a comparative theology library</title>
   <meta name="description" content="Compare creator gods, sacred texts and calendars across the world's religious traditions, with real photos of the manuscripts and a 3D map of 643 deities.">
   <link rel="canonical" href="https://prodbykctw-max.github.io/divine-origins/">
