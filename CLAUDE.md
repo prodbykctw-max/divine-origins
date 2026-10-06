@@ -137,6 +137,13 @@ This project is described by the user as critically important. The standard is n
   (`app/vite/CosmosView.jsx`); a WebGL galaxy (`app/library/js/universe.jsx`)
   runs behind the library. Both need a hardware GPU and fall back to 2D views.
   Rebuild with `node app/build_combined.mjs` (CI runs it on every push/PR).
+- **Theme:** Blue Qur'an Night — indigo surfaces + silver text (dark) and a
+  lapis-on-paper version (light); the page follows the device's colour setting.
+  One interactive colour per mode, Amiri + Noto Sans, no glass blur, no glow,
+  no all-caps labels. Tokens for both modes live in `app/library/css/theme.css`
+  (loaded last). The Source Map (shadow root, `ParallelsOfTheGods.jsx`) is
+  dark in both modes.
+  App icon + share image: `app/library/icons/`.
 - **Spec package** complete and self-tested at 102/102 green.
 - **CI** gates docs + canonical seed + the app build on every push/PR.
 - **Next horizon:** move the library sections onto the v0.8.0 data (they still

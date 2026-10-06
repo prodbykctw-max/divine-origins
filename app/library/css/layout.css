@@ -41,9 +41,7 @@
   top: 0;
   z-index: var(--z-sticky);
   height: 56px;
-  background: rgba(5, 4, 8, 0.88);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgb(var(--void-rgb) / 0.88);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -64,8 +62,8 @@
 
 .topnav__logo {
   font-family: var(--font-display);
-  font-size: 0.72rem;
-  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  letter-spacing: 0;
   color: var(--gold);
   white-space: nowrap;
   flex-shrink: 0;
@@ -74,9 +72,9 @@
 
 .topnav__link {
   font-family: var(--font-mono);
-  font-size: 0.704rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--text-dim);
   white-space: nowrap;
   padding: 0.25rem 0.6rem;
@@ -94,17 +92,17 @@
 .topnav__link.active {
   color: var(--gold);
   border-color: var(--gold);
-  background: rgba(201, 168, 76, 0.08);
+  background: rgb(var(--accent-rgb) / 0.08);
 }
 
 /* Highlight link */
 .topnav__link--cta {
   color: var(--gold);
   border-color: var(--gold);
-  background: rgba(201, 168, 76, 0.08);
+  background: rgb(var(--accent-rgb) / 0.08);
 }
 .topnav__link--cta:hover {
-  background: rgba(201, 168, 76, 0.16);
+  background: rgb(var(--accent-rgb) / 0.16);
 }
 
 /* ── SECTION ── */
@@ -123,9 +121,9 @@
 .section__eyeline {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.704rem;
-  letter-spacing: 0.55em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--gold-dim);
   margin-bottom: var(--space-3);
 }
@@ -193,8 +191,8 @@
   gap: var(--space-1);
   padding: var(--space-2) var(--space-4) var(--space-3);
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgb(var(--ink-rgb) / 0.05);
+  background: rgb(var(--ink-rgb) / 0.02);
   cursor: pointer;
   min-width: 96px;
   text-align: center;
@@ -217,14 +215,14 @@
 
 .rail__item:hover,
 .rail__item[aria-selected="true"] {
-  background: rgba(201, 168, 76, 0.06);
-  border-color: rgba(201, 168, 76, 0.2);
+  background: rgb(var(--accent-rgb) / 0.06);
+  border-color: rgb(var(--accent-rgb) / 0.2);
   transform: translateY(-3px);
 }
 
 .rail__item[aria-selected="true"] {
-  background: rgba(201, 168, 76, 0.1);
-  border-color: rgba(201, 168, 76, 0.3);
+  background: rgb(var(--accent-rgb) / 0.1);
+  border-color: rgb(var(--accent-rgb) / 0.3);
 }
 
 .rail__item:hover::after,
@@ -234,9 +232,9 @@
 
 .rail__tradition {
   font-family: var(--font-mono);
-  font-size: 0.631rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--item-color, var(--gold-dim));
   opacity: 0.75;
 }
@@ -286,9 +284,9 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, transparent 45%, rgba(5, 4, 8, 0.88) 100%),
-    linear-gradient(to bottom, rgba(5, 4, 8, 0.18) 0%, transparent 30%,
-                    transparent 60%, rgba(5, 4, 8, 0.5) 100%);
+    linear-gradient(to right, transparent 45%, rgb(var(--scrim-rgb) / 0.88) 100%),
+    linear-gradient(to bottom, rgb(var(--scrim-rgb) / 0.18) 0%, transparent 30%,
+                    transparent 60%, rgb(var(--scrim-rgb) / 0.5) 100%);
   pointer-events: none;
 }
 
@@ -297,13 +295,12 @@
   top: var(--space-4);
   left: var(--space-4);
   font-family: var(--font-mono);
-  font-size: 0.649rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--item-color, var(--gold));
   padding: 0.22rem 0.55rem;
   background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(8px);
   border-left: 2px solid var(--item-color, var(--gold));
 }
 
@@ -313,18 +310,16 @@
   left: var(--space-4);
   right: var(--space-6);
   font-family: var(--font-mono);
-  font-size: 0.613rem;
-  letter-spacing: 0.22em;
-  color: rgba(255, 255, 255, 0.38);
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  color: rgb(var(--ink-rgb) / 0.38);
+  text-transform: none;
   line-height: 1.5;
 }
 
 .split-panel__content {
-  background: rgba(10, 8, 18, 0.6);
-  backdrop-filter: blur(32px) saturate(1.2);
-  -webkit-backdrop-filter: blur(32px) saturate(1.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgb(var(--void-rgb) / 0.6);
+  border-left: 1px solid rgb(var(--ink-rgb) / 0.06);
   overflow-y: auto;
   max-height: 580px;
   scrollbar-width: thin;
@@ -352,15 +347,15 @@
 
 .info-block--scholarly  { border-color: var(--teal); }
 .info-block--tradition  { border-color: var(--violet); }
-.info-block--parallels  { border-color: rgba(201, 168, 76, 0.45); }
+.info-block--parallels  { border-color: rgb(var(--accent-rgb) / 0.45); }
 .info-block--russell    { border-color: var(--sage); }
-.info-block--texts      { border-color: rgba(201, 168, 76, 0.35); }
+.info-block--texts      { border-color: rgb(var(--accent-rgb) / 0.35); }
 
 .info-block__label {
   font-family: var(--font-mono);
-  font-size: 0.658rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   display: block;
   margin-bottom: var(--space-3);
 }
@@ -389,9 +384,9 @@
 
 .panel-nav__btn {
   font-family: var(--font-mono);
-  font-size: 0.681rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--gold-dim);
   padding: 0.38rem 0.75rem;
   border: 1px solid var(--border);
@@ -401,13 +396,13 @@
 .panel-nav__btn:hover {
   color: var(--gold);
   border-color: var(--gold-dim);
-  background: rgba(201, 168, 76, 0.05);
+  background: rgb(var(--accent-rgb) / 0.05);
 }
 
 .panel-nav__counter {
   font-family: var(--font-mono);
-  font-size: 0.676rem;
-  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  letter-spacing: 0;
   color: var(--text-dim);
   flex: 1;
   text-align: center;
@@ -428,14 +423,14 @@
     background: linear-gradient(
       to bottom,
       transparent 30%,
-      rgba(5, 4, 8, 0.92) 100%
+      rgb(var(--scrim-rgb) / 0.92) 100%
     );
   }
 
   .split-panel__content {
     max-height: none;
     border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgb(var(--ink-rgb) / 0.06);
   }
 
   .container {

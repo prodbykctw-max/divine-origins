@@ -45,10 +45,10 @@ function Galaxy({ geoRef }) {
     const col = new Float32Array(COUNT * 3);
     const size = new Float32Array(COUNT);
     const seed = new Float32Array(COUNT);
-    const inner = new THREE.Color('#fff1c4');
-    const gold = new THREE.Color('#c9a84c');
-    const ember = new THREE.Color('#8a4b13');
-    const blue = new THREE.Color('#7fa8d8');
+    const inner = new THREE.Color('#f3f4f1');
+    const gold = new THREE.Color('#a9c4e4');
+    const ember = new THREE.Color('#8f86b8');
+    const blue = new THREE.Color('#5b7fb8');
     const arms = 4;
     for (let i = 0; i < COUNT; i++) {
       const r = Math.pow(Math.random(), 1.35) * 30 + 0.2;
@@ -155,7 +155,7 @@ function Solid({ geo, pos, s, speed, i }) {
       {geo === 'dodec' && <dodecahedronGeometry args={[1, 0]} />}
       {geo === 'torus' && <torusGeometry args={[1, 0.28, 10, 36]} />}
       {geo === 'tetra' && <tetrahedronGeometry args={[1, 0]} />}
-      <meshBasicMaterial color="#c9a84c" wireframe transparent opacity={0.2} depthWrite={false} />
+      <meshBasicMaterial color="#a9c4e4" wireframe transparent opacity={0.2} depthWrite={false} />
     </mesh>
   );
 }
@@ -167,9 +167,9 @@ function Core() {
     const g = c.getContext('2d');
     const grd = g.createRadialGradient(64, 64, 0, 64, 64, 64);
     grd.addColorStop(0, 'rgba(255,244,212,1)');
-    grd.addColorStop(0.2, 'rgba(240,208,128,0.55)');
-    grd.addColorStop(0.55, 'rgba(201,168,76,0.12)');
-    grd.addColorStop(1, 'rgba(201,168,76,0)');
+    grd.addColorStop(0.2, 'rgba(181,214,200,0.55)');
+    grd.addColorStop(0.55, 'rgba(134,187,166,0.12)');
+    grd.addColorStop(1, 'rgba(134,187,166,0)');
     g.fillStyle = grd; g.fillRect(0, 0, 128, 128);
     const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
   }, []);
@@ -230,8 +230,8 @@ function Universe() {
       frameloop={reduceMotion ? 'demand' : 'always'}
       style={{ position: 'fixed', inset: 0 }}
     >
-      <color attach="background" args={['#050408']} />
-      <fog attach="fog" args={['#050408', 26, 90]} />
+      <color attach="background" args={['#18233a']} />
+      <fog attach="fog" args={['#18233a', 26, 90]} />
       <Galaxy geoRef={geoRef} />
       <QualityGovernor galaxyGeo={geoRef} />
       <Core />
