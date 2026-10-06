@@ -10,6 +10,7 @@ import { mkdtempSync, readFileSync, writeFileSync, statSync, rmSync, mkdirSync, 
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadLibrary, staticIndexHTML, llmsTxt, sitemapXml } from './static_index.mjs';
 
 const APP = dirname(fileURLToPath(import.meta.url));
 const VITE = join(APP, 'vite');
@@ -57,6 +58,14 @@ html = html.replace('<script type="module" src="js/main.js"></script>', () => `<
 if (html === before || html.includes('href="css/') || html.includes('src="js/main.js"')) {
   throw new Error('index.html markers not found — nothing written');
 }
+// 5b. Crawlable contents for search engines and AI crawlers that skip JavaScript
+const lib = await loadLibrary(LIB);
+const seed = JSON.parse(readFileSync(join(APP, '..', 'data', 'source_map_seed_data_v080.json'), 'utf8'));
+const seedCounts = { deities: seed.deities.length, traditions: seed.traditions.length };
+const HOME_MARK = '<!-- Injected by render.js renderHome() -->';
+if (!html.includes(HOME_MARK)) throw new Error('home section marker not found — nothing written');
+html = html.replace(HOME_MARK, () => staticIndexHTML(lib, seedCounts));
+html = html.replace('<head>', () => "<head>\n  <script>document.documentElement.classList.add('js')</script>");
 // 6a. Deployable site (GitHub Pages): index.html + img/ (photos load lazily, sized per device)
 rmSync(SITE, { recursive: true, force: true });
 mkdirSync(SITE, { recursive: true });
@@ -67,6 +76,10 @@ mkdirSync(join(SITE, 'icons'), { recursive: true });
 cpSync(join(LIB, 'icons', 'divine-origins', 'web'), join(SITE, 'icons'), { recursive: true });
 rmSync(join(SITE, 'icons', 'head.html'), { force: true });
 cpSync(join(LIB, 'icons', 'og-image.jpg'), join(SITE, 'icons', 'og-image.jpg'));
+// AI and search discovery files
+writeFileSync(join(SITE, 'llms.txt'), llmsTxt(lib, seedCounts, LIVE));
+writeFileSync(join(SITE, 'sitemap.xml'), sitemapXml(LIVE, new Date().toISOString().slice(0, 10)));
+// robots.txt only counts at the domain root (prodbykctw-max.github.io/robots.txt), which this repo doesn't serve.
 writeFileSync(join(SITE, '.nojekyll'), '');
 
 // 6b. Single portable file: same page, photos loaded from the live site

@@ -211,3 +211,11 @@ input::placeholder { color: var(--text-dim); }
   .split-panel__content-inner button { color: var(--accent) !important; border-color: var(--border-strong) !important; }
 }
 @media (prefers-color-scheme: light) { .book__type { color: #c9dbf0 !important; } }
+
+/* Crawlable contents: shown only when JavaScript is off (search and AI crawlers) */
+.static-index { max-width: 46rem; margin: 6rem auto 3rem; padding: 0 1rem; line-height: 1.6; }
+.static-index h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.static-index h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+.static-index li { margin: 0.4rem 0; color: var(--text-secondary); }
+.static-index li strong { color: var(--text-primary); font-weight: 600; }
+.js .static-index { display: none; }
