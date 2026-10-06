@@ -126,28 +126,28 @@ function buildTradPanel(g) {
           </div>
 
           ${g.offshootOf ? `
-          <div style="padding:0.6rem 0.8rem;margin-top:0.8rem;background:rgba(127,138,166,0.06);border:1px solid rgba(127,138,166,0.2);border-radius:2px">
+          <div style="padding:0.6rem 0.8rem;margin-top:0.8rem;background:rgba(136,64,196,0.06);border:1px solid rgba(136,64,196,0.2);border-radius:2px">
             <span class="t-label" style="color:var(--violet)">◈ Offshoot / Variant of: ${g.offshootOf}</span>
           </div>` : ''}
 
           <!-- Deities quick list -->
           ${g.deityIds?.length ? `
           <div style="margin-top:1.2rem">
-            <div class="t-label" style="color:var(--text-dim);margin-bottom:0.5rem">Key figures</div>
+            <div class="t-label" style="color:var(--text-dim);margin-bottom:0.5rem">KEY FIGURES</div>
             <div style="display:flex;flex-wrap:wrap;gap:0.3rem">
-              ${g.deityIds.map(id => `<span class="tag">${title(id)}</span>`).join('')}
+              ${g.deityIds.map(id => `<span class="tag">${id.replace(/_/g,' ').toUpperCase()}</span>`).join('')}
             </div>
           </div>` : ''}
 
           <!-- Canon links -->
           <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;gap:0.6rem;flex-wrap:wrap">
             <button onclick="navigateTo('texts')"
-                    style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid ${g.color}66;color:${g.color};background:${g.color}0a;cursor:pointer;transition:all 0.2s;border-radius:2px">
+                    style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.25em;text-transform:uppercase;padding:0.4rem 0.8rem;border:1px solid ${g.color}66;color:${g.color};background:${g.color}0a;cursor:pointer;transition:all 0.2s;border-radius:2px">
               VIEW SACRED TEXTS →
             </button>
             ${g.calendarId ? `
             <button onclick="navigateTo('calendars')"
-                    style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid var(--border);color:var(--text-dim);background:transparent;cursor:pointer;transition:all 0.2s;border-radius:2px">
+                    style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.25em;text-transform:uppercase;padding:0.4rem 0.8rem;border:1px solid var(--border);color:var(--text-dim);background:transparent;cursor:pointer;transition:all 0.2s;border-radius:2px">
               CALENDAR SYSTEM →
             </button>` : ''}
           </div>
@@ -169,12 +169,3 @@ window.tradNav = (dir) => {
   const next = Math.max(0, Math.min(TRADITION_GROUPS.length - 1, currentIdx + dir));
   selectTradition(next);
 };
-
-function sentence(v) {
-  const t = String(v).replace(/[_-]+/g, ' ').trim().toLowerCase();
-  return t.charAt(0).toUpperCase() + t.slice(1);
-}
-
-function title(v) {
-  return String(v).replace(/_/g, ' ').toLowerCase().replace(/(^|[\s/(-])([a-z\u00c0-\u024f])/g, (m, a, b) => a + b.toUpperCase());
-}

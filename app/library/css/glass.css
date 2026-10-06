@@ -15,9 +15,9 @@
 
 :root {
   /* Glass material */
-  --glass-fill:      rgba(29,32,28, 0.52);
-  --glass-fill-thick:rgba(39,43,38, 0.78);
-  --glass-tint-gold: rgba(134,187,166, 0.14);
+  --glass-fill:      rgba(22, 18, 38, 0.52);
+  --glass-fill-thick:rgba(16, 13, 28, 0.78);
+  --glass-tint-gold: rgba(201, 168, 76, 0.14);
   --glass-blur:      blur(22px) saturate(1.7);
   --glass-edge:      rgba(255, 255, 255, 0.14);
   --glass-edge-dark: rgba(0, 0, 0, 0.55);
@@ -42,6 +42,8 @@
 .book-detail,
 .split-panel {
   background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-edge);
   box-shadow: var(--glass-specular), var(--glass-shadow);
 }
@@ -51,6 +53,8 @@
   height: auto;
   padding: 10px 16px;
   background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   border-bottom: 0;
   box-shadow: none;
   transition: background 0.35s ease;
@@ -59,7 +63,7 @@
 
 /* Uniform bar once content scrolls under it (iOS 27 scroll edge) */
 .topnav.is-scrolled {
-  background: linear-gradient(180deg, rgba(20,23,19, 0.92) 0%, rgba(20,23,19, 0.7) 70%, rgba(20,23,19, 0) 100%);
+  background: linear-gradient(180deg, rgba(5, 4, 8, 0.92) 0%, rgba(5, 4, 8, 0.7) 70%, rgba(5, 4, 8, 0) 100%);
 }
 
 .topnav__inner {
@@ -91,10 +95,10 @@
 }
 /* Selected item: a lighter glass "thumb", like the HIG toggles */
 .topnav__link.active {
-  color: #f1efe3;
-  background: linear-gradient(180deg, rgba(134,187,166, 0.30), rgba(134,187,166, 0.14));
-  border-color: rgba(181,214,200, 0.45);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 14px -4px rgba(134,187,166, 0.55);
+  color: #fff4d4;
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.30), rgba(201, 168, 76, 0.14));
+  border-color: rgba(240, 208, 128, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 14px -4px rgba(201, 168, 76, 0.55);
 }
 .topnav__link:active { transform: scale(0.96); }
 
@@ -109,18 +113,22 @@
 }
 .filter-pill,
 .deity-filter-pill {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .filter-pill--active {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 14px -6px rgba(134,187,166, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 14px -6px rgba(201, 168, 76, 0.6);
 }
 .cta-btn {
   min-height: var(--tap);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
 }
 .cta-btn--primary {
-  background: linear-gradient(180deg, #e2c46c 0%, #86bba6 55%, #b08e3a 100%) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 26px -10px rgba(134,187,166, 0.7);
+  background: linear-gradient(180deg, #e2c46c 0%, #c9a84c 55%, #b08e3a 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 26px -10px rgba(201, 168, 76, 0.7);
 }
 .cta-btn:active { transform: scale(0.97); }
 
@@ -128,6 +136,8 @@
   min-height: var(--tap);
   padding: 0 1.1rem;
   background: var(--glass-fill);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--glass-edge);
 }
 
@@ -135,13 +145,15 @@
 .rail__item {
   border-radius: var(--r-mid);
   background: var(--glass-fill);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .rail__item::after { left: 14px; right: 14px; border-radius: 2px; }
 .rail__item[aria-selected="true"] {
-  background: linear-gradient(180deg, rgba(134,187,166, 0.18), rgba(134,187,166, 0.06));
-  border-color: rgba(181,214,200, 0.4);
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.18), rgba(201, 168, 76, 0.06));
+  border-color: rgba(240, 208, 128, 0.4);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
@@ -169,7 +181,9 @@
 [data-trad-nav] { border-radius: var(--r-mid); }
 
 .modal-overlay {
-  background: rgba(10,12,10, 0.55);
+  background: rgba(3, 2, 6, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 /* Search inputs */
@@ -198,8 +212,10 @@ input[type="text"] {
   .glass, .topnav__inner, .modal, .book-detail, .split-panel,
   .rail__item, .panel-nav__btn, .filter-pill, .deity-filter-pill, .cta-btn {
     background: var(--glass-fill-thick) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
-  .topnav.is-scrolled { background: #141713; }
+  .topnav.is-scrolled { background: #050408; }
 }
 @media (prefers-contrast: more) {
   :root { --glass-edge: rgba(255, 255, 255, 0.45); }
@@ -220,12 +236,16 @@ input[type="text"] {
 #universe { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 #universe canvas { display: block; }
 /* keep reading text crisp over the moving galaxy */
-.has-3d .section__desc, .has-3d .t-body, .has-3d .t-italic { text-shadow: none; }
+.has-3d .section__desc, .has-3d .t-body, .has-3d .t-italic { text-shadow: 0 1px 12px rgba(5,4,8,0.9), 0 0 2px rgba(5,4,8,0.9); }
 /* lighter blur over the live 3D backdrop: the browser re-blurs every frame */
 .has-3d .topnav__inner, .has-3d .split-panel, .has-3d .book-detail {
+  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+  backdrop-filter: blur(12px) saturate(1.5);
 }
 .has-3d .rail__item, .has-3d .filter-pill, .has-3d .deity-filter-pill,
 .has-3d .cta-btn, .has-3d .panel-nav__btn {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* ── The top navigation is never covered: overlays open beneath it ── */
@@ -254,14 +274,14 @@ input[type="text"] {
   transition: opacity .5s ease;
 }
 .split-panel__img img.art-img.loaded { opacity: 1; transform: none; }
-.art-overlay { z-index: 2; background: linear-gradient(to bottom, rgba(20,23,19,.55) 0%, transparent 18%, transparent 70%, rgba(20,23,19,.88) 100%) !important; }
+.art-overlay { z-index: 2; background: linear-gradient(to bottom, rgba(5,4,8,.55) 0%, transparent 18%, transparent 70%, rgba(5,4,8,.88) 100%) !important; }
 .split-panel__img-trad { z-index: 3; }
 .split-panel__img-caption.art-cap { z-index: 3; }
 
 .art-cap { display: flex; flex-direction: column; gap: .15rem; text-align: left; }
 .art-cap__title { font-family: var(--font-body); font-size: .95rem; font-style: italic; color: #efe4c2; letter-spacing: 0; text-transform: none; }
-.art-cap__where { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0; text-transform: none; color: var(--gold); }
-.art-cap__credit { font-size: 0.75rem; color: #9a917c; text-decoration: none; letter-spacing: 0; text-transform: none; }
+.art-cap__where { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.art-cap__credit { font-size: .7rem; color: #9a917c; text-decoration: none; letter-spacing: 0; text-transform: none; }
 .art-cap__credit:hover { color: var(--gold-light); text-decoration: underline; }
 
 .book-detail__artifact { margin: 0 0 1rem; width: 100%; }

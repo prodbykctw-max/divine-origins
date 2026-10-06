@@ -72,16 +72,16 @@ export function renderDeities() {
 }
 
 function buildDeityFilters() {
-  const pills = [{ id: 'all', label: 'All', color: '#86bba6' }, ...TRADITION_GROUPS.map(g => ({ id: g.id, label: g.label, color: g.color }))];
+  const pills = [{ id: 'all', label: 'ALL', color: '#c9a84c' }, ...TRADITION_GROUPS.map(g => ({ id: g.id, label: g.label, color: g.color }))];
   return pills.map(p => `
     <button class="deity-filter-pill ${p.id === 'all' ? 'deity-filter-pill--active' : ''}"
             data-trad="${p.id}"
-            style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;
+            style="font-family:var(--font-mono);font-size:0.676rem;letter-spacing:0.22em;text-transform:uppercase;
                    padding:0.28rem 0.65rem;border-radius:2px;cursor:pointer;transition:all 0.2s;
                    border:1px solid ${p.id === 'all' ? p.color : 'rgba(255,255,255,0.07)'};
                    color:${p.id === 'all' ? p.color : 'var(--text-dim)'};
                    background:${p.id === 'all' ? p.color + '12' : 'transparent'}">
-      ${title(p.label.split('/')[0].trim())}
+      ${p.label.split('/')[0].trim().toUpperCase()}
     </button>`).join('');
 }
 
@@ -91,7 +91,7 @@ function renderDeityRail() {
 
   rail.innerHTML = filteredDeities.map((d, i) => {
     const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
-    const color = group?.color ?? '#86bba6';
+    const color = group?.color ?? '#c9a84c';
     return `
       <button class="rail__item reveal-card"
               role="option"
@@ -139,7 +139,7 @@ function injectDeityPanel(idx, dir) {
 
 function buildDeityPanel(d, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === d.tradition);
-  const color   = group?.color ?? '#86bba6';
+  const color   = group?.color ?? '#c9a84c';
 
   const badgeClass = d.confidence === 'documented' ? 'badge--documented'
                    : d.confidence === 'debated'    ? 'badge--debated'
@@ -195,7 +195,7 @@ function buildDeityPanel(d, idx) {
 
           <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
             <button onclick="openDeityModal('${d.id}')"
-                    style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid ${color}66;color:${color};background:${color}0a;cursor:pointer;border-radius:2px">
+                    style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.25em;text-transform:uppercase;padding:0.4rem 0.8rem;border:1px solid ${color}66;color:${color};background:${color}0a;cursor:pointer;border-radius:2px">
               PRIMARY SOURCES + FULL ENTRY →
             </button>
           </div>
@@ -220,9 +220,9 @@ function bindDeityEvents() {
 
       document.querySelectorAll('.deity-filter-pill').forEach(p => {
         const active = p.dataset.trad === activeTrad;
-        const color  = active ? '#86bba6' : 'rgba(255,255,255,0.07)';
+        const color  = active ? '#c9a84c' : 'rgba(255,255,255,0.07)';
         p.style.borderColor  = color;
-        p.style.color        = active ? '#86bba6' : 'var(--text-dim)';
+        p.style.color        = active ? '#c9a84c' : 'var(--text-dim)';
         p.style.background   = active ? '#c9a84c12' : 'transparent';
       });
 
@@ -264,10 +264,10 @@ window.openDeityModal = (id) => {
   const d = DEITIES.find(x => x.id === id);
   if (!d) return;
   const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
-  const color = group?.color ?? '#86bba6';
+  const color = group?.color ?? '#c9a84c';
 
   const sources = d.primarySources?.map(s =>
-    `<li style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;color:var(--teal);padding:0.25rem 0;border-bottom:1px solid rgba(64,168,160,0.1)">${s}</li>`
+    `<li style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.12em;color:var(--teal);padding:0.25rem 0;border-bottom:1px solid rgba(64,168,160,0.1)">${s}</li>`
   ).join('') ?? '';
 
   openModal({
@@ -282,7 +282,7 @@ window.openDeityModal = (id) => {
         <div class="info-block info-block--scholarly">
           <span class="info-block__label">✓ Scholarly / Documented Account</span>
           <p>${d.scholarly}</p>
-          ${sources ? `<div style="margin-top:1rem"><div class="t-label" style="color:var(--teal);margin-bottom:0.4rem">Primary sources</div><ul style="list-style:none">${sources}</ul></div>` : ''}
+          ${sources ? `<div style="margin-top:1rem"><div class="t-label" style="color:var(--teal);margin-bottom:0.4rem">PRIMARY SOURCES</div><ul style="list-style:none">${sources}</ul></div>` : ''}
         </div>
 
         <div class="info-block info-block--tradition">
@@ -309,12 +309,3 @@ window.openDeityModal = (id) => {
     `
   });
 };
-
-function sentence(v) {
-  const t = String(v).replace(/[_-]+/g, ' ').trim().toLowerCase();
-  return t.charAt(0).toUpperCase() + t.slice(1);
-}
-
-function title(v) {
-  return String(v).replace(/_/g, ' ').toLowerCase().replace(/(^|[\s/(-])([a-z\u00c0-\u024f])/g, (m, a, b) => a + b.toUpperCase());
-}

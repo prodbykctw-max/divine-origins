@@ -6,26 +6,26 @@
 /* ── TOKENS ── */
 :root {
   /* Surface */
-  --void:         #141713;
-  --deep:         #191c18;
-  --layer:        #1d201c;
-  --surface:      #272b26;
-  --raised:       #30352f;
+  --void:         #050408;
+  --deep:         #0a0812;
+  --layer:        #110f1e;
+  --surface:      #1c1830;
+  --raised:       #261f3d;
 
   /* Borders */
   --border:       rgba(255,255,255,0.07);
-  --border-gold:  rgba(134,187,166,0.25);
+  --border-gold:  rgba(201,168,76,0.25);
   --border-glass: rgba(255,255,255,0.10);
 
   /* Brand palette */
-  --gold:         #86bba6;
-  --gold-light:   #b5d6c8;
-  --gold-dim:     #4f6e62;
-  --teal:         #6fae98;
-  --violet:       #7f8aa6;
-  --crimson:      #c98f6b;
+  --gold:         #c9a84c;
+  --gold-light:   #f0d080;
+  --gold-dim:     #7a6330;
+  --teal:         #40a8a0;
+  --violet:       #8840c4;
+  --crimson:      #c44040;
   --sage:         #608050;
-  --silver:       #b7bfc9;
+  --silver:       #a8b8c8;
 
   /* Confidence tier colors */
   --tier-documented: var(--teal);
@@ -33,16 +33,16 @@
   --tier-tradition:  var(--violet);
 
   /* Text */
-  --text-primary:   #e6e4d6;
-  --text-secondary: #b3b19d;
-  --text-dim:       #939179;
-  --text-inverse:   #141713;
+  --text-primary:   #e8dfc0;
+  --text-secondary: #ada390;
+  --text-dim:       #7d7563;
+  --text-inverse:   #050408;
 
   /* Typography */
-  --font-display: 'Tiro Devanagari Sanskrit', serif;
-  --font-body:    'Hind', 'Georgia', serif;
-  --font-mono:    'Hind', system-ui, sans-serif;
-  --font-ui:      'Hind', system-ui, sans-serif;
+  --font-display: 'Cinzel', 'Trajan Pro', serif;
+  --font-body:    'Cormorant Garamond', 'Georgia', serif;
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+  --font-ui:      'Inter', system-ui, sans-serif;
 
   /* Easing */
   --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
@@ -124,8 +124,8 @@ ul, ol { list-style: none; }
 /* ── TYPOGRAPHY ── */
 .t-display {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   line-height: 0.95;
   color: var(--text-primary);
 }
@@ -133,7 +133,7 @@ ul, ol { list-style: none; }
 .t-title {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: 0;
+  letter-spacing: 0.04em;
   line-height: 1.1;
 }
 
@@ -146,17 +146,17 @@ ul, ol { list-style: none; }
 
 .t-caption {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 0.713rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
   color: var(--text-dim);
 }
 
 .t-label {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 0.69rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
 }
 
 .t-italic {
@@ -169,22 +169,30 @@ ul, ol { list-style: none; }
 
 .glass-subtle {
   background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
   border: 1px solid var(--border);
 }
 
 .glass-mid {
-  background: rgba(25,28,24, 0.55);
+  background: rgba(10, 8, 18, 0.55);
+  backdrop-filter: blur(24px) saturate(1.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.2);
   border: 1px solid var(--border-glass);
 }
 
 .glass-strong {
-  background: rgba(25,28,24, 0.78);
+  background: rgba(10, 8, 18, 0.78);
+  backdrop-filter: blur(40px) saturate(1.4);
+  -webkit-backdrop-filter: blur(40px) saturate(1.4);
   border: 1px solid var(--border-gold);
 }
 
 /* Gold-tinted glass for featured elements */
 .glass-gold {
-  background: rgba(134,187,166, 0.06);
+  background: rgba(201, 168, 76, 0.06);
+  backdrop-filter: blur(24px) saturate(1.3);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
   border: 1px solid var(--border-gold);
 }
 
@@ -194,9 +202,9 @@ ul, ol { list-style: none; }
   align-items: center;
   gap: 0.3em;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 0.667rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
   padding: 0.2rem 0.55rem;
   border-radius: 2px;
   white-space: nowrap;
@@ -209,24 +217,24 @@ ul, ol { list-style: none; }
 }
 
 .badge--debated {
-  background: rgba(134,187,166, 0.12);
+  background: rgba(201, 168, 76, 0.12);
   color: var(--gold);
-  border: 1px solid rgba(134,187,166, 0.28);
+  border: 1px solid rgba(201, 168, 76, 0.28);
 }
 
 .badge--tradition {
-  background: rgba(127,138,166, 0.12);
+  background: rgba(136, 64, 196, 0.12);
   color: var(--violet);
-  border: 1px solid rgba(127,138,166, 0.28);
+  border: 1px solid rgba(136, 64, 196, 0.28);
 }
 
 /* ── TAGS ── */
 .tag {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 0.658rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   padding: 0.15rem 0.4rem;
   border: 1px solid var(--border);
   color: var(--text-dim);
@@ -243,13 +251,13 @@ ul, ol { list-style: none; }
 
 /* ── GLOW UTILITIES ── */
 .glow-gold {
-  box-shadow: 0 0 40px rgba(134,187,166, 0.12),
-              0 0 80px rgba(134,187,166, 0.04);
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.12),
+              0 0 80px rgba(201, 168, 76, 0.04);
 }
 
 .glow-violet {
-  box-shadow: 0 0 40px rgba(127,138,166, 0.15),
-              0 0 80px rgba(127,138,166, 0.05);
+  box-shadow: 0 0 40px rgba(136, 64, 196, 0.15),
+              0 0 80px rgba(136, 64, 196, 0.05);
 }
 
 /* ── FOCUS VISIBLE ── */
@@ -260,6 +268,6 @@ ul, ol { list-style: none; }
 
 /* ── SELECTION ── */
 ::selection {
-  background: rgba(134,187,166, 0.25);
+  background: rgba(201, 168, 76, 0.25);
   color: var(--text-primary);
 }
