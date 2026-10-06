@@ -85,11 +85,6 @@ function glowTexture() {
   return t;
 }
 
-// Light mode (device setting): the map is printed on pale paper instead of glowing on night sky.
-const lightMQ = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
-const isLight = () => !!(lightMQ && lightMQ.matches);
-const BAND_COLORS_LIGHT = { specific: '#2f7a5f', moderate: '#8a6a1f', 'universal-motif': '#a24a35', 'tag-divergent': '#6b6f6d' };
-const PAPER = '#f3f4f7';
 const reduceMotion = typeof window !== 'undefined' && window.matchMedia &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -102,20 +97,20 @@ function Shells() {
       {[1, 2, 3, 4].map((k, i) => (
         <mesh key={k}>
           <icosahedronGeometry args={[SHELLS[k].r, i < 2 ? 2 : 3]} />
-          <meshBasicMaterial color={isLight() ? '#2b4f86' : '#a9c4e4'} wireframe transparent opacity={(isLight() ? 0.07 : 0.035) + (i === 0 ? 0.03 : 0)} depthWrite={false} />
+          <meshBasicMaterial color="#a9c4e4" wireframe transparent opacity={0.035 + (i === 0 ? 0.03 : 0)} depthWrite={false} />
         </mesh>
       ))}
       <mesh rotation={[Math.PI / 2 + 0.42, 0, 0]}>
         <torusGeometry args={[SHELLS['cross-tier'].r, 0.02, 8, 160]} />
-        <meshBasicMaterial color={isLight() ? '#2b4f86' : '#c9dbf0'} transparent opacity={0.35} />
+        <meshBasicMaterial color="#c9dbf0" transparent opacity={0.35} />
       </mesh>
       {/* the Source */}
       <mesh>
         <sphereGeometry args={[0.55, 32, 32]} />
-        <meshBasicMaterial color={isLight() ? '#17213a' : '#f3f4f1'} />
+        <meshBasicMaterial color="#f3f4f1" />
       </mesh>
       <sprite scale={[5, 5, 5]}>
-        <spriteMaterial map={useMemo(glowTexture, [])} color={isLight() ? '#2b4f86' : '#d8dde4'} transparent opacity={isLight() ? 0.22 : 0.9} depthWrite={false} blending={isLight() ? THREE.NormalBlending : THREE.AdditiveBlending} />
+        <spriteMaterial map={useMemo(glowTexture, [])} color="#d8dde4" transparent opacity={0.9} depthWrite={false} blending={THREE.AdditiveBlending} />
       </sprite>
     </group>
   );
@@ -152,10 +147,9 @@ function Figures({ facets, positions, colorOf, degree, visible, selectedId, rela
       tmp.scale.setScalar(s);
       tmp.updateMatrix();
       m.setMatrixAt(i, tmp.matrix);
-      const light = isLight();
-      col.set(isSel ? (light ? '#17213a' : '#f3f4f1') : colorOf(f));
-      if (dim) { if (light) col.lerp(new THREE.Color(PAPER), 0.75); else col.multiplyScalar(0.22); }
-      else if (isRel) col.lerp(new THREE.Color(light ? '#1f3d6b' : '#c9dbf0'), 0.45);
+      col.set(isSel ? '#f3f4f1' : colorOf(f));
+      if (dim) col.multiplyScalar(0.22);
+      else if (isRel) col.lerp(new THREE.Color('#c9dbf0'), 0.45);
       m.setColorAt(i, col);
       colors.setXYZ(i, col.r, col.g, col.b);
     });
@@ -167,8 +161,8 @@ function Figures({ facets, positions, colorOf, degree, visible, selectedId, rela
   return (
     <group>
       <points ref={pts} geometry={glowGeo} visible={!lite}>
-        <pointsMaterial map={tex} size={0.95} sizeAttenuation vertexColors transparent opacity={isLight() ? 0.6 : 0.6}
-          depthWrite={false} blending={isLight() ? THREE.NormalBlending : THREE.AdditiveBlending} />
+        <pointsMaterial map={tex} size={0.95} sizeAttenuation vertexColors transparent opacity={0.6}
+          depthWrite={false} blending={THREE.AdditiveBlending} />
       </points>
       <instancedMesh
         ref={mesh}
@@ -200,14 +194,8 @@ function Threads({ edges, positions, selectedId }) {
       const a = positions[e.a], b = positions[e.b];
       p.set([a.x, a.y, a.z, b.x, b.y, b.z], i * 6);
       const hot = selectedId && (e.a === selectedId || e.b === selectedId);
-      if (isLight()) {
-        col.set(BAND_COLORS_LIGHT[e.band] || '#5d677c');
-        const fade = hot ? 0 : e.sig ? 0.55 : 0.85;
-        col.lerp(new THREE.Color(PAPER), selectedId && !hot ? 0.85 : fade);
-      } else {
-        col.set(BAND_COLORS[e.band] || '#95a1b0').multiplyScalar(hot ? 1.6 : e.sig ? 0.75 : 0.32);
-        if (selectedId && !hot) col.multiplyScalar(0.35);
-      }
+      col.set(BAND_COLORS[e.band] || '#95a1b0').multiplyScalar(hot ? 1.6 : e.sig ? 0.75 : 0.32);
+      if (selectedId && !hot) col.multiplyScalar(0.35);
       c.set([col.r, col.g, col.b, col.r, col.g, col.b], i * 6);
     });
     g.setAttribute('position', new THREE.BufferAttribute(p, 3));
@@ -216,7 +204,7 @@ function Threads({ edges, positions, selectedId }) {
   }, [edges, positions, selectedId]);
   return (
     <lineSegments geometry={geo}>
-      <lineBasicMaterial vertexColors transparent opacity={0.9} depthWrite={false} blending={isLight() ? THREE.NormalBlending : THREE.AdditiveBlending} />
+      <lineBasicMaterial vertexColors transparent opacity={0.9} depthWrite={false} blending={THREE.AdditiveBlending} />
     </lineSegments>
   );
 }
@@ -306,8 +294,7 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
     .map((p) => ({ a: p.facet_a_id, b: p.facet_b_id, band: p.specificity_band, sig: p.specificity_significant !== false })), [parallels, positions]);
   const colorOf = useCallback((f) => {
     const deity = deityById[f.parent_deity_id];
-    // three.js only parses the comma form of hsl(), so convert "hsl(h s% l%)"
-    return colorFor(deity ? deity.tradition_id : null).edge.replace(/^hsl\((\d+)\s+(\d+)%\s+(\d+)%\)$/, 'hsl($1, $2%, $3%)');
+    return colorFor(deity ? deity.tradition_id : null).edge;
   }, [deityById, colorFor]);
 
   const focus = selectedFacetId && positions[selectedFacetId] ? positions[selectedFacetId] : null;
@@ -343,8 +330,8 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
           flipflops={3}
           onFallback={() => { setDpr(1); setLite(true); }}
         />
-        <color attach="background" args={[isLight() ? PAPER : '#18233a']} />
-        <fog attach="fog" args={[isLight() ? PAPER : '#18233a', 45, 140]} />
+        <color attach="background" args={['#18233a']} />
+        <fog attach="fog" args={['#18233a', 45, 140]} />
         <Stars radius={160} depth={60} count={reduceMotion || lite ? 1200 : 3000} factor={4} saturation={0} fade speed={reduceMotion ? 0 : 0.6} />
         <Shells />
         <Threads edges={edges} positions={positions} selectedId={selectedFacetId} />
@@ -383,7 +370,7 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
       )}
 
       <div className="cosmos-legend glass">
-        <div className="marginalia" style={{ color: 'var(--sm-accent-hi)' }}>The Cosmos</div>
+        <div className="marginalia" style={{ color: '#c9dbf0' }}>The Cosmos</div>
         <div className="cosmos-legend__row">{facets.length} figures · {edges.length} parallels</div>
         <div className="cosmos-legend__row">Drag to orbit · pinch or scroll to zoom · tap a figure</div>
         {onBrowseList && (
