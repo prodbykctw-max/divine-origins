@@ -97,20 +97,20 @@ function Shells() {
       {[1, 2, 3, 4].map((k, i) => (
         <mesh key={k}>
           <icosahedronGeometry args={[SHELLS[k].r, i < 2 ? 2 : 3]} />
-          <meshBasicMaterial color="#c9a84c" wireframe transparent opacity={0.035 + (i === 0 ? 0.03 : 0)} depthWrite={false} />
+          <meshBasicMaterial color="#86bba6" wireframe transparent opacity={0.035 + (i === 0 ? 0.03 : 0)} depthWrite={false} />
         </mesh>
       ))}
       <mesh rotation={[Math.PI / 2 + 0.42, 0, 0]}>
         <torusGeometry args={[SHELLS['cross-tier'].r, 0.02, 8, 160]} />
-        <meshBasicMaterial color="#f0d080" transparent opacity={0.35} />
+        <meshBasicMaterial color="#b5d6c8" transparent opacity={0.35} />
       </mesh>
       {/* the Source */}
       <mesh>
         <sphereGeometry args={[0.55, 32, 32]} />
-        <meshBasicMaterial color="#fff1c4" />
+        <meshBasicMaterial color="#f1efe3" />
       </mesh>
       <sprite scale={[5, 5, 5]}>
-        <spriteMaterial map={useMemo(glowTexture, [])} color="#e9c86a" transparent opacity={0.9} depthWrite={false} blending={THREE.AdditiveBlending} />
+        <spriteMaterial map={useMemo(glowTexture, [])} color="#d9d4b0" transparent opacity={0.9} depthWrite={false} blending={THREE.AdditiveBlending} />
       </sprite>
     </group>
   );
@@ -147,9 +147,9 @@ function Figures({ facets, positions, colorOf, degree, visible, selectedId, rela
       tmp.scale.setScalar(s);
       tmp.updateMatrix();
       m.setMatrixAt(i, tmp.matrix);
-      col.set(isSel ? '#fff4d4' : colorOf(f));
+      col.set(isSel ? '#f1efe3' : colorOf(f));
       if (dim) col.multiplyScalar(0.22);
-      else if (isRel) col.lerp(new THREE.Color('#f0d080'), 0.45);
+      else if (isRel) col.lerp(new THREE.Color('#b5d6c8'), 0.45);
       m.setColorAt(i, col);
       colors.setXYZ(i, col.r, col.g, col.b);
     });
@@ -194,7 +194,7 @@ function Threads({ edges, positions, selectedId }) {
       const a = positions[e.a], b = positions[e.b];
       p.set([a.x, a.y, a.z, b.x, b.y, b.z], i * 6);
       const hot = selectedId && (e.a === selectedId || e.b === selectedId);
-      col.set(BAND_COLORS[e.band] || '#8f8263').multiplyScalar(hot ? 1.6 : e.sig ? 0.75 : 0.32);
+      col.set(BAND_COLORS[e.band] || '#939179').multiplyScalar(hot ? 1.6 : e.sig ? 0.75 : 0.32);
       if (selectedId && !hot) col.multiplyScalar(0.35);
       c.set([col.r, col.g, col.b, col.r, col.g, col.b], i * 6);
     });
@@ -330,8 +330,8 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
           flipflops={3}
           onFallback={() => { setDpr(1); setLite(true); }}
         />
-        <color attach="background" args={['#050408']} />
-        <fog attach="fog" args={['#050408', 45, 140]} />
+        <color attach="background" args={['#141713']} />
+        <fog attach="fog" args={['#141713', 45, 140]} />
         <Stars radius={160} depth={60} count={reduceMotion || lite ? 1200 : 3000} factor={4} saturation={0} fade speed={reduceMotion ? 0 : 0.6} />
         <Shells />
         <Threads edges={edges} positions={positions} selectedId={selectedFacetId} />
@@ -370,7 +370,7 @@ export default function CosmosView({ facets, deityById, traditionById, parallels
       )}
 
       <div className="cosmos-legend glass">
-        <div className="marginalia" style={{ color: '#f0d080' }}>The Cosmos</div>
+        <div className="marginalia" style={{ color: '#b5d6c8' }}>The Cosmos</div>
         <div className="cosmos-legend__row">{facets.length} figures · {edges.length} parallels</div>
         <div className="cosmos-legend__row">Drag to orbit · pinch or scroll to zoom · tap a figure</div>
         {onBrowseList && (

@@ -48,7 +48,7 @@ const result = await esbuild.build({
 const js = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
 
 // 5. Inline everything into index.html
-const styles = ['base', 'layout', 'animations', 'polish', 'glass']
+const styles = ['base', 'layout', 'animations', 'polish', 'glass', 'theme']
   .map((n) => readFileSync(join(LIB, 'css', `${n}.css`), 'utf8')).join('\n');
 let html = readFileSync(join(LIB, 'index.html'), 'utf8');
 const before = html;
