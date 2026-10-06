@@ -345,6 +345,15 @@ function SourceMapApp({ data, onReload }) {
             --sm-accent-rgb: 43 79 134; --sm-ink-rgb: 23 33 58; --sm-void-rgb: 230 233 239; --sm-scrim-rgb: 12 18 32;
           }
         }
+        /* The 3D Cosmos is a night-sky star map in both modes: its panel and overlays keep the dark palette. */
+        .cosmos {
+          color-scheme: dark;
+          --sm-void: #18233a; --sm-deep: #1b2840; --sm-canvas: #1f2c3f; --sm-surface: #283952; --sm-raised: #31435f;
+          --sm-text: #e8eae7; --sm-text2: #cfd5dc; --sm-muted: #aab4c0; --sm-dim: #95a1b0;
+          --sm-accent: #a9c4e4; --sm-accent-hi: #c9dbf0; --sm-on-accent: #14213a;
+          --sm-accent-rgb: 169 196 228; --sm-ink-rgb: 232 234 231; --sm-void-rgb: 24 35 58; --sm-scrim-rgb: 12 18 32;
+          background: #18233a;
+        }
         
         .smallcaps {
           font-variant: normal;
