@@ -17,7 +17,7 @@ export function initModal() {
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
 }
 
-export function openModal({ accentColor = '#86bba6', html = '' } = {}) {
+export function openModal({ accentColor = '#c9a84c', html = '' } = {}) {
   const overlay = document.getElementById('modal-overlay');
   const accent  = document.getElementById('modal-accent');
   const content = document.getElementById('modal-content');

@@ -88,7 +88,7 @@ function buildTimelineItem(item, i) {
 
       <div style="display:flex;align-items:baseline;gap:0.6rem;flex-wrap:wrap;margin-bottom:0.2rem">
         <span class="t-title" style="font-size:1rem;color:var(--text-primary)">${item.title}</span>
-        <span class="badge ${badgeClass}" style="font-size: 0.75rem">${sentence(item.confidence)}</span>
+        <span class="badge ${badgeClass}" style="font-size:0.631rem">${item.confidence.toUpperCase()}</span>
       </div>
 
       <div class="t-caption" style="color:var(--text-dim);margin-bottom:0.45rem">
@@ -100,9 +100,4 @@ function buildTimelineItem(item, i) {
 
       ${item.source ? `<div class="t-caption" style="color:var(--teal);margin-top:0.4rem">Source: ${item.source}</div>` : ''}
     </div>`;
-}
-
-function sentence(v) {
-  const t = String(v).replace(/[_-]+/g, ' ').trim().toLowerCase();
-  return t.charAt(0).toUpperCase() + t.slice(1);
 }
