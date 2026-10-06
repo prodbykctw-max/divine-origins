@@ -102,7 +102,7 @@ function buildPatternBlock(p, i) {
 
       <div id="pat-body-${i}" style="display:none;padding:0 2.5rem 2.5rem">
         <div style="margin-bottom:1.5rem">${chainHTML}</div>
-        <div style="padding:1.2rem 1.5rem;background:rgba(0,0,0,0.25);border:1px solid ${p.color}33;border-left:3px solid ${p.color}">
+        <div style="padding:1.2rem 1.5rem;background:rgb(var(--wash-rgb) / 0.25);border:1px solid ${p.color}33;border-left:3px solid ${p.color}">
           <div class="t-label" style="color:${p.color};margin-bottom:0.6rem">What this means: you decide</div>
           <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.7">${p.conclusion}</p>
         </div>
@@ -113,7 +113,7 @@ function buildPatternBlock(p, i) {
 /* ── PATTERNS DATA (inline here to avoid another file) ── */
 const PATTERNS = [
   {
-    color: '#86bba6',
+    color: 'var(--accent)',
     title: 'The Dying & Rising God — One Unbroken Chain',
     intro: 'The same story appears in writing across 4,000 years and every inhabited continent. A divine being dies, descends to the underworld, and returns. The progression in the written record is documented.',
     chain: [

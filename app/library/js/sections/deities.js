@@ -72,13 +72,13 @@ export function renderDeities() {
 }
 
 function buildDeityFilters() {
-  const pills = [{ id: 'all', label: 'All', color: '#86bba6' }, ...TRADITION_GROUPS.map(g => ({ id: g.id, label: g.label, color: g.color }))];
+  const pills = [{ id: 'all', label: 'All', color: 'var(--accent)' }, ...TRADITION_GROUPS.map(g => ({ id: g.id, label: g.label, color: g.color }))];
   return pills.map(p => `
     <button class="deity-filter-pill ${p.id === 'all' ? 'deity-filter-pill--active' : ''}"
             data-trad="${p.id}"
             style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;
                    padding:0.28rem 0.65rem;border-radius:2px;cursor:pointer;transition:all 0.2s;
-                   border:1px solid ${p.id === 'all' ? p.color : 'rgba(255,255,255,0.07)'};
+                   border:1px solid ${p.id === 'all' ? p.color : 'rgb(var(--ink-rgb) / 0.07)'};
                    color:${p.id === 'all' ? p.color : 'var(--text-dim)'};
                    background:${p.id === 'all' ? p.color + '12' : 'transparent'}">
       ${title(p.label.split('/')[0].trim())}
@@ -91,7 +91,7 @@ function renderDeityRail() {
 
   rail.innerHTML = filteredDeities.map((d, i) => {
     const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
-    const color = group?.color ?? '#86bba6';
+    const color = group?.color ?? 'var(--accent)';
     return `
       <button class="rail__item reveal-card"
               role="option"
@@ -139,7 +139,7 @@ function injectDeityPanel(idx, dir) {
 
 function buildDeityPanel(d, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === d.tradition);
-  const color   = group?.color ?? '#86bba6';
+  const color   = group?.color ?? 'var(--accent)';
 
   const badgeClass = d.confidence === 'documented' ? 'badge--documented'
                    : d.confidence === 'debated'    ? 'badge--debated'
@@ -220,9 +220,9 @@ function bindDeityEvents() {
 
       document.querySelectorAll('.deity-filter-pill').forEach(p => {
         const active = p.dataset.trad === activeTrad;
-        const color  = active ? '#86bba6' : 'rgba(255,255,255,0.07)';
+        const color  = active ? 'var(--accent)' : 'rgb(var(--ink-rgb) / 0.07)';
         p.style.borderColor  = color;
-        p.style.color        = active ? '#86bba6' : 'var(--text-dim)';
+        p.style.color        = active ? 'var(--accent)' : 'var(--text-dim)';
         p.style.background   = active ? '#c9a84c12' : 'transparent';
       });
 
@@ -264,7 +264,7 @@ window.openDeityModal = (id) => {
   const d = DEITIES.find(x => x.id === id);
   if (!d) return;
   const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
-  const color = group?.color ?? '#86bba6';
+  const color = group?.color ?? 'var(--accent)';
 
   const sources = d.primarySources?.map(s =>
     `<li style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;color:var(--teal);padding:0.25rem 0;border-bottom:1px solid rgba(64,168,160,0.1)">${s}</li>`

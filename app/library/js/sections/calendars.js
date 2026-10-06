@@ -116,7 +116,7 @@ function buildCalPanel(c, idx) {
       <div class="cal-detail-grid" style="display:grid;grid-template-columns:1fr 2fr">
 
         <!-- Left summary -->
-        <div style="padding:2rem;background:rgba(0,0,0,0.2);border-right:1px solid var(--border)">
+        <div style="padding:2rem;background:rgb(var(--wash-rgb) / 0.2);border-right:1px solid var(--border)">
           ${art ? `<figure class="cal-artifact">
             <img src="${art.large}" srcset="${art.srcset}" sizes="(max-width: 720px) 90vw, 360px" alt="${art.title.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
             <figcaption class="art-cap">${captionHTML(art)}</figcaption>

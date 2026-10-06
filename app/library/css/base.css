@@ -6,21 +6,21 @@
 /* ── TOKENS ── */
 :root {
   /* Surface */
-  --void:         #141713;
-  --deep:         #191c18;
-  --layer:        #1d201c;
-  --surface:      #272b26;
-  --raised:       #30352f;
+  --void:         var(--void);
+  --deep:         var(--deep);
+  --layer:        var(--layer);
+  --surface:      var(--surface);
+  --raised:       var(--raised);
 
   /* Borders */
-  --border:       rgba(255,255,255,0.07);
-  --border-gold:  rgba(134,187,166,0.25);
-  --border-glass: rgba(255,255,255,0.10);
+  --border:       rgb(var(--ink-rgb) / 0.07);
+  --border-gold:  rgb(var(--accent-rgb) / 0.25);
+  --border-glass: rgb(var(--ink-rgb) / 0.10);
 
   /* Brand palette */
-  --gold:         #86bba6;
-  --gold-light:   #b5d6c8;
-  --gold-dim:     #4f6e62;
+  --gold:         var(--accent);
+  --gold-light:   var(--accent-hover);
+  --gold-dim:     var(--accent-dim);
   --teal:         #6fae98;
   --violet:       #7f8aa6;
   --crimson:      #c98f6b;
@@ -33,16 +33,16 @@
   --tier-tradition:  var(--violet);
 
   /* Text */
-  --text-primary:   #e6e4d6;
-  --text-secondary: #b3b19d;
-  --text-dim:       #939179;
-  --text-inverse:   #141713;
+  --text-primary:   var(--text-primary);
+  --text-secondary: var(--text-secondary);
+  --text-dim:       var(--text-dim);
+  --text-inverse:   var(--void);
 
   /* Typography */
-  --font-display: 'Tiro Devanagari Sanskrit', serif;
-  --font-body:    'Hind', 'Georgia', serif;
-  --font-mono:    'Hind', system-ui, sans-serif;
-  --font-ui:      'Hind', system-ui, sans-serif;
+  --font-display: 'Amiri', serif;
+  --font-body:    'Noto Sans', 'Georgia', serif;
+  --font-mono:    'Noto Sans', system-ui, sans-serif;
+  --font-ui:      'Noto Sans', system-ui, sans-serif;
 
   /* Easing */
   --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
@@ -168,23 +168,23 @@ ul, ol { list-style: none; }
 /* Three tiers of glassmorphism for different contexts */
 
 .glass-subtle {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgb(var(--ink-rgb) / 0.02);
   border: 1px solid var(--border);
 }
 
 .glass-mid {
-  background: rgba(25,28,24, 0.55);
+  background: rgb(var(--void-rgb) / 0.55);
   border: 1px solid var(--border-glass);
 }
 
 .glass-strong {
-  background: rgba(25,28,24, 0.78);
+  background: rgb(var(--void-rgb) / 0.78);
   border: 1px solid var(--border-gold);
 }
 
 /* Gold-tinted glass for featured elements */
 .glass-gold {
-  background: rgba(134,187,166, 0.06);
+  background: rgb(var(--accent-rgb) / 0.06);
   border: 1px solid var(--border-gold);
 }
 
@@ -209,9 +209,9 @@ ul, ol { list-style: none; }
 }
 
 .badge--debated {
-  background: rgba(134,187,166, 0.12);
+  background: rgb(var(--accent-rgb) / 0.12);
   color: var(--gold);
-  border: 1px solid rgba(134,187,166, 0.28);
+  border: 1px solid rgb(var(--accent-rgb) / 0.28);
 }
 
 .badge--tradition {
@@ -243,8 +243,8 @@ ul, ol { list-style: none; }
 
 /* ── GLOW UTILITIES ── */
 .glow-gold {
-  box-shadow: 0 0 40px rgba(134,187,166, 0.12),
-              0 0 80px rgba(134,187,166, 0.04);
+  box-shadow: 0 0 40px rgb(var(--accent-rgb) / 0.12),
+              0 0 80px rgb(var(--accent-rgb) / 0.04);
 }
 
 .glow-violet {
@@ -260,6 +260,6 @@ ul, ol { list-style: none; }
 
 /* ── SELECTION ── */
 ::selection {
-  background: rgba(134,187,166, 0.25);
+  background: rgb(var(--accent-rgb) / 0.25);
   color: var(--text-primary);
 }

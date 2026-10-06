@@ -1,36 +1,42 @@
 /* =============================================================
-   THEME.CSS — Chola Bronze
-   Loaded last. Dark patinated bronze, one interactive colour
-   (verdigris), no glass blur, no glow, no all-caps chrome.
-   Swap the :root block to change the whole palette.
+   THEME.CSS — Blue Qur'an Night
+   Loaded last. Indigo-dyed parchment with silver text (dark) and
+   a matching lapis-on-paper version (light). The page follows the
+   device setting. One interactive colour per mode, no glass blur,
+   no glow, no all-caps chrome.
    ============================================================= */
 :root {
-  --void:    #141713;
-  --deep:    #191c18;
-  --layer:   #1d201c;   /* page canvas */
-  --surface: #272b26;   /* panels, cards, rails */
-  --raised:  #30352f;   /* overlays, menus */
+  color-scheme: dark;
+  --ink-rgb: 255 255 255;   /* hairlines and washes over the canvas */
+  --scrim-rgb: 12 18 32;
+  --wash-rgb: 0 0 0;        /* recessed cells */    /* darkening over photos: same in both modes */
+  --void:    #18233a;  --void-rgb: 24 35 58;
+  --deep:    #1b2840;
+  --layer:   #1f2c3f;  --layer-rgb: 31 44 63;   /* page canvas */
+  --surface: #283952;  --surface-rgb: 40 57 82;  /* panels, cards, rails */
+  --raised:  #31435f;                          /* overlays, menus */
 
-  --text-primary:   #e6e4d6;
-  --text-secondary: #b3b19d;
-  --text-dim:       #939179;
+  --text-primary:   #e8eae7;
+  --text-secondary: #b6bfca;
+  --text-dim:       #95a1b0;
 
-  --accent:       #86bba6;   /* verdigris: actions, links, focus, selection */
-  --accent-hover: #a2cdbb;
-  --on-accent:    #14201a;
+  --accent:       #a9c4e4;  --accent-rgb: 169 196 228;  /* lapis light: actions, links, focus, selection */
+  --accent-hover: #c9dbf0;
+  --accent-dim:   #5b7396;
+  --on-accent:    #14213a;
 
-  --border:        rgba(230,228,214,0.10);
-  --border-strong: rgba(230,228,214,0.20);
-  --border-gold:   rgba(134,187,166,0.35);
+  --border:        rgba(232,234,231,0.11);
+  --border-strong: rgba(232,234,231,0.22);
+  --border-gold:   rgb(var(--accent-rgb) / 0.35);
 
   /* legacy names still used across the sections */
   --gold:       var(--accent);
   --gold-light: var(--accent-hover);
-  --gold-dim:   #8fa89c;
+  --gold-dim:   #8fa3bd;
 
   --glass-fill:       var(--surface);
   --glass-fill-thick: var(--raised);
-  --glass-tint-gold:  rgba(134,187,166,0.10);
+  --glass-tint-gold:  rgb(var(--accent-rgb) / 0.10);
   --glass-blur:       none;
   --glass-edge:       var(--border);
   --glass-specular:   inset 0 1px 0 rgba(255,255,255,0.05);
@@ -41,17 +47,48 @@
   --r-inner: 6px;
   --r-pill:  6px;
 
-  --font-display: 'Tiro Devanagari Sanskrit', Georgia, serif;
-  --font-body:    'Hind', system-ui, sans-serif;
-  --font-ui:      'Hind', system-ui, sans-serif;
-  --font-mono:    'Hind', system-ui, sans-serif;
+  --font-display: 'Amiri', Georgia, serif;
+  --font-body:    'Noto Sans', system-ui, sans-serif;
+  --font-ui:      'Noto Sans', system-ui, sans-serif;
+  --font-mono:    'Noto Sans', system-ui, sans-serif;
+}
+
+/* Light: the same blue, set on pale paper */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --ink-rgb: 23 33 58;
+    --wash-rgb: 120 135 165;
+    --teal: #1f6b52; --violet: #5b4a9c; --crimson: #9c3b2c; --sage: #3f6a35; --silver: #4a5568;
+    --void:    #e6e9ef;  --void-rgb: 230 233 239;
+    --deep:    #eceef3;
+    --layer:   #f3f4f7;  --layer-rgb: 243 244 247;
+    --surface: #ffffff;  --surface-rgb: 255 255 255;
+    --raised:  #ffffff;
+
+    --text-primary:   #17213a;
+    --text-secondary: #46526a;
+    --text-dim:       #5d677c;
+
+    --accent:       #2b4f86;  --accent-rgb: 43 79 134;
+    --accent-hover: #1f3d6b;
+    --accent-dim:   #8aa0c2;
+    --on-accent:    #ffffff;
+
+    --border:        rgba(23,33,58,0.12);
+    --border-strong: rgba(23,33,58,0.24);
+    --gold-dim:      #46546d;
+    --glass-specular: none;
+  }
+  /* the night-sky backdrop belongs to dark mode */
+  #universe, #universe canvas { display: none !important; }
 }
 
 html { font-synthesis: none; background: var(--layer); }
 body { background: var(--layer); color: var(--text-primary); font-family: var(--font-body); font-size: 1rem; line-height: 1.55; }
-::selection { background: rgba(134,187,166,0.35); color: var(--text-primary); }
+::selection { background: rgb(var(--accent-rgb) / 0.35); color: var(--text-primary); }
 
-/* Tiro ships one weight: headings get size, not bold */
+/* headings get size, not bold */
 h1, h2, h3, .t-display, .t-title, .section__title { font-family: var(--font-display); font-weight: 400; letter-spacing: 0; }
 .section__title {
   background: none !important;
@@ -77,7 +114,7 @@ h1, h2, h3, .t-display, .t-title, .section__title { font-family: var(--font-disp
   font-family: var(--font-ui); font-size: 0.9375rem; font-weight: 500; letter-spacing: 0; text-transform: none;
   color: var(--text-secondary); border-radius: 6px; box-shadow: none;
 }
-.topnav__link:hover { background: rgba(230,228,214,0.06); color: var(--text-primary); }
+.topnav__link:hover { background: rgb(var(--accent-rgb) / 0.10); color: var(--text-primary); }
 .topnav__link.active, .topnav__link[aria-current="page"] {
   color: var(--on-accent) !important; background: var(--accent) !important;
   border-color: var(--accent) !important; box-shadow: none !important;
@@ -117,7 +154,7 @@ h1, h2, h3, .t-display, .t-title, .section__title { font-family: var(--font-disp
 .rail__item { background: var(--surface); border: 1px solid var(--border); }
 .rail__item[aria-selected="true"] { background: var(--raised); border-color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent) !important; }
 .info-block__label { font-family: var(--font-ui); font-size: 0.875rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
-.modal-overlay { background: rgba(10,12,10,0.78); }
+.modal-overlay { background: rgb(var(--void-rgb) / 0.78); }
 
 /* links and focus */
 a { color: var(--accent); }
@@ -146,3 +183,31 @@ input::placeholder { color: var(--text-dim); }
 #modal-close, .modal__close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; }
 .art-cap__credit { display: inline-block; padding: 3px 0; }
 .modal__close { font-size: 0.875rem !important; font-weight: 500; }
+
+/* evidence badges: one readable colour per tier, per mode */
+:root { --tier-doc: #8fcfb5; --tier-deb: var(--accent); --tier-trad: #b9b0e6; }
+@media (prefers-color-scheme: light) { :root { --tier-doc: #1f6b52; --tier-deb: #2b4f86; --tier-trad: #5b4a9c; } }
+.badge--documented { color: var(--tier-doc) !important; border-color: currentColor !important; }
+.badge--debated    { color: var(--tier-deb) !important; border-color: currentColor !important; }
+.badge--tradition  { color: var(--tier-trad) !important; border-color: currentColor !important; }
+.modal__close { color: var(--text-secondary) !important; }
+
+/* text that sits on a photo stays light in both modes */
+.art-cap__title { color: #f3f4f1 !important; }
+.art-cap__where { color: #c9dbf0 !important; }
+.art-cap__credit { color: #cfd5dc !important; }
+.split-panel__img-caption { background: rgb(var(--scrim-rgb) / 0.82) !important; }
+@media (prefers-color-scheme: light) {
+  .book__spine-text { color: var(--text-primary) !important; }
+  .book__meta, .book__title, .book__date { color: #f3f4f1 !important; }
+}
+@media (prefers-color-scheme: light) {
+  .glass-mid, .glass-thick, .book-detail, .split-panel__content { background: var(--surface) !important; }
+  .book__cover-face { background-color: #283952 !important; }
+  .cal-artifact .art-cap__title, .book-detail__artifact .art-cap__title { color: var(--text-primary) !important; }
+  .cal-artifact .art-cap__where, .book-detail__artifact .art-cap__where { color: var(--accent) !important; }
+  .cal-artifact .art-cap__credit, .book-detail__artifact .art-cap__credit { color: var(--text-secondary) !important; }
+  .split-panel__content-inner .t-caption { color: var(--text-secondary) !important; }
+  .split-panel__content-inner button { color: var(--accent) !important; border-color: var(--border-strong) !important; }
+}
+@media (prefers-color-scheme: light) { .book__type { color: #c9dbf0 !important; } }

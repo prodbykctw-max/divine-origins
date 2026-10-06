@@ -87,7 +87,7 @@ function buildFilterPills() {
   return traditionsWithTexts.map(tradId => {
     const group = TRADITION_GROUPS.find(g => g.id === tradId);
     const label = group?.label ?? tradId.replace(/_/g, ' / ');
-    const color = group?.color ?? '#86bba6';
+    const color = group?.color ?? 'var(--accent)';
     return `
       <button class="filter-pill"
               role="tab"
@@ -111,7 +111,7 @@ function buildBookTrack(filter) {
 /* ── BUILD SINGLE BOOK ── */
 function buildBook(text, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
-  const color   = group?.color ?? '#86bba6';
+  const color   = group?.color ?? 'var(--accent)';
   const art     = artifact('texts', text.id);
 
   // Spine color is darker version of tradition color
@@ -156,18 +156,18 @@ function buildBook(text, idx) {
 /* ── BUILD BOOK DETAIL PANEL ── */
 function buildBookDetail(text) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
-  const color   = group?.color ?? '#86bba6';
+  const color   = group?.color ?? 'var(--accent)';
   const art     = artifact('texts', text.id);
 
   const statusColors = {
     canonical:          '#6fae98',
-    deuterocanonical:   '#86bba6',
+    deuterocanonical:   'var(--accent)',
     apocryphal:         '#7f8aa6',
     pseudepigraphical:  '#c98f6b',
     oral:               '#608050',
     lost:               '#5a5448',
   };
-  const statusColor = statusColors[text.status] ?? '#86bba6';
+  const statusColor = statusColors[text.status] ?? 'var(--accent)';
 
   const acceptedStr = text.acceptedBy?.length
     ? text.acceptedBy.join(', ')

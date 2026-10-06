@@ -4,14 +4,14 @@
 
 /* ── NAV: only the current section is boxed ── */
 .topnav {
-  background: linear-gradient(180deg, rgba(20,23,19, 0.94), rgba(20,23,19, 0.86));
-  border-bottom: 1px solid rgba(134,187,166, 0.14);
+  background: linear-gradient(180deg, rgb(var(--void-rgb) / 0.94), rgb(var(--void-rgb) / 0.86));
+  border-bottom: 1px solid rgb(var(--accent-rgb) / 0.14);
   box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.9);
 }
 .topnav::after {
   content: '';
   position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(134,187,166,0.45), transparent);
+  background: linear-gradient(90deg, transparent, rgb(var(--accent-rgb) / 0.45), transparent);
   pointer-events: none;
 }
 .topnav__inner { gap: 0.35rem; }
@@ -21,7 +21,7 @@
   margin-right: 1.25rem;
 }
 .topnav__link {
-  color: #939179;
+  color: var(--text-dim);
   padding: 0.4rem 0.75rem;
   position: relative;
 }
@@ -33,18 +33,18 @@
 .topnav__link:hover {
   color: var(--gold-light);
   border-color: transparent;
-  background: rgba(134,187,166, 0.06);
+  background: rgb(var(--accent-rgb) / 0.06);
 }
 .topnav__link.active {
   color: var(--gold-light);
-  border-color: rgba(134,187,166, 0.7);
-  background: rgba(134,187,166, 0.1);
-  box-shadow: 0 0 16px -4px rgba(134,187,166, 0.45);
+  border-color: rgb(var(--accent-rgb) / 0.7);
+  background: rgb(var(--accent-rgb) / 0.1);
+  box-shadow: 0 0 16px -4px rgb(var(--accent-rgb) / 0.45);
 }
 
 /* ── SECTION HEADERS ── */
 .section__title {
-  background: linear-gradient(180deg, #f3e7c0 0%, #86bba6 100%);
+  background: linear-gradient(180deg, #f3e7c0 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -59,7 +59,7 @@
   color: var(--gold);
   text-align: center;
   background:
-    linear-gradient(90deg, transparent, rgba(134,187,166,0.5) 40%, transparent 40%, transparent 60%, rgba(134,187,166,0.5) 60%, transparent) center / 100% 1px no-repeat;
+    linear-gradient(90deg, transparent, rgb(var(--accent-rgb) / 0.5) 40%, transparent 40%, transparent 60%, rgb(var(--accent-rgb) / 0.5) 60%, transparent) center / 100% 1px no-repeat;
 }
 
 /* ── FILTER PILLS (Sacred Texts) ── */
@@ -77,17 +77,17 @@
   letter-spacing: 0;
   text-transform: none;
   padding: 0.42rem 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgb(var(--ink-rgb) / 0.09);
   border-radius: 999px;
-  color: #939179;
-  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-dim);
+  background: rgb(var(--ink-rgb) / 0.02);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-.filter-pill:hover { color: var(--gold-light); border-color: rgba(134,187,166,0.4); }
+.filter-pill:hover { color: var(--gold-light); border-color: rgb(var(--accent-rgb) / 0.4); }
 .filter-pill--active {
   color: var(--gold-light);
   border-color: var(--gold);
-  background: rgba(134,187,166, 0.12);
+  background: rgb(var(--accent-rgb) / 0.12);
 }
 
 /* Deity filter pills: same shape as the text filters */
@@ -157,10 +157,10 @@
   content: '';
   position: absolute;
   left: 0; right: 0; bottom: 0; height: 70%;
-  background: linear-gradient(to top, rgba(20,23,19,0.92) 0%, rgba(20,23,19,0.55) 55%, transparent 100%);
+  background: linear-gradient(to top, rgb(var(--scrim-rgb) / 0.92) 0%, rgb(var(--scrim-rgb) / 0.55) 55%, transparent 100%);
   pointer-events: none;
 }
 .book__cover-img { opacity: 0.55; }
 .book__meta { z-index: 2; }
 .book__title { font-size: 0.78rem; }
-.book__date { color: rgba(255, 255, 255, 0.62); }
+.book__date { color: rgb(var(--ink-rgb) / 0.62); }

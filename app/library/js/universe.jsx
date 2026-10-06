@@ -45,10 +45,10 @@ function Galaxy({ geoRef }) {
     const col = new Float32Array(COUNT * 3);
     const size = new Float32Array(COUNT);
     const seed = new Float32Array(COUNT);
-    const inner = new THREE.Color('#f1efe3');
-    const gold = new THREE.Color('#a19a63');
-    const ember = new THREE.Color('#6b4a2f');
-    const blue = new THREE.Color('#86bba6');
+    const inner = new THREE.Color('#f3f4f1');
+    const gold = new THREE.Color('#a9c4e4');
+    const ember = new THREE.Color('#8f86b8');
+    const blue = new THREE.Color('#5b7fb8');
     const arms = 4;
     for (let i = 0; i < COUNT; i++) {
       const r = Math.pow(Math.random(), 1.35) * 30 + 0.2;
@@ -155,7 +155,7 @@ function Solid({ geo, pos, s, speed, i }) {
       {geo === 'dodec' && <dodecahedronGeometry args={[1, 0]} />}
       {geo === 'torus' && <torusGeometry args={[1, 0.28, 10, 36]} />}
       {geo === 'tetra' && <tetrahedronGeometry args={[1, 0]} />}
-      <meshBasicMaterial color="#86bba6" wireframe transparent opacity={0.2} depthWrite={false} />
+      <meshBasicMaterial color="#a9c4e4" wireframe transparent opacity={0.2} depthWrite={false} />
     </mesh>
   );
 }
@@ -230,8 +230,8 @@ function Universe() {
       frameloop={reduceMotion ? 'demand' : 'always'}
       style={{ position: 'fixed', inset: 0 }}
     >
-      <color attach="background" args={['#141713']} />
-      <fog attach="fog" args={['#141713', 26, 90]} />
+      <color attach="background" args={['#18233a']} />
+      <fog attach="fog" args={['#18233a', 26, 90]} />
       <Galaxy geoRef={geoRef} />
       <QualityGovernor galaxyGeo={geoRef} />
       <Core />

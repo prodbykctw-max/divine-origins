@@ -15,14 +15,14 @@
 
 :root {
   /* Glass material */
-  --glass-fill:      rgba(29,32,28, 0.52);
-  --glass-fill-thick:rgba(39,43,38, 0.78);
-  --glass-tint-gold: rgba(134,187,166, 0.14);
+  --glass-fill:      rgb(var(--layer-rgb) / 0.52);
+  --glass-fill-thick:rgb(var(--surface-rgb) / 0.78);
+  --glass-tint-gold: rgb(var(--accent-rgb) / 0.14);
   --glass-blur:      blur(22px) saturate(1.7);
-  --glass-edge:      rgba(255, 255, 255, 0.14);
+  --glass-edge:      rgb(var(--ink-rgb) / 0.14);
   --glass-edge-dark: rgba(0, 0, 0, 0.55);
-  --glass-specular:  inset 0 1px 0 rgba(255, 255, 255, 0.22),
-                     inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --glass-specular:  inset 0 1px 0 rgb(var(--ink-rgb) / 0.22),
+                     inset 0 -1px 0 rgb(var(--ink-rgb) / 0.04);
   --glass-shadow:    0 10px 30px -10px rgba(0, 0, 0, 0.75),
                      0 0 0 1px var(--glass-edge-dark);
 
@@ -59,7 +59,7 @@
 
 /* Uniform bar once content scrolls under it (iOS 27 scroll edge) */
 .topnav.is-scrolled {
-  background: linear-gradient(180deg, rgba(20,23,19, 0.92) 0%, rgba(20,23,19, 0.7) 70%, rgba(20,23,19, 0) 100%);
+  background: linear-gradient(180deg, rgb(var(--void-rgb) / 0.92) 0%, rgb(var(--void-rgb) / 0.7) 70%, rgb(var(--void-rgb) / 0) 100%);
 }
 
 .topnav__inner {
@@ -86,15 +86,15 @@
   transition: color 0.2s, background 0.25s, box-shadow 0.25s, transform 0.2s;
 }
 .topnav__link:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgb(var(--ink-rgb) / 0.06);
   color: var(--gold-light);
 }
 /* Selected item: a lighter glass "thumb", like the HIG toggles */
 .topnav__link.active {
-  color: #f1efe3;
-  background: linear-gradient(180deg, rgba(134,187,166, 0.30), rgba(134,187,166, 0.14));
-  border-color: rgba(181,214,200, 0.45);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 14px -4px rgba(134,187,166, 0.55);
+  color: var(--text-primary);
+  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.30), rgb(var(--accent-rgb) / 0.14));
+  border-color: rgb(var(--accent-rgb) / 0.45);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.35), 0 4px 14px -4px rgb(var(--accent-rgb) / 0.55);
 }
 .topnav__link:active { transform: scale(0.96); }
 
@@ -109,18 +109,18 @@
 }
 .filter-pill,
 .deity-filter-pill {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.08);
 }
 .filter-pill--active {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 14px -6px rgba(134,187,166, 0.6);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.3), 0 4px 14px -6px rgb(var(--accent-rgb) / 0.6);
 }
 .cta-btn {
   min-height: var(--tap);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.12), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
 }
 .cta-btn--primary {
-  background: linear-gradient(180deg, #e2c46c 0%, #86bba6 55%, #b08e3a 100%) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 26px -10px rgba(134,187,166, 0.7);
+  background: linear-gradient(180deg, #e2c46c 0%, var(--accent) 55%, #b08e3a 100%) !important;
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.55), 0 10px 26px -10px rgb(var(--accent-rgb) / 0.7);
 }
 .cta-btn:active { transform: scale(0.97); }
 
@@ -135,14 +135,14 @@
 .rail__item {
   border-radius: var(--r-mid);
   background: var(--glass-fill);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgb(var(--ink-rgb) / 0.08);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.08);
 }
 .rail__item::after { left: 14px; right: 14px; border-radius: 2px; }
 .rail__item[aria-selected="true"] {
-  background: linear-gradient(180deg, rgba(134,187,166, 0.18), rgba(134,187,166, 0.06));
-  border-color: rgba(181,214,200, 0.4);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.18), rgb(var(--accent-rgb) / 0.06));
+  border-color: rgb(var(--accent-rgb) / 0.4);
+  box-shadow: inset 0 1px 0 rgb(var(--ink-rgb) / 0.25);
 }
 
 /* ── PANELS: concentric corners ── */
@@ -159,7 +159,7 @@
 }
 .info-block {
   border-radius: var(--r-inner);
-  background: rgba(255, 255, 255, 0.025);
+  background: rgb(var(--ink-rgb) / 0.025);
 }
 .book__cover,
 .book__cover-face { border-radius: 4px var(--r-inner) var(--r-inner) 4px; }
@@ -169,7 +169,7 @@
 [data-trad-nav] { border-radius: var(--r-mid); }
 
 .modal-overlay {
-  background: rgba(10,12,10, 0.55);
+  background: rgb(var(--void-rgb) / 0.55);
 }
 
 /* Search inputs */
@@ -199,13 +199,13 @@ input[type="text"] {
   .rail__item, .panel-nav__btn, .filter-pill, .deity-filter-pill, .cta-btn {
     background: var(--glass-fill-thick) !important;
   }
-  .topnav.is-scrolled { background: #141713; }
+  .topnav.is-scrolled { background: var(--void); }
 }
 @media (prefers-contrast: more) {
-  :root { --glass-edge: rgba(255, 255, 255, 0.45); }
+  :root { --glass-edge: rgb(var(--ink-rgb) / 0.45); }
   .topnav__link { color: #d8ceb4; }
   .topnav__link.active { border-color: var(--gold-light); }
-  .filter-pill, .deity-filter-pill { border-color: rgba(255, 255, 255, 0.4) !important; }
+  .filter-pill, .deity-filter-pill { border-color: rgb(var(--ink-rgb) / 0.4) !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -254,7 +254,7 @@ input[type="text"] {
   transition: opacity .5s ease;
 }
 .split-panel__img img.art-img.loaded { opacity: 1; transform: none; }
-.art-overlay { z-index: 2; background: linear-gradient(to bottom, rgba(20,23,19,.55) 0%, transparent 18%, transparent 70%, rgba(20,23,19,.88) 100%) !important; }
+.art-overlay { z-index: 2; background: linear-gradient(to bottom, rgb(var(--scrim-rgb) / .55) 0%, transparent 18%, transparent 70%, rgb(var(--scrim-rgb) / .88) 100%) !important; }
 .split-panel__img-trad { z-index: 3; }
 .split-panel__img-caption.art-cap { z-index: 3; }
 
@@ -268,7 +268,7 @@ input[type="text"] {
 .book-detail__artifact img, .cal-artifact img {
   display: block; width: 100%; max-height: 340px; object-fit: contain;
   background: #070510; border-radius: var(--r-inner, 10px);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgb(var(--ink-rgb) / .08);
 }
 .book-detail__artifact .art-cap, .cal-artifact .art-cap { margin-top: .6rem; }
 .cal-artifact { margin: 0 0 1.4rem; }
