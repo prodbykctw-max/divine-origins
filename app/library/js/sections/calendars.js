@@ -36,7 +36,7 @@ export function renderCalendars() {
                            transition:background 0.2s;border:none;animation-delay:${i * 0.05}s"
                     onmouseover="this.style.background='var(--surface)'"
                     onmouseout="this.style.background='var(--layer)'">
-              <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.3rem">${c.type.toUpperCase()}</div>
+              <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.3rem">${sentence(c.type)}</div>
               <div class="t-title" style="font-size:0.82rem;color:var(--text-primary);margin-bottom:0.2rem;line-height:1.3">${c.name}</div>
               <div class="t-caption" style="color:var(--text-dim)">${c.yearLength} day yr</div>
             </button>`).join('')}
@@ -67,7 +67,7 @@ function buildCalPanel(c, idx) {
 
   const structureRows = Object.entries(c.structure ?? {}).map(([k, v]) =>
     `<tr>
-      <td style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.2em;color:var(--gold-dim);padding:0.4rem 0.8rem 0.4rem 0;text-transform:uppercase;white-space:nowrap">${k.replace(/_/g,' ')}</td>
+      <td style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;color:var(--gold-dim);padding:0.4rem 0.8rem 0.4rem 0;text-transform: none;white-space:nowrap">${k.replace(/_/g,' ')}</td>
       <td style="font-size:0.85rem;color:var(--text-secondary);padding:0.4rem 0">${v}</td>
     </tr>`
   ).join('');
@@ -105,7 +105,7 @@ function buildCalPanel(c, idx) {
     const specialKeys = ['calendarNote','epagomenalDays','samhainDetail','nowruzDetail','tzolkinDetail','yugaDetail','ramadanDetail'];
     return specialKeys.filter(k => c[k]).map(k => `
       <div class="info-block info-block--texts">
-        <span class="info-block__label">${k.replace(/([A-Z])/g,' $1').toUpperCase()}</span>
+        <span class="info-block__label">${sentence(k.replace(/([A-Z])/g,' $1'))}</span>
         <p>${c[k]}</p>
       </div>`).join('');
   })();
@@ -121,7 +121,7 @@ function buildCalPanel(c, idx) {
             <img src="${art.large}" srcset="${art.srcset}" sizes="(max-width: 720px) 90vw, 360px" alt="${art.title.replace(/"/g, '&quot;')}" loading="lazy" decoding="async">
             <figcaption class="art-cap">${captionHTML(art)}</figcaption>
           </figure>` : ''}
-          <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.4rem">${c.type.toUpperCase()} CALENDAR</div>
+          <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.4rem">${sentence(c.type)} calendar</div>
           <h2 class="t-title" style="font-size:1.2rem;color:var(--text-primary);margin-bottom:0.4rem;line-height:1.2">${c.name}</h2>
           ${c.altNames?.length ? `<p class="t-italic" style="font-size:0.8rem;margin-bottom:1rem">${c.altNames.join(' · ')}</p>` : ''}
 
@@ -142,9 +142,9 @@ function buildCalPanel(c, idx) {
 
           ${c.textSources?.length ? `
           <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
-            <div class="t-label" style="color:var(--teal);margin-bottom:0.5rem">TEXT SOURCES</div>
+            <div class="t-label" style="color:var(--teal);margin-bottom:0.5rem">Text sources</div>
             <ul style="list-style:none;display:grid;gap:0.25rem">
-              ${c.textSources.map(s => `<li style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.12em;color:var(--teal)">${s}</li>`).join('')}
+              ${c.textSources.map(s => `<li style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;color:var(--teal)">${s}</li>`).join('')}
             </ul>
           </div>` : ''}
 
@@ -163,3 +163,8 @@ window.calNav    = (dir) => {
   const next = Math.max(0, Math.min(CALENDAR_SYSTEMS.length - 1, currentIdx + dir));
   injectCalPanel(next, dir);
 };
+
+function sentence(v) {
+  const t = String(v).replace(/[_-]+/g, ' ').trim().toLowerCase();
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}

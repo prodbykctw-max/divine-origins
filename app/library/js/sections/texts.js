@@ -41,7 +41,7 @@ function buildTextsHTML() {
         <div class="texts-filter" role="tablist" aria-label="Filter by tradition">
           <button class="filter-pill filter-pill--active"
                   role="tab" aria-selected="true"
-                  data-filter="all">ALL TRADITIONS</button>
+                  data-filter="all">All traditions</button>
           ${buildFilterPills()}
         </div>
       </div>
@@ -87,14 +87,14 @@ function buildFilterPills() {
   return traditionsWithTexts.map(tradId => {
     const group = TRADITION_GROUPS.find(g => g.id === tradId);
     const label = group?.label ?? tradId.replace(/_/g, ' / ');
-    const color = group?.color ?? '#c9a84c';
+    const color = group?.color ?? '#86bba6';
     return `
       <button class="filter-pill"
               role="tab"
               aria-selected="false"
               data-filter="${tradId}"
               style="--pill-color:${color}">
-        ${label.toUpperCase()}
+        ${title(label)}
       </button>`;
   }).join('');
 }
@@ -111,13 +111,13 @@ function buildBookTrack(filter) {
 /* ── BUILD SINGLE BOOK ── */
 function buildBook(text, idx) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
-  const color   = group?.color ?? '#c9a84c';
+  const color   = group?.color ?? '#86bba6';
   const art     = artifact('texts', text.id);
 
   // Spine color is darker version of tradition color
   const spineColor = color + '88';
 
-  const typeLabel = text.type.toUpperCase().replace('_', ' ');
+  const typeLabel = sentence(text.type);
   const isSelected = text.id === selectedTextId;
 
   return `
@@ -156,18 +156,18 @@ function buildBook(text, idx) {
 /* ── BUILD BOOK DETAIL PANEL ── */
 function buildBookDetail(text) {
   const group   = TRADITION_GROUPS.find(g => g.id === text.tradition);
-  const color   = group?.color ?? '#c9a84c';
+  const color   = group?.color ?? '#86bba6';
   const art     = artifact('texts', text.id);
 
   const statusColors = {
-    canonical:          '#40a8a0',
-    deuterocanonical:   '#c9a84c',
-    apocryphal:         '#8840c4',
-    pseudepigraphical:  '#c44040',
+    canonical:          '#6fae98',
+    deuterocanonical:   '#86bba6',
+    apocryphal:         '#7f8aa6',
+    pseudepigraphical:  '#c98f6b',
     oral:               '#608050',
     lost:               '#5a5448',
   };
-  const statusColor = statusColors[text.status] ?? '#c9a84c';
+  const statusColor = statusColors[text.status] ?? '#86bba6';
 
   const acceptedStr = text.acceptedBy?.length
     ? text.acceptedBy.join(', ')
@@ -188,7 +188,7 @@ function buildBookDetail(text) {
         ${group?.label ?? text.tradition}
       </div>
       <div class="t-caption" style="color:${statusColor}">
-        ● ${text.status.toUpperCase()}
+        ● ${sentence(text.status)}
       </div>
       <div class="t-caption" style="margin-top:0.6rem">
         ${text.language}
@@ -218,7 +218,7 @@ function buildBookDetail(text) {
       <span class="info-block__label" style="color:var(--teal)">📚 TEXTUAL SOURCES</span>
       <ul style="list-style:none;display:grid;gap:0.3rem">
         ${text.textSources.map(s => `
-          <li style="font-family:var(--font-mono);font-size:0.69rem;letter-spacing:0.15em;
+          <li style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;
                      color:var(--teal);padding:0.25rem 0;
                      border-bottom:1px solid rgba(64,168,160,0.12)">${s}</li>
         `).join('')}
@@ -237,7 +237,7 @@ function buildBookDetail(text) {
         <div class="t-label" style="color:var(--teal);margin-bottom:0.3rem">✓ CANONICAL IN</div>
         <p style="font-size:0.78rem;color:var(--text-secondary)">${acceptedStr}</p>
       </div>
-      <div style="padding:0.6rem;background:rgba(136,64,196,0.06);border:1px solid rgba(136,64,196,0.2);border-radius:2px">
+      <div style="padding:0.6rem;background:rgba(127,138,166,0.06);border:1px solid rgba(127,138,166,0.2);border-radius:2px">
         <div class="t-label" style="color:var(--violet);margin-bottom:0.3rem">✗ EXCLUDED FROM</div>
         <p style="font-size:0.78rem;color:var(--text-secondary)">${rejectedStr}</p>
       </div>
@@ -245,7 +245,7 @@ function buildBookDetail(text) {
 
     <!-- Main note -->
     <div class="info-block info-block--scholarly">
-      <span class="info-block__label">SCHOLARLY ACCOUNT</span>
+      <span class="info-block__label">Scholarly account</span>
       <p>${text.note}</p>
     </div>
 
@@ -353,4 +353,13 @@ function closeBookDetail() {
     detailEl.classList.remove('open');
     detailEl.setAttribute('aria-hidden', 'true');
   }
+}
+
+function sentence(v) {
+  const t = String(v).replace(/[_-]+/g, ' ').trim().toLowerCase();
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}
+
+function title(v) {
+  return String(v).replace(/_/g, ' ').toLowerCase().replace(/(^|[\s/(-])([a-z\u00c0-\u024f])/g, (m, a, b) => a + b.toUpperCase());
 }

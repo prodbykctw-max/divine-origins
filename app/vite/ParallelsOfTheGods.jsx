@@ -130,7 +130,7 @@ export default function App() {
 
 function LoadingScreen() {
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: '#050408', color: '#ede3c4', fontFamily: '"Cormorant Garamond", Georgia, serif' }}>
+    <div className="min-h-screen flex items-center justify-center" style={{ background: '#141713', color: '#e6e4d6', fontFamily: '"Hind", system-ui, sans-serif' }}>
       <div className="text-center">
         <div className="text-2xl italic">Loading the Source Map…</div>
       </div>
@@ -140,7 +140,7 @@ function LoadingScreen() {
 
 function ErrorScreen({ msg }) {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#050408' }}>
+    <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#141713' }}>
       <div className="max-w-md text-center" style={{ color: '#e8705f' }}>
         <div className="text-xl mb-2 font-semibold">Cannot render</div>
         <div className="text-sm font-mono">{msg}</div>
@@ -298,25 +298,25 @@ function SourceMapApp({ data, onReload }) {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'radial-gradient(ellipse 120% 60% at 50% 0%, #15112a 0%, #0a0812 45%, #050408 100%)',
-      color: '#ede3c4',
-      fontFamily: '"Cormorant Garamond", Georgia, "Times New Roman", serif',
+      background: '#1d201c',
+      color: '#e6e4d6',
+      fontFamily: '"Hind", system-ui, sans-serif',
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Hind:wght@400;500;600&display=swap');
 
         .smallcaps {
-          font-variant: small-caps;
-          letter-spacing: 0.08em;
+          font-variant: normal;
+          letter-spacing: 0;
         }
         .marginalia {
-          font-variant: small-caps;
-          letter-spacing: 0.12em;
+          font-variant: normal;
+          letter-spacing: 0;
           font-size: 12px;
-          color: #a3957a;
+          color: #aaa894;
         }
         .codex-rule {
-          background: linear-gradient(90deg, transparent 0%, #c9a84c 20%, #c9a84c 80%, transparent 100%);
+          background: linear-gradient(90deg, transparent 0%, #86bba6 20%, #86bba6 80%, transparent 100%);
           height: 1px;
         }
         .tier-band {
@@ -327,26 +327,24 @@ function SourceMapApp({ data, onReload }) {
           position: absolute;
           left: 0; right: 0; top: 0;
           height: 1px;
-          background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.4) 20%, rgba(201,168,76,0.4) 80%, transparent 100%);
+          background: rgba(230,228,214,0.12);
         }
         .deity-chip {
           transition: transform 120ms ease, opacity 200ms ease, box-shadow 200ms ease;
           cursor: pointer;
         }
         .deity-chip:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,168,76,0.35);
+          box-shadow: 0 0 0 1px rgba(134,187,166,0.6);
         }
-        .deity-chip:focus-visible { outline: 2px solid #f0d080; outline-offset: 2px; }
-        input[type=search]::placeholder { color: #7d735c; }
-        input[type=search]:focus { border-color: #c9a84c !important; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
+        .deity-chip:focus-visible { outline: 2px solid #b5d6c8; outline-offset: 2px; }
+        input[type=search]::placeholder { color: #939179; }
+        input[type=search]:focus { border-color: #86bba6 !important; box-shadow: 0 0 0 3px rgba(134,187,166,0.15); }
         select { color-scheme: dark; }
         .deity-chip.selected {
-          transform: translateY(-1px);
-          box-shadow: 0 0 0 2px #c9a84c, 0 4px 14px rgba(201,168,76,0.35);
+          box-shadow: 0 0 0 2px #86bba6;
         }
         .deity-chip.related {
-          box-shadow: 0 0 0 1.5px #f0d080, 0 0 12px rgba(240,208,128,0.4);
+          box-shadow: 0 0 0 1.5px #b5d6c8;
         }
         .deity-chip.dim {
           opacity: 0.28;
@@ -360,20 +358,18 @@ function SourceMapApp({ data, onReload }) {
         }
         .sheet-backdrop {
           background: rgba(0,0,0, 0.45);
-          backdrop-filter: blur(2px);
-          -webkit-backdrop-filter: blur(2px);
         }
         .sheet {
-          background: rgba(22,18,38,0.62);
+          background: rgba(29,32,28,0.62);
           box-shadow: 0 -8px 30px rgba(0,0,0,0.25);
-          border-top: 1px solid #c9a84c;
+          border-top: 1px solid #86bba6;
         }
         .scrollbar-thin::-webkit-scrollbar {
           height: 6px;
           width: 6px;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb {
-          background: rgba(201,168,76,0.35);
+          background: rgba(134,187,166,0.35);
           border-radius: 999px;
         }
         .scrollbar-thin::-webkit-scrollbar-track {
@@ -381,64 +377,61 @@ function SourceMapApp({ data, onReload }) {
         }
         .paper-texture {
           background-image:
-            radial-gradient(circle at 30% 20%, rgba(201,168,76,0.04) 0%, transparent 50%),
-            radial-gradient(circle at 70% 60%, rgba(201,168,76,0.03) 0%, transparent 50%);
+            radial-gradient(circle at 30% 20%, rgba(134,187,166,0.04) 0%, transparent 50%),
+            radial-gradient(circle at 70% 60%, rgba(134,187,166,0.03) 0%, transparent 50%);
         }
         /* ── Cosmos (3D) ── */
         .cosmos { border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 30px 80px -30px rgba(0,0,0,0.9); }
         .cosmos-legend { position: absolute; left: 14px; top: 14px; padding: 10px 14px; border-radius: 18px; pointer-events: none; max-width: 70%; }
-        .cosmos-legend__row { font-size: 13px; color: #cdc2a3; line-height: 1.35; }
+        .cosmos-legend__row { font-size: 13px; color: #cfccb8; line-height: 1.35; }
         .cosmos-tiers { position: absolute; right: 14px; top: 14px; padding: 10px 14px; border-radius: 18px; pointer-events: none; }
-        .cosmos-tiers__item { font-variant: small-caps; letter-spacing: .1em; font-size: 12px; color: #c9a84c; line-height: 1.6; }
-        .cosmos-reset { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 0 18px; min-height: 44px; color: #fff4d4; font-family: inherit; font-size: 14px; cursor: pointer; }
-.cosmos-list-btn { pointer-events: auto; margin-top: 8px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(240,208,128,0.45); background: rgba(201,168,76,0.14); color: #fff4d4; font-family: inherit; font-size: 13px; cursor: pointer; }
+        .cosmos-tiers__item { font-variant: normal; letter-spacing: 0; font-size: 12px; color: #86bba6; line-height: 1.6; }
+        .cosmos-reset { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); padding: 0 18px; min-height: 44px; color: #f1efe3; font-family: inherit; font-size: 14px; cursor: pointer; }
+.cosmos-list-btn { pointer-events: auto; margin-top: 8px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(181,214,200,0.45); background: rgba(134,187,166,0.14); color: #f1efe3; font-family: inherit; font-size: 13px; cursor: pointer; }
         @media (pointer: coarse) { .cosmos-list-btn { min-height: 44px; } }
-        .cosmos-tip { max-width: min(300px, calc(100% - 16px)); white-space: normal !important; background: rgba(12,10,22,0.86); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(240,208,128,0.4); border-radius: 14px; padding: 6px 12px; white-space: nowrap; box-shadow: 0 10px 30px -10px rgba(0,0,0,.9); }
-        .cosmos-tip__name { font-size: 15px; font-weight: 600; color: #fff4d4; font-family: 'Cormorant Garamond', Georgia, serif; }
-        .cosmos-tip__meta { font-size: 11px; color: #c9a84c; font-variant: small-caps; letter-spacing: .08em; font-family: 'Cormorant Garamond', Georgia, serif; }
+        .cosmos-tip { max-width: min(300px, calc(100% - 16px)); white-space: normal !important; background: rgba(12,10,22,0.86); border: 1px solid rgba(181,214,200,0.4); border-radius: 14px; padding: 6px 12px; white-space: nowrap; box-shadow: 0 10px 30px -10px rgba(0,0,0,.9); }
+        .cosmos-tip__name { font-size: 15px; font-weight: 600; color: #f1efe3; font-family: 'Hind', Georgia, serif; }
+        .cosmos-tip__meta { font-size: 0.75rem; color: #86bba6; font-variant: normal; letter-spacing: 0; font-family: 'Hind', Georgia, serif; }
         @media (max-width: 600px) { .cosmos.has-sel .cosmos-legend { display: none; } .cosmos-tiers { display: none; } .cosmos-legend { max-width: calc(100% - 28px); } }
         /* ── Apple Liquid Glass + HIG layer (black & gold) ── */
         .glass, .glass-modal, .sheet {
-          background: rgba(22,18,38,0.62);
-          -webkit-backdrop-filter: blur(24px) saturate(1.7);
-          backdrop-filter: blur(24px) saturate(1.7);
-          border: 1px solid rgba(255,255,255,0.14);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 0 0 1px rgba(0,0,0,0.55), 0 24px 60px -20px rgba(0,0,0,0.85);
+          background: #272b26;
+          border: 1px solid rgba(230,228,214,0.12);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
         }
         .sheet { border-bottom: 0; }
-        .sheet, .glass-modal { background: rgba(16,13,30,0.86); }
+        .sheet, .glass-modal { background: #30352f; }
         .segmented {
-          display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px;
+          display: inline-flex; gap: 0; padding: 0; border-radius: 6px; border: 1px solid rgba(230,228,214,0.2); overflow: hidden;
         }
         .seg-btn {
-          min-height: 36px; padding: 0 18px; border-radius: 999px; border: 1px solid transparent;
-          background: transparent; color: #c9a84c; font-size: 12px; cursor: pointer; font-family: inherit;
+          min-height: 40px; padding: 0 16px; border-radius: 0; border: 0;
+          background: transparent; color: #e6e4d6; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
           transition: background .25s, color .25s, box-shadow .25s;
         }
-        .seg-btn:hover { color: #f0d080; }
+        .seg-btn:hover { background: rgba(230,228,214,0.06); }
         .seg-btn.is-on {
-          color: #fff4d4;
-          background: linear-gradient(180deg, rgba(201,168,76,0.34), rgba(201,168,76,0.16));
-          border-color: rgba(240,208,128,0.45);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 14px -4px rgba(201,168,76,0.55);
+          color: #e6e4d6;
+          background: #30352f;
+          box-shadow: inset 0 -2px 0 #86bba6;
         }
-        header { box-shadow: inset 0 -1px 0 rgba(255,255,255,0.05), 0 12px 30px -20px rgba(0,0,0,0.9); }
-        button:not(.deity-chip):not(.seg-btn) { border-radius: 999px !important; }
+        header { box-shadow: inset 0 -1px 0 rgba(230,228,214,0.1); }
+        button:not(.deity-chip):not(.seg-btn) { border-radius: 6px !important; }
         button:not(.deity-chip) { transition: transform .15s ease, background .2s, color .2s; }
         button:not(.deity-chip):active { transform: scale(0.96); }
-        input[type=search] { border-radius: 999px !important; min-height: 44px; }
-        select { border-radius: 12px !important; min-height: 40px; }
-        .deity-chip { border-radius: 14px !important; }
-        .deity-chip.selected { box-shadow: 0 0 0 2px #f0d080, 0 8px 24px -6px rgba(201,168,76,0.55) !important; }
-        .card { border-radius: 22px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,12,25,0.6) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); }
-        .sheet-backdrop { background: rgba(3,2,6,0.5) !important; -webkit-backdrop-filter: blur(6px) !important; backdrop-filter: blur(6px) !important; }
+        input[type=search] { border-radius: 6px !important; min-height: 44px; font-size: 16px; }
+        select { border-radius: 6px !important; min-height: 40px; }
+        .deity-chip { border-radius: 8px !important; }
+        .deity-chip.selected { box-shadow: 0 0 0 2px #86bba6 !important; }
+        .card { border-radius: 12px; border: 1px solid rgba(230,228,214,0.1); background: #272b26 !important; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
+        .sheet-backdrop { background: rgba(10,12,10,0.5) !important; }
         @media (pointer: coarse) {
           .seg-btn { min-height: 44px; }
           header button { min-width: 44px; min-height: 44px; }
         }
         @media (max-width: 600px) { .deity-chip { max-width: none !important; flex: 1 1 100%; } }
         @media (prefers-reduced-transparency: reduce) {
-          .glass, .glass-modal, .sheet, header { background: #100d1c !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+          .glass, .glass-modal, .sheet, header { background: #272b26 !important; }
         }
         @media (prefers-contrast: more) {
           .glass, .glass-modal, .sheet, .deity-chip { border-color: rgba(255,255,255,0.45) !important; }
@@ -594,10 +587,8 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
 
   return (
     <header style={{
-      borderBottom: '1px solid rgba(201,168,76,0.35)',
-      background: 'rgba(8,6,14,0.86)',
-      backdropFilter: 'blur(18px)',
-      WebkitBackdropFilter: 'blur(18px)',
+      borderBottom: '1px solid rgba(134,187,166,0.35)',
+      background: 'rgba(20,23,19,0.86)',
       position: 'sticky',
       top: 'var(--nav-h, 0px)',
       zIndex: 30,
@@ -605,11 +596,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-baseline justify-between gap-2">
           <div>
-            <div className="marginalia">Comparative Cosmology</div>
-            <h1 style={{ fontFamily: 'Cinzel, serif', fontWeight: 600, fontSize: 'clamp(20px, 3.2vw, 30px)', lineHeight: 1.1, color: '#c9a84c', letterSpacing: '0.06em', textShadow: '0 0 24px rgba(201,168,76,0.25)' }}>
+            <h1 style={{ fontFamily: '"Tiro Devanagari Sanskrit", serif', fontWeight: 400, fontSize: 'clamp(24px, 3.2vw, 32px)', lineHeight: 1.15, color: '#e6e4d6', letterSpacing: 0 }}>
               Parallels of the Gods
             </h1>
-            <div className="marginalia mt-0.5" style={{ color: '#a8925c' }}>
+            <div className="marginalia mt-0.5" style={{ color: '#aaa894' }}>
               {visibleCount} of {totalCount} facets shown
             </div>
           </div>
@@ -618,11 +608,11 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               onClick={onCompareClick}
               className="smallcaps"
               style={{
-                fontSize: '10px',
+                fontSize: '12px',
                 padding: '6px 10px',
-                border: '1px solid #c9a84c',
+                border: '1px solid #86bba6',
                 borderRadius: '2px',
-                color: '#c9a84c',
+                color: '#86bba6',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
@@ -633,11 +623,11 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               onClick={onAboutClick}
               className="smallcaps"
               style={{
-                fontSize: '10px',
+                fontSize: '12px',
                 padding: '6px 10px',
-                border: '1px solid #c9a84c',
+                border: '1px solid #86bba6',
                 borderRadius: '2px',
-                color: '#c9a84c',
+                color: '#86bba6',
                 background: 'transparent',
                 cursor: 'pointer',
               }}
@@ -649,7 +639,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
 
         <div className="mt-3 flex items-center gap-2">
           <div className="flex-1 relative">
-            <Search size={14} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: '#a8925c' }} />
+            <Search size={14} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: '#aaa894' }} />
             <input
               type="search"
               value={searchQuery}
@@ -660,17 +650,17 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
                 padding: '8px 30px 8px 32px',
                 fontSize: '14px',
                 fontFamily: 'inherit',
-                background: '#0e0c19',
-                border: '1px solid rgba(201,168,76,0.4)',
+                background: '#1b1e1a',
+                border: '1px solid rgba(134,187,166,0.4)',
                 borderRadius: '2px',
-                color: '#ede3c4',
+                color: '#e6e4d6',
                 outline: 'none',
               }}
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#a8925c', cursor: 'pointer' }}
+                style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#aaa894', cursor: 'pointer' }}
               >
                 <X size={14} />
               </button>
@@ -681,10 +671,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Filter traditions"
             style={{
               padding: '8px',
-              border: '1px solid rgba(201,168,76,0.4)',
+              border: '1px solid rgba(134,187,166,0.4)',
               borderRadius: '2px',
-              background: filtersOpen ? '#c9a84c' : 'transparent',
-              color: filtersOpen ? '#0a0812' : '#c9a84c',
+              background: filtersOpen ? '#86bba6' : 'transparent',
+              color: filtersOpen ? '#191c18' : '#86bba6',
               cursor: 'pointer',
             }}
           >
@@ -695,10 +685,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Scholarly mode"
             style={{
               padding: '8px',
-              border: '1px solid rgba(201,168,76,0.4)',
+              border: '1px solid rgba(134,187,166,0.4)',
               borderRadius: '2px',
-              background: scholarlyMode ? '#c9a84c' : 'transparent',
-              color: scholarlyMode ? '#0a0812' : '#c9a84c',
+              background: scholarlyMode ? '#86bba6' : 'transparent',
+              color: scholarlyMode ? '#191c18' : '#86bba6',
               cursor: 'pointer',
             }}
           >
@@ -709,10 +699,10 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             title="Upload dataset"
             style={{
               padding: '8px',
-              border: '1px solid rgba(201,168,76,0.4)',
+              border: '1px solid rgba(134,187,166,0.4)',
               borderRadius: '2px',
               background: 'transparent',
-              color: '#c9a84c',
+              color: '#86bba6',
               cursor: 'pointer',
             }}
           >
@@ -721,7 +711,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
           <input ref={fileRef} type="file" accept=".json,application/json" onChange={onFileUpload} style={{ display: 'none' }} />
         </div>
         {scholarlyMode && (
-          <div className="mt-2 marginalia" style={{ color: '#c9a84c' }}>
+          <div className="mt-2 marginalia" style={{ color: '#86bba6' }}>
             ✶ Scholarly mode active — academic caveats shown on each parallel.
           </div>
         )}
@@ -737,17 +727,17 @@ function FilterBar({ traditions, activeTraditions, onToggle, onAll, onNone }) {
   return (
     <div style={{
       padding: '10px 16px',
-      borderBottom: '1px solid rgba(201,168,76,0.25)',
-      background: '#0e0c19',
+      borderBottom: '1px solid rgba(134,187,166,0.25)',
+      background: '#1b1e1a',
     }}>
       <div className="flex items-center justify-between mb-2">
         <div className="marginalia">Traditions</div>
         <div className="flex gap-2">
-          <button onClick={onAll} className="marginalia" style={{ color: '#c9a84c', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
+          <button onClick={onAll} className="marginalia" style={{ color: '#86bba6', background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px' }}>
             All
           </button>
-          <span style={{ color: '#c9a84c' }}>·</span>
-          <button onClick={onNone} className="marginalia" style={{ color: '#c9a84c', background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px' }}>
+          <span style={{ color: '#86bba6' }}>·</span>
+          <button onClick={onNone} className="marginalia" style={{ color: '#86bba6', background: 'none', border: 'none', cursor: 'pointer', fontSize: '12px' }}>
             None
           </button>
         </div>
@@ -768,7 +758,7 @@ function FilterBar({ traditions, activeTraditions, onToggle, onAll, onNone }) {
                 borderRadius: '2px',
                 border: `1px solid ${active ? c.bg : 'rgba(255,255,255,0.14)'}`,
                 background: active ? c.bg : 'transparent',
-                color: active ? '#f6ecd0' : '#a3957a',
+                color: active ? '#eceadc' : '#aaa894',
                 opacity: active ? 1 : 0.6,
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
@@ -793,37 +783,37 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
     <section className="tier-band" style={{
       padding: '20px 0 22px',
       background: isCrossTier
-        ? 'linear-gradient(90deg, rgba(201,168,76,0.07) 0%, rgba(201,168,76,0.12) 50%, rgba(201,168,76,0.07) 100%)'
+        ? 'linear-gradient(90deg, rgba(134,187,166,0.07) 0%, rgba(134,187,166,0.12) 50%, rgba(134,187,166,0.07) 100%)'
         : 'transparent',
     }}>
       <div className="px-4 mb-3 flex items-baseline gap-3">
         <div style={{
-          fontFamily: 'Cinzel, serif',
+          fontFamily: '"Tiro Devanagari Sanskrit", serif',
           fontSize: '28px',
           fontWeight: 600,
-          color: '#c9a84c',
-          textShadow: '0 0 18px rgba(201,168,76,0.35)',
+          color: '#86bba6',
+          textShadow: 'none',
           lineHeight: 1,
           minWidth: '32px',
         }}>
           {meta.label}
         </div>
         <div className="flex-1">
-          <div className="smallcaps" style={{ fontSize: '13px', fontWeight: 600, color: '#ede3c4' }}>
+          <div className="smallcaps" style={{ fontSize: '13px', fontWeight: 600, color: '#e6e4d6' }}>
             {meta.name}
           </div>
           <div className="marginalia" style={{ marginTop: '1px' }}>
             {meta.subtitle}
           </div>
         </div>
-        <div className="marginalia" style={{ color: '#8f8263' }}>
+        <div className="marginalia" style={{ color: '#939179' }}>
           {facets.length} {facets.length === 1 ? 'figure' : 'figures'}
         </div>
       </div>
 
       <div className="px-4 flex flex-wrap gap-2">
         {facets.length === 0 && (
-          <div className="marginalia italic" style={{ color: '#8f8263', fontStyle: 'italic', padding: '4px 8px' }}>
+          <div className="marginalia italic" style={{ color: '#939179', fontStyle: 'italic', padding: '4px 8px' }}>
             no figures in this tier
           </div>
         )}
@@ -850,8 +840,8 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
               onClick={() => onSelect(facet.id)}
               style={{
                 padding: '9px 13px 10px 14px',
-                background: 'linear-gradient(160deg, rgba(28,24,48,0.92) 0%, rgba(14,12,25,0.92) 100%)',
-                border: '1px solid rgba(201,168,76,0.16)',
+                background: '#272b26',
+                border: '1px solid rgba(230,228,214,0.1)',
                 borderLeft: `3px solid ${c.edge}`,
                 borderRadius: '3px',
                 fontFamily: 'inherit',
@@ -871,7 +861,7 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
               </div>
               <div className="marginalia" style={{
                 color: c.fg,
-                fontSize: '10px',
+                fontSize: '12px',
                 fontWeight: 500,
               }}>
                 {tradition?.name || deity.tradition_id} · {facet.facet_name}
@@ -932,33 +922,33 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}
             aria-label="Close"
           >
-            <div style={{ width: 40, height: 4, background: 'rgba(201,168,76,0.5)', borderRadius: 2 }} />
+            <div style={{ width: 40, height: 4, background: 'rgba(134,187,166,0.5)', borderRadius: 2 }} />
           </button>
         </div>
 
         {/* Header */}
-        <div style={{ padding: '0 18px 12px', flexShrink: 0, borderBottom: '1px solid rgba(201,168,76,0.25)' }}>
+        <div style={{ padding: '0 18px 12px', flexShrink: 0, borderBottom: '1px solid rgba(134,187,166,0.25)' }}>
           <div className="flex items-center justify-between mb-1">
             <span className="marginalia" style={{
               padding: '2px 6px',
               background: c.bg,
-              color: '#f6ecd0',
+              color: '#eceadc',
               borderRadius: '2px',
             }}>
               {tradition?.name || deity.tradition_id}
             </span>
-            <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }} aria-label="Clear selection">
+            <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa894' }} aria-label="Clear selection">
               <X size={16} />
             </button>
           </div>
-          <h2 style={{ fontSize: '24px', fontWeight: 600, lineHeight: 1.1, color: '#ede3c4', marginBottom: '3px' }}>
+          <h2 style={{ fontSize: '24px', fontWeight: 600, lineHeight: 1.1, color: '#e6e4d6', marginBottom: '3px' }}>
             {deity.primary_name}
           </h2>
-          <div className="marginalia" style={{ color: c.fg, fontStyle: 'italic', fontVariant: 'small-caps' }}>
+          <div className="marginalia" style={{ color: c.fg, fontStyle: 'italic', fontVariant: 'normal' }}>
             {facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}
           </div>
           {deity.alternate_names && deity.alternate_names.length > 0 && (
-            <div className="mt-1" style={{ fontSize: '12px', color: '#a3957a', fontStyle: 'italic' }}>
+            <div className="mt-1" style={{ fontSize: '12px', color: '#aaa894', fontStyle: 'italic' }}>
               also: {deity.alternate_names.slice(0, 4).join(' · ')}
               {deity.alternate_names.length > 4 && ' …'}
             </div>
@@ -966,7 +956,7 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
         </div>
 
         {/* Tabs */}
-        <div style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgba(201,168,76,0.2)', flexShrink: 0 }}>
+        <div style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgba(134,187,166,0.2)', flexShrink: 0 }}>
           {[
             { id: 'essence', label: 'Essence', icon: <Sparkles size={12} /> },
             { id: 'parallels', label: `Parallels (${relatedFacetIds.length})`, icon: <ArrowUpRight size={12} /> },
@@ -981,10 +971,10 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
                 padding: '8px 8px',
                 background: 'none',
                 border: 'none',
-                borderBottom: tab === t.id ? '2px solid #c9a84c' : '2px solid transparent',
-                color: tab === t.id ? '#ede3c4' : '#a8925c',
+                borderBottom: tab === t.id ? '2px solid #86bba6' : '2px solid transparent',
+                color: tab === t.id ? '#e6e4d6' : '#aaa894',
                 fontWeight: tab === t.id ? 600 : 400,
-                fontSize: '11px',
+                fontSize: '12px',
                 cursor: 'pointer',
                 fontFamily: 'inherit',
                 display: 'flex',
@@ -1033,15 +1023,15 @@ function EssenceTab({ facet, deity }) {
     <div>
       <div style={{ marginBottom: 14 }}>
         <div className="marginalia mb-1">Summary</div>
-        <p style={{ fontSize: '15px', lineHeight: 1.5, color: '#ede3c4' }}>
-          {deity.summary || <em style={{ color: '#a8925c' }}>No summary available.</em>}
+        <p style={{ fontSize: '15px', lineHeight: 1.5, color: '#e6e4d6' }}>
+          {deity.summary || <em style={{ color: '#aaa894' }}>No summary available.</em>}
         </p>
       </div>
 
       {facet.core_claim && (
-        <div style={{ marginBottom: 14, padding: '12px 14px', background: '#0e0c19', borderLeft: '3px solid #c9a84c' }}>
+        <div style={{ marginBottom: 14, padding: '12px 14px', background: '#1b1e1a', borderLeft: '3px solid #86bba6' }}>
           <div className="marginalia mb-1">Core claim · {facet.facet_name}</div>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, fontStyle: 'italic', color: '#cdc2a3' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, fontStyle: 'italic', color: '#cfccb8' }}>
             {facet.core_claim}
           </p>
         </div>
@@ -1051,13 +1041,13 @@ function EssenceTab({ facet, deity }) {
         {deity.etymology && (
           <div style={{ flex: 1 }}>
             <div className="marginalia mb-1">Etymology</div>
-            <div style={{ fontSize: '13px', color: '#cdc2a3' }}>{deity.etymology}</div>
+            <div style={{ fontSize: '13px', color: '#cfccb8' }}>{deity.etymology}</div>
           </div>
         )}
         {deity.earliest_attestation && (
           <div style={{ flex: 1 }}>
             <div className="marginalia mb-1">Earliest attestation</div>
-            <div style={{ fontSize: '13px', color: '#cdc2a3' }}>{deity.earliest_attestation}</div>
+            <div style={{ fontSize: '13px', color: '#cfccb8' }}>{deity.earliest_attestation}</div>
           </div>
         )}
       </div>
@@ -1065,7 +1055,7 @@ function EssenceTab({ facet, deity }) {
       {facet.valence && (
         <div style={{ marginBottom: 12 }}>
           <div className="marginalia mb-1">Valence</div>
-          <div style={{ fontSize: '13px', color: '#cdc2a3', textTransform: 'capitalize' }}>{facet.valence}</div>
+          <div style={{ fontSize: '13px', color: '#cfccb8', textTransform: 'capitalize' }}>{facet.valence}</div>
         </div>
       )}
     </div>
@@ -1077,7 +1067,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
   const [typeFilter, setTypeFilter] = useState(() => new Set()); // empty = all evidence types
   if (relatedFacetIds.length === 0) {
     return (
-      <div style={{ padding: '24px 0', textAlign: 'center', color: '#a8925c', fontStyle: 'italic' }}>
+      <div style={{ padding: '24px 0', textAlign: 'center', color: '#aaa894', fontStyle: 'italic' }}>
         No parallels recorded for this facet yet.
       </div>
     );
@@ -1155,13 +1145,13 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
             className="marginalia"
             style={{
               padding: '2px 7px',
-              fontSize: '10px',
+              fontSize: '12px',
               borderRadius: '2px',
               cursor: 'pointer',
               fontFamily: 'inherit',
-              border: `1px solid ${specFilter === f.id ? '#3f6e5e' : 'rgba(201,168,76,0.4)'}`,
+              border: `1px solid ${specFilter === f.id ? '#3f6e5e' : 'rgba(134,187,166,0.4)'}`,
               background: specFilter === f.id ? '#3f6e5e' : 'transparent',
-              color: specFilter === f.id ? '#f6ecd0' : '#c9a84c',
+              color: specFilter === f.id ? '#eceadc' : '#86bba6',
             }}
           >
             {f.label}
@@ -1180,13 +1170,13 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                 className="marginalia"
                 style={{
                   padding: '2px 7px',
-                  fontSize: '10px',
+                  fontSize: '12px',
                   borderRadius: '2px',
                   cursor: 'pointer',
                   fontFamily: 'inherit',
-                  border: `1px solid ${on ? '#c9a84c' : 'rgba(201,168,76,0.4)'}`,
-                  background: on ? '#c9a84c' : 'transparent',
-                  color: on ? '#0a0812' : '#c9a84c',
+                  border: `1px solid ${on ? '#86bba6' : 'rgba(134,187,166,0.4)'}`,
+                  background: on ? '#86bba6' : 'transparent',
+                  color: on ? '#191c18' : '#86bba6',
                 }}
               >
                 {t.replace(/-/g, ' ')}
@@ -1201,7 +1191,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {shown.length === 0 && (
-          <div style={{ padding: '14px 0', textAlign: 'center', color: '#a8925c', fontStyle: 'italic', fontSize: 13 }}>
+          <div style={{ padding: '14px 0', textAlign: 'center', color: '#aaa894', fontStyle: 'italic', fontSize: 13 }}>
             No parallels match this filter.
           </div>
         )}
@@ -1209,10 +1199,10 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
           const tc = colorFor(deity.tradition_id);
           return (
             <div key={facet.id} style={{
-              border: '1px solid rgba(201,168,76,0.3)',
+              border: '1px solid rgba(134,187,166,0.3)',
               borderRadius: 2,
               padding: '10px 12px',
-              background: '#12101f',
+              background: '#1d201c',
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
                 <button
@@ -1223,19 +1213,19 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     <span className="marginalia" style={{
                       padding: '1px 5px',
                       background: tc.bg,
-                      color: '#f6ecd0',
+                      color: '#eceadc',
                       borderRadius: '2px',
-                      fontSize: '9px',
+                      fontSize: '12px',
                     }}>
                       {tradition?.name || deity.tradition_id}
                     </span>
                     {explicit && (
                       <span className="marginalia" style={{
                         padding: '1px 5px',
-                        background: '#c9a84c',
-                        color: '#f6ecd0',
+                        background: '#86bba6',
+                        color: '#eceadc',
                         borderRadius: '2px',
-                        fontSize: '9px',
+                        fontSize: '12px',
                       }}>
                         {explicit.strength}
                       </span>
@@ -1250,10 +1240,10 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                         }`}
                         style={{
                           padding: '1px 5px',
-                          background: SPECIFICITY_COLORS[explicit.specificity_band] || '#a8925c',
-                          color: '#f6ecd0',
+                          background: SPECIFICITY_COLORS[explicit.specificity_band] || '#aaa894',
+                          color: '#eceadc',
                           borderRadius: '2px',
-                          fontSize: '9px',
+                          fontSize: '12px',
                         }}
                       >
                         {explicit.specificity_band}
@@ -1269,7 +1259,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                           border: '1px solid #9c4a3a',
                           color: '#9c4a3a',
                           borderRadius: '2px',
-                          fontSize: '9px',
+                          fontSize: '12px',
                         }}
                       >
                         n.s.
@@ -1278,10 +1268,10 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     {explicit?.type && (
                       <span className="marginalia" title={explicit.descriptor || explicit.type} style={{
                         padding: '1px 5px',
-                        background: 'rgba(201,168,76,0.18)',
-                        color: '#c9a84c',
+                        background: 'rgba(134,187,166,0.18)',
+                        color: '#86bba6',
                         borderRadius: '2px',
-                        fontSize: '9px',
+                        fontSize: '12px',
                       }}>
                         {explicit.type.replace(/-/g, ' ')}
                       </span>
@@ -1294,13 +1284,13 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
                     {facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}
                   </div>
                 </button>
-                <ArrowUpRight size={14} style={{ color: '#a8925c', flexShrink: 0, marginTop: 4 }} />
+                <ArrowUpRight size={14} style={{ color: '#aaa894', flexShrink: 0, marginTop: 4 }} />
               </div>
 
               {explicit?.basis && explicit.basis.length > 0 && (
-                <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px dotted rgba(201,168,76,0.4)' }}>
+                <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px dotted rgba(134,187,166,0.4)' }}>
                   <div className="marginalia mb-1">Why parallel</div>
-                  <ul style={{ fontSize: '12.5px', color: '#cdc2a3', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
+                  <ul style={{ fontSize: '12.5px', color: '#cfccb8', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
                     {explicit.basis.map((b, i) => (
                       <li key={i} style={{ marginBottom: 3 }}>{b}</li>
                     ))}
@@ -1309,9 +1299,9 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
               )}
 
               {scholarlyMode && explicit?.scholarly_caveat && (
-                <div style={{ marginTop: 8, padding: '8px 10px', background: '#1a1630', borderLeft: '2px solid #c9a84c' }}>
-                  <div className="marginalia mb-1" style={{ color: '#c9a84c' }}>Scholarly note</div>
-                  <div style={{ fontSize: '12px', color: '#cdc2a3', lineHeight: 1.45, fontStyle: 'italic' }}>
+                <div style={{ marginTop: 8, padding: '8px 10px', background: '#272b26', borderLeft: '2px solid #86bba6' }}>
+                  <div className="marginalia mb-1" style={{ color: '#86bba6' }}>Scholarly note</div>
+                  <div style={{ fontSize: '12px', color: '#cfccb8', lineHeight: 1.45, fontStyle: 'italic' }}>
                     {explicit.scholarly_caveat}
                   </div>
                 </div>
@@ -1320,7 +1310,7 @@ function ParallelsTab({ relatedFacetIds, explicitParallels, facetById, deityById
               {scholarlyMode && explicit?.primary_text_evidence && (
                 <div style={{ marginTop: 6 }}>
                   <div className="marginalia mb-1">Primary text evidence</div>
-                  <div style={{ fontSize: '11.5px', color: '#a3957a', fontStyle: 'italic' }}>
+                  <div style={{ fontSize: '11.5px', color: '#aaa894', fontStyle: 'italic' }}>
                     {explicit.primary_text_evidence.join(' · ')}
                   </div>
                 </div>
@@ -1339,15 +1329,15 @@ function SourcesTab({ facet, deity }) {
     <div>
       <div className="marginalia mb-2">Primary sources</div>
       {sources.length === 0 ? (
-        <div style={{ color: '#a8925c', fontStyle: 'italic' }}>No primary sources listed.</div>
+        <div style={{ color: '#aaa894', fontStyle: 'italic' }}>No primary sources listed.</div>
       ) : (
         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           {sources.map((s, i) => (
             <li key={i} style={{
               padding: '8px 0',
-              borderBottom: i < sources.length - 1 ? '1px dotted rgba(201,168,76,0.3)' : 'none',
+              borderBottom: i < sources.length - 1 ? '1px dotted rgba(134,187,166,0.3)' : 'none',
               fontSize: '14px',
-              color: '#ede3c4',
+              color: '#e6e4d6',
               fontStyle: 'italic',
             }}>
               {s}
@@ -1369,11 +1359,11 @@ function TagsTab({ facet }) {
           <span key={tag} style={{
             padding: '3px 8px',
             fontSize: '12px',
-            background: 'rgba(201,168,76,0.12)',
-            border: '1px solid rgba(201,168,76,0.3)',
+            background: 'rgba(134,187,166,0.12)',
+            border: '1px solid rgba(134,187,166,0.3)',
             borderRadius: '2px',
-            color: '#cdc2a3',
-            fontFamily: 'JetBrains Mono, ui-monospace, monospace',
+            color: '#cfccb8',
+            fontFamily: '"Hind", system-ui, sans-serif',
           }}>
             {tag}
           </span>
@@ -1382,7 +1372,7 @@ function TagsTab({ facet }) {
       {facet.tier_assignment && (
         <div style={{ marginTop: 14 }}>
           <div className="marginalia mb-1">Tier assignment</div>
-          <div style={{ fontSize: '14px', color: '#ede3c4' }}>
+          <div style={{ fontSize: '14px', color: '#e6e4d6' }}>
             Tier {facet.tier_assignment} — {TIER_META[facet.tier_assignment]?.name}
           </div>
         </div>
@@ -1416,27 +1406,27 @@ function AboutModal({ meta, parallels = [], onClose }) {
         display: 'flex',
         flexDirection: 'column',
       }}>
-        <div style={{ padding: '18px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
+        <div style={{ padding: '18px 20px', borderBottom: '1px solid rgba(134,187,166,0.3)' }}>
           <div className="flex items-start justify-between">
             <div>
               <div className="marginalia">The framework</div>
-              <h2 style={{ fontSize: '22px', fontWeight: 600, color: '#ede3c4', lineHeight: 1.1 }}>
+              <h2 style={{ fontSize: '22px', fontWeight: 600, color: '#e6e4d6', lineHeight: 1.1 }}>
                 Parallels of the Gods
               </h2>
             </div>
-            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }}>
+            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa894' }}>
               <X size={18} />
             </button>
           </div>
         </div>
         <div className="scrollbar-thin" style={{ overflowY: 'auto', padding: '16px 20px 20px' }}>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#ede3c4' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#e6e4d6' }}>
             Every culture has named the divine differently — but the structures repeat. The unknowable Source. The Most High and the divine council. The craftsman-god who shaped this world. The rulers who govern it. The light-bringers who descend to wake us up.
           </p>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#ede3c4' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 14, color: '#e6e4d6' }}>
             This atlas lays every documented deity onto a four-tier framework derived from Gnostic cosmology and verified against Hermetic, Kabbalistic, Vedantic, Platonic, Egyptian, Norse, and Mesopotamian sources.
           </p>
-          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 18, color: '#ede3c4', fontStyle: 'italic' }}>
+          <p style={{ fontSize: '15px', lineHeight: 1.5, marginBottom: 18, color: '#e6e4d6', fontStyle: 'italic' }}>
             The names change. The structure does not.
           </p>
 
@@ -1448,14 +1438,14 @@ function AboutModal({ meta, parallels = [], onClose }) {
               const m = TIER_META[t];
               return (
                 <div key={t} style={{ display: 'flex', gap: 12 }}>
-                  <div style={{ minWidth: 28, fontSize: '20px', fontStyle: 'italic', color: '#c9a84c', fontWeight: 600, lineHeight: 1 }}>
+                  <div style={{ minWidth: 28, fontSize: '20px', fontStyle: 'italic', color: '#86bba6', fontWeight: 600, lineHeight: 1 }}>
                     {m.label}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div className="smallcaps" style={{ fontSize: '12px', fontWeight: 600, color: '#ede3c4' }}>
+                    <div className="smallcaps" style={{ fontSize: '12px', fontWeight: 600, color: '#e6e4d6' }}>
                       {m.name}
                     </div>
-                    <div style={{ fontSize: '13px', color: '#cdc2a3', marginTop: 1, lineHeight: 1.4 }}>
+                    <div style={{ fontSize: '13px', color: '#cfccb8', marginTop: 1, lineHeight: 1.4 }}>
                       {m.subtitle} — {(meta.tier_definitions && meta.tier_definitions[t]) || ''}
                     </div>
                   </div>
@@ -1467,7 +1457,7 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia mb-2">How to read this map</div>
-          <ol style={{ fontSize: '13.5px', lineHeight: 1.5, color: '#ede3c4', paddingLeft: 18, margin: 0 }}>
+          <ol style={{ fontSize: '13.5px', lineHeight: 1.5, color: '#e6e4d6', paddingLeft: 18, margin: 0 }}>
             <li style={{ marginBottom: 6 }}>Tap any figure to open its detail panel.</li>
             <li style={{ marginBottom: 6 }}>Selected figures glow gold. Their parallels across traditions glow softer — others dim.</li>
             <li style={{ marginBottom: 6 }}>Switch to the <em>Parallels</em> tab to see why each match holds.</li>
@@ -1479,7 +1469,7 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia mb-2">Reading the badges</div>
-          <div style={{ fontSize: '13px', color: '#cdc2a3', lineHeight: 1.5, marginBottom: 8 }}>
+          <div style={{ fontSize: '13px', color: '#cfccb8', lineHeight: 1.5, marginBottom: 8 }}>
             Each parallel is weighted by how <em>rare</em> the structural function it
             shares is across the whole dataset — the guard against "everything
             resembles everything". A badge shows the band:
@@ -1493,16 +1483,16 @@ function AboutModal({ meta, parallels = [], onClose }) {
             ].map(([band, desc]) => (
               <div key={band} style={{ display: 'flex', gap: 8, alignItems: 'baseline' }}>
                 <span className="marginalia" style={{
-                  padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
-                  background: SPECIFICITY_COLORS[band] || '#a8925c', color: '#f6ecd0', whiteSpace: 'nowrap',
+                  padding: '1px 5px', fontSize: '12px', borderRadius: '2px',
+                  background: SPECIFICITY_COLORS[band] || '#aaa894', color: '#eceadc', whiteSpace: 'nowrap',
                 }}>{band}</span>
-                <span style={{ fontSize: '12.5px', color: '#cdc2a3' }}>{desc}</span>
+                <span style={{ fontSize: '12.5px', color: '#cfccb8' }}>{desc}</span>
               </div>
             ))}
           </div>
-          <div style={{ fontSize: '12.5px', color: '#cdc2a3', lineHeight: 1.5, marginBottom: 4 }}>
+          <div style={{ fontSize: '12.5px', color: '#cfccb8', lineHeight: 1.5, marginBottom: 4 }}>
             <span className="marginalia" style={{
-              padding: '1px 5px', fontSize: '9px', borderRadius: '2px',
+              padding: '1px 5px', fontSize: '12px', borderRadius: '2px',
               border: '1px solid #9c4a3a', color: '#9c4a3a',
             }}>n.s.</span> marks a parallel that a randomized null model can't
             distinguish from two random figures (p ≥ 0.05). Use the
@@ -1513,17 +1503,17 @@ function AboutModal({ meta, parallels = [], onClose }) {
           <div className="codex-rule" style={{ margin: '18px 0' }} />
 
           <div className="marginalia">Data</div>
-          <div style={{ fontSize: '12px', color: '#a3957a', marginTop: 4 }}>
+          <div style={{ fontSize: '12px', color: '#aaa894', marginTop: 4 }}>
             Schema v{meta.schema_version || '—'} · Dataset v{meta.version || '—'}
           </div>
           {stats.total > 0 && (
-            <div style={{ fontSize: '12px', color: '#a3957a', marginTop: 4 }}>
+            <div style={{ fontSize: '12px', color: '#aaa894', marginTop: 4 }}>
               {stats.total} parallels · <strong>{stats.sig} statistically significant</strong> (p&lt;.05
               vs a randomized null model) · {stats.cited} citation-backed
             </div>
           )}
           {meta.description && (
-            <p style={{ fontSize: '12px', color: '#a3957a', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
+            <p style={{ fontSize: '12px', color: '#aaa894', marginTop: 4, fontStyle: 'italic', lineHeight: 1.4 }}>
               {meta.description}
             </p>
           )}
@@ -1575,8 +1565,8 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
       onChange={e => onChange(e.target.value)}
       style={{
         width: '100%', padding: '6px 8px', fontFamily: 'inherit', fontSize: '13px',
-        background: '#0e0c19', border: '1px solid rgba(201,168,76,0.5)', borderRadius: '2px',
-        color: '#ede3c4',
+        background: '#1b1e1a', border: '1px solid rgba(134,187,166,0.5)', borderRadius: '2px',
+        color: '#e6e4d6',
       }}
     >
       {options.map(o => <option key={o.id} value={o.id}>{o.label}</option>)}
@@ -1584,32 +1574,32 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
   );
 
   const Column = ({ facet, deity }) => {
-    if (!facet || !deity) return <div style={{ flex: 1, color: '#a8925c', fontStyle: 'italic' }}>—</div>;
+    if (!facet || !deity) return <div style={{ flex: 1, color: '#aaa894', fontStyle: 'italic' }}>—</div>;
     const tc = colorFor(deity.tradition_id);
     const t = traditionById[deity.tradition_id];
     return (
       <div style={{ flex: 1, minWidth: 0 }}>
-        <div className="marginalia" style={{ padding: '2px 6px', background: tc.bg, color: '#f6ecd0', borderRadius: '2px', display: 'inline-block' }}>
+        <div className="marginalia" style={{ padding: '2px 6px', background: tc.bg, color: '#eceadc', borderRadius: '2px', display: 'inline-block' }}>
           {t?.name || deity.tradition_id}
         </div>
-        <div style={{ fontSize: '18px', fontWeight: 600, color: '#ede3c4', marginTop: 4 }}>{deity.primary_name}</div>
+        <div style={{ fontSize: '18px', fontWeight: 600, color: '#e6e4d6', marginTop: 4 }}>{deity.primary_name}</div>
         <div className="marginalia" style={{ color: tc.fg }}>{facet.facet_name} · Tier {String(facet.tier_assignment).toUpperCase()}</div>
-        {facet.valence && <div style={{ fontSize: 12, color: '#cdc2a3', marginTop: 4, textTransform: 'capitalize' }}>{facet.valence}</div>}
+        {facet.valence && <div style={{ fontSize: 12, color: '#cfccb8', marginTop: 4, textTransform: 'capitalize' }}>{facet.valence}</div>}
         <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Function tags</div>
         <div className="flex flex-wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
           {(facet.function_tags || []).map(tag => (
             <span key={tag} style={{
-              padding: '2px 6px', fontSize: 11, borderRadius: 2,
-              background: sharedTags.includes(tag) ? '#3f6e5e' : 'rgba(201,168,76,0.12)',
-              color: sharedTags.includes(tag) ? '#f6ecd0' : '#cdc2a3',
-              fontFamily: 'JetBrains Mono, ui-monospace, monospace',
+              padding: '2px 6px', fontSize: 12, borderRadius: 2,
+              background: sharedTags.includes(tag) ? '#3f6e5e' : 'rgba(134,187,166,0.12)',
+              color: sharedTags.includes(tag) ? '#eceadc' : '#cfccb8',
+              fontFamily: '"Hind", system-ui, sans-serif',
             }}>{tag}</span>
           ))}
         </div>
         {facet.core_claim && (
           <>
             <div className="marginalia" style={{ marginTop: 8, marginBottom: 2 }}>Core claim</div>
-            <div style={{ fontSize: 13, color: '#cdc2a3', fontStyle: 'italic', lineHeight: 1.45 }}>{facet.core_claim}</div>
+            <div style={{ fontSize: 13, color: '#cfccb8', fontStyle: 'italic', lineHeight: 1.45 }}>{facet.core_claim}</div>
           </>
         )}
       </div>
@@ -1624,13 +1614,13 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
         width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px - var(--nav-h, 0px))', zIndex: 96,
         borderRadius: '26px', overflow: 'hidden', display: 'flex', flexDirection: 'column',
       }}>
-        <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(201,168,76,0.3)' }}>
+        <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(134,187,166,0.3)' }}>
           <div className="flex items-start justify-between" style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div>
               <div className="marginalia">Compare two figures</div>
-              <h2 style={{ fontSize: '20px', fontWeight: 600, color: '#ede3c4', lineHeight: 1.1 }}>Side by side</h2>
+              <h2 style={{ fontSize: '20px', fontWeight: 600, color: '#e6e4d6', lineHeight: 1.1 }}>Side by side</h2>
             </div>
-            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a8925c' }}><X size={18} /></button>
+            <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa894' }}><X size={18} /></button>
           </div>
           <div style={{ display: 'flex', gap: 12, marginTop: 12 }}>
             <div style={{ flex: 1 }}><Picker value={aId} onChange={setAId} /></div>
@@ -1649,32 +1639,32 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
           {sharedTags.length ? (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
               {sharedTags.map(t => (
-                <span key={t} style={{ padding: '2px 6px', fontSize: 11, borderRadius: 2, background: '#3f6e5e', color: '#f6ecd0', fontFamily: 'JetBrains Mono, ui-monospace, monospace' }}>{t}</span>
+                <span key={t} style={{ padding: '2px 6px', fontSize: 12, borderRadius: 2, background: '#3f6e5e', color: '#eceadc', fontFamily: '"Hind", system-ui, sans-serif' }}>{t}</span>
               ))}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: '#a8925c', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 13, color: '#aaa894', fontStyle: 'italic' }}>
               No shared function-tags — any parallel between these two rests on its written basis, not tag overlap.
             </div>
           )}
 
           <div className="marginalia mb-1" style={{ marginTop: 12 }}>Canonical parallel</div>
           {link ? (
-            <div style={{ border: '1px solid rgba(201,168,76,0.3)', borderRadius: 2, padding: '10px 12px', background: '#0e0c19' }}>
+            <div style={{ border: '1px solid rgba(134,187,166,0.3)', borderRadius: 2, padding: '10px 12px', background: '#1b1e1a' }}>
               <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 6 }}>
-                {link.strength && <span className="marginalia" style={{ padding: '1px 5px', background: '#c9a84c', color: '#0a0812', borderRadius: 2, fontSize: 9 }}>{link.strength}</span>}
-                {link.specificity_band && <span className="marginalia" style={{ padding: '1px 5px', background: SPECIFICITY_COLORS[link.specificity_band] || '#a8925c', color: '#f6ecd0', borderRadius: 2, fontSize: 9 }}>{link.specificity_band}</span>}
-                {link.specificity_significant === false && <span className="marginalia" style={{ padding: '1px 5px', border: '1px solid #9c4a3a', color: '#9c4a3a', borderRadius: 2, fontSize: 9 }}>n.s.</span>}
-                {link.type && <span className="marginalia" style={{ padding: '1px 5px', background: 'rgba(201,168,76,0.18)', color: '#c9a84c', borderRadius: 2, fontSize: 9 }}>{link.type.replace(/-/g, ' ')}</span>}
+                {link.strength && <span className="marginalia" style={{ padding: '1px 5px', background: '#86bba6', color: '#191c18', borderRadius: 2, fontSize: 12 }}>{link.strength}</span>}
+                {link.specificity_band && <span className="marginalia" style={{ padding: '1px 5px', background: SPECIFICITY_COLORS[link.specificity_band] || '#aaa894', color: '#eceadc', borderRadius: 2, fontSize: 12 }}>{link.specificity_band}</span>}
+                {link.specificity_significant === false && <span className="marginalia" style={{ padding: '1px 5px', border: '1px solid #9c4a3a', color: '#9c4a3a', borderRadius: 2, fontSize: 12 }}>n.s.</span>}
+                {link.type && <span className="marginalia" style={{ padding: '1px 5px', background: 'rgba(134,187,166,0.18)', color: '#86bba6', borderRadius: 2, fontSize: 12 }}>{link.type.replace(/-/g, ' ')}</span>}
               </div>
               {Array.isArray(link.basis) && (
-                <ul style={{ fontSize: 12.5, color: '#cdc2a3', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
+                <ul style={{ fontSize: 12.5, color: '#cfccb8', lineHeight: 1.45, paddingLeft: 16, margin: 0 }}>
                   {link.basis.map((bb, i) => <li key={i} style={{ marginBottom: 3 }}>{bb}</li>)}
                 </ul>
               )}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: '#a8925c', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 13, color: '#aaa894', fontStyle: 'italic' }}>
               No canonical parallel is recorded between these two facets.
             </div>
           )}
@@ -1852,7 +1842,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
     }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = '#12101f';
+    ctx.fillStyle = '#1d201c';
     ctx.fillRect(0, 0, w, h);
 
     ctx.save();
@@ -1861,7 +1851,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
 
     // tier rings (faint)
     const ringRadii = new Set(Object.values(positions).map((p) => p.ring));
-    ctx.strokeStyle = 'rgba(201,168,76,0.15)';
+    ctx.strokeStyle = 'rgba(134,187,166,0.15)';
     ctx.lineWidth = 1 / transform.scale;
     ringRadii.forEach((idx) => {
       const r = 70 + idx * 100;
@@ -1877,7 +1867,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
       const isSelectedEdge = selectedFacetId && (a === selectedFacetId || b === selectedFacetId);
       const band = p.specificity_band;
       const sig = p.specificity_significant;
-      let color = ({ specific: '#5fb39a', moderate: '#d9b25e', 'universal-motif': '#d0715c', 'tag-divergent': '#8d918f' })[band] || '#8f8263';
+      let color = ({ specific: '#5fb39a', moderate: '#a19a63', 'universal-motif': '#d0715c', 'tag-divergent': '#8d918f' })[band] || '#939179';
       let alpha = sig ? 0.6 : 0.18;
       let width = sig ? 1.4 : 0.7;
       if (isSelectedEdge) { alpha = 0.95; width = 2.2; }
@@ -1909,7 +1899,7 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
       ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
       ctx.fill();
       if (isSelected || isRelated) {
-        ctx.strokeStyle = '#c9a84c';
+        ctx.strokeStyle = '#86bba6';
         ctx.lineWidth = (isSelected ? 2.5 : 1.5) / transform.scale;
         ctx.stroke();
       }
@@ -1996,19 +1986,19 @@ function NetworkView({ facets, deityById, traditionById, parallels, isFacetVisib
 function Footer({ meta, totalDeities, totalFacets, totalParallels }) {
   return (
     <footer style={{
-      borderTop: '1px solid rgba(201,168,76,0.3)',
+      borderTop: '1px solid rgba(134,187,166,0.3)',
       marginTop: 16,
       padding: '14px 18px 22px',
       background: 'transparent',
     }}>
       <div className="codex-rule mb-3" />
-      <div className="marginalia" style={{ textAlign: 'center', color: '#a8925c' }}>
+      <div className="marginalia" style={{ textAlign: 'center', color: '#aaa894' }}>
         {totalDeities} figures · {totalFacets} facets · {totalParallels} canonical parallels
       </div>
-      <div className="marginalia" style={{ textAlign: 'center', color: '#a8925c', marginTop: 6, fontSize: '10px' }}>
+      <div className="marginalia" style={{ textAlign: 'center', color: '#aaa894', marginTop: 6, fontSize: '12px' }}>
         Schema v{meta.schema_version || '—'} · Data v{meta.version || '—'}
       </div>
-      <div style={{ textAlign: 'center', marginTop: 10, fontSize: '11px', color: '#8f8263', fontStyle: 'italic' }}>
+      <div style={{ textAlign: 'center', marginTop: 10, fontSize: '12px', color: '#939179', fontStyle: 'italic' }}>
         The names change. The structure does not.
       </div>
     </footer>
