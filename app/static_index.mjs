@@ -46,7 +46,7 @@ export function staticIndexHTML({ texts, groups, calendars, deities }, seedCount
             <li><a href="sitemap.xml">Divine Origins sitemap</a></li>
           </ul>
           <h2>About the author</h2>
-          <address>Divine Origins is researched and built by KCTW, a developer and music producer and co-founder of RARE Agency. The source code, seed data and specification are public on <a href="https://github.com/prodbykctw-max/divine-origins" rel="author">GitHub</a>.</address>
+          <address class="about-author">Divine Origins is researched and built by <a href="https://prodbykctw-max.github.io/about/" rel="author">KCTW</a> (Melvin D. Brown III), a developer and music producer and co-founder and lead developer of RARE Agency. The source code, seed data and specification are public on <a href="https://github.com/prodbykctw-max/divine-origins">GitHub</a>. Questions or corrections: <a href="https://prodbykctw-max.github.io/contact/">contact KCTW</a>. This site collects no personal data: <a href="https://prodbykctw-max.github.io/privacy/">privacy policy</a>.</address>
         </div>`;
 }
 
