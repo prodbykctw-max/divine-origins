@@ -143,8 +143,11 @@ This project is described by the user as critically important. The standard is n
   no all-caps labels. Tokens for both modes live in `app/library/css/theme.css`
   (loaded last). The Source Map follows the same setting: its `--sm-*`
   variables live in the `<style>` block of `ParallelsOfTheGods.jsx`; the
-  Network canvas uses `PAL()` and the 3D Cosmos uses `isLight()` (canvas and
-  WebGL can't read CSS variables).
+  Network canvas uses `PAL()` (canvas can't read CSS variables).
+  **The 3D Cosmos star map (`CosmosView.jsx`) is frozen**: it stays dark, in
+  both modes, exactly as shipped (`.cosmos` forces the dark `--sm-*` vars).
+  Never restyle or "fix" it during a theme or colour change without the
+  user's explicit OK.
   App icon + share image: `app/library/icons/`.
 - **Spec package** complete and self-tested at 102/102 green.
 - **CI** gates docs + canonical seed + the app build on every push/PR.

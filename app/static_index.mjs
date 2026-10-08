@@ -39,6 +39,14 @@ export function staticIndexHTML({ texts, groups, calendars, deities }, seedCount
           <ul>${deities.map((x) => li(x.name, [trad(x.tradition), x.date].filter(Boolean).join(', '), firstSentence(x.shortDesc))).join('')}</ul>
           <h2>Calendar systems (${calendars.length})</h2>
           <ul>${calendars.map((c) => li(c.name, [c.type && titleCase(c.type), c.origin].filter(Boolean).join(', '), firstSentence(c.note))).join('')}</ul>
+          <h2>Read the library in other formats</h2>
+          <ul>
+            <li><a href="index.md">Divine Origins library contents as Markdown</a></li>
+            <li><a href="llms.txt">Divine Origins summary for AI assistants (llms.txt)</a></li>
+            <li><a href="sitemap.xml">Divine Origins sitemap</a></li>
+          </ul>
+          <h2>About the author</h2>
+          <address>Divine Origins is researched and built by KCTW, a developer and music producer and co-founder of RARE Agency. The source code, seed data and specification are public on <a href="https://github.com/prodbykctw-max/divine-origins" rel="author">GitHub</a>.</address>
         </div>`;
 }
 
