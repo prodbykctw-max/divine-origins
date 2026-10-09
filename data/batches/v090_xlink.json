@@ -1,0 +1,196 @@
+{
+ "traditions": [],
+ "deities": [],
+ "facets": [],
+ "deity_updates": [],
+ "parallels": [
+  {
+   "id": "xl-p001",
+   "facet_a_id": "papaios-scythian-sky-father",
+   "facet_b_id": "zeus-sky-father",
+   "strength": "identity",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Herodotus records that the Scythians call Zeus 'Papaios'",
+    "Both are the sky-father at the head of the pantheon"
+   ],
+   "source_tradition": "Greek ethnography (Herodotus)",
+   "primary_text_evidence": [
+    "Herodotus, Histories 4.59"
+   ]
+  },
+  {
+   "id": "xl-p002",
+   "facet_a_id": "api-scythian-scythian-earth",
+   "facet_b_id": "gaia-earth-body",
+   "strength": "identity",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Herodotus equates the Scythian Api with Ge, the Earth",
+    "Both are the earth as divine mother and consort of the sky-father"
+   ],
+   "source_tradition": "Greek ethnography (Herodotus)",
+   "primary_text_evidence": [
+    "Herodotus, Histories 4.59"
+   ]
+  },
+  {
+   "id": "xl-p003",
+   "facet_a_id": "argimpasa-investiture-goddess",
+   "facet_b_id": "aphrodite-love",
+   "strength": "identity",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Herodotus equates Argimpasa with Aphrodite Ourania",
+    "Both are the heavenly goddess of love and sovereignty"
+   ],
+   "source_tradition": "Greek ethnography (Herodotus)",
+   "primary_text_evidence": [
+    "Herodotus, Histories 4.59"
+   ]
+  },
+  {
+   "id": "xl-p004",
+   "facet_a_id": "typhon-detail-storm-rival",
+   "facet_b_id": "set-usurper-murderer",
+   "strength": "identity",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Greek writers name the Egyptian Set as Typhon",
+    "Both are the storm-chaos rival who fights the reigning order and the rightful heir"
+   ],
+   "source_tradition": "Greco-Egyptian identification",
+   "primary_text_evidence": [
+    "Herodotus, Histories 2.144, 2.156",
+    "Plutarch, On Isis and Osiris 41, 49"
+   ]
+  },
+  {
+   "id": "xl-p005",
+   "facet_a_id": "uranos-first-sky-king",
+   "facet_b_id": "varuna-all-seeing",
+   "strength": "partial-parallel",
+   "type": "etymological-link",
+   "basis": [
+    "Both are an ancient sky-sovereign who encompasses the world",
+    "A shared root for the two names has long been proposed"
+   ],
+   "scholarly_caveat": "The Varuna–Ouranos etymology is old and widely doubted; treat it as a possibility, not a finding."
+  },
+  {
+   "id": "xl-p006",
+   "facet_a_id": "eros-primordial-cosmogonic-desire",
+   "facet_b_id": "kamadeva-arrow-of-desire",
+   "strength": "partial-parallel",
+   "type": "structural-function-match",
+   "basis": [
+    "Desire personified as a god",
+    "In the Rigveda, desire (kama) is the first seed of mind at creation, as Eros is among the first powers in Hesiod"
+   ],
+   "primary_text_evidence": [
+    "Rigveda 10.129",
+    "Hesiod, Theogony 116–122"
+   ]
+  },
+  {
+   "id": "xl-p007",
+   "facet_a_id": "supay-lord-uku-pacha",
+   "facet_b_id": "satan-christian-ruler-of-this-world",
+   "strength": "partial-parallel",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Spanish missionaries used 'Supay' to translate 'the Devil' in Quechua catechisms",
+    "Supay rules the inner world of the dead, the realm the missionaries equated with hell"
+   ],
+   "source_tradition": "Colonial Andean Christianity",
+   "scholarly_caveat": "The equation is a missionary translation. In Andean tradition Supay is an ambivalent lord of the inner earth, not a principle of evil."
+  },
+  {
+   "id": "xl-p008",
+   "facet_a_id": "ekwensu-chaos-trickster",
+   "facet_b_id": "satan-christian-tempter",
+   "strength": "partial-parallel",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Igbo Bible translations and preaching render 'Satan' as Ekwensu",
+    "Both are agents of disorder who lead people astray"
+   ],
+   "source_tradition": "Igbo Christianity",
+   "scholarly_caveat": "Before missionary use, Ekwensu was an ambivalent trickster and war power, not an evil adversary of God."
+  },
+  {
+   "id": "xl-p009",
+   "facet_a_id": "tornarsuk-shaman-helper",
+   "facet_b_id": "satan-christian-fallen-angel",
+   "strength": "partial-parallel",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Moravian and Danish missionaries in Greenland identified Tornarsuk with the Devil",
+    "Both stand at the head of the spirit powers outside the missionaries' God"
+   ],
+   "source_tradition": "Greenlandic mission Christianity",
+   "scholarly_caveat": "Tornarsuk was the master of the shamans' helping spirits; the devil reading is a missionary recasting."
+  },
+  {
+   "id": "xl-p010",
+   "facet_a_id": "yurupari-flute-lawgiver",
+   "facet_b_id": "satan-christian-tempter",
+   "strength": "contrast",
+   "type": "documented-historical-transmission",
+   "basis": [
+    "Jesuit missionaries named Yurupari as the Devil in Tupi-language teaching",
+    "In Northwest Amazonian tradition he is the culture-hero lawgiver of the sacred flutes"
+   ],
+   "source_tradition": "Colonial Brazilian Christianity",
+   "scholarly_caveat": "A missionary demonization of a culture hero; the two roles are opposites."
+  },
+  {
+   "id": "xl-p011",
+   "facet_a_id": "ogun-trinidad-warrior-iron",
+   "facet_b_id": "michael-christian-dragon-fighter",
+   "strength": "identity",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "In Trinidad Orisha worship, Ogun is venerated through Saint Michael the Archangel",
+    "Both are the armed warrior who defends the faithful"
+   ],
+   "syncretic_source": "Trinidad Orisha (Shango) tradition, 19th–20th century"
+  },
+  {
+   "id": "xl-p012",
+   "facet_a_id": "pan-lord-of-wild",
+   "facet_b_id": "horned-god-lord-of-wild",
+   "strength": "derivation",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Wiccan writings present the Horned God as the god known to the Greeks as Pan",
+    "Both are the horned lord of beasts and wild nature"
+   ],
+   "syncretic_source": "Gerald Gardner, Witchcraft Today (1954), and later Wiccan liturgy"
+  },
+  {
+   "id": "xl-p013",
+   "facet_a_id": "pan-lord-of-wild",
+   "facet_b_id": "baphomet-astral-light",
+   "strength": "partial-parallel",
+   "type": "iconographic-parallel",
+   "basis": [
+    "Lévi's goat-headed Baphomet draws on the horned, goat-footed image of Pan",
+    "Both are images of nature's generative force"
+   ],
+   "syncretic_source": "Éliphas Lévi, Dogme et Rituel de la Haute Magie (1854–56)"
+  },
+  {
+   "id": "xl-p014",
+   "facet_a_id": "athtar-failed-ascent",
+   "facet_b_id": "athtar-south-arabian-venus-high-god",
+   "strength": "identity",
+   "type": "etymological-link",
+   "basis": [
+    "The same morning-star god under the shared Semitic name ʿAthtar",
+    "Venus as a male divinity in both pantheons"
+   ],
+   "source_tradition": "Semitic (Ugaritic and South Arabian)"
+  }
+ ]
+}

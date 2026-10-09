@@ -1,0 +1,6 @@
+added {'traditions': 100, 'deities': 760, 'facets': 880, 'alt_names': 208, 'parallels': 937}
+skip_facet: 4 ['v090_eas:kubera-lord-of-wealth', 'v090_eur:papaios-sky-father', 'v090_eur:api-scythian-earth', 'v090_eur:argimpasa-heavenly-goddess']
+skip_deity: 3 ['v090_eur:papaios', 'v090_eur:api-scythian', 'v090_eur:argimpasa']
+drop_parallel_duplicate_pair: 8 ['v090_eur:eur-p042', 'v090_eur:eur-p138', 'v090_eur:eur-p146', 'v090_afa:afa-p128', 'v090_afa:afa-p197', 'v090_xlink:xl-p001', 'v090_xlink:xl-p002', 'v090_xlink:xl-p003']
+drop_parallel_missing_facet: 3 ['v090_eur:eur-p180', 'v090_eur:eur-p181', 'v090_eur:eur-p182']
+totals {'traditions': 252, 'deities': 1403, 'facets': 1814, 'canonical_parallels': 1196}

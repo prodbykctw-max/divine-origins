@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "counts": {
+      "traditions": 252,
+      "deities": 1403,
+      "facets": 1814,
+      "parallels": 1196
+    },
+    "defects_total": 1,
+    "by_severity": {
+      "SEVERITY-3": 1
+    },
+    "by_code": {
+      "facets_mostly_unsourced": 1
+    },
+    "strength_distribution": {
+      "identity": 215,
+      "strong-parallel": 289,
+      "derivation": 105,
+      "partial-parallel": 376,
+      "contrast": 50,
+      "confident": 155,
+      "working": 5,
+      "tentative": 1
+    },
+    "facets_with_scholarly_note": 181
+  },
+  "defects": [
+    {
+      "severity": "SEVERITY-3",
+      "code": "facets_mostly_unsourced",
+      "ref": "181/1814",
+      "detail": "only 181/1814 (10.0%) facets carry a scholarly_note"
+    }
+  ]
+}

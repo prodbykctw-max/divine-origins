@@ -1,0 +1,627 @@
+{
+  "_about": "Coverage checklist: traditions and the core figures each should have. Used by tools/audit_coverage.py. A figure counts as present when it matches a deity primary_name or alternate_name (case-insensitive substring).",
+  "groups": {
+    "Abrahamic and related": {
+      "Judaism (Hebrew Bible, rabbinic)": [
+        "Yahweh",
+        "Elohim",
+        "HaShem|Hashem|Ha-Shem",
+        "Shekhinah",
+        "HaSatan",
+        "Metatron",
+        "Michael",
+        "Gabriel",
+        "Leviathan",
+        "Behemoth"
+      ],
+      "Second Temple / apocalyptic": [
+        "Enoch",
+        "Azazel",
+        "Shemihaza",
+        "Mastema",
+        "Belial",
+        "Watchers"
+      ],
+      "Christianity": [
+        "God the Father",
+        "Christ",
+        "Holy Spirit|Holy Ghost|Paraclete",
+        "Mary",
+        "Satan",
+        "Lucifer",
+        "Beelzebub",
+        "Michael"
+      ],
+      "Islam": [
+        "Allah",
+        "Jibril|Jibrail|Jibra'il",
+        "Iblis",
+        "Shaitan|Shaytan",
+        "Isa|ʿĪsā",
+        "Muhammad",
+        "Jinn",
+        "Mika'il|Mikail|Mikal",
+        "Israfil",
+        "Azrael|Azra'il|Malak al-Mawt"
+      ],
+      "Kabbalah": [
+        "Ein Sof",
+        "Adam Kadmon",
+        "Samael",
+        "Lilith"
+      ],
+      "Gnosticism": [
+        "Monad",
+        "Sophia",
+        "Yaldabaoth",
+        "Barbelo",
+        "Abraxas"
+      ],
+      "Mandaeism": [
+        "Hayyi Rabbi|Hayyi",
+        "Manda d-Hayyi",
+        "Ptahil",
+        "Ruha"
+      ],
+      "Yazidism": [
+        "Melek Taus",
+        "Tawûsî Melek",
+        "Sheikh Adi"
+      ],
+      "Druze": [
+        "al-Hakim",
+        "Hamza ibn Ali"
+      ],
+      "Bahá'í Faith": [
+        "Bahá'u'lláh",
+        "the Báb"
+      ],
+      "Samaritanism": [
+        "Taheb"
+      ],
+      "Rastafari": [
+        "Jah",
+        "Haile Selassie"
+      ]
+    },
+    "Satanism and the Left-Hand Path": {
+      "LaVeyan Satanism (Church of Satan)": [
+        "Satan"
+      ],
+      "Temple of Set": [
+        "Set"
+      ],
+      "Theistic Satanism": [
+        "Satan"
+      ],
+      "The Satanic Temple": [
+        "Baphomet"
+      ]
+    },
+    "Ancient Near East": {
+      "Sumerian": [
+        "An",
+        "Enlil",
+        "Enki",
+        "Inanna",
+        "Ninhursag",
+        "Nanna|Suen",
+        "Utu",
+        "Ereshkigal"
+      ],
+      "Babylonian / Akkadian": [
+        "Marduk",
+        "Tiamat",
+        "Apsu",
+        "Ishtar",
+        "Nabu",
+        "Shamash",
+        "Sin|Suen",
+        "Nergal"
+      ],
+      "Assyrian": [
+        "Ashur"
+      ],
+      "Canaanite / Ugaritic": [
+        "El",
+        "Baal",
+        "Asherah",
+        "Anat",
+        "Mot",
+        "Yam",
+        "Astarte",
+        "Dagon",
+        "Moloch"
+      ],
+      "Phoenician / Punic": [
+        "Melqart",
+        "Tanit",
+        "Eshmun",
+        "Baal Hammon"
+      ],
+      "Hittite / Hurrian": [
+        "Teshub",
+        "Kumarbi",
+        "Hebat",
+        "Tarhunz",
+        "Arinna|Sun goddess of Arinna"
+      ],
+      "Pre-Islamic Arabian": [
+        "Hubal",
+        "Allat",
+        "al-Uzza",
+        "Manat",
+        "Dushara"
+      ],
+      "Zoroastrianism": [
+        "Ahura Mazda",
+        "Angra Mainyu",
+        "Ahriman",
+        "Mithra",
+        "Anahita",
+        "Amesha Spenta|Amesha Spentas"
+      ],
+      "Manichaeism": [
+        "Father of Greatness",
+        "Primal Man",
+        "Prince of Darkness"
+      ],
+      "Egyptian": [
+        "Ra",
+        "Atum",
+        "Ptah",
+        "Osiris",
+        "Isis",
+        "Horus",
+        "Set",
+        "Thoth",
+        "Anubis",
+        "Ma'at",
+        "Amun",
+        "Apep",
+        "Hathor",
+        "Sekhmet",
+        "Nut",
+        "Geb",
+        "Aten"
+      ]
+    },
+    "Mediterranean and Europe": {
+      "Greek": [
+        "Zeus",
+        "Hera",
+        "Poseidon",
+        "Hades",
+        "Athena",
+        "Apollo",
+        "Artemis",
+        "Aphrodite",
+        "Ares",
+        "Hermes",
+        "Hephaestus",
+        "Demeter",
+        "Dionysus",
+        "Prometheus",
+        "Kronos",
+        "Gaia",
+        "Uranus|Ouranos",
+        "Typhon",
+        "Chaos|Khaos",
+        "Hecate",
+        "Persephone"
+      ],
+      "Roman": [
+        "Jupiter",
+        "Juno",
+        "Mars",
+        "Venus",
+        "Mercury",
+        "Neptune",
+        "Pluto",
+        "Minerva",
+        "Saturn",
+        "Janus",
+        "Vesta",
+        "Bacchus",
+        "Sol Invictus"
+      ],
+      "Orphic / mystery": [
+        "Phanes|Protogonos",
+        "Zagreus",
+        "Mithras",
+        "Cybele",
+        "Attis"
+      ],
+      "Etruscan": [
+        "Tinia",
+        "Uni",
+        "Menrva"
+      ],
+      "Norse": [
+        "Odin",
+        "Thor",
+        "Loki",
+        "Freyja",
+        "Frigg",
+        "Baldr",
+        "Tyr",
+        "Heimdall",
+        "Hel",
+        "Ymir",
+        "Freyr",
+        "Fenrir",
+        "Jormungandr"
+      ],
+      "Celtic": [
+        "Dagda",
+        "Lugh",
+        "Morrigan",
+        "Brigid",
+        "Danu",
+        "Cernunnos",
+        "Taranis",
+        "Rhiannon",
+        "Arawn",
+        "Manannan"
+      ],
+      "Slavic": [
+        "Perun",
+        "Veles",
+        "Svarog",
+        "Mokosh",
+        "Dazhbog",
+        "Chernobog"
+      ],
+      "Baltic": [
+        "Dievas",
+        "Perkunas",
+        "Laima"
+      ],
+      "Finnish": [
+        "Ukko",
+        "Väinämöinen",
+        "Ilmatar|Luonnotar",
+        "Tuoni"
+      ],
+      "Sámi": [
+        "Beaivi|Beiwe|Beaivváš",
+        "Horagalles|Hora Galles"
+      ],
+      "Basque": [
+        "Mari",
+        "Sugaar"
+      ],
+      "Armenian": [
+        "Aramazd",
+        "Anahit",
+        "Vahagn"
+      ],
+      "Georgian": [
+        "Armazi"
+      ],
+      "Wicca / modern Paganism": [
+        "The Goddess",
+        "The Horned God"
+      ],
+      "Thelema": [
+        "Nuit",
+        "Hadit",
+        "Ra-Hoor-Khuit",
+        "Babalon"
+      ]
+    },
+    "South Asia": {
+      "Vedic": [
+        "Indra",
+        "Agni",
+        "Varuna",
+        "Soma",
+        "Prajapati",
+        "Purusha",
+        "Rudra",
+        "Vritra|Vrtra",
+        "Ushas"
+      ],
+      "Hindu": [
+        "Brahma",
+        "Vishnu",
+        "Shiva",
+        "Devi",
+        "Lakshmi",
+        "Saraswati",
+        "Parvati",
+        "Durga",
+        "Kali",
+        "Ganesha",
+        "Kartikeya",
+        "Hanuman",
+        "Rama",
+        "Krishna",
+        "Yama",
+        "Brahman",
+        "Ravana",
+        "Mahishasura"
+      ],
+      "Buddhism": [
+        "Buddha",
+        "Avalokiteshvara",
+        "Amitabha",
+        "Maitreya",
+        "Mara",
+        "Manjushri",
+        "Tara",
+        "Vairocana"
+      ],
+      "Jainism": [
+        "Mahavira",
+        "Parshvanatha",
+        "Rishabhanatha"
+      ],
+      "Sikhism": [
+        "Waheguru",
+        "Ik Onkar"
+      ],
+      "Tibetan Bön": [
+        "Tonpa Shenrab"
+      ],
+      "Dravidian folk": [
+        "Murugan",
+        "Ayyanar",
+        "Mariamman"
+      ]
+    },
+    "East and Southeast Asia": {
+      "Chinese folk / Taoist": [
+        "Jade Emperor",
+        "Pangu",
+        "Nüwa",
+        "Fuxi|Fu Xi",
+        "Guanyin",
+        "Xiwangmu",
+        "Laozi",
+        "Guan Yu",
+        "Yanluo|Yama King|Yanwang",
+        "Mazu",
+        "Sun Wukong"
+      ],
+      "Japanese Shinto": [
+        "Amaterasu",
+        "Susanoo",
+        "Izanagi",
+        "Izanami",
+        "Tsukuyomi",
+        "Inari",
+        "Hachiman",
+        "Ame-no-Minakanushi|Amenominakanushi"
+      ],
+      "Korean": [
+        "Hwanin|Hananim",
+        "Hwanung",
+        "Dangun"
+      ],
+      "Vietnamese": [
+        "Lạc Long Quân",
+        "Âu Cơ"
+      ],
+      "Philippine": [
+        "Bathala"
+      ],
+      "Balinese / Indonesian": [
+        "Sang Hyang Widhi|Acintya",
+        "Batara Guru"
+      ],
+      "Burmese": [
+        "Thagyamin"
+      ],
+      "Thai": [
+        "Phra Phrom"
+      ],
+      "Ainu": [
+        "Kamuy"
+      ]
+    },
+    "Central Asia and Siberia": {
+      "Tengrism": [
+        "Tengri",
+        "Umay",
+        "Erlik"
+      ],
+      "Mongolian": [
+        "Tengri"
+      ],
+      "Siberian": [
+        "Ülgen",
+        "Erlik"
+      ]
+    },
+    "Africa": {
+      "Yoruba": [
+        "Olodumare",
+        "Olorun",
+        "Obatala",
+        "Orunmila",
+        "Eshu",
+        "Ogun",
+        "Shango",
+        "Oya",
+        "Yemoja",
+        "Oshun"
+      ],
+      "Fon / Ewe": [
+        "Mawu",
+        "Lisa",
+        "Nana Buluku",
+        "Legba"
+      ],
+      "Akan": [
+        "Nyame",
+        "Asase Yaa",
+        "Anansi"
+      ],
+      "Igbo": [
+        "Chukwu",
+        "Ala",
+        "Amadioha"
+      ],
+      "Zulu": [
+        "Unkulunkulu"
+      ],
+      "San": [
+        "Cagn"
+      ],
+      "Dogon": [
+        "Amma",
+        "Nommo"
+      ],
+      "Maasai": [
+        "Enkai"
+      ],
+      "Kikuyu": [
+        "Ngai"
+      ],
+      "Dinka": [
+        "Nhialic"
+      ],
+      "Bakongo": [
+        "Nzambi"
+      ],
+      "Oromo": [
+        "Waaqa"
+      ],
+      "Ancient Nubian / Kushite": [
+        "Apedemak"
+      ]
+    },
+    "African diaspora": {
+      "Haitian Vodou": [
+        "Bondye|Bondieu",
+        "Papa Legba",
+        "Damballa",
+        "Erzulie",
+        "Baron Samedi",
+        "Ogou"
+      ],
+      "Santería / Lucumí": [
+        "Olofi|Olofin",
+        "Elegguá",
+        "Changó",
+        "Yemayá",
+        "Babalú-Ayé"
+      ],
+      "Candomblé": [
+        "Oxalá",
+        "Exu",
+        "Iemanjá",
+        "Oxum"
+      ],
+      "Umbanda": [
+        "Zambi"
+      ],
+      "Hoodoo / Palo": [
+        "Nsambi"
+      ]
+    },
+    "Americas": {
+      "Aztec / Mexica": [
+        "Ometeotl|Ometecuhtli",
+        "Quetzalcoatl",
+        "Tezcatlipoca",
+        "Huitzilopochtli",
+        "Tlaloc",
+        "Coatlicue",
+        "Mictlantecuhtli",
+        "Xipe Totec"
+      ],
+      "Maya": [
+        "Itzamna",
+        "Kukulkan",
+        "Hunab Ku|Hunab K'u",
+        "Chaac",
+        "Ixchel|Ix Chel",
+        "Hun Hunahpu",
+        "Tepeu"
+      ],
+      "Inca / Andean": [
+        "Viracocha",
+        "Inti",
+        "Pachamama",
+        "Mama Quilla",
+        "Supay",
+        "Illapa"
+      ],
+      "Lakota": [
+        "Wakan Tanka",
+        "Iktomi",
+        "White Buffalo Calf Woman"
+      ],
+      "Navajo": [
+        "Changing Woman"
+      ],
+      "Haudenosaunee": [
+        "Sky Woman"
+      ],
+      "Ojibwe": [
+        "Gitche Manitou",
+        "Nanabozho"
+      ],
+      "Inuit": [
+        "Sedna"
+      ],
+      "Hopi": [
+        "Spider Grandmother"
+      ],
+      "Taíno": [
+        "Yúcahu",
+        "Atabey"
+      ],
+      "Guaraní": [
+        "Tupã"
+      ],
+      "Mapuche": [
+        "Ngenechen"
+      ]
+    },
+    "Oceania": {
+      "Māori": [
+        "Io",
+        "Ranginui",
+        "Papatuanuku",
+        "Tāne",
+        "Māui"
+      ],
+      "Hawaiian": [
+        "Kāne",
+        "Kanaloa",
+        "Lono",
+        "Kū",
+        "Pele"
+      ],
+      "Aboriginal Australian": [
+        "Rainbow Serpent",
+        "Baiame",
+        "Bunjil"
+      ],
+      "Melanesian": [
+        "Qat"
+      ]
+    },
+    "Modern esoteric and new religious": {
+      "Theosophy": [
+        "Sanat Kumara"
+      ],
+      "Hermeticism": [
+        "Hermes Trismegistus"
+      ],
+      "Cao Đài": [
+        "Cao Đài"
+      ],
+      "Latter-day Saints": [
+        "Heavenly Father",
+        "Heavenly Mother"
+      ],
+      "Spiritism": [
+        "Spirit of Truth"
+      ]
+    }
+  }
+}
