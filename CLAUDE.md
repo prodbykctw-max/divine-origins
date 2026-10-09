@@ -57,7 +57,7 @@ divine-origins/
   cross-refs). Bar: **102/102**. Run after any doc edit before committing.
 - **`tools/validate_seed_data.py`** validates the **seed data** (foreign keys,
   dangling refs, self/mislinked parallels, triage contradictions). Exits non-zero
-  on any Severity-1 defect. CI gates the **canonical v0.9.0** file with it.
+  on any Severity-1 defect. CI gates the **canonical v0.9.1** file with it.
 
 A green self-test says nothing about the data. Always run the data validator on
 any seed you touch.
@@ -65,7 +65,7 @@ any seed you touch.
 ## When the user asks you to do something
 
 ### "Validate / fix the data"
-Run `python3 tools/validate_seed_data.py data/source_map_seed_data_v090.json`.
+Run `python3 tools/validate_seed_data.py data/source_map_seed_data_v091.json`.
 The canonical seed must stay at 0 Severity-1 / 0 Severity-2. To regenerate it
 from sources, `python3 tools/forward_port.py`. Never hand-edit in a way that
 reintroduces dangling `parallel_facets` or orphaned `tradition_id` FKs.
@@ -125,20 +125,21 @@ This project is described by the user as critically important. The standard is n
 
 ## Current state
 
-- **Canonical data:** `v0.9.0` — 252 traditions, 1,403 deities, 1,814 facets,
-  1,196 parallels; validates 0 Severity-1 / 0 Severity-2. Built by
-  `tools/merge_batches.py` from v0.8.0 + the regional batches in `data/batches/`
-  (see `reports/EXPANSION_v090.md`). The app embeds a copy at
-  `app/vite/seed-data.json` — keep it identical to the canonical file.
+- **Canonical data:** `v0.9.1` — 324 traditions, 1,742 deities, 2,209 facets,
+  1,745 parallels; validates 0 Severity-1 / 0 Severity-2. Built by
+  `tools/merge_batches.py`: v0.9.0 = v0.8.0 + regional batches; v0.9.1 =
+  v0.9.0 + occult/Hermetic, UFO & new-religion, and New Age batches
+  (see `reports/EXPANSION_v090.md`, `reports/EXPANSION_v091.md`). The app
+  embeds a copy at `app/vite/seed-data.json` — keep it identical.
   Coverage is audited with `tools/audit_coverage.py` against
-  `tools/coverage_checklist.json` (400/400 in v0.9.0). The same figure under
+  `tools/coverage_checklist.json` (450/450 in v0.9.1). The same figure under
   different names gets one record per tradition, joined by typed `identity` /
   `derivation` links (e.g. HaSatan → Satan → Iblīs; Set = Satan per the Temple of Set).
 - **Full data lineage committed:** v0.1.0 → v0.3.0 → v0.4.0 → v0.5.0 → v0.6.0 →
-  v0.6.5 → v0.7.0 → v0.8.0 → v0.9.0, each with a defect manifest in `reports/`.
+  v0.6.5 → v0.7.0 → v0.8.0 → v0.9.0 → v0.9.1, each with a defect manifest in `reports/`.
 - **App:** `app/divine-origins-combined.html` — one self-contained file: the
   Divine Origins library (`app/library/`) with the Source Map app (`app/vite/`,
-  React 19 + React Three Fiber + GSAP, canonical v0.9.0 seed) mounted inside it
+  React 19 + React Three Fiber + GSAP, canonical v0.9.1 seed) mounted inside it
   in a shadow root. Default Source Map view is the 3D **Cosmos**
   (`app/vite/CosmosView.jsx`); a WebGL galaxy (`app/library/js/universe.jsx`)
   runs behind the library. Both need a hardware GPU and fall back to 2D views.

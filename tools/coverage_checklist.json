@@ -622,6 +622,104 @@
       "Spiritism": [
         "Spirit of Truth"
       ]
+    },
+    "Western esotericism and the occult": {
+      "Hermeticism": [
+        "Hermes Trismegistus",
+        "Poimandres",
+        "Agathos Daimon"
+      ],
+      "Grimoires / Goetia": [
+        "Bael",
+        "Paimon",
+        "Astaroth",
+        "Asmoday|Asmodeus",
+        "Lucifuge Rofocale"
+      ],
+      "Enochian": [
+        "Choronzon|Coronzon",
+        "Madimi"
+      ],
+      "Typhonian / Thelema": [
+        "Lam",
+        "Aiwass",
+        "Nuit",
+        "Babalon"
+      ],
+      "Anthroposophy": [
+        "Ahriman",
+        "Sorath"
+      ],
+      "Folk saints": [
+        "Santa Muerte",
+        "Maximón",
+        "Jesús Malverde"
+      ],
+      "Lovecraftian occultism": [
+        "Cthulhu",
+        "Azathoth"
+      ]
+    },
+    "UFO religions and new movements": {
+      "Contactee / UFO": [
+        "The Greys",
+        "Nordics",
+        "Ashtar Sheran",
+        "Semjase"
+      ],
+      "Raëlism": [
+        "Raël"
+      ],
+      "Heaven's Gate": [
+        "Ti and Do|Ti"
+      ],
+      "Scientology": [
+        "Xenu"
+      ],
+      "Nation of Islam": [
+        "Yakub",
+        "W. Fard Muhammad|Fard"
+      ],
+      "Urantia": [
+        "Michael of Nebadon"
+      ],
+      "Ancient astronauts": [
+        "Anunnaki (Sitchin)|Nibiru"
+      ],
+      "Law of One": [
+        "Ra (Law of One)"
+      ],
+      "Demonological reading of UFOs": [
+        "UFO entities as demons"
+      ]
+    },
+    "New Age": {
+      "Theosophy / Masters": [
+        "Koot Hoomi|Kuthumi",
+        "Morya",
+        "Djwal Khul"
+      ],
+      "Ascended Masters": [
+        "Saint Germain",
+        "Lady Nada|Nada"
+      ],
+      "Channeled": [
+        "Seth",
+        "Ramtha",
+        "Abraham",
+        "Kryon",
+        "Bashar"
+      ],
+      "New Age concepts": [
+        "Christ consciousness",
+        "Higher Self",
+        "Gaia"
+      ],
+      "Plant-medicine traditions": [
+        "Madre Ayahuasca|Mother Ayahuasca",
+        "Juramidam",
+        "Iboga"
+      ]
     }
   }
 }

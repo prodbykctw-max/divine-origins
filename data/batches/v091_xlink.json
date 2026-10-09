@@ -1,0 +1,169 @@
+{
+ "traditions": [
+  {
+   "id": "demonological-ufology",
+   "name": "Demonological reading of UFOs",
+   "earliest_attestation": "1969–1975 CE (Vallée, Keel, Seraphim Rose); continued in Christian ufology",
+   "geographic_origin": "United States and France",
+   "scholarly_note": "An interpretive tradition, not an organized religion: writers who read UFO encounters as the same phenomenon earlier ages called demons, fairies or fallen angels. Jacques Vallée and John Keel framed it as folklore continuity; Orthodox and evangelical writers framed it as demonic deception."
+  }
+ ],
+ "deities": [
+  {
+   "id": "ufo-entities-as-demons",
+   "primary_name": "UFO entities as demons",
+   "alternate_names": [
+    "Ultraterrestrials (Keel)",
+    "the aliens as fallen angels",
+    "demonic visitors"
+   ],
+   "tradition_id": "demonological-ufology",
+   "earliest_attestation": "1969 CE (Vallée, Passport to Magonia, folklore-continuity form); demonic reading 1970–1975 (Keel; Seraphim Rose)",
+   "primary_sources": [
+    "Jacques Vallée, Passport to Magonia (1969)",
+    "John Keel, Operation Trojan Horse (1970)",
+    "Seraphim Rose, Orthodoxy and the Religion of the Future (1975)",
+    "Gary Bates, Alien Intrusion (2004)"
+   ],
+   "summary": "The beings people meet as aliens are not visitors from other planets. They are the same intelligences that every earlier age met under its own names — demons, the fair folk, the jinn, the fallen angels — wearing the costume of the space age. They take whatever form a culture expects; Christian writers such as Seraphim Rose add that they deceive and lead people away from God with promises of hidden knowledge and a new humanity.",
+   "facets": [
+    "ufo-entities-as-demons-deceivers",
+    "ufo-entities-as-demons-shape-takers"
+   ]
+  }
+ ],
+ "facets": [
+  {
+   "id": "ufo-entities-as-demons-deceivers",
+   "parent_deity_id": "ufo-entities-as-demons",
+   "facet_name": "Fallen angels in the guise of space visitors",
+   "tier_assignment": 4,
+   "function_tags": [
+    "adversary",
+    "deceiver",
+    "fallen-angel",
+    "false-revelation"
+   ],
+   "valence": "negative",
+   "core_claim": "The 'aliens' are demons. Their messages of cosmic brotherhood, their abductions and their hybrid programmes are the old rebellion against God in a new form, as the Watchers once came down and mingled with humanity.",
+   "parallel_facets": [],
+   "scholarly_note": "Christian-apologetic form: Seraphim Rose (1975), Gary Bates (2004)."
+  },
+  {
+   "id": "ufo-entities-as-demons-shape-takers",
+   "parent_deity_id": "ufo-entities-as-demons",
+   "facet_name": "One phenomenon behind fairies, demons and aliens",
+   "tier_assignment": 4,
+   "function_tags": [
+    "shape-shifter",
+    "trickster",
+    "liminality",
+    "culture-adaptive-apparition"
+   ],
+   "valence": "ambivalent",
+   "core_claim": "The same intelligence appears in every century in the shape its witnesses expect: fairies and incubi in the medieval countryside, airships in the 1890s, flying saucers after 1947. The form changes; the behaviour does not.",
+   "parallel_facets": [],
+   "scholarly_note": "Folklore-continuity form: Jacques Vallée, Passport to Magonia (1969); John Keel, Operation Trojan Horse (1970), who called them 'ultraterrestrials'."
+  }
+ ],
+ "deity_updates": [],
+ "parallels": [
+  {
+   "id": "xl2-p001",
+   "facet_a_id": "ufo-entities-as-demons-deceivers",
+   "facet_b_id": "greys-visitors",
+   "strength": "identity",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "This reading identifies the grey visitors of abduction accounts as demons",
+    "Both are non-human intelligences that appear, take people and deliver messages"
+   ],
+   "syncretic_source": "Seraphim Rose, Orthodoxy and the Religion of the Future (1975); Gary Bates, Alien Intrusion (2004)"
+  },
+  {
+   "id": "xl2-p002",
+   "facet_a_id": "ufo-entities-as-demons-deceivers",
+   "facet_b_id": "watchers-fallen",
+   "strength": "identity",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Christian ufology reads the Watchers of 1 Enoch, who came down and mingled with humanity, as the same beings people now call aliens",
+    "Both descend from the sky, cross the boundary between heaven and earth, and corrupt humanity"
+   ],
+   "syncretic_source": "Christian ufology since the 1970s (e.g. Gary Bates, Alien Intrusion, 2004)"
+  },
+  {
+   "id": "xl2-p003",
+   "facet_a_id": "ufo-entities-as-demons-shape-takers",
+   "facet_b_id": "jinn-beings-of-fire",
+   "strength": "partial-parallel",
+   "type": "structural-function-match",
+   "basis": [
+    "Both are unseen intelligent beings that share the world with humans and can take visible forms",
+    "Both are blamed for abductions, possession and deceptive visions"
+   ],
+   "scholarly_caveat": "Some Muslim writers identify UFO beings with jinn; this is a popular reading, not a teaching of Islamic law or theology."
+  },
+  {
+   "id": "xl2-p004",
+   "facet_a_id": "greys-hybrid-program",
+   "facet_b_id": "nephilim-giants",
+   "strength": "partial-parallel",
+   "type": "narrative-pattern-match",
+   "basis": [
+    "Sky-beings produce hybrid offspring with humans",
+    "In 1 Enoch the hybrids are the Nephilim; in abduction lore they are the alien-human hybrids"
+   ],
+   "scholarly_caveat": "The parallel is drawn by modern ufologists and Christian writers; 1 Enoch says nothing of spacecraft."
+  },
+  {
+   "id": "xl2-p005",
+   "facet_a_id": "lam-grey-prototype",
+   "facet_b_id": "greys-visitors",
+   "strength": "derivation",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Crowley's 1919 drawing of Lam, with its huge bald head and small features, is read as an early image of a grey",
+    "Typhonian writers present Lam as an entity contacted from 'outside', as contactees describe the greys"
+   ],
+   "syncretic_source": "Kenneth Grant's Typhonian writings (from 1972) and later ufology",
+   "scholarly_caveat": "The grey-alien image took shape in the 1960s–80s; the link to Crowley's drawing is a later reading."
+  },
+  {
+   "id": "xl2-p006",
+   "facet_a_id": "watchers-teachers-of-forbidden-arts",
+   "facet_b_id": "anunnaki-sitchin-astronaut-gods",
+   "strength": "partial-parallel",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Both are sky-beings who come down and teach humanity arts and knowledge",
+    "Ancient-astronaut writers read both as visitors from another world"
+   ],
+   "syncretic_source": "Erich von Däniken, Chariots of the Gods? (1968); Zecharia Sitchin, The 12th Planet (1976)"
+  },
+  {
+   "id": "xl2-p007",
+   "facet_a_id": "galactic-federation-of-light-star-alliance",
+   "facet_b_id": "ashtar-sheran-fleet-commander",
+   "strength": "identity",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Channelers place Ashtar's fleet within the Galactic Federation of Light",
+    "Both are star-nations said to watch over Earth's coming transition"
+   ],
+   "syncretic_source": "New Age channeling literature, 1980s–1990s"
+  },
+  {
+   "id": "xl2-p008",
+   "facet_a_id": "ufo-entities-as-demons-deceivers",
+   "facet_b_id": "ashtar-sheran-fleet-commander",
+   "strength": "contrast",
+   "type": "modern-syncretic-identification",
+   "basis": [
+    "Contactees receive Ashtar as a benevolent space commander",
+    "Christian ufology reads the same messages as demonic deception"
+   ],
+   "syncretic_source": "Contactee movement (George Van Tassel, 1952) vs. Christian ufology (Seraphim Rose, 1975)"
+  }
+ ]
+}
