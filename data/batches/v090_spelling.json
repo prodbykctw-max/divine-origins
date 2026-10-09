@@ -1,0 +1,187 @@
+{
+ "traditions": [],
+ "deities": [],
+ "facets": [],
+ "parallels": [],
+ "deity_updates": [
+  {
+   "deity_id": "indra",
+   "add_alternate_names": [
+    "Shakra"
+   ]
+  },
+  {
+   "deity_id": "daksha",
+   "add_alternate_names": [
+    "Daksha Prajapati"
+   ]
+  },
+  {
+   "deity_id": "purusha",
+   "add_alternate_names": [
+    "Purusha"
+   ]
+  },
+  {
+   "deity_id": "avalokiteshvara-deity",
+   "add_alternate_names": [
+    "Avalokiteshvara",
+    "Lokeshvara"
+   ]
+  },
+  {
+   "deity_id": "agni-deity",
+   "add_alternate_names": [
+    "Hutasha (Devourer-of-Offerings)"
+   ]
+  },
+  {
+   "deity_id": "kubera",
+   "add_alternate_names": [
+    "Vaishravana (Buddhist)",
+    "Vaishravana"
+   ]
+  },
+  {
+   "deity_id": "mahishasura",
+   "add_alternate_names": [
+    "Mahishasura"
+   ]
+  },
+  {
+   "deity_id": "venkateswara",
+   "add_alternate_names": [
+    "Venkateshvara"
+   ]
+  },
+  {
+   "deity_id": "chandra",
+   "add_alternate_names": [
+    "Shashin"
+   ]
+  },
+  {
+   "deity_id": "shukra",
+   "add_alternate_names": [
+    "Shukracarya",
+    "Ushanas Kavya"
+   ]
+  },
+  {
+   "deity_id": "shani",
+   "add_alternate_names": [
+    "Shanaishcara ('Slow-Mover')"
+   ]
+  },
+  {
+   "deity_id": "shesha",
+   "add_alternate_names": [
+    "Adishesha",
+    "Anantashesha"
+   ]
+  },
+  {
+   "deity_id": "dattatreya",
+   "add_alternate_names": [
+    "Shri Guru Datta"
+   ]
+  },
+  {
+   "deity_id": "manasa",
+   "add_alternate_names": [
+    "Vishahari"
+   ]
+  },
+  {
+   "deity_id": "nandi",
+   "add_alternate_names": [
+    "Nandikeshvara"
+   ]
+  },
+  {
+   "deity_id": "saptamatrika",
+   "add_alternate_names": [
+    "Ashtamatrkas (Eight Mothers)"
+   ]
+  },
+  {
+   "deity_id": "dasa-mahavidya",
+   "add_alternate_names": [
+    "The Dasha Mahavidyas"
+   ]
+  },
+  {
+   "deity_id": "sati",
+   "add_alternate_names": [
+    "Dakshayani"
+   ]
+  },
+  {
+   "deity_id": "kamakhya",
+   "add_alternate_names": [
+    "Kameshvari"
+   ]
+  },
+  {
+   "deity_id": "muneeswaran",
+   "add_alternate_names": [
+    "Munishvaran"
+   ]
+  },
+  {
+   "deity_id": "ishtalinga-shiva",
+   "add_alternate_names": [
+    "Ishtalinga (Paramashiva)"
+   ]
+  },
+  {
+   "deity_id": "sakra-buddhist",
+   "add_alternate_names": [
+    "Shakra (Buddhist)",
+    "Shakro devanam indrah"
+   ]
+  },
+  {
+   "deity_id": "bhaisajyaguru",
+   "add_alternate_names": [
+    "Bhaishajyaguru"
+   ]
+  },
+  {
+   "deity_id": "neminatha",
+   "add_alternate_names": [
+    "Arishtanemi"
+   ]
+  },
+  {
+   "deity_id": "bahubali",
+   "add_alternate_names": [
+    "Gommateshvara"
+   ]
+  },
+  {
+   "deity_id": "ambika-jain",
+   "add_alternate_names": [
+    "Kushmandini"
+   ]
+  },
+  {
+   "deity_id": "rato-machindranath",
+   "add_alternate_names": [
+    "Lokeshvara"
+   ]
+  },
+  {
+   "deity_id": "bishamonten",
+   "add_alternate_names": [
+    "Vaishravana"
+   ]
+  },
+  {
+   "deity_id": "taishakuten",
+   "add_alternate_names": [
+    "Shakra / Indra (source form)"
+   ]
+  }
+ ]
+}
