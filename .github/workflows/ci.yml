@@ -2,7 +2,7 @@ name: CI
 
 # Gates the project. Two independent checks, mirroring the two harnesses:
 #   1. self_test.py  — validates the DOCUMENTATION (docs exist, terms, JSON blocks)
-#   2. validate_seed_data.py — validates the canonical SEED DATA (v0.9.0)
+#   2. validate_seed_data.py — validates the canonical SEED DATA (v0.9.1)
 #   3. app build — the Source Map app and the combined single-file site must build
 # The seed validator exits non-zero on any Severity-1 defect, so a structurally
 # broken seed fails the build. Only the canonical seed is gated; historical
@@ -41,8 +41,8 @@ jobs:
       - name: Validate canonical seed (fails on any Severity-1 defect)
         run: |
           python3 tools/validate_seed_data.py \
-            data/source_map_seed_data_v090.json \
-            --manifest reports/defect_manifest_v090.json
+            data/source_map_seed_data_v091.json \
+            --manifest reports/defect_manifest_v091.json
 
   app-build:
     name: App build (Source Map + combined site)

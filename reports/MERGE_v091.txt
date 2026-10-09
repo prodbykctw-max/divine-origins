@@ -1,0 +1,3 @@
+added {'traditions': 72, 'deities': 339, 'facets': 395, 'parallels': 549, 'alt_names': 5}
+drop_parallel_duplicate_pair: 1 ['v091_xlink:xl2-p004']
+totals {'traditions': 324, 'deities': 1742, 'facets': 2209, 'canonical_parallels': 1745}
