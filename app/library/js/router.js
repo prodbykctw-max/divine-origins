@@ -13,6 +13,7 @@ const SECTIONS = [
   'calendars',
   'patterns',
   'timeline',
+  'sites',
   'source-map',
 ];
 

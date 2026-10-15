@@ -1,0 +1,14 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?s (SAMPLE(?en) AS ?name_en) (SAMPLE(?any) AS ?name_any) (SAMPLE(?c) AS ?coord) (SAMPLE(?cty) AS ?country) (GROUP_CONCAT(DISTINCT STR(?t); SEPARATOR="|") AS ?types) (GROUP_CONCAT(DISTINCT STR(?rel); SEPARATOR="|") AS ?religions) (GROUP_CONCAT(DISTINCT STR(?ded); SEPARATOR="|") AS ?dedicated) (SAMPLE(?img) AS ?image) WHERE {
+  { ?s wdt:P31/wdt:P279* wd:Q1370598 } UNION { ?s wdt:P31/wdt:P279* wd:Q164240 } UNION { ?s wdt:P31 wd:Q15135589 } UNION { ?s wdt:P31 wd:Q1595289 } UNION { ?s wdt:P31 wd:Q811600 } UNION { ?s wdt:P31 wd:Q12373247 } UNION { ?s wdt:P825 ?dd . ?dd wdt:P31/wdt:P279* wd:Q178885 }
+  ?s wdt:P625 ?c .
+  OPTIONAL { ?s rdfs:label ?en FILTER(LANG(?en)="en") }
+  OPTIONAL { ?s rdfs:label ?any }
+  OPTIONAL { ?s wdt:P17 ?cty }
+  OPTIONAL { ?s wdt:P31 ?t }
+  OPTIONAL { ?s wdt:P140 ?rel }
+  OPTIONAL { ?s wdt:P825 ?ded }
+  OPTIONAL { ?s wdt:P18 ?img }
+} GROUP BY ?s
