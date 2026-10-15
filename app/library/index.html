@@ -6,7 +6,7 @@
   <!-- GitHub Pages ignores _headers, so the security policy ships as meta tags.
        'unsafe-inline' scripts: the build inlines the bundle and sections use onclick="" handlers.
        prodbykctw-max.github.io: the single-file build loads photos and icons from the live site. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://prodbykctw-max.github.io; manifest-src 'self' https://prodbykctw-max.github.io; media-src 'self'; connect-src 'self' data: blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://prodbykctw-max.github.io; manifest-src 'self' https://prodbykctw-max.github.io; media-src 'self'; connect-src 'self' data: blob: https://prodbykctw-max.github.io; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Divine Origins: a comparative theology library</title>
   <meta name="description" content="Compare creator gods, sacred texts and calendars across the world's religious traditions, with real photos of the manuscripts and a 3D map of 643 deities.">
@@ -47,6 +47,7 @@
   <!-- Stylesheets — order matters -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sites.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
@@ -67,6 +68,7 @@
         <a href="#calendars"  class="topnav__link" data-section="calendars">Calendars</a>
         <a href="#patterns"   class="topnav__link" data-section="patterns">The pattern</a>
         <a href="#timeline"   class="topnav__link" data-section="timeline">Timeline</a>
+        <a href="#sites"      class="topnav__link" data-section="sites">Holy sites</a>
         <a href="#source-map" class="topnav__link topnav__link--cta" data-section="source-map">Source map</a>
       </div>
     </nav>
@@ -102,6 +104,10 @@
 
       <section id="section-timeline"   role="region" aria-label="Timeline" hidden aria-hidden="true">
         <!-- Injected by render.js renderTimeline() -->
+      </section>
+
+      <section id="section-sites"      role="region" aria-label="Holy Sites" hidden aria-hidden="true">
+        <!-- Injected by sections/sites.js renderSites() -->
       </section>
 
       <section id="section-source-map" role="region" aria-label="The Source Map" hidden aria-hidden="true">

@@ -49,7 +49,7 @@ const result = await esbuild.build({
 const js = result.outputFiles[0].text.replace(/<\/script/gi, '<\\/script');
 
 // 5. Inline everything into index.html
-const styles = ['base', 'layout', 'animations', 'polish', 'glass', 'theme']
+const styles = ['base', 'layout', 'animations', 'polish', 'glass', 'theme', 'sites']
   .map((n) => readFileSync(join(LIB, 'css', `${n}.css`), 'utf8')).join('\n');
 let html = readFileSync(join(LIB, 'index.html'), 'utf8');
 const before = html;
@@ -97,6 +97,8 @@ rmSync(SITE, { recursive: true, force: true });
 mkdirSync(SITE, { recursive: true });
 writeFileSync(join(SITE, 'index.html'), html);
 cpSync(join(LIB, 'img'), join(SITE, 'img'), { recursive: true });
+// Holy Sites data: index + one file per country and per dedicated figure, fetched on demand
+cpSync(join(LIB, 'sites'), join(SITE, 'sites'), { recursive: true });
 // Icons, web manifest and the social sharing image
 mkdirSync(join(SITE, 'icons'), { recursive: true });
 cpSync(join(LIB, 'icons', 'divine-origins', 'web'), join(SITE, 'icons'), { recursive: true });

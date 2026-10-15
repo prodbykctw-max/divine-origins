@@ -51,6 +51,22 @@ divine-origins/
 └── .github/workflows/ci.yml   ← gates docs self-test + seed validation + app build
 ```
 
+## Holy Sites (app/library sections/sites.js)
+
+- **Deep dives** — `app/library/data/sites/deep-dives.js`: famous sites, relics, symbols and
+  lore, each with *what it is / what the lost-history side claims / what the evidence shows*,
+  plus links to Source Map deity ids and sacred-text ids. Photos: `app/library/img/sites/`,
+  credits in `data/sites/deep-dive-images.js` and `tools/sites/deep_dive_photos.json`.
+- **Every recorded site** — `app/library/sites/` (index.json, `c/<country Q-id>.json`,
+  `t/<dedicatee Q-id>.json`), generated from Wikidata (CC0):
+  `python3 tools/sites/pull_sites.py` (QLever, writes gitignored `tools/sites/raw/`) then
+  `python3 tools/sites/build_sites.py`. Deity links: automatic name match against the seed,
+  corrected by `tools/sites/deity_map_overrides.json`.
+  The Source Map's **Sites** tab reads `app/vite/src/site-counts.json`.
+- `node tools/sites/check_sites.mjs` (CI) fails on any deep-dive link or data file that doesn't exist.
+- Never write `<img …>` tag text inside JS that gets inlined into index.html: the browser's preload
+  scanner reads it and requests the template text as a URL. Build image nodes with the DOM.
+
 ## Two test harnesses (don't confuse them)
 
 - **`scripts/self_test.py`** validates the **documentation** (terms, JSON blocks,

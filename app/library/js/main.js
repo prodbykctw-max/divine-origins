@@ -16,6 +16,7 @@ import { renderDeities }     from './sections/deities.js';
 import { renderPatterns }    from './sections/patterns.js';
 import { renderTimeline }    from './sections/timeline.js';
 import { renderSourceMap }   from './sections/source-map.js';
+import { renderSites }       from './sections/sites.js';
 import { initModal, closeModal } from './ui/modal.js';
 
 /* ── REGISTER ALL SECTION RENDERERS ── */
@@ -26,6 +27,7 @@ registerRenderer('texts',       renderTexts);
 registerRenderer('calendars',   renderCalendars);
 registerRenderer('patterns',    renderPatterns);
 registerRenderer('timeline',    renderTimeline);
+registerRenderer('sites',       renderSites);
 registerRenderer('source-map',  renderSourceMap);
 
 /* ── BOOT ── */

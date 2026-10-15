@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
-import { Search, X, Filter, BookOpen, Eye, EyeOff, Info, ChevronUp, ChevronDown, Sparkles, ArrowUpRight, FileText, Upload, Layers } from 'lucide-react';
+import { Search, X, Filter, BookOpen, Eye, EyeOff, Info, ChevronUp, ChevronDown, Sparkles, ArrowUpRight, FileText, Upload, Layers, MapPin } from 'lucide-react';
 import SEED_DATA from './seed-data.json';
+import SITE_COUNTS from './src/site-counts.json';
 import CosmosView from './CosmosView.jsx';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -233,6 +234,23 @@ function SourceMapApp({ data, onReload }) {
     window.addEventListener('divine:navigate', closeAll);
     return () => window.removeEventListener('divine:navigate', closeAll);
   }, []);
+
+  // Another section of the site asked to open a deity (Holy Sites → "Open in the Source Map")
+  useEffect(() => {
+    const open = (id) => {
+      if (!id) return;
+      const f = facets.find(x => x.parent_deity_id === id);
+      const d = deityById[id];
+      if (!f || !d) return;
+      setActiveTraditions(prev => (prev.has(d.tradition_id) ? prev : new Set([...prev, d.tradition_id])));
+      setSelectedFacetId(f.id);
+      setSheetOpen(true);
+    };
+    const onOpen = (e) => { open(e.detail && e.detail.deityId); window.__pendingDeity = null; };
+    if (typeof window !== 'undefined' && window.__pendingDeity) { open(window.__pendingDeity); window.__pendingDeity = null; }
+    window.addEventListener('divine:open-deity', onOpen);
+    return () => window.removeEventListener('divine:open-deity', onOpen);
+  }, [facets, deityById]);
 
   // Reset selection if data reloaded
   useEffect(() => {
@@ -1006,12 +1024,13 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
         </div>
 
         {/* Tabs */}
-        <div style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgb(var(--sm-accent-rgb) / 0.2)', flexShrink: 0 }}>
+        <div className="scrollbar-thin" style={{ display: 'flex', gap: 0, padding: '0 18px', borderBottom: '1px solid rgb(var(--sm-accent-rgb) / 0.2)', flexShrink: 0, overflowX: 'auto' }}>
           {[
             { id: 'essence', label: 'Essence', icon: <Sparkles size={12} /> },
             { id: 'parallels', label: `Parallels (${relatedFacetIds.length})`, icon: <ArrowUpRight size={12} /> },
             { id: 'sources', label: 'Sources', icon: <FileText size={12} /> },
             { id: 'tags', label: 'Tags', icon: <Layers size={12} /> },
+            ...(SITE_COUNTS[deity.id] ? [{ id: 'sites', label: `Sites (${SITE_COUNTS[deity.id][0].toLocaleString('en-US')})`, icon: <MapPin size={12} /> }] : []),
           ].map(t => (
             <button
               key={t.id}
@@ -1031,6 +1050,8 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
                 alignItems: 'center',
                 gap: 4,
                 marginRight: 6,
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}
             >
               {t.icon}
@@ -1061,6 +1082,9 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
           )}
           {tab === 'tags' && (
             <TagsTab facet={facet} />
+          )}
+          {tab === 'sites' && SITE_COUNTS[deity.id] && (
+            <SitesTab deity={deity} entry={SITE_COUNTS[deity.id]} />
           )}
         </div>
       </div>
@@ -1395,6 +1419,76 @@ function SourcesTab({ facet, deity }) {
           ))}
         </ul>
       )}
+    </div>
+  );
+}
+
+// Holy sites dedicated to this figure (Wikidata "dedicated to"), loaded on demand
+// from the site's sites/ folder, which the Holy Sites section also uses.
+const SITES_BASE = (typeof window !== 'undefined' && window.__IMG_BASE__)
+  ? window.__IMG_BASE__.replace(/img\/$/, 'sites/') : 'sites/';
+const LIVE_SITE = 'https://prodbykctw-max.github.io/divine-origins/#sites';
+
+function SitesTab({ deity, entry }) {
+  const [state, setState] = useState({ loading: true });
+  const [count, targets] = entry;
+  const name = deity.primary_name.replace(/\s*\((full|detail)[^)]*\)\s*$/i, '');
+  useEffect(() => {
+    let alive = true;
+    setState({ loading: true });
+    Promise.all([
+      fetch(SITES_BASE + 'index.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+      ...targets.map(q => fetch(SITES_BASE + 't/' + q + '.json').then(r => (r.ok ? r.json() : []))),
+    ]).then(([index, ...parts]) => {
+      if (!alive) return;
+      const seen = new Set(); const rows = [];
+      parts.flat().forEach(r => { if (!seen.has(r[0])) { seen.add(r[0]); rows.push(r); } });
+      const byCountry = new Map();
+      rows.forEach(r => { const c = r[7] >= 0 ? index.countries[r[7]][1] : 'No country recorded'; byCountry.set(c, (byCountry.get(c) || 0) + 1); });
+      setState({ loading: false, rows, index, countries: [...byCountry.entries()].sort((a, b) => b[1] - a[1]) });
+    }).catch(() => alive && setState({ loading: false, failed: true }));
+    return () => { alive = false; };
+  }, [deity.id]);
+
+  const browseAll = () => {
+    window.__sitesFocus = { targets, label: name, deityId: deity.id };
+    window.location.hash = 'sites';
+    setTimeout(() => window.dispatchEvent(new Event('divine:show-sites')), 150);
+  };
+
+  if (state.loading) return <div style={{ color: 'var(--sm-muted)', fontSize: 14 }}>Loading {count.toLocaleString('en-US')} sites…</div>;
+  if (state.failed) return (
+    <div style={{ fontSize: 14, color: 'var(--sm-text2)' }}>
+      {count.toLocaleString('en-US')} sites are dedicated to {name}. <a href={LIVE_SITE} style={{ color: 'var(--sm-accent)' }}>Open Holy Sites on Divine Origins</a> to see them.
+    </div>
+  );
+  const { rows, index, countries } = state;
+  return (
+    <div>
+      <p style={{ fontSize: 14, lineHeight: 1.5, color: 'var(--sm-text2)', marginBottom: 12 }}>
+        {rows.length.toLocaleString('en-US')} temples, shrines, churches and other places of worship are recorded as dedicated to {name}
+        {targets.length > 1 ? ` (under ${targets.length} names)` : ''}.
+      </p>
+      <div className="marginalia mb-1">Where</div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 14 }}>
+        {countries.slice(0, 8).map(([c, n]) => (
+          <span key={c} style={{ fontSize: 12, padding: '3px 8px', border: '1px solid rgb(var(--sm-accent-rgb) / 0.3)', borderRadius: 6, color: 'var(--sm-text2)' }}>{c} · {n.toLocaleString('en-US')}</span>
+        ))}
+        {countries.length > 8 && <span style={{ fontSize: 12, color: 'var(--sm-muted)', alignSelf: 'center' }}>+{countries.length - 8} more</span>}
+      </div>
+      <div className="marginalia mb-1">Sites</div>
+      <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 14px' }}>
+        {rows.slice(0, 25).map(r => (
+          <li key={r[0]} style={{ padding: '6px 0', borderBottom: '1px solid rgb(var(--sm-accent-rgb) / 0.15)', fontSize: 14 }}>
+            <a href={'https://www.wikidata.org/wiki/Q' + r[0]} target="_blank" rel="noopener" style={{ color: 'var(--sm-text)' }}>{r[1]}</a>
+            <span style={{ color: 'var(--sm-muted)', fontSize: 12 }}> · {[index.types[r[2]], r[7] >= 0 ? index.countries[r[7]][1] : ''].filter(Boolean).join(' · ')}</span>
+          </li>
+        ))}
+      </ul>
+      <button onClick={browseAll} style={{ background: 'var(--sm-accent)', color: 'var(--sm-on-accent, #fff)', border: 'none', borderRadius: 8, padding: '9px 14px', fontSize: 14, cursor: 'pointer', fontFamily: 'inherit' }}>
+        See all {rows.length.toLocaleString('en-US')} in Holy Sites
+      </button>
+      <p style={{ fontSize: 11, color: 'var(--sm-muted)', marginTop: 10 }}>Source: Wikidata (CC0). Only sites with a recorded dedication are counted.</p>
     </div>
   );
 }

@@ -1,0 +1,41 @@
+{
+  "_about": "Hand-checked links from Wikidata 'dedicated to' (P825) targets to Source Map deity ids. 'map' replaces the automatic name match for that target; 'exclude' blocks a target whose name collides with an unrelated app figure. Every entry here was checked against the app record and the Wikidata item on 2026-10-15.",
+  "map": {
+    "Q345": ["mary-theotokos"],
+    "Q1358870": ["mary-theotokos"],
+    "Q93205414": ["mary-theotokos"],
+    "Q208542": ["mary-theotokos"],
+    "Q302": ["christ"],
+    "Q642420": ["christ"],
+    "Q45581": ["michael", "michael-christian"],
+    "Q5186087": ["michael-christian"],
+    "Q715162": ["guanyin", "avalokiteshvara-deity"],
+    "Q11380": ["vishnu-detail"],
+    "Q42891": ["krishna"],
+    "Q9441": ["gautama-buddha-historical"],
+    "Q2089602": ["yama-buddhist"],
+    "Q93172": ["gaia-titan"],
+    "Q193461": ["maitreya-deity"],
+    "Q132543": ["diana-roman"],
+    "Q56951": ["raphael"],
+    "Q37302": ["holy-spirit"],
+    "Q58373": ["amun-ra"],
+    "Q11378": ["shiva-detail"],
+    "Q236242": ["amida-nembutsu", "amitabha-detail"],
+    "Q21282948": ["saint-lazarus"]
+  },
+  "exclude": {
+    "Q442516": "Germanus of Auxerre is a 5th-c. bishop, not the Ascended Master Saint Germain",
+    "Q312376": "Silas the apostle, not the Roman god Silvanus",
+    "Q4430779": "Immanuel (biblical name), not the channeled entity Emmanuel",
+    "Q210392": "'killed in action' (memorials), not the chaos-magic Kia",
+    "Q235113": "angels in general, not the Abramelin Holy Guardian Angel",
+    "Q186350": "God the Father (Christian), not the Chaldean Father",
+    "Q1285522": "Saint Hermes, a Christian martyr, not the Greek god",
+    "Q462596": "Sophia of Rome, a martyr, not Holy Wisdom",
+    "Q776193": "Quirinus of Sescia, a martyr, not the Roman god",
+    "Q494511": "Devi (the goddess in general) is not specifically Durga",
+    "Q868306": "Samantabhadra the bodhisattva, not the Adi-Buddha",
+    "Q539890": "Lazarus of Bethany; the app's Saint Lazarus is Lazarus the Beggar (Luke 16)"
+  }
+}
