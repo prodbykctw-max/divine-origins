@@ -59,6 +59,13 @@ export const DEEP_DIVES = [
     evidence: 'Both readings are argued by Egyptologists: some see it as a ritual solar boat, others as the boat that carried Khufu’s body in his funeral. Shipwrights who studied it judged it could float and be sailed.',
     deities: ['ra-deity'], texts: [], wiki: W('Khufu_ship') },
 
+  { id: 'merer_diary', name: 'Diary of Merer (Wadi al-Jarf papyri)', kind: 'artifact', region: 'egypt', group: 'egyptian',
+    place: 'Found at Wadi al-Jarf on the Red Sea coast; parts on show at the Egyptian Museum, Cairo', date: 'Khufu’s 26th–27th regnal years (Fourth Dynasty, c. 2560s BCE)', lat: 28.8917, lon: 32.6583,
+    what: 'Papyrus logbooks kept by Merer, an inspector (sehedj) in charge of about 40 boatmen. A French mission led by Pierre Tallet and Gregory Marouard found them in 2013, buried in front of the boat-storage caves at Wadi al-Jarf, the oldest known artificial harbour. They are the oldest known papyri with text.',
+    claim: 'That no record shows how the pyramids were built, so they must be older than the pharaohs or the work of a lost civilisation.',
+    evidence: 'The best-preserved logbooks, Papyrus Jarf A and B, follow Merer’s crew in Khufu’s 27th year shipping white limestone by boat from the Tura quarries to Giza: about 30 blocks of 2–3 tonnes every ten days, some 200 a month. They name Ankhhaf, Khufu’s half-brother, as overseer of the harbour at Giza. The diary does not say what the blocks were for; Tallet thinks they were most likely the Great Pyramid’s outer casing. It is the only known eyewitness record of work on the pyramid.',
+    deities: [], texts: [], wiki: W('Diary_of_Merer') },
+
   { id: 'disk_of_sabu', name: 'Sabu disk', kind: 'artifact', region: 'egypt', group: 'egyptian',
     place: 'Egyptian Museum, Cairo', date: 'c. 3000–2800 BCE (First Dynasty)', lat: 30.0478, lon: 31.2336,
     what: 'A thin three-lobed stone bowl found in 1936 by Walter Emery in the tomb of the official Sabu at Saqqara.',
