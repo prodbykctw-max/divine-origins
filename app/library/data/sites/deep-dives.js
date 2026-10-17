@@ -28,7 +28,7 @@ export const DEEP_DIVES = [
     place: 'Giza, Egypt', date: 'c. 2600 BCE (Fourth Dynasty)', lat: 29.9792, lon: 31.1342,
     what: 'The largest of the Egyptian pyramids and the only one of the Seven Wonders of the Ancient World still largely standing. It was built for the pharaoh Khufu over roughly 26 years.',
     claim: 'That it is far older than Khufu, was never a tomb, and worked as a machine: a power plant, a resonator, or a device tied to Tesla-style wireless energy.',
-    evidence: 'Work-gang marks naming Khufu are painted inside the sealed relieving chambers above the King’s Chamber. The papyri of Merer, found at Wadi al-Jarf, are a logbook of a crew shipping limestone to Giza for Khufu’s pyramid. Muon scans (ScanPyramids, 2017) found a large void above the Grand Gallery; its purpose is still unknown.',
+    evidence: 'Work-gang marks naming Khufu are painted inside the sealed relieving chambers above the King’s Chamber. The papyri of Merer, found at Wadi al-Jarf, are a logbook of a crew shipping limestone to Giza for Khufu’s pyramid. Muon scans (ScanPyramids, published in Nature in 2017) found a void at least 30 m long above the Grand Gallery, and in March 2023 the team revealed a sealed corridor about 9 m long behind the chevron stones of the north face, later viewed with an endoscope. The purpose of both is still unknown; the researchers avoid calling the big void a chamber.',
     deities: ['ra-deity', 'osiris-detail'], texts: ['pyramid_texts'], wiki: W('Great_Pyramid_of_Giza') },
 
   { id: 'great_sphinx', name: 'Great Sphinx of Giza', kind: 'site', region: 'egypt', group: 'egyptian',
