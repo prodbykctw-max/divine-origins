@@ -167,14 +167,14 @@ export const DEEP_DIVES = [
 
   { id: 'ayanis', name: 'Ayanis fortress', kind: 'site', region: 'neareast', group: 'mesopotamian',
     place: 'Lake Van, Turkey', date: '7th century BCE (Urartu)', lat: 38.7550, lon: 43.2290,
-    what: 'An Urartian fortress built by King Rusa II, with a temple to the chief Urartian god Haldi decorated with inlaid stone.',
+    what: 'An Urartian fortress built by King Rusa II around 673/672 BCE, with a temple to the chief Urartian god Haldi decorated with inlaid stone. An earthquake and fire destroyed it about 653–650 BCE. In 2024 excavators found three bronze shields and a ceremonial bronze helmet dedicated to Haldi, 6–7 m down under the collapsed mudbrick walls. Urartu is the Assyrian name of the kingdom; the Hebrew Bible calls the same land Ararat, so the “mountains of Ararat” where Genesis 8:4 rests the ark are this region, not one peak.',
     claim: 'That its finds point to forgotten ancient knowledge.',
-    evidence: 'It is a well-dated Iron Age royal fortress; its inscriptions name Rusa II and Haldi.',
+    evidence: 'It is a well-dated Iron Age royal fortress; its inscriptions name Rusa II and Haldi. The shields and helmet are temple offerings of a kind found at other Urartian sites; more than 30 shields have come from Ayanis.',
     deities: ['haldi'], texts: [], wiki: W('Ayanis') },
 
   { id: 'library_ashurbanipal', name: 'Library of Ashurbanipal', kind: 'site', region: 'neareast', group: 'mesopotamian',
     place: 'Nineveh, Iraq (tablets in the British Museum)', date: '7th century BCE', lat: 36.3594, lon: 43.1528,
-    what: 'More than 30,000 clay tablets and fragments gathered by the last great Assyrian king, including the Epic of Gilgamesh and the Enuma Elish.',
+    what: 'More than 30,000 clay tablets and fragments gathered by the last great Assyrian king (r. 668–627 BCE), including the Epic of Gilgamesh and the Enuma Elish. When Nineveh fell in 612 BCE the fire likely baked many tablets hard. Austen Henry Layard’s team began finding them in 1849. In 1872 George Smith, a former banknote engraver at the British Museum, read Tablet XI of Gilgamesh: Utnapishtim, warned by the god Ea, builds a boat, survives the flood, lands on Mount Nimush and sends out a dove, a swallow and a raven, close to Noah’s raven and dove in Genesis 8.',
     claim: 'That the tablets describe the Anunnaki as visitors from another world.',
     evidence: 'The Anunnaki in these texts are the gods of heaven and the underworld. The "visitors" reading comes from Zecharia Sitchin’s 1976 book, and Assyriologists reject his translations.',
     deities: ['anunnaki', 'anunnaki-sitchin', 'enki-deity'], texts: ['gilgamesh', 'enuma_elish', 'atrahasis'], wiki: W('Library_of_Ashurbanipal') },
