@@ -5,6 +5,7 @@
 
 import { TRADITION_GROUPS }  from '../../data/traditions/groups.js';
 import { artifactPanel }     from '../ui/artifact.js';
+import { tabImage, TAB_IMAGES } from '../../data/traditions/tab-images.js';
 import { state, setState }   from '../state.js';
 import { cyclePanel, scrollRailToItem, initScrollReveals } from '../animations.js';
 
@@ -32,11 +33,12 @@ export function renderTraditions() {
       <div class="rail-wrap">
         <div class="rail" id="trad-rail" role="listbox" aria-label="Select a tradition">
           ${TRADITION_GROUPS.map((g, i) => `
-            <button class="rail__item reveal-card"
+            <button class="rail__item reveal-card${tabImage(g.id) ? ' rail__item--img' : ''}"
                     role="option"
                     aria-selected="${i === 0}"
                     data-idx="${i}"
-                    style="--item-color:${g.color};animation-delay:${i * 0.04}s"
+                    style="--item-color:${g.color};animation-delay:${i * 0.04}s${tabImage(g.id) ? `;--tab-img:url('${tabImage(g.id).url}')` : ''}"
+                    ${tabImage(g.id) ? `title="${tabImage(g.id).title}"` : ''}
                     tabindex="${i === 0 ? '0' : '-1'}">
               <span class="rail__tradition">${g.region.split('/')[0].trim()}</span>
               <span class="rail__name">${g.label}</span>
@@ -44,6 +46,8 @@ export function renderTraditions() {
           `).join('')}
         </div>
       </div>
+
+      <div class="container"><details class="tab-credits"><summary>Photo credits for the tabs</summary><p>${TRADITION_GROUPS.filter(g => TAB_IMAGES[g.id]).map(g => `<a href="${TAB_IMAGES[g.id].source}" target="_blank" rel="noopener">${TAB_IMAGES[g.id].title}</a> (${TAB_IMAGES[g.id].credit})`).join(' · ')}</p></details></div>
 
       <!-- Info stage -->
       <div class="container">

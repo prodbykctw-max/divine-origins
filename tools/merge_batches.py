@@ -3,8 +3,9 @@
 
     python3 tools/merge_batches.py BASE.json OUT.json batch1.json [batch2.json ...]
 
-Each batch: {traditions, deities, facets, parallels, deity_updates} (see
-data/batches/README.md). Rules applied:
+Each batch: {traditions, deities, facets, parallels, deity_updates} plus optional
+fix keys deity_edits / facet_edits ({id, set: {...}}) and remove_traditions
+(only removed when no deity uses them). See data/batches/README.md. Rules applied:
   - Ids already present (base or an earlier batch) are skipped, along with their
     facets; parallels pointing at a skipped facet are dropped and reported.
   - Facets whose parent is an existing deity are appended to that deity's facets.
@@ -65,6 +66,18 @@ for bp in batch_paths:
         if u.get('add_alternate_names'):
             d['alternate_names'] = norm_names(d.get('alternate_names', []), u['add_alternate_names'])
             added['alt_names'] += len(u['add_alternate_names'])
+    for e in b.get('deity_edits', []):
+        d = D.get(e['deity_id'])
+        if not d: log['bad_edit'].append(f"{tag}:{e['deity_id']}"); continue
+        d.update(e['set']); added['deity_edits'] += 1
+    for e in b.get('facet_edits', []):
+        f = F.get(e['facet_id'])
+        if not f: log['bad_edit'].append(f"{tag}:{e['facet_id']}"); continue
+        f.update(e['set']); added['facet_edits'] += 1
+    for tid in b.get('remove_traditions', []):
+        if any(x['tradition_id'] == tid for x in data['deities']):
+            log['keep_tradition_in_use'].append(f"{tag}:{tid}"); continue
+        data['traditions'] = [t for t in data['traditions'] if t['id'] != tid]; T.discard(tid); added['traditions_removed'] += 1
     for p in b.get('parallels', []):
         a, c = p['facet_a_id'], p['facet_b_id']
         if a not in F or c not in F:

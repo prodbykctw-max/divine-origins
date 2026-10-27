@@ -1,0 +1,2 @@
+added {'facets': 1, 'alt_names': 2, 'deity_edits': 1, 'traditions_removed': 6, 'parallels': 1}
+totals {'traditions': 318, 'deities': 1742, 'facets': 2210, 'canonical_parallels': 1746}
