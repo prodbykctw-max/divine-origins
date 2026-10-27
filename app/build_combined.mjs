@@ -60,7 +60,7 @@ if (html === before || html.includes('href="css/') || html.includes('src="js/mai
 }
 // 5b. Crawlable contents for search engines and AI crawlers that skip JavaScript
 const lib = await loadLibrary(LIB);
-const seed = JSON.parse(readFileSync(join(APP, '..', 'data', 'source_map_seed_data_v092.json'), 'utf8'));
+const seed = JSON.parse(readFileSync(join(APP, '..', 'data', 'source_map_seed_data_v093.json'), 'utf8'));
 const seedCounts = { deities: seed.deities.length, traditions: seed.traditions.length };
 const HOME_MARK = '<!-- Injected by render.js renderHome() -->';
 if (!html.includes(HOME_MARK)) throw new Error('home section marker not found — nothing written');
@@ -84,7 +84,7 @@ const LD = {
       creator: { '@type': 'Person', '@id': 'https://prodbykctw-max.github.io/about/#kctw', name: 'KCTW', url: 'https://prodbykctw-max.github.io/about/', sameAs: ['https://github.com/prodbykctw-max'] },
       dateModified: today,
       distribution: { '@type': 'DataDownload', encodingFormat: 'application/json',
-        contentUrl: 'https://github.com/prodbykctw-max/divine-origins/blob/main/data/source_map_seed_data_v092.json' } },
+        contentUrl: 'https://github.com/prodbykctw-max/divine-origins/blob/main/data/source_map_seed_data_v093.json' } },
   ],
 };
 const ldRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
@@ -107,6 +107,7 @@ cpSync(join(LIB, 'icons', 'og-image.jpg'), join(SITE, 'icons', 'og-image.jpg'));
 cpSync(join(LIB, 'icons', 'og-image-v2.jpg'), join(SITE, 'icons', 'og-image-v2.jpg'));
 cpSync(join(LIB, 'icons', 'og-image-v3.jpg'), join(SITE, 'icons', 'og-image-v3.jpg'));
 cpSync(join(LIB, 'icons', 'og-image-v4.jpg'), join(SITE, 'icons', 'og-image-v4.jpg'));
+cpSync(join(LIB, 'icons', 'og-image-v5.jpg'), join(SITE, 'icons', 'og-image-v5.jpg'));
 // AI and search discovery files
 writeFileSync(join(SITE, 'llms.txt'), llmsTxt(lib, seedCounts, LIVE));
 writeFileSync(join(SITE, 'index.md'), llmsTxt(lib, seedCounts, LIVE));
