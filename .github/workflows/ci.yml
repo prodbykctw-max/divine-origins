@@ -41,8 +41,8 @@ jobs:
       - name: Validate canonical seed (fails on any Severity-1 defect)
         run: |
           python3 tools/validate_seed_data.py \
-            data/source_map_seed_data_v092.json \
-            --manifest reports/defect_manifest_v092.json
+            data/source_map_seed_data_v093.json \
+            --manifest reports/defect_manifest_v093.json
 
   app-build:
     name: App build (Source Map + combined site)
