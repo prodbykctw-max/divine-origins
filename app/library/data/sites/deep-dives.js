@@ -4,7 +4,7 @@
    to, each with three parts: what it is, what the lost-history side
    claims, and what the evidence shows. Facts were checked against the
    linked Wikipedia article (and the studies named in the text) on
-   2026-10-15. `deities` / `texts` link to records already in the app.
+   2026-10-15 (Shorts days 4–11 additions on 2026-10-27). `deities` / `texts` link to records already in the app.
    ============================================================= */
 
 export const SITE_REGIONS = [
@@ -28,7 +28,7 @@ export const DEEP_DIVES = [
     place: 'Giza, Egypt', date: 'c. 2600 BCE (Fourth Dynasty)', lat: 29.9792, lon: 31.1342,
     what: 'The largest of the Egyptian pyramids and the only one of the Seven Wonders of the Ancient World still largely standing. It was built for the pharaoh Khufu over roughly 26 years.',
     claim: 'That it is far older than Khufu, was never a tomb, and worked as a machine: a power plant, a resonator, or a device tied to Tesla-style wireless energy.',
-    evidence: 'Work-gang marks naming Khufu are painted inside the sealed relieving chambers above the King’s Chamber. The papyri of Merer, found at Wadi al-Jarf, are a logbook of a crew shipping limestone to Giza for Khufu’s pyramid. Muon scans (ScanPyramids, published in Nature in 2017) found a void at least 30 m long above the Grand Gallery, and in March 2023 the team revealed a sealed corridor about 9 m long behind the chevron stones of the north face, later viewed with an endoscope. The purpose of both is still unknown; the researchers avoid calling the big void a chamber.',
+    evidence: 'Work-gang marks naming Khufu are painted inside the sealed relieving chambers above the King’s Chamber. The papyri of Merer, found at Wadi al-Jarf, are a logbook of a crew shipping limestone to Giza for Khufu’s pyramid. Muon scans (ScanPyramids, published in Nature in 2017) found a void at least 30 m long above the Grand Gallery, and in March 2023 the team revealed a sealed corridor about 9 m long behind the chevron stones of the north face, later viewed with an endoscope. The purpose of both is still unknown; the researchers avoid calling the big void a chamber. The four narrow shafts from the King’s and Queen’s Chambers, about 20 cm square, were long called air shafts. In 1993 Rudolf Gantenbrink’s robot Upuaut 2 climbed the Queen’s Chamber south shaft and was stopped by a small limestone door fitted with two copper pieces; in 2002 a camera pushed through a hole in that door showed a second stone about 21 cm behind it, and in 2011 the Djedi robot filmed small red-painted marks in the space between, which no one has yet read. A widely held view is that the shafts were aimed at stars important to the Egyptians (Orion’s Belt, Sirius, the northern circumpolar stars) as symbolic paths for the king’s soul, not ventilation.',
     deities: ['ra-deity', 'osiris-detail'], texts: ['pyramid_texts'], wiki: W('Great_Pyramid_of_Giza') },
 
   { id: 'great_sphinx', name: 'Great Sphinx of Giza', kind: 'site', region: 'egypt', group: 'egyptian',
@@ -134,7 +134,7 @@ export const DEEP_DIVES = [
     place: 'Şanlıurfa, Turkey', date: 'c. 9500–8000 BCE', lat: 37.2231, lon: 38.9224,
     what: 'Large round enclosures with carved T-shaped limestone pillars, among the oldest known megaliths, built before farming and pottery.',
     claim: 'That it records a comet strike (the Younger Dryas impact) on Pillar 43, was built by survivors of Atlantis, or was Noah’s altar.',
-    evidence: 'Excavators date it to the Pre-Pottery Neolithic and now find houses, cisterns and quarries alongside the enclosures. The comet reading of Pillar 43 (Sweatman and Tsikritsis, 2017) was rejected by the excavation team.',
+    evidence: 'Excavators date it to the Pre-Pottery Neolithic and now find houses, cisterns and quarries alongside the enclosures. The comet reading of Pillar 43 (Sweatman and Tsikritsis, 2017) was rejected by the excavation team. The German Archaeological Institute dates the enclosures to about 9500–8000 BCE, more than 6,000 years before Stonehenge. The tallest central pillars are about 5.5 m high and weigh around 8 tonnes; they are carved with foxes, snakes, boars and cranes, and some carry human arms and hands on their sides, which marks them as stylised figures. Klaus Schmidt, who led the excavations from the mid-1990s until his death in 2014, saw it as a temple (“First came the temple, then the city”); it became a UNESCO World Heritage Site in 2018.',
     deities: [], texts: [], wiki: W('Göbekli_Tepe') },
 
   { id: 'karahan_tepe', name: 'Karahan Tepe', kind: 'site', region: 'neareast', group: 'mesopotamian',
@@ -185,6 +185,27 @@ export const DEEP_DIVES = [
     claim: 'That ziggurats and pyramids everywhere share one source.',
     evidence: 'Ziggurats were solid mud-brick platforms carrying a temple on top; Egyptian pyramids were tombs. The shapes converge because a heap is the simplest way to build high.',
     deities: ['nanna'], texts: [], wiki: W('Ziggurat_of_Ur') },
+
+  { id: 'shuruppak', name: 'Shuruppak (Tell Fara) flood layer', kind: 'site', region: 'neareast', group: 'mesopotamian',
+    place: 'Tell Fara, Al-Qadisiyyah, Iraq', date: 'Flood layer c. 3000 BCE (end of the Jemdet Nasr period)', lat: 31.7774, lon: 45.5098,
+    what: 'The Sumerian city whose king survives the flood: Utnapishtim in the Epic of Gilgamesh, Ziusudra in Sumerian texts. Its ruins are the mound of Tell Fara in southern Iraq.',
+    claim: 'That the flood layer proves Noah’s worldwide flood.',
+    evidence: 'A joint American Schools of Oriental Research and University of Pennsylvania team led by Erich Schmidt dug here in March and April 1931 and recorded a layer of flood deposits at the end of the Jemdet Nasr period, about 3000 BCE, with the city rebuilt above it. Schmidt wrote that the flood story “seems to be based on a very real event or a series of such.” The layer shows a local river flood, not a global one; flood layers at other Mesopotamian cities are of different dates.',
+    deities: ['enki-deity'], texts: ['gilgamesh', 'eridu_genesis', 'atrahasis'], wiki: W('Shuruppak') },
+
+  { id: 'nippur_flood_tablet', name: 'Sumerian flood tablet from Nippur (Eridu Genesis)', kind: 'artifact', region: 'neareast', group: 'mesopotamian',
+    place: 'Penn Museum, Philadelphia (found at Nippur, Iraq)', date: '17th century BCE (Old Babylonian, dated by script)', lat: 39.9492, lon: -75.1915,
+    what: 'A broken baked-clay tablet, about 13 by 10 cm, written in Sumerian and preserving one of the oldest known flood stories. Penn Museum number CBS 10673.',
+    claim: 'That Genesis simply copied it, or that it is an eyewitness record of the flood.',
+    evidence: 'Found at Nippur by the University of Pennsylvania’s Babylonian Expedition (the museum credits the 1896 season; some accounts give 1893) and first published by Arno Poebel in 1912. Only the lower third survives. Enki warns Ziusudra, ruler of Shuruppak, of the gods’ flood; a storm rages for seven days and seven nights; Ziusudra comes out, offers an ox and a sheep, and the gods grant him eternal life. The parallels with Noah are close, but the tablet is one witness among several Mesopotamian flood traditions, not proof of copying in either direction. It is on display in the Penn Museum’s Middle East Galleries.',
+    deities: ['enki-deity'], texts: ['eridu_genesis', 'atrahasis', 'gilgamesh'], wiki: W('Eridu_Genesis') },
+
+  { id: 'gilgamesh_tomb', name: 'The tomb of Gilgamesh in the Euphrates', kind: 'lore', region: 'neareast', group: 'mesopotamian',
+    place: 'Uruk, Iraq (the poem’s setting)', date: 'Sumerian poem; date of composition unknown', lat: 31.3242, lon: 45.6372,
+    what: 'The Sumerian poem The Death of Gilgamesh (Bilgames) tells how the king, dying, dreams of the gods in assembly deciding his fate, and how his people bury him in the bed of the Euphrates.',
+    claim: 'That the tomb has been found under the old river course at Uruk.',
+    evidence: 'In the poem Enki reminds the gods that after the flood they swore no human would live forever except Ziusudra, so Gilgamesh is made a judge of the dead in the underworld instead. The Euphrates is turned aside, a stone tomb is built in the dry riverbed, sealed, and the water let back over it. Copies were found at Nippur and Me-Turan (Tell Haddad). In 2002 a German Archaeological Institute magnetometer survey at Uruk found a man-made structure in the middle of a former Euphrates riverbed; project leader Margarete van Ess said it could correspond to the poem’s burial but would have to be excavated to know. No tomb of Gilgamesh has been confirmed.',
+    deities: ['gilgamesh-deity', 'enki-deity'], texts: ['gilgamesh_death', 'gilgamesh'], wiki: W('Gilgamesh') },
 
   { id: 'durupinar', name: 'Durupınar site', kind: 'site', region: 'neareast', group: 'hebrew',
     place: 'Near Mount Ararat, Turkey', date: 'Geological', lat: 39.4403, lon: 44.2347,
@@ -383,14 +404,21 @@ export const DEEP_DIVES = [
     place: 'Cusco, Peru', date: '15th century CE (Inca)', lat: -13.5086, lon: -71.9817,
     what: 'An Inca citadel above Cusco with zig-zag walls of huge polygonal stones fitted without mortar.',
     claim: 'That the stones were softened or melted, or laid by a pre-Inca megalith-building people.',
-    evidence: 'Spanish-era chroniclers describe the Inca building it, and the quarries, abandoned "tired stones" and hauling routes have been traced.',
+    evidence: 'Spanish-era chroniclers describe the Inca building it, and the quarries, abandoned "tired stones" and hauling routes have been traced. It stands about 3,700 m up; its three terraced walls run about 400 m long and stand about 6 m tall, and many joints are too tight for a sheet of paper. The largest limestone block is estimated at 128 to almost 200 tonnes. Inca tradition credits the emperor Pachacuti and his successors in the 1400s, and the chronicler Pedro Cieza de León wrote of 4,000 men quarrying stone and 6,000 hauling it. After the conquest the Spanish took much of the upper structure apart to build colonial Cusco.',
     deities: ['viracocha-deity', 'inti-deity'], texts: [], wiki: W('Sacsayhuamán') },
+
+  { id: 'puma_punku', name: 'Puma Punku (Tiwanaku)', kind: 'site', region: 'americas', group: 'indigenous',
+    place: 'Tiwanaku, La Paz, Bolivia', date: 'Begun c. AD 536–600 (radiocarbon)', lat: -16.5547, lon: -68.6733,
+    what: 'A terraced platform mound in the ancient city of Tiwanaku, about 3,850 m up near Lake Titicaca, famous for precisely cut stones with flat faces, sharp inner corners and repeated, interchangeable shapes.',
+    claim: 'That the stones were machined by a lost high-tech civilisation or by visitors from elsewhere, or that the site is 10,000 years old or more.',
+    evidence: 'The largest slab is red sandstone, about 7.8 by 5.2 m and some 131 tonnes, from a quarry about 10 km away; the harder andesite came from the Copacabana Peninsula about 90 km away across Lake Titicaca. Blocks were locked with I-shaped cramps of a copper–arsenic–nickel bronze, some cast in place in the notches. A radiocarbon date calibrated to AD 536–600 marks the start of construction. Researchers Protzen and Nair say the tools used on the andesite are essentially unknown, apart from hammerstones; replication work with stone tools has carved similar designs.',
+    deities: ['viracocha-deity'], texts: [], wiki: W('Pumapunku') },
 
   { id: 'machu_picchu', name: 'Machu Picchu', kind: 'site', region: 'americas', group: 'indigenous',
     place: 'Cusco region, Peru', date: '15th century CE', lat: -13.1631, lon: -72.5450,
     what: 'An Inca estate on a ridge at 2,430 m, built for the emperor Pachacuti, known to the outside world from 1911.',
     claim: 'That faces are carved into the surrounding mountains.',
-    evidence: 'The "faces" are natural rock forms seen from particular angles; the Inca did shape some rocks and outcrops into the site’s shrines.',
+    evidence: 'The "faces" are natural rock forms seen from particular angles; the Inca did shape some rocks and outcrops into the site’s shrines. It was built around 1450, probably as a royal estate, from blocks fitted without mortar. The carved Intihuatana stone ("place where the sun is tied") casts its longest shadow at the southern winter solstice on June 21, and a window in the curved Torreón is said to let the solstice sunrise fall across a carved rock inside, though scholars doubt it was a precise instrument. Hiram Bingham brought it to world attention in 1911; it became a UNESCO World Heritage Site in 1983.',
     deities: ['inti-deity'], texts: [], wiki: W('Machu_Picchu') },
 
   { id: 'nazca_lines', name: 'Nazca Lines', kind: 'site', region: 'americas', group: 'indigenous',
