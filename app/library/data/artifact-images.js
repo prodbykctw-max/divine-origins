@@ -1,4 +1,4 @@
-/* AUTO-GENERATED from img/sources.json — real artifact photos (public domain / CC0 / CC BY / CC BY-SA).
+/* GENERATED from img/sources.json (generator no longer in the repo: keep "match" in step with sources.json by hand) — real artifact photos (public domain / CC0 / CC BY / CC BY-SA).
    Each entry was checked against its source page and viewed. Regenerate, don't hand-edit. */
 export const ARTIFACTS = {
  "texts": {
@@ -1122,7 +1122,7 @@ export const ARTIFACTS = {
    "credit": "ywpark2003 — via Wikimedia Commons (CC0)",
    "license": "CC0",
    "source": "https://commons.wikimedia.org/wiki/File:Seated_God_El_Ugarit_Damascus.jpg",
-   "match": "exact witness"
+   "match": "identified as — a seated god of the type usually identified as El; the statuette carries no inscription naming him"
   },
   "el_elyon": {
    "w480": "deities/el_elyon-480.webp",
@@ -1242,7 +1242,7 @@ export const ARTIFACTS = {
    "credit": "Nationalmuseet - The National Museum of Denmark from Denmark — via Wikimedia Commons (CC BY-SA 2.0)",
    "license": "CC BY-SA 2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Odin_fra_Lejre_(8423840948).jpg",
-   "match": "exact witness"
+   "match": "identified as — the seated figure on a throne with two birds is usually read as Odin on Hliðskjálf with his ravens; some scholars read it as a goddess"
   },
   "tao": {
    "w480": "deities/tao-480.webp",
@@ -1301,7 +1301,7 @@ const BASE = (typeof window !== 'undefined' && window.__IMG_BASE__) || 'img/';
 export function artifact(kind, id) {
   const a = ARTIFACTS[kind] && ARTIFACTS[kind][id];
   if (!a) return null;
-  return { ...a, small: BASE + a.w480, large: BASE + a.w900, srcset: `${BASE + a.w480} 480w, ${BASE + a.w900} 900w` };
+  return { ...a, kind, small: BASE + a.w480, large: BASE + a.w900, srcset: `${BASE + a.w480} 480w, ${BASE + a.w900} 900w` };
 }
 
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -1310,9 +1310,29 @@ const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<
 export function captionHTML(a) {
   if (!a) return '';
   const where = [a.institution, a.date].filter((v) => v && !/not stated/i.test(v)).join(' · ');
+  const note = matchNote(a);
   return `<span class="art-cap__title">${esc(a.title)}</span>` +
     (where ? `<span class="art-cap__where">${esc(where)}</span>` : '') +
+    (note ? `<span class="art-cap__note">${esc(note)}</span>` : '') +
     `<a class="art-cap__credit" href="${esc(a.source)}" target="_blank" rel="noopener">Photo: ${esc(a.credit)}</a>`;
+}
+
+/** Fine print when a photo is not the figure or text itself (from the "match" field).
+    Tradition photos illustrate the tradition as a whole and carry no note. */
+export function matchNote(a) {
+  const m = (a && a.match) || '';
+  if (!m || /^exact witness/i.test(m) || a.kind === 'traditions') return '';
+  const [type, ...rest] = m.split(' — ');
+  const why = rest.join(' — ');
+  const tail = why ? ' ' + why.charAt(0).toUpperCase() + why.slice(1) + '.' : '';
+  const t = type.toLowerCase();
+  if (a.kind === 'deities') {
+    if (t.startsWith('identified as')) return 'Identified, not labelled: no inscription names the figure.' + tail;
+    return 'Not an image of this deity: a related object from the same tradition is shown.' + tail;
+  }
+  const what = a.kind === 'calendars' ? 'calendar' : 'text';
+  if (t.startsWith('same text')) return `A later copy of this ${what}, not the original manuscript.` + tail;
+  return `Not this ${what} itself: a related object from the same tradition is shown.` + tail;
 }
 
 export { esc as escapeHTML };

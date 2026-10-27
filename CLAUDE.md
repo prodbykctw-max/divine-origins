@@ -177,6 +177,11 @@ This project is described by the user as critically important. The standard is n
 - **Tradition tabs:** each of the 15 tradition groups shows a real photo on its
   rail tab and home card (`app/library/data/traditions/tab-images.js`, crops in
   `img/traditions/tabs/`, credits under the rail).
+- **Image honesty:** every artifact photo's `match` field drives a fine-print note
+  (`matchNote` in `app/library/data/artifact-images.js`): a deity photo that is not
+  that deity, an identified-but-unlabelled figure, a later copy of a text, or a
+  related object instead of the text/calendar itself always says so under the photo.
+  New photos must carry an honest `match` in `img/sources.json` and the JS file.
 - **Spec package** complete and self-tested at 102/102 green.
 - **CI** gates docs + canonical seed + the app build on every push/PR.
 - **Next horizon:** move the library sections onto the v0.8.0 data (they still
