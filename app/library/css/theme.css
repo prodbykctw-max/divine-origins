@@ -245,3 +245,9 @@ input::placeholder { color: var(--text-dim); }
 .tab-credits summary { cursor: pointer; color: var(--text-secondary); width: max-content; }
 .trad-card--img .trad-card__sub { font-size: 0.75rem; color: #cfd8e6; }
 .tab-credits a { color: var(--text-secondary); }
+
+/* Fine print under a photo that is not the figure/text itself (see matchNote in data/artifact-images.js). */
+.art-cap__note { font-size: 0.75rem; line-height: 1.45; font-style: italic; color: #f0e2b6; }
+@media (prefers-color-scheme: light) {
+  .cal-artifact .art-cap__note, .book-detail__artifact .art-cap__note, .site-dive__fig .art-cap__note { color: var(--text-secondary) !important; }
+}
