@@ -26,3 +26,9 @@ v0.9.1 is built on v0.9.0:
 python3 tools/merge_batches.py data/source_map_seed_data_v090.json data/source_map_seed_data_v091.json \
   data/batches/v091_occ.json data/batches/v091_nrm.json data/batches/v091_nag.json data/batches/v091_xlink.json
 ```
+
+v0.9.2 = v0.9.1 + fixes (`deity_edits`, `facet_edits`, `remove_traditions` keys):
+
+```
+python3 tools/merge_batches.py data/source_map_seed_data_v091.json data/source_map_seed_data_v092.json data/batches/v092_fixes.json
+```

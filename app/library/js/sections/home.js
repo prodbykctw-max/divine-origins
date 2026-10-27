@@ -4,6 +4,7 @@
 
 import { navigate } from '../router.js';
 import { TRADITION_GROUPS } from '../../data/traditions/groups.js';
+import { tabImage } from '../../data/traditions/tab-images.js';
 import { SACRED_TEXTS }     from '../../data/texts/sacred-texts.js';
 import { CALENDAR_SYSTEMS } from '../../data/calendars/systems.js';
 
@@ -71,7 +72,7 @@ export function renderHome() {
           <h2 class="section__title">15 Tradition Groups</h2>
           <p class="section__desc">Each tradition is a complete world. Click any to enter.</p>
         </header>
-        <div id="home-trad-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--border)">
+        <div id="home-trad-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:1px;background:var(--border)">
           ${TRADITION_GROUPS.map(buildTradCard).join('')}
         </div>
       </div>
@@ -80,6 +81,7 @@ export function renderHome() {
 
   // Bind tradition card clicks
   section.querySelectorAll('[data-trad-nav]').forEach(el => {
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate('traditions'); } });
     el.addEventListener('click', () => navigate('traditions'));
   });
 }
@@ -104,6 +106,12 @@ function ctaBtn(label, section, primary) {
 }
 
 function buildTradCard(g) {
+  const t = tabImage(g.id);
+  if (t) return `
+    <div data-trad-nav="${g.id}" class="trad-card--img" role="link" tabindex="0" title="${t.title}" style="--tab-img:url('${t.url}')">
+      <div class="t-title">${g.label}</div>
+      <div class="t-caption">${g.era}</div>
+    </div>`;
   return `
     <div data-trad-nav="${g.id}" style="background:var(--layer);padding:1.5rem;cursor:pointer;transition:background 0.2s,transform 0.2s;border-left:3px solid ${g.color}22"
          onmouseover="this.style.background='var(--surface)';this.style.borderLeftColor='${g.color}'"

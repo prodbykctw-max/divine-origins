@@ -1,0 +1,20 @@
+{
+ "traditions": [], "deities": [], "deity_updates": [
+  {"deity_id":"yucahu","add_alternate_names":["Yócahu Bagua Maórocoti","Yúcahu Bagua Maórocoti"]}
+ ],
+ "deity_edits": [
+  {"deity_id":"yucahu","set":{
+   "primary_name":"Yúcahu",
+   "earliest_attestation":"c. 1498 CE (Ramón Pané's account of Taíno belief on Hispaniola)",
+   "primary_sources":["Ramón Pané, Relación acerca de las antigüedades de los indios (c. 1498), ch. 1","Spanish colonial accounts"],
+   "summary":"Yúcahu Bagua Maórocoti is the being in the sky who is immortal and cannot be seen. He has a mother but no beginning. He is the lord of cassava, the bread of the people, and of the sea, and with his mother Atabey he is the supreme divine pair of the Taíno."
+  }}
+ ],
+ "facets": [
+  {"id":"yucahu-immortal-sky-being","parent_deity_id":"yucahu","facet_name":"The Immortal One in the Sky, Without Beginning","tier_assignment":2,"function_tags":["supreme-being","sky","invisible-god","son-of-the-mother"],"valence":"positive","core_claim":"In the sky there is a being who is immortal, whom no one can see, who has a mother but no beginning: Yúcahu Bagua Maórocoti. The zemís of the people are his presence among them.","parallel_facets":[],"scholarly_note":"Ramón Pané, Relación (c. 1498), ch. 1, recorded on Hispaniola; Pané gives the name as Yócahu Vagua Maórocoti. The modern association with El Yunque, Puerto Rico's mountain, is a popular tradition and not in Pané."}
+ ],
+ "parallels": [
+  {"id":"fx-p001","facet_a_id":"yucahu-immortal-sky-being","facet_b_id":"atabey-taino-earth","strength":"strong-parallel","type":"narrative-pattern-match","basis":["Pané names Atabey (with five names) as the mother of Yúcahu","The supreme pair of the Taíno is mother and son, not husband and wife"],"source_tradition":"Taíno (Hispaniola)","primary_text_evidence":["Ramón Pané, Relación (c. 1498), ch. 1"]}
+ ],
+ "remove_traditions": ["celtic-irish-shared","celtic","aztec-nahuatl","igbo-detail","afro-diasporic","indo-greek"]
+}
