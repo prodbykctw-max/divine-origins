@@ -60,6 +60,12 @@ const SPECIFICITY_COLORS = {
   'tag-divergent': '#5a5d5c',
 };
 
+// Search folding: case- and diacritic-insensitive (NFD, strip combining marks).
+// Used on both the query and the indexed text; displayed names are untouched.
+function foldText(s) {
+  return String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+}
+
 // Stable, manuscript-muted color derived from the tradition id, so the 150+
 // traditions in v0.8.0 that aren't in the hand-picked palette above still read
 // as visually distinct instead of all collapsing to one gray.
@@ -266,18 +272,18 @@ function SourceMapApp({ data, onReload }) {
   // Search match
   const searchMatches = useMemo(() => {
     if (!searchQuery.trim()) return null;
-    const q = searchQuery.toLowerCase();
+    const q = foldText(searchQuery);
     const matches = new Set();
     facets.forEach(f => {
       const d = deityById[f.parent_deity_id];
       if (!d) return;
-      const hay = [
+      const hay = foldText([
         d.primary_name,
         ...(d.alternate_names || []),
         f.facet_name,
         ...(f.function_tags || []),
         f.core_claim || '',
-      ].join(' ').toLowerCase();
+      ].join(' '));
       if (hay.includes(q)) matches.add(f.id);
     });
     return matches;
