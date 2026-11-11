@@ -17,7 +17,9 @@ No third-party dependencies. Python 3.8+.
 import argparse
 import collections
 import json
+import re
 import sys
+import unicodedata
 
 
 # --- severity ranking ------------------------------------------------------
@@ -26,13 +28,21 @@ SEV2 = "SEVERITY-2"  # contradicts itself; corrupts counts/reports
 SEV3 = "SEVERITY-3"  # quality / non-discriminating measures
 
 
+def _fold(text):
+    """Lower-case, strip diacritics, collapse non-alphanumerics to single spaces."""
+    nfd = unicodedata.normalize("NFD", str(text).lower())
+    bare = "".join(c for c in nfd if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", bare).strip()
+
+
 def load(path):
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
 
 
 def validate(data):
-    """Return (defects, summary). `defects` is a list of dict records."""
+    """Return (defects, summary, warnings). `defects` and `warnings` are lists of
+    dict records; warnings are advisory and never affect the exit code."""
     deities = data.get("deities", [])
     facets = data.get("facets", [])
     parallels = data.get("canonical_parallels", [])
@@ -45,6 +55,11 @@ def validate(data):
     deity_ids = set(deity_by_id)
 
     defects = []
+    warnings = []  # advisory only: reported with counts, never fail the build
+
+    def warn(code, ref, detail):
+        warnings.append({"severity": "WARNING", "code": code, "ref": ref,
+                         "detail": detail})
 
     def add(severity, code, ref, detail):
         defects.append(
@@ -169,6 +184,56 @@ def validate(data):
             f"only {facets_with_note}/{len(facets)} "
             f"({facets_with_note/len(facets):.1%}) facets carry a scholarly_note")
 
+    # --- WARNINGS (advisory; do not affect exit code) ---------------------
+    # (a) parallel id "p_<a>_<b>" whose linked figures do not match the slugs.
+    # Only two-slug ids are checked (longer ids are ambiguous to split).
+    def slug_matches(slug, facet_id):
+        f = facet_by_id.get(facet_id)
+        d = deity_by_id.get(f.get("parent_deity_id")) if f else None
+        if not f or not d:
+            return False
+        names = [facet_id, d.get("id", ""), d.get("primary_name", ""),
+                 f.get("facet_name", "")] + list(d.get("alternate_names") or [])
+        s = _fold(slug)
+        return bool(s) and any(s in _fold(n) for n in names)
+
+    for p in parallels:
+        pid = p.get("id", "")
+        if not pid.startswith("p_"):
+            continue
+        parts = pid[2:].split("_")
+        if len(parts) != 2:
+            continue
+        a, b = p.get("facet_a_id"), p.get("facet_b_id")
+        if a not in facet_by_id or b not in facet_by_id:
+            continue
+        ok = (slug_matches(parts[0], a) and slug_matches(parts[1], b)) or \
+             (slug_matches(parts[0], b) and slug_matches(parts[1], a))
+        if not ok:
+            warn("parallel_slug_figure_mismatch", pid,
+                 f"id names '{parts[0]}' + '{parts[1]}' but links "
+                 f"{a} ({label(a)}) + {b} ({label(b)})")
+
+    # (b) tier values outside the schema's tier_definitions.
+    tier_defs = (data.get("_meta") or {}).get("tier_definitions") or {}
+    valid_tiers = {str(k) for k in tier_defs} or {"1", "2", "3", "4", "cross-tier"}
+    for f in facets:
+        t = f.get("tier_assignment")
+        if str(t) not in valid_tiers:
+            warn("facet_tier_not_in_schema", f["id"],
+                 f"tier_assignment={t!r} not one of {sorted(valid_tiers)}")
+
+    # (c) documented-historical-transmission rows with no evidence
+    # (docs/06 requires transmission_evidence for this type).
+    evidence_fields = ("transmission_evidence", "primary_text_evidence",
+                       "suggested_citation", "scholarly_note")
+    for p in parallels:
+        if p.get("type") == "documented-historical-transmission" and not any(
+                p.get(k) for k in evidence_fields):
+            warn("documented_transmission_without_evidence", p["id"],
+                 "type=documented-historical-transmission but none of "
+                 + " / ".join(evidence_fields) + " is set")
+
     summary = {
         "counts": {
             "traditions": len(traditions),
@@ -179,10 +244,12 @@ def validate(data):
         "defects_total": len(defects),
         "by_severity": dict(collections.Counter(d["severity"] for d in defects)),
         "by_code": dict(collections.Counter(d["code"] for d in defects)),
+        "warnings_total": len(warnings),
+        "warnings_by_code": dict(collections.Counter(w["code"] for w in warnings)),
         "strength_distribution": dict(strengths),
         "facets_with_scholarly_note": facets_with_note,
     }
-    return defects, summary
+    return defects, summary, warnings
 
 
 def main(argv=None):
@@ -193,7 +260,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
 
     data = load(args.file)
-    defects, summary = validate(data)
+    defects, summary, warnings = validate(data)
 
     print(f"# Validation of {args.file}")
     print(f"  counts: {summary['counts']}")
@@ -204,6 +271,17 @@ def main(argv=None):
     for code, n in sorted(summary["by_code"].items(),
                           key=lambda kv: -kv[1]):
         print(f"    {n:>4}  {code}")
+
+    if warnings:
+        print(f"\n  warnings (advisory, do not fail the build): {len(warnings)}")
+        for code, n in sorted(summary["warnings_by_code"].items(),
+                              key=lambda kv: -kv[1]):
+            print(f"    {n:>4}  {code}")
+        for w in warnings:
+            # list in full only the small classes; the big ones are in the manifest
+            if summary["warnings_by_code"][w["code"]] <= 20:
+                print(f"    [{w['code']}] {w['ref']}: {w['detail']}")
+        print("    (full list of every warning is in the manifest)")
 
     # show every SEV1 (these must be fixed); sample the rest
     sev1 = [d for d in defects if d["severity"] == SEV1]
@@ -216,7 +294,8 @@ def main(argv=None):
 
     if args.manifest:
         with open(args.manifest, "w", encoding="utf-8") as fh:
-            json.dump({"summary": summary, "defects": defects}, fh,
+            json.dump({"summary": summary, "defects": defects,
+                       "warnings": warnings}, fh,
                       indent=2, ensure_ascii=False)
         print(f"\n  full manifest written to {args.manifest}")
 
