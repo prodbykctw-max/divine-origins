@@ -1,0 +1,7 @@
+{
+ "traditions": [], "deities": [], "facets": [], "parallels": [],
+ "parallel_edits": [
+  {"parallel_id":"p_thoth_hermes","set":{"facet_b_id":"hermes-trismegistus-wisdom-teacher"},"unlink_old":true},
+  {"parallel_id":"p_pachamama_gaia","set":{"facet_b_id":"gaia-earth-body"},"unlink_old":false}
+ ]
+}

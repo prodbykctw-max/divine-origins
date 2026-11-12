@@ -4,8 +4,10 @@
     python3 tools/merge_batches.py BASE.json OUT.json batch1.json [batch2.json ...]
 
 Each batch: {traditions, deities, facets, parallels, deity_updates} plus optional
-fix keys deity_edits / facet_edits ({id, set: {...}}) and remove_traditions
-(only removed when no deity uses them). See data/batches/README.md. Rules applied:
+fix keys deity_edits / facet_edits ({id, set: {...}}), parallel_edits
+({parallel_id, set: {...}, unlink_old: bool}: re-points a parallel's facet_a_id /
+facet_b_id; with unlink_old the old pair's mirrored parallel_facets entries are
+removed from both facets) and remove_traditions (only removed when no deity uses them). See data/batches/README.md. Rules applied:
   - Ids already present (base or an earlier batch) are skipped, along with their
     facets; parallels pointing at a skipped facet are dropped and reported.
   - Facets whose parent is an existing deity are appended to that deity's facets.
@@ -74,6 +76,21 @@ for bp in batch_paths:
         f = F.get(e['facet_id'])
         if not f: log['bad_edit'].append(f"{tag}:{e['facet_id']}"); continue
         f.update(e['set']); added['facet_edits'] += 1
+    for e in b.get('parallel_edits', []):
+        p = next((x for x in data['canonical_parallels'] if x['id'] == e['parallel_id']), None)
+        if not p: log['bad_edit'].append(f"{tag}:{e['parallel_id']}"); continue
+        na = e['set'].get('facet_a_id', p['facet_a_id']); nc = e['set'].get('facet_b_id', p['facet_b_id'])
+        if na not in F or nc not in F or na == nc or F[na]['parent_deity_id'] == F[nc]['parent_deity_id']:
+            log['bad_edit'].append(f"{tag}:{e['parallel_id']}"); continue
+        newkey = frozenset((na, nc)); oldkey = frozenset((p['facet_a_id'], p['facet_b_id']))
+        if newkey != oldkey and newkey in pairs:
+            log['drop_parallel_duplicate_pair'].append(f"{tag}:{e['parallel_id']}"); continue
+        if e.get('unlink_old') and newkey != oldkey:
+            x, y = p['facet_a_id'], p['facet_b_id']
+            F[x]['parallel_facets'] = [i for i in F[x]['parallel_facets'] if i != y]
+            F[y]['parallel_facets'] = [i for i in F[y]['parallel_facets'] if i != x]
+        pairs.discard(oldkey); pairs.add(newkey)
+        p.update(e['set']); added['parallel_edits'] += 1
     for tid in b.get('remove_traditions', []):
         if any(x['tradition_id'] == tid for x in data['deities']):
             log['keep_tradition_in_use'].append(f"{tag}:{tid}"); continue

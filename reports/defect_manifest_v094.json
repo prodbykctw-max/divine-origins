@@ -1,0 +1,4646 @@
+{
+  "summary": {
+    "counts": {
+      "traditions": 319,
+      "deities": 1744,
+      "facets": 2213,
+      "parallels": 1753
+    },
+    "defects_total": 1,
+    "by_severity": {
+      "SEVERITY-3": 1
+    },
+    "by_code": {
+      "facets_mostly_unsourced": 1
+    },
+    "warnings_total": 767,
+    "warnings_by_code": {
+      "parallel_slug_figure_mismatch": 6,
+      "facet_tier_not_in_schema": 644,
+      "documented_transmission_without_evidence": 117
+    },
+    "strength_distribution": {
+      "identity": 310,
+      "strong-parallel": 394,
+      "derivation": 196,
+      "partial-parallel": 621,
+      "contrast": 71,
+      "confident": 155,
+      "working": 5,
+      "tentative": 1
+    },
+    "facets_with_scholarly_note": 249
+  },
+  "defects": [
+    {
+      "severity": "SEVERITY-3",
+      "code": "facets_mostly_unsourced",
+      "ref": "249/2213",
+      "detail": "only 249/2213 (11.3%) facets carry a scholarly_note"
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_eshu_hermes",
+      "detail": "id names 'eshu' + 'hermes' but links eshu-trickster-messenger (Èṣù :: The Divine Trickster and Messenger) + loki-trickster-liberator (Loki :: Trickster / Liberator)"
+    },
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_viracocha_enki",
+      "detail": "id names 'viracocha' + 'enki' but links viracocha-wandering-teacher (Viracocha :: The Wandering Civilizer) + marduk-cosmic-orderer (Marduk :: Cosmic orderer (slayer of Tiamat))"
+    },
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_nuwa_enki",
+      "detail": "id names 'nuwa' + 'enki' but links nuwa-creator-humanity (Nüwa :: Fashioner of Humanity from Clay) + marduk-cosmic-orderer (Marduk :: Cosmic orderer (slayer of Tiamat))"
+    },
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_tao_brahman",
+      "detail": "id names 'tao' + 'brahman' but links laozi-deified-tao (Laozi :: Deified as Taishang Laojun) + sophia-fallen-aeon (Sophia (Orthodox / Hagia Sophia) :: The Fallen Aeon (Mother of the Demiurge))"
+    },
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_tara_mary",
+      "detail": "id names 'tara' + 'mary' but links tara-savior-feminine (Tārā :: Swift Feminine Savior) + christ-logos-descended (Christ :: Christ as Descended Logos)"
+    },
+    {
+      "severity": "WARNING",
+      "code": "parallel_slug_figure_mismatch",
+      "ref": "p_iblis_satan",
+      "detail": "id names 'iblis' + 'satan' but links iblis-accuser (Iblīs / Shayṭān :: Tempter and Accuser of Humanity) + mara-lord-samsara (Māra :: Lord of the Realm of Becoming)"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "avalokiteshvara-compassion",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maitreya-returning",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tara-savior-feminine",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tara-mother-of-buddhas",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saoshyant-world-savior",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saoshyant-virgin-born",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "laozi-sage-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nuwa-creator-humanity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nuwa-sky-repairer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "obatala-creator-of-bodies",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "eshu-trickster-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "eshu-crossroads-guardian",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oshun-love-fertility",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oshun-hidden-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "viracocha-wandering-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maui-trickster-demigod",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maui-culture-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pele-volcanic-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pele-divine-passion",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "perun-serpent-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "veles-wealth-magic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mokosh-fate-weaver",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amaterasu-hidden-restored",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "susanoo-slays-yamata",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dagda-druid-magic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lugh-champion-warrior",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "morrigan-fate-war",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "morrigan-sovereignty-goddess",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "cernunnos-lord-of-animals",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "cernunnos-liminal",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "osiris-dying-rising",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "isis-magic-resurrection",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thoth-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahdi-returning-savior",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahdi-hidden-imam",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "khidr-immortal-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "khidr-divine-wisdom-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "insan-kamil-cosmic-mirror",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "insan-kamil-divine-axis",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "isa-returning-prophet",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mary-mediatrix-graces",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mary-goddess-continuity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sophia-world-soul",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahavira-tirthankara",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-wisdom-magic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-friend-of-humanity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-fashioner",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gilgamesh-immortality-seeker",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ra-nightly-death-resurrection",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "horus-avenger-osiris",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sekhmet-healer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thoth-divine-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thoth-arbiter-scribe",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nut-solar-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "set-defender-ra",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "itzamna-lord-of-knowledge",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hero-twins-descent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hun-hunahpu-dying-rising-corn",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "white-buffalo-calf-woman-gift",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "white-buffalo-calf-woman-returns",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "raven-steals-sun",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "raven-transformer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nanabozho-trickster-transformer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "anansi-spider-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "anansi-keeper-of-stories",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nommo-sacrificed-resurrected",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "cagn-dies-returns",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dangun-divine-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hwanung-heaven-descends",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "perkunas-serpent-battle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "laima-fate-goddess",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "vainamoinen-shaman-singer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sugaar-cosmic-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "teshub-dragon-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "melqart-dying-rising-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "janus-doorways",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zagreus-dismembered-reborn",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kali-time-destroyer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tara-hindu-savior",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bhairavi-fierce-liberator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chhinnamasta-self-decapitation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bagalamukhi-paralyzer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "matangi-outcaste-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kamala-lotus-abundance",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ganesha-remover-obstacles",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manjushri-sword-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ksitigarbha-vow-empty-hells",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ksitigarbha-hell-liberator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ogun-iron-civilizer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oya-storms-change",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guan-yu-deified-general",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "freya-seidr-magic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baldur-beloved-slain",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baldur-returns-after-ragnarok",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "xipe-totec-flayed-renewal",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ranginui-grief-rain",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tane-separator-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baiame-milky-way",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "qat-creator-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pachamama-feeding",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "agni-fire-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "indra-dragon-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tsukuyomi-night-separation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guanyin-compassion",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guanyin-thousand-arms",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mazu-sea-protector",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manannan-sea-otherworld",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manannan-psychopomp",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "brigid-triple-fire",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jarilo-dying-rising-spring",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "world-tree-axis-mundi",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "legba-crossroads-gate",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baron-samedi-death-lwa",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yaldabaoth-jealous-boast",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "barbelo-forethought",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "quetzalcoatl-civilizing-deity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "quetzalcoatl-returning-feathered-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gaia-oracle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hekate-crossroads-magic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hermes-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hermes-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "demeter-recovering-persephone",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "apollo-prophecy",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "athena-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zeus-law-justice",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "krishna-cosmic-lover",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shiva-destroyer-transformer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amitabha-vow-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nezha-self-sacrifice",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nezha-lotus-rebirth",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tezcatlipoca-smoking-mirror",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "were-jaguar-olmec",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "attis-dying-rising",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mithras-bull-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kamuy-bear-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gshen-rab-bon-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "izanami-death-1000",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amaterasu-cave-return",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "selu-corn-mother-sacrifice",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "monster-slayer-twin-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "born-for-water-twin",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kachinas-ancestral-spirits",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "inktomi-spider-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manabozho-great-hare",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nabu-scribal-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lilith-refuser-bride",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "isis-magic-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bodhidharma-zen-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hui-neng-sudden-enlightenment",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "confucius-supreme-sage",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chango-santeria-syncretism",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wati-kutjara-ancestor-pair",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mwadi-female-royal-medium",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "olmec-dragon-proto-quetzalcoatl",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "fish-savior-of-vedas",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "boar-earth-rescuer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dwarf-cosmic-stride",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "buddha-hindu-absorption",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saraswati-wisdom-arts",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hanuman-bhakti-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gautama-buddha-historical",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hevajra-tantric-union",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "loki-shape-shifter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tyr-oath-keeper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "osiris-dismembered",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dionysus-ecstatic-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "prometheus-fire-theft",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "orpheus-recovers-eurydice",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "herakles-divine-champion",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "houyi-archer-suns",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jiuweihu-nine-tailed",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sun-wukong-monkey-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yu-flood-tamer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "cu-chulainn-warrior-frenzy",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gwydion-magic-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ceridwen-cauldron-awen",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "odin-wanderer-wisdom",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "odin-self-sacrifice",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thor-protector-humanity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "husayn-karbala-martyr",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nizari-living-imam",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lamb-cosmic-sovereign",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "new-jerusalem-cosmic-city",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amida-grace-alone",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shinran-grace-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zhuangzi-butterfly-sage",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chakrasamvara-tantric-union",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "okomfo-divine-priest",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "quetzalcoatl-historical-priest-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "old-man-coyote-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "en-no-gyoja-shugendo-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gongen-kami-buddha-avatar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "erzulie-love-lwa",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "damballa-cosmic-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ogou-warrior-revolution",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jurema-plant-spirit",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "orula-ifa-santeria",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "asclepius-healing",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "minerva-wisdom-craft",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bacchus-roman-wine",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mercury-roman-commerce",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "apollo-slays-python",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guan-yu-war-righteousness",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shango-royal-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ogun-first-clearer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maui-snares-sun",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "elijah-fiery-chariot",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "isis-detail-divine-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gaia-titan-prophecy-at-delphi",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zeus-detail-fate-subject-to",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ganesha-elephant-head-story",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gautama-buddha-historical-four-sights",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "odin-detail-poetry-mead",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thor-deity-goats-regenerated",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "demeter-eleusinian-mysteries",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hermes-detail-caduceus",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ra-deity-journey-through-duat",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "horus-deity-contendings-with-set",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-deity-me-list",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sun-wukong-seventy-two-transformations",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "huitzilopochtli-born-mid-battle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maui-deity-slows-the-sun",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "raven-northwest-box-of-daylight",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "inari-kitsune-fox-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ranginui-papatuanuku-held-apart",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "odin-detail-kvasir-poetry-mead",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "freya-volva-seeress",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "morrigan-prophecy-after-battle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thoth-deity-gives-time-to-gods",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-deity-ninmah-contest",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amitabha-detail-18th-vow-calling",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zeus-detail-xenia-hospitality",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hermes-detail-psychopompos-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hekate-triple-crossroads",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dionysus-twice-born",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "morrigan-washer-at-ford",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "avalokiteshvara-compassion-vow-not-to-enter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "michael-eschatological-champion",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "angel-of-the-lord-bearer-of-the-name",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "helel-ben-shachar-fallen-star",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "athtar-failed-ascent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "satan-christian-fallen-angel",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-pride-fall",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "holy-spirit-paraclete",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "michael-christian-weigher-of-souls",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "muhammad-seal-of-prophets",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "muhammad-intercessor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "muhammad-nur-muhammadi",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manda-d-hayyi-saviour",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hibil-ziwa-descent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yahya-yuhana-baptiser",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "melek-taus-refusal-to-bow",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sheikh-adi-reformer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "al-hakim-manifestation-of-unity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "al-hakim-occultation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bahaullah-manifestation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bahaullah-promised-one",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "the-bab-herald",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "abdul-baha-exemplar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "taheb-restorer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "moses-samaritan-unique-prophet",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "haile-selassie-returned-messiah",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "marcus-garvey-prophet-of-return",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "satan-laveyan-symbol-of-self",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "satan-laveyan-four-crown-princes",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "satan-theistic-venerated-liberator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-luciferian-light-bringer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "set-temple-of-set-prince-of-darkness",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "set-temple-of-set-xeper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "satan-tst-eternal-rebel",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baphomet-tst-pluralism",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baphomet-astral-light",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hadit-point-of-self",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hoor-paar-kraat-lord-of-silence",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "babalon-scarlet-woman",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "therion-prophet-of-aeon",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "goddess-wicca-triple-goddess",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "horned-god-dying-reborn",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "spirit-of-truth-consoler",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "god-christian-science-divine-science",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-christian-science-divine-idea",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jehovah-jw-active-force",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jesus-jw-firstborn-michael",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kidane-mehret-covenant-of-mercy",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pushan-guide-of-paths",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "trita-aptya-three-headed-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rudra-howling-archer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ashvins-divine-physicians",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahabali-righteous-asura-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shukra-guru-of-asuras",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ganga-purifying-river",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shesha-world-bearing-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "garuda-nectar-stealing-eagle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sita-earth-born-queen",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "narada-wandering-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dattatreya-trinity-guru",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sati-body-of-pithas",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ayya-vaikundar-final-avatar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "basava-founder-saint",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "khunlung-khunlai-descended-founders",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "vajrapani-thunderbolt-guardian",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hariti-child-devourer-protector",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "padmasambhava-spirit-tamer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gesar-demon-subduing-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rishabhanatha-first-ford-maker",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "parshvanatha-serpent-sheltered-jina",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "neminatha-compassionate-renouncer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tirthankaras-24-ford-makers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bahubali-standing-meditator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guru-nanak-light-of-the-guru",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "guru-gobind-singh-khalsa-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bhagauti-sword-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "balumain-solstice-visitor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kumari-living-goddess",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "manas-uniting-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "targitaos-first-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ulu-toyon-dark-upper-lord",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mangi-cosmic-hunter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mir-susne-khum-world-watcher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kurkyl-raven-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kutkh-big-raven-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "fuxi-trigram-revealer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lu-dongbin-alchemical-patriarch",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "erlang-shen-flood-tamer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wusheng-laomu-apocalyptic-return",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "huangdi-ancestor-sovereign",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shennong-herb-taster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hachiman-great-bodhisattva",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "okuninushi-land-shaper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sukunabikona-healer-dwarf",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ebisu-hiruko-returned",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ame-no-uzume-dance-restores-sun",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sarutahiko-crossroads-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ninigi-heavenly-descent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kamuy-fuchi-hearth-intercessor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "okikurmi-culture-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kannon-hearer-of-cries",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jizo-guardian-of-children",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enma-jizo-honji",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "benzaiten-music-eloquence",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tenjin-vengeful-to-patron",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hotei-maitreya-incognito",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ungnyeo-enduring-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bari-gongju-fetches-water-of-life",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bari-gongju-guide-of-dead",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lac-long-quan-dragon-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lieu-hanh-banished-princess",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thanh-giong-child-giant-savior",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tran-hung-dao-deified-general-exorcist",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "semar-hidden-elder-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dewi-sri-rice-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "phra-mae-thorani-earth-witness",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kamapuaa-pig-rain-lover",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hiiaka-hula-healer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "olifat-sky-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "marawa-death-origin",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "to-kabinana-wise-brother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "waa-crow-moiety",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nurundere-river-shaper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wandjina-rain-law-beings",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wawilak-sisters-naming-journey",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "karora-ancestor-from-sleep",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "purukupali-death-decree",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "malo-bomai-law-bringer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mireuk-future-buddha",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tagaro-wise-creator-brother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dumuzi-taken-below",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ningishzida-serpent-gatekeeper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "telipinu-vanishing-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "eshmun-restored-youth",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shapash-sun-psychopomp",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mithra-avestan-sun-herald",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gayomart-first-man",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "third-messenger-light-ships",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "primal-man-mani-sacrificed-first-emanation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mani-apostle-of-light",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "aten-rays-with-hands",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "apis-living-bull",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "phanes-swallowed-by-zeus",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "turms-messenger-psychopomp",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "vanth-soul-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tages-revealer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "quirinus-deified-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "zalmoxis-immortality-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thracian-horseman-divine-rider",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lemminkainen-dismembered-restored",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "batradz-steel-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tlepsh-smith-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "vahagn-straw-thief",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "drangue-storm-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lleu-llaw-gyffes-spear-struck-eagle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bran-the-blessed-guardian-head",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mabon-divine-youth",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "egungun-returning-ancestors",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ibeji-sacred-twins",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oduduwa-earth-maker",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ori-personal-destiny",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "dan-fon-world-holding-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "fa-fon-destiny-divination",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ekwensu-chaos-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "agwu-diviner-calling",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chi-igbo-personal-guardian",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gikuyu-mumbi-first-ancestors",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "abuk-first-woman",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kalunga-threshold-water",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mbidi-kiluwe-civilizing-hunter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kalala-ilunga-founder-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nehanda-royal-lion-spirit",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chaminuka-prophet-spirit",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "amadlozi-lineage-ancestors",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "heitsi-eibib-dying-rising-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lebe-serpent-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pangool-ancestral-intercessors",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kintu-first-man-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "razana-honored-ancestors",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-barbara-lightning-patron",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-lazarus-patron-of-sick",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-regla-patroness-of-sea",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-peter-keys-of-heaven",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-george-dragon-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-anthony-of-padua-finder-of-ways",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "holy-child-of-atocha-wandering-child",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-czestochowa-scarred-protector",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-charity-cobre-patroness-of-cuba",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-mercy-ransomer-of-captives",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-candelaria-candle-bearer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-james-the-greater-warrior-apostle",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-john-the-baptist-forerunner-baptizer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-patrick-banisher-of-serpents",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-isidore-patron-of-farmers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-sebastian-arrow-martyr",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-sorrows-pierced-heart",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-francis-of-assisi-poor-mystic",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saints-cosmas-and-damian-twin-healers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "our-lady-of-immaculate-conception-immaculate",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gede-lwa-death-jesters",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maman-brigitte-grave-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "marasa-divine-children",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "erzulie-dantor-warrior-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "loko-atisou-first-priest",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "met-kalfou-night-crossroads",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ayida-wedo-rainbow-serpent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "eleggua-lucumi-opener-of-roads",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "babalu-aye-lucumi-disease-healer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oya-lucumi-cemetery-gate",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "exu-candomble-mover-of-axe",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "omolu-candomble-straw-covered-healer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "iansa-candomble-wind-mistress",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pretos-velhos-wise-elders",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "caboclos-forest-healers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "exu-umbanda-street-guardians",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "pombagira-street-queen",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "exu-tranca-ruas-lock-the-roads",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maria-padilha-queen-of-pombagiras",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucero-mundo-morning-star-roads",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "centella-ndoki-cemetery-wind",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "madama-espiritismo-healer-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "indio-espiritismo-warrior-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "high-john-conqueror-unconquered-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "crossroads-man-hoodoo-crossroads-initiator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tlazolteotl-eater-of-filth",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nanahuatzin-self-sacrifice-sun",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "huehuecoyotl-old-coyote-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "xolotl-dog-psychopomp",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kukulkan-feathered-serpent-lord",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "xmucane-maize-grinder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nine-wind-wind-ancestor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ai-apaec-fanged-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "cuniraya-ragged-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bochica-civilizer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kuaray-sun-twin",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yurupari-flute-lawgiver",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "deminan-cassava-thief",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tulugaak-raven-creator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "tornarsuk-shaman-helper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sweet-medicine-arrow-bringer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chufi-fire-stealing-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "glooscap-transformer-hero",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ahayuuta-war-twins",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "spider-woman-navajo-weaver-helper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "first-man-navajo-bundle-holder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "first-woman-navajo-first-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "coyote-first-angry-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "child-of-water-monster-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "killer-of-enemies-elder-slayer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "peacemaker-lawgiver-of-peace",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thunder-boys-thunder-twins",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "coyote-plateau-transformer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "simbi-water-magician",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "legba-full-fon-gatekeeper",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "poimandres-revealer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "anthropos-hermetic-descent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "one-thing-emerald-telesma",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "anima-mundi-renaissance-spiritus",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mercurius-spirit-of-the-work",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mercurius-trickster",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rebis-union-of-opposites",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "world-soul-plotinus-mediator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hecate-chaldean-world-soul",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hecate-chaldean-theurgic-epiphany",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "aion-born-of-kore",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "akephalos-bornless-angel",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "leontocephaline-lord-of-time",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hga-abramelin-knowledge-conversation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "secret-chiefs-hidden-masters",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christian-rosenkreuz-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christian-rosenkreuz-chymical-wedding",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "reparateur-martinist-reintegration",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "adam-martinist-fallen-minister",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hiram-abiff-slain-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lam-gateway",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lam-the-way",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "set-typhonian-first-god-sirius",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nyarlathotep-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yog-sothoth-gate-and-key",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "eris-discordian-goddess-of-chaos",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "baphomet-chaos-mass-of-chaos",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "aradia-witch-messiah",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "diana-stregheria-queen-of-witches",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sabbath-devil-black-man",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "santa-muerte-holy-death-protector",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "san-la-muerte-protector",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jesus-malverde-bandit-saint",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maximon-rilaj-mam",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-sun-being-descent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-sun-being-christ-impulse",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-sun-being-etheric-return",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-anthroposophy-upward-tempter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "michael-time-spirit-age-of-michael",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "anthroposophia-isis-sophia",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "masters-of-wisdom-hidden-adepts",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-theosophy-light-bearer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rael-last-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rael-maitreya",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-raelian-truth-teller",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jesus-raelian-prophet",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "do-heavens-gate-returned-representative",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "do-heavens-gate-exit",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thetan-immortal-self",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "allah-fard-mahdi",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "elijah-muhammad-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "noble-drew-ali-prophet",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "clarence-13x-father",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "yahawashi-returning-messiah",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "master-jesus-aetherius-venusian-avatar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "uriel-unarius-archangel",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "raphael-unarius-moderator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jmmanuel-prophet-of-creation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "michael-of-nebadon-bestowal-as-jesus",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "machiventa-melchizedek-emergency-son",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "melchizedek-priest-king",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "melchizedek-heavenly-judge",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "oannes-fish-sage",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "enki-sitchin-champion-of-humans",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ra-law-of-one-humble-messenger",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ra-law-of-one-egyptian-contact",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "nakayama-miki-shrine-of-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ushitora-no-konjin-banished-returning",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "deguchi-nao-oracle-of-konjin",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "deguchi-onisaburo-miroku",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "konko-daijin-mediator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "choe-je-u-founder-martyr",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jeungsan-sangje-supreme-incarnate",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sotaesan-founding-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "li-hongzhi-master-of-the-fa",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "true-parents-second-advent",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahanta-living-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "meher-baba-avatar-of-the-age",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "meher-baba-silence",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shirdi-sai-baba-perfect-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sathya-sai-baba-avatar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "shiv-baba-confluence-age",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "brahma-baba-chariot-of-shiva",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "chaitanya-radha-krishna-combined",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "peyote-spirit-cross-fire",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wovoka-prophet-of-the-dance",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "wovoka-messiah",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "handsome-lake-prophet",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "simon-kimbangu-comforter",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "isaiah-shembe-servant-of-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "huynh-phu-so-prophet-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "phat-thay-tay-an-buddha-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "fohat-cosmic-electricity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lords-of-flame-mind-bringers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "spiritual-hierarchy-elder-brothers",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "koot-hoomi-love-wisdom-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "morya-will-and-power",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "djwal-khul-telepathic-revelation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rakoczi-ceremonial-order",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "master-jesus-theosophical-sixth-ray-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maitreya-theosophical-world-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "maitreya-theosophical-reappearance",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lucifer-theosophical-light-bearer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "vaivasvata-manu-race-progenitor",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahachohan-lord-of-civilisation",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sanatkumara-hindu-eternal-youth-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-germain-violet-flame",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "saint-germain-aquarian-hierarch",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "great-white-brotherhood-ascended-host",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "el-morya-will-of-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lord-lanto-illumination",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "paul-the-venetian-divine-love",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "serapis-bey-ascension-flame",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "hilarion-truth-healing",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lady-nada-ministration",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kuthumi-world-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "kuan-yin-ascended-mercy-flame",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mother-mary-ascended-healing-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jesus-ascended-master-way-shower",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gautama-lord-of-the-world-lord-of-the-world",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "portia-goddess-of-justice-justice-opportunity",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "sanat-kumara-ascended-keeper-of-the-flame",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "seth-jane-roberts-create-your-reality",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ramtha-forgotten-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "abraham-hicks-law-of-attraction",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "bashar-follow-excitement",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "jesus-acim-forgiveness-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "holy-spirit-acim-voice-for-god",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "emmanuel-rodegast-loving-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "lazaris-never-physical-friend",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "michael-teachings-entity-causal-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "white-eagle-star-brotherhood",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-consciousness-universal-christ",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "higher-self-inner-guide",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "gaia-new-age-ascending-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "thoth-the-atlantean-atlantean-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "metatron-new-age-sacred-geometry-healer",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "adama-of-telos-lemurian-high-priest",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "goddess-movement-great-goddess-divine-feminine-reclaimed",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "christ-unity-divine-idea",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mikao-usui-lineage-founder",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mahavatar-babaji-deathless-avatar",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "helping-spirits-core-shamanism-upper-world-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "madre-ayahuasca-plant-teacher",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "madre-ayahuasca-grandmother-of-healing",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mestre-irineu-juramidam-imperial-master",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mestre-irineu-juramidam-receiver-of-hymns",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "rainha-da-floresta-divine-mother",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "santo-daime-sacrament-divine-being-in-drink",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "mestre-gabriel-recreator",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "iboga-spirit-ancestral-gateway",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ninos-santos-speaking-children",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "ninos-santos-book-of-language",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "facet_tier_not_in_schema",
+      "ref": "huachuma-san-pedro-keys-of-heaven",
+      "detail": "tier_assignment=0 not one of ['1', '2', '3', '4', 'cross-tier']"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p212",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p213",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p215",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p216",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p309",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p311",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p325",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_guanyin_tara",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_barbelo_sophia",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_isis_universal_mary",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_hermes_trismegistus_thoth",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_olmec_dragon_quetzalcoatl",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_sun_wukong_hanuman",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_ritamasatmaat",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "p_erzulie_oshun_diaspora",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "abr-p035",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "abr-p039",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "abr-p117",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "sas-p023",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "sas-p069",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "sas-p105",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eas-p012",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eas-p036",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eas-p102",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eas-p120",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p087",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p102",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p155",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p173",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p218",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p221",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "eur-p223",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p030",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p031",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p032",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p033",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p034",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p035",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p036",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p037",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p038",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p039",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p040",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p041",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p042",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p043",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p044",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p045",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p046",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p047",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p048",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p049",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p050",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p051",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p052",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p055",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p056",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p057",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p058",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p063",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p064",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p067",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p085",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p127",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p153",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "afa-p218",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "xl-p007",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "xl-p008",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "xl-p009",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "xl-p010",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p011",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p020",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p034",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p039",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p053",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p073",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p075",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p087",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p092",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p094",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p097",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p121",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p122",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p130",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p131",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p133",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p134",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p135",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p136",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p138",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p159",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p189",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p197",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p198",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "occ-p200",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p053",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p056",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p089",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p116",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p120",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p127",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p131",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p137",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p159",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p175",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p177",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nrm-p183",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p004",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p035",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p039",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p050",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p075",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p078",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p096",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p097",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p098",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    },
+    {
+      "severity": "WARNING",
+      "code": "documented_transmission_without_evidence",
+      "ref": "nag-p100",
+      "detail": "type=documented-historical-transmission but none of transmission_evidence / primary_text_evidence / suggested_citation / scholarly_note is set"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "version": "093",
+  "version": "094",
   "description": "Forward-port: v0.6.5 clean structure + v0.7.0 citation/triage layer. Repaired 7 Sev-1 defects (4 tradition FKs, 2 mislinked parallels, 1 intra-deity parallel dropped); triage derived from data; duplicates removed. Validates with 0 Severity-1 / 0 Severity-2 defects. See reports/FORWARD_PORT_v080.md.",
   "schema_version": 2,
   "tier_definitions": {
@@ -424,7 +424,7 @@
    }
   },
   "merged_batches": [
-   "v093_sacred_name.json"
+   "v094_slug_fixes.json"
   ]
  },
  "traditions": [
@@ -38754,8 +38754,7 @@
    "core_claim": "Loki repeatedly extracts the Aesir from disasters of their own making — and sometimes creates them. He brings them Mjölnir, Sleipnir, Gungnir, and other treasures, often through cunning theft.",
    "parallel_facets": [
     "prometheus-fire-bringer",
-    "eshu-trickster-messenger",
-    "thoth-wisdom"
+    "eshu-trickster-messenger"
    ]
   },
   {
@@ -39367,7 +39366,8 @@
     "mercurius-spirit-of-the-work",
     "poimandres-revealer",
     "ophiel-olympic-governor",
-    "thoth-the-atlantean-atlantean-master"
+    "thoth-the-atlantean-atlantean-master",
+    "thoth-wisdom"
    ]
   },
   {
@@ -42867,7 +42867,8 @@
     "mari-mountain-goddess",
     "mother-earth-aetherius-living-being",
     "gaia-new-age-living-planet",
-    "pachamama-neo-andean-living-mother"
+    "pachamama-neo-andean-living-mother",
+    "gaia-earth-body"
    ]
   },
   {
@@ -43446,7 +43447,6 @@
     "hermes-trismegistus-wisdom-teacher",
     "marduk-cosmic-orderer",
     "sophia-redemptive",
-    "loki-trickster-liberator",
     "fuxi-trigram-revealer",
     "hermes-messenger",
     "agathos-daimon-first-god-teacher",
@@ -81599,7 +81599,7 @@
   {
    "id": "p_pachamama_gaia",
    "facet_a_id": "pachamama-earth-mother",
-   "facet_b_id": "mokosh-earth-mother",
+   "facet_b_id": "gaia-earth-body",
    "strength": "confident",
    "type": "structural-function-match",
    "basis": [
@@ -81609,16 +81609,15 @@
    ],
    "provenance": "candidate",
    "triage_status": "genuine-novel",
-   "specificity_score": 0.381,
+   "specificity_score": 0.388,
    "specificity_band": "universal-motif",
    "specificity_shared_tags": [
     "cosmic-source",
     "earth",
-    "fertility",
     "great-mother"
    ],
-   "specificity_pvalue": 0.0003,
-   "specificity_z": 11.12,
+   "specificity_pvalue": 0.0009,
+   "specificity_z": 8.43,
    "specificity_significant": true
   },
   {
@@ -81748,7 +81747,7 @@
   {
    "id": "p_thoth_hermes",
    "facet_a_id": "thoth-wisdom",
-   "facet_b_id": "loki-trickster-liberator",
+   "facet_b_id": "hermes-trismegistus-wisdom-teacher",
    "strength": "confident",
    "type": "documented-historical-transmission",
    "basis": [
