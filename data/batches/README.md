@@ -32,3 +32,9 @@ v0.9.2 = v0.9.1 + fixes (`deity_edits`, `facet_edits`, `remove_traditions` keys)
 ```
 python3 tools/merge_batches.py data/source_map_seed_data_v091.json data/source_map_seed_data_v092.json data/batches/v092_fixes.json
 ```
+
+v0.9.4 = v0.9.3 + parallel fixes (`parallel_edits` key: `{parallel_id, set:{facet_b_id}, unlink_old}`):
+
+```
+python3 tools/merge_batches.py data/source_map_seed_data_v093.json data/source_map_seed_data_v094.json data/batches/v094_slug_fixes.json
+```
