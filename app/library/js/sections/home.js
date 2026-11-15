@@ -81,8 +81,8 @@ export function renderHome() {
 
   // Bind tradition card clicks
   section.querySelectorAll('[data-trad-nav]').forEach(el => {
-    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate('traditions'); } });
-    el.addEventListener('click', () => navigate('traditions'));
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate('traditions', el); } });
+    el.addEventListener('click', () => navigate('traditions', el));
   });
 }
 
@@ -99,7 +99,7 @@ function ctaBtn(label, section, primary) {
   const style = primary
     ? 'background:var(--gold);color:var(--void);border:1px solid var(--gold);font-weight: 600'
     : 'background:transparent;color:var(--text-primary);border:1px solid var(--border-strong)';
-  return `<button class="cta-btn${primary ? ' cta-btn--primary' : ''}" onclick="navigateTo('${section}')"
+  return `<button class="cta-btn${primary ? ' cta-btn--primary' : ''}" onclick="navigateTo('${section}', this)"
     style="${style};font-family:var(--font-ui);font-size:0.9375rem;font-weight:500;padding:0.65rem 1.25rem;min-height:44px;cursor:pointer;transition:background-color .15s,border-color .15s;border-radius:6px">
     ${label}
   </button>`;
