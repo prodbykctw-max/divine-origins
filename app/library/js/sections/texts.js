@@ -8,6 +8,7 @@ import { TRADITION_GROUPS }                   from '../../data/traditions/groups
 import { artifact, captionHTML }              from '../ui/artifact.js';
 import { state, setState }                    from '../state.js';
 import { bindBookHover, scrollRailToItem }    from '../animations.js';
+import { grow, motionOff }                    from '../ui/glide.js';
 
 /* ── TRADITION FILTER STATE ── */
 let activeTradFilter = 'all';
@@ -334,8 +335,11 @@ function selectBook(textId) {
   if (contentEl) contentEl.innerHTML = contentHTML;
 
   if (detailEl) {
+    const wasOpen = detailEl.classList.contains('open');
     detailEl.classList.add('open');
     detailEl.setAttribute('aria-hidden', 'false');
+    // the details grow out of the book that was picked (a switch between books just swaps the text)
+    if (!wasOpen) grow(detailEl, selectedEl, 'open');
     // Scroll into view smoothly
     setTimeout(() => detailEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
   }
@@ -343,6 +347,7 @@ function selectBook(textId) {
 
 /* ── CLOSE DETAIL ── */
 function closeBookDetail() {
+  shrinkDetailIntoBook(selectedTextId);
   selectedTextId = null;
   document.querySelectorAll('.book').forEach(b => {
     b.classList.remove('selected');
@@ -353,6 +358,29 @@ function closeBookDetail() {
     detailEl.classList.remove('open');
     detailEl.setAttribute('aria-hidden', 'true');
   }
+}
+
+/* The open details shrink back into their book. The panel itself still closes at once, as before;
+   what shrinks is a painted copy of it, removed when the shrink ends. */
+function shrinkDetailIntoBook(textId) {
+  const detailEl = document.getElementById('book-detail');
+  const bookEl = textId && document.querySelector(`.book[data-text-id="${textId}"]`);
+  if (!detailEl || !bookEl || motionOff() || !detailEl.classList.contains('open')) return;
+  const r = detailEl.getBoundingClientRect();
+  if (!(r.width > 0 && r.height > 0) || r.bottom < 0 || r.top > window.innerHeight) return;
+  const ghost = detailEl.cloneNode(true);
+  ghost.removeAttribute('id');
+  ghost.querySelectorAll('[id]').forEach((n) => n.removeAttribute('id'));
+  ghost.setAttribute('aria-hidden', 'true');
+  ghost.inert = true;
+  Object.assign(ghost.style, { position: 'fixed', left: `${r.left}px`, top: `${r.top}px`, width: `${r.width}px`, height: `${r.height}px`,
+    margin: '0', maxHeight: 'none', zIndex: '40', pointerEvents: 'none', transition: 'none', boxSizing: 'border-box' });
+  document.body.appendChild(ghost);
+  const a = grow(ghost, bookEl, 'close');
+  const end = () => ghost.remove();
+  if (!a) { end(); return; }
+  a.onfinish = end; a.oncancel = end;
+  setTimeout(end, 600);
 }
 
 function sentence(v) {

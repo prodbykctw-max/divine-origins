@@ -503,3 +503,9 @@
    does the moving; the modal's own open/close transitions would fight it. */
 .modal-overlay.glide-vt,
 .modal-overlay.glide-vt .modal { transition: none; }
+
+/* ── PAGE GLIDE (router.js) ── a section opened from a card grows out of it; Back shrinks it into it.
+   The browser's default cross-fade blends the two pages additively; turn it off while a page glide runs. */
+html.page-glide::view-transition-old(root),
+html.page-glide::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+html.page-glide-back::view-transition-old(root) { z-index: 2; }

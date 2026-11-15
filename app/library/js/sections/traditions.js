@@ -145,12 +145,12 @@ function buildTradPanel(g) {
 
           <!-- Canon links -->
           <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);display:flex;gap:0.6rem;flex-wrap:wrap">
-            <button onclick="navigateTo('texts')"
+            <button onclick="navigateTo('texts', this)"
                     style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid ${g.color}66;color:${g.color};background:${g.color}0a;cursor:pointer;transition:all 0.2s;border-radius:2px">
               VIEW SACRED TEXTS →
             </button>
             ${g.calendarId ? `
-            <button onclick="navigateTo('calendars')"
+            <button onclick="navigateTo('calendars', this)"
                     style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid var(--border);color:var(--text-dim);background:transparent;cursor:pointer;transition:all 0.2s;border-radius:2px">
               CALENDAR SYSTEM →
             </button>` : ''}
