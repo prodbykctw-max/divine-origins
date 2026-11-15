@@ -254,7 +254,8 @@ function webglAvailable() {
 
 /** Fly the camera to a section's vantage point. */
 export function flyTo(section) {
-  const shot = SHOTS[section] || SHOTS.home;
+  // Own keys only: a #constructor / #__proto__ link must fall back to home, not crash (security audit 2026-11-15).
+  const shot = Object.prototype.hasOwnProperty.call(SHOTS, section) ? SHOTS[section] : SHOTS.home;
   const d = reduceMotion ? 0 : 2.2;
   gsap.to(rig, {
     x: shot.pos[0], y: shot.pos[1], z: shot.pos[2],
