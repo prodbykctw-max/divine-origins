@@ -498,3 +498,8 @@
     max-height: none;
   }
 }
+
+/* While a card grows into the modal (or the modal shrinks back into it) the view transition
+   does the moving; the modal's own open/close transitions would fight it. */
+.modal-overlay.glide-vt,
+.modal-overlay.glide-vt .modal { transition: none; }
