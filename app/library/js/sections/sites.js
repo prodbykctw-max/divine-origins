@@ -123,7 +123,7 @@ function buildCards() {
   }).join('');
 }
 
-function openDeepDive(id) {
+function openDeepDive(id, card) {
   const d = DEEP_DIVES.find((x) => x.id === id);
   if (!d) return;
   const art = siteArtifact(d.id);
@@ -133,6 +133,22 @@ function openDeepDive(id) {
   const map = d.lat != null ? `https://www.openstreetmap.org/?mlat=${d.lat}&mlon=${d.lon}#map=15/${d.lat}/${d.lon}` : '';
   openModal({
     accentColor: color,
+    source: card || null,
+    sourceImage: card ? card.querySelector('.site-card__img') : null,
+    destImage: '#site-dive-photo',
+    onOpen: () => {
+      // The photo is added as a DOM node, not as tag text: an <img> tag written inside the inlined
+      // bundle is read by the browser's preload scanner, which then requests the template text as a URL.
+      const fig = document.getElementById('site-dive-photo');
+      if (fig && art) {
+        const img = document.createElement('img');
+        img.src = art.large; img.srcset = art.srcset; img.sizes = '(max-width: 720px) 92vw, 640px';
+        img.alt = art.title; img.decoding = 'async';
+        fig.prepend(img);
+      }
+      document.querySelectorAll('#modal-content [data-open-deity]').forEach((b) =>
+        b.addEventListener('click', () => openInSourceMap(b.dataset.openDeity)));
+    },
     html: `
       <article class="site-dive">
         ${art ? `<figure class="site-dive__fig" id="site-dive-photo"><figcaption class="art-cap">${captionHTML(art)}</figcaption></figure>` : ''}
@@ -150,17 +166,6 @@ function openDeepDive(id) {
         </p>
       </article>`,
   });
-  // The photo is added as a DOM node, not as tag text: an <img> tag written inside the inlined
-  // bundle is read by the browser's preload scanner, which then requests the template text as a URL.
-  const fig = document.getElementById('site-dive-photo');
-  if (fig && art) {
-    const img = document.createElement('img');
-    img.src = art.large; img.srcset = art.srcset; img.sizes = '(max-width: 720px) 92vw, 640px';
-    img.alt = art.title; img.decoding = 'async';
-    fig.prepend(img);
-  }
-  document.querySelectorAll('#modal-content [data-open-deity]').forEach((b) =>
-    b.addEventListener('click', () => openInSourceMap(b.dataset.openDeity)));
 }
 
 /** Open a deity's sheet in the Source Map (handled in ParallelsOfTheGods.jsx). */
@@ -336,7 +341,7 @@ function bindSites(section) {
   }));
   section.querySelector('#sites-grid').addEventListener('click', (e) => {
     const card = e.target.closest('[data-site]');
-    if (card) openDeepDive(card.dataset.site);
+    if (card) openDeepDive(card.dataset.site, card);
   });
   section.querySelectorAll('[data-mode]').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
   const input = section.querySelector('#sites-pick');

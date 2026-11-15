@@ -1,8 +1,36 @@
-import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
+import { flushSync } from 'react-dom';
 import { Search, X, Filter, BookOpen, Eye, EyeOff, Info, ChevronUp, ChevronDown, Sparkles, ArrowUpRight, FileText, Upload, Layers, MapPin } from 'lucide-react';
 import SEED_DATA from './seed-data.json';
 import SITE_COUNTS from './src/site-counts.json';
 import CosmosView from './CosmosView.jsx';
+import { canMorph, motionOff, usable, morph, grow, fade } from '../library/js/ui/glide.js';
+
+// Where the last tap landed: a figure picked in the 3D / network view has no chip to grow from,
+// so the sheet grows out of that point instead.
+let lastTap = { x: 0, y: 0, t: 0 };
+if (typeof window !== 'undefined') {
+  window.addEventListener('pointerdown', (e) => { lastTap = { x: e.clientX, y: e.clientY, t: Date.now() }; }, true);
+}
+
+// Grow/shrink for a panel opened by a button or a tap point. `origin` is an element or {x, y}.
+// Returns { fade, animateOut }: animateOut(done) plays the way back, then calls done().
+function useGlide(panelRef, backdropRef, origin) {
+  const closing = useRef(false);
+  useLayoutEffect(() => {
+    if (!origin) return;
+    grow(panelRef.current, origin, 'open');
+    fade(backdropRef.current, 'open');
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  return useCallback((done) => {
+    if (closing.current) return;
+    const a = origin && !motionOff() ? grow(panelRef.current, origin, 'close') : null;
+    if (!a) { done(); return; }
+    closing.current = true;
+    fade(backdropRef.current, 'close');
+    a.finished.then(done, done);
+  }, [origin]); // eslint-disable-line react-hooks/exhaustive-deps
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EMBEDDED SEED DATA
@@ -223,6 +251,13 @@ function SourceMapApp({ data, onReload }) {
   // UI state
   const [selectedFacetId, setSelectedFacetId] = useState(null);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const rootRef = useRef(null);
+  const sheetFrom = useRef(null);     // {x, y} the open sheet grows from (no chip to grow from)
+  const [sheetGlide, setSheetGlide] = useState('none'); // 'morph' | 'point' | 'none'
+  const closeSeq = useRef(0);
+  const aboutFrom = useRef(null);
+  const compareFrom = useRef(null);
+  const chipFor = (id) => (rootRef.current ? rootRef.current.querySelector('[data-facet-id="' + id + '"]') : null);
   const [activeTraditions, setActiveTraditions] = useState(() => new Set(traditions.map(t => t.id)));
   const [searchQuery, setSearchQuery] = useState('');
   const [scholarlyMode, setScholarlyMode] = useState(false);
@@ -249,6 +284,7 @@ function SourceMapApp({ data, onReload }) {
       const d = deityById[id];
       if (!f || !d) return;
       setActiveTraditions(prev => (prev.has(d.tradition_id) ? prev : new Set([...prev, d.tradition_id])));
+      sheetFrom.current = null; setSheetGlide('none');
       setSelectedFacetId(f.id);
       setSheetOpen(true);
     };
@@ -299,18 +335,63 @@ function SourceMapApp({ data, onReload }) {
   }, [activeTraditions, searchMatches, deityById]);
 
   function selectFacet(id) {
+    closeSeq.current++;
+    if (sheetOpen) { setSelectedFacetId(id); return; } // switching figures inside an open sheet
+    const chip = chipFor(id);
+    if (chip && canMorph() && usable(chip)) {
+      sheetFrom.current = null;
+      // the chip that was tapped grows into the sheet
+      morph({
+        dir: 'open',
+        pairs: [{ from: chip, name: 'glide-card', to: () => (rootRef.current ? rootRef.current.querySelector('.sheet') : null) }],
+        update: () => flushSync(() => { setSheetGlide('morph'); setSelectedFacetId(id); setSheetOpen(true); }),
+      });
+      return;
+    }
+    const recent = Date.now() - lastTap.t < 1500;
+    sheetFrom.current = !chip && recent && !motionOff() ? { x: lastTap.x, y: lastTap.y } : null;
+    setSheetGlide(sheetFrom.current ? 'point' : 'none');
     setSelectedFacetId(id);
     setSheetOpen(true);
   }
 
+  // Close the sheet back into the chip it grew from (or toward the tap it grew from).
+  function dismissSheet(apply) {
+    const seq = ++closeSeq.current;
+    const sheet = rootRef.current ? rootRef.current.querySelector('.sheet') : null;
+    if (!sheetOpen || !sheet) { apply(); return; }
+    const fid = selectedFacetId;
+    const chip = fid ? chipFor(fid) : null;
+    if (chip && canMorph() && usable(chip) && usable(sheet)) {
+      morph({
+        dir: 'close',
+        pairs: [{ from: sheet, name: 'glide-card', to: () => chipFor(fid) }],
+        update: () => flushSync(apply),
+      });
+      return;
+    }
+    if (sheetFrom.current && !motionOff()) {
+      const backdrop = rootRef.current.querySelector('.sheet-backdrop');
+      const a = grow(sheet, sheetFrom.current, 'close');
+      if (a) {
+        fade(backdrop, 'close');
+        a.finished.then(() => {
+          if (closeSeq.current === seq) apply();
+          else { a.cancel(); if (backdrop) backdrop.getAnimations().forEach((x) => x.cancel()); }
+        }, () => {});
+        return;
+      }
+    }
+    apply();
+  }
+
   function closeSheet() {
-    setSheetOpen(false);
     // Keep selectedFacetId so the highlight persists; clear on a second close gesture
+    dismissSheet(() => setSheetOpen(false));
   }
 
   function clearSelection() {
-    setSelectedFacetId(null);
-    setSheetOpen(false);
+    dismissSheet(() => { setSelectedFacetId(null); setSheetOpen(false); });
   }
 
   function toggleTradition(id) {
@@ -345,7 +426,7 @@ function SourceMapApp({ data, onReload }) {
   const totalDeities = deities.length;
 
   return (
-    <div style={{
+    <div ref={rootRef} style={{
       minHeight: '100vh',
       background: 'var(--sm-canvas)',
       color: 'var(--sm-text)',
@@ -524,8 +605,8 @@ function SourceMapApp({ data, onReload }) {
 
       <Header
         meta={meta}
-        onAboutClick={() => setAboutOpen(true)}
-        onCompareClick={() => setCompareOpen(true)}
+        onAboutClick={(el) => { aboutFrom.current = el; setAboutOpen(true); }}
+        onCompareClick={(el) => { compareFrom.current = el; setCompareOpen(true); }}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         scholarlyMode={scholarlyMode}
@@ -634,10 +715,12 @@ function SourceMapApp({ data, onReload }) {
           onClose={closeSheet}
           onClear={clearSelection}
           onSelectFacet={selectFacet}
+          glide={sheetGlide}
+          origin={sheetGlide === 'point' ? sheetFrom.current : null}
         />
       )}
 
-      {aboutOpen && <AboutModal meta={meta} parallels={parallels} onClose={() => setAboutOpen(false)} />}
+      {aboutOpen && <AboutModal meta={meta} parallels={parallels} origin={aboutFrom.current} onClose={() => setAboutOpen(false)} />}
 
       {compareOpen && (
         <CompareModal
@@ -646,6 +729,7 @@ function SourceMapApp({ data, onReload }) {
           traditionById={traditionById}
           parallels={parallels}
           initialFacetId={selectedFacetId}
+          origin={compareFrom.current}
           onClose={() => setCompareOpen(false)}
         />
       )}
@@ -679,7 +763,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
           </div>
           <div style={{ display: 'flex', gap: 6 }}>
             <button
-              onClick={onCompareClick}
+              onClick={(e) => onCompareClick(e.currentTarget)}
               className="smallcaps"
               style={{
                 fontSize: '12px',
@@ -694,7 +778,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               Compare
             </button>
             <button
-              onClick={onAboutClick}
+              onClick={(e) => onAboutClick(e.currentTarget)}
               className="smallcaps"
               style={{
                 fontSize: '12px',
@@ -911,6 +995,7 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
             <button
               key={facet.id}
               className={cls}
+              data-facet-id={facet.id}
               onClick={() => onSelect(facet.id)}
               style={{
                 padding: '9px 13px 10px 14px',
@@ -951,8 +1036,16 @@ function TierBand({ tier, meta, facets, deityById, traditionById, selectedFacetI
 // ─────────────────────────────────────────────────────────────────────────────
 // DetailSheet — bottom sheet with the node's full data
 // ─────────────────────────────────────────────────────────────────────────────
-function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionById, parallelsForFacet, parallelRecords, scholarlyMode, onClose, onClear, onSelectFacet, compact }) {
+function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionById, parallelsForFacet, parallelRecords, scholarlyMode, onClose, onClear, onSelectFacet, compact, glide, origin }) {
   const [tab, setTab] = useState('essence');
+  const sheetRef = useRef(null);
+  const backRef = useRef(null);
+  useLayoutEffect(() => {
+    if (glide !== 'point' || !origin) return;
+    grow(sheetRef.current, origin, 'open');
+    fade(backRef.current, 'open');
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const fadeCls = glide === 'none' ? ' fade-in' : '';
   const c = colorFor(deity?.tradition_id);
   const relatedFacetIds = Array.from(parallelsForFacet[facet.id] || []);
 
@@ -973,8 +1066,8 @@ function DetailSheet({ facet, deity, tradition, facetById, deityById, traditionB
 
   return (
     <>
-      {!compact && <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />}
-      <div className="sheet fade-in" style={{
+      {!compact && <div ref={backRef} className={'sheet-backdrop' + fadeCls} style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />}
+      <div ref={sheetRef} className={'sheet' + fadeCls} style={{
         position: 'fixed',
         bottom: 0, left: 0, right: 0,
         maxHeight: compact ? '55vh' : '78vh',
@@ -1534,7 +1627,11 @@ function TagsTab({ facet }) {
 // ─────────────────────────────────────────────────────────────────────────────
 // AboutModal — explanation of the framework
 // ─────────────────────────────────────────────────────────────────────────────
-function AboutModal({ meta, parallels = [], onClose }) {
+function AboutModal({ meta, parallels = [], onClose: closeNow, origin }) {
+  const panelRef = useRef(null);
+  const backRef = useRef(null);
+  const [glides] = useState(() => !!origin && usable(origin) && !motionOff());
+  const onClose = useGlide(panelRef, backRef, glides ? origin : null).bind(null, closeNow);
   const stats = useMemo(() => {
     const total = parallels.length;
     const sig = parallels.filter(p => p.specificity_significant === true).length;
@@ -1543,8 +1640,8 @@ function AboutModal({ meta, parallels = [], onClose }) {
   }, [parallels]);
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
-      <div className="fade-in glass-modal" style={{
+      <div ref={backRef} className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
+      <div ref={panelRef} className="fade-in glass-modal" style={{
         position: 'fixed',
         top: 'calc(50% + var(--nav-h, 0px) / 2)', left: '50%',
         transform: 'translate(-50%, -50%)',
@@ -1676,7 +1773,11 @@ function AboutModal({ meta, parallels = [], onClose }) {
 // ─────────────────────────────────────────────────────────────────────────────
 // CompareModal — side-by-side comparison of any two facets (docs/00 §4)
 // ─────────────────────────────────────────────────────────────────────────────
-function CompareModal({ facets, deityById, traditionById, parallels, initialFacetId, onClose }) {
+function CompareModal({ facets, deityById, traditionById, parallels, initialFacetId, onClose: closeNow, origin }) {
+  const panelRef = useRef(null);
+  const backRef = useRef(null);
+  const [glides] = useState(() => !!origin && usable(origin) && !motionOff());
+  const onClose = useGlide(panelRef, backRef, glides ? origin : null).bind(null, closeNow);
   // facet options sorted by deity name for the two pickers
   const options = useMemo(() => {
     return facets
@@ -1758,8 +1859,8 @@ function CompareModal({ facets, deityById, traditionById, parallels, initialFace
 
   return (
     <>
-      <div className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
-      <div className="fade-in glass-modal" style={{
+      <div ref={backRef} className="sheet-backdrop fade-in" style={{ position: 'fixed', inset: 0, zIndex: 90 }} onClick={onClose} />
+      <div ref={panelRef} className="fade-in glass-modal" style={{
         position: 'fixed', top: 'calc(50% + var(--nav-h, 0px) / 2)', left: '50%', transform: 'translate(-50%, -50%)',
         width: 'min(720px, calc(100vw - 32px))', maxHeight: 'calc(100vh - 48px - var(--nav-h, 0px))', zIndex: 96,
         borderRadius: '26px', overflow: 'hidden', display: 'flex', flexDirection: 'column',

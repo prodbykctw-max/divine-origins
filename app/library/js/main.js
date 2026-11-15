@@ -105,7 +105,7 @@ function enterSection() {
   }
 }
 window.addEventListener('hashchange', () => {
-  closeModal(); // a nav tap while a detail modal is open closes it (and restores page scroll)
+  closeModal({ instant: true }); // a nav tap while a detail modal is open closes it (and restores page scroll)
   window.dispatchEvent(new Event('divine:navigate')); // Source Map closes its sheet / modals
   setTimeout(enterSection, 0);
 });

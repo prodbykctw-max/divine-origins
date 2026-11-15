@@ -194,7 +194,7 @@ function buildDeityPanel(d, idx) {
           </div>` : ''}
 
           <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
-            <button onclick="openDeityModal('${d.id}')"
+            <button onclick="openDeityModal('${d.id}', this)"
                     style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;padding:0.4rem 0.8rem;border:1px solid ${color}66;color:${color};background:${color}0a;cursor:pointer;border-radius:2px">
               PRIMARY SOURCES + FULL ENTRY →
             </button>
@@ -260,7 +260,7 @@ window.deityNav = (dir) => {
   selectDeity(next);
 };
 
-window.openDeityModal = (id) => {
+window.openDeityModal = (id, from) => {
   const d = DEITIES.find(x => x.id === id);
   if (!d) return;
   const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
@@ -272,6 +272,7 @@ window.openDeityModal = (id) => {
 
   openModal({
     accentColor: color,
+    source: from && from.nodeType === 1 ? from : null,
     html: `
       <div style="padding:2.5rem">
         <div class="t-caption" style="color:${color};margin-bottom:0.5rem">${group?.label ?? d.tradition} · ${d.tier} · ${d.region}</div>
