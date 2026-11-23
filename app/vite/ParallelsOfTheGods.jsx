@@ -488,8 +488,10 @@ function SourceMapApp({ data, onReload }) {
           transition: transform 120ms ease, opacity 200ms ease, box-shadow 200ms ease;
           cursor: pointer;
         }
-        .deity-chip:hover {
-          box-shadow: 0 0 0 1px rgb(var(--sm-accent-rgb) / 0.6);
+        @media (hover: hover) and (pointer: fine) {
+          .deity-chip:hover {
+            box-shadow: 0 0 0 1px rgb(var(--sm-accent-rgb) / 0.6);
+          }
         }
         .deity-chip:focus-visible { outline: 2px solid var(--sm-accent-hi); outline-offset: 2px; }
         input[type=search]::placeholder { color: var(--sm-dim); }
@@ -509,7 +511,7 @@ function SourceMapApp({ data, onReload }) {
           pointer-events: none;
         }
         .tradition-chip {
-          transition: all 150ms ease;
+          transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, opacity 150ms ease;
         }
         .sheet-backdrop {
           background: rgba(0,0,0, 0.45);
@@ -564,7 +566,7 @@ function SourceMapApp({ data, onReload }) {
           background: transparent; color: var(--sm-text); font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
           transition: background .25s, color .25s, box-shadow .25s;
         }
-        .seg-btn:hover { background: rgb(var(--sm-ink-rgb) / 0.06); }
+        @media (hover: hover) and (pointer: fine) { .seg-btn:hover { background: rgb(var(--sm-ink-rgb) / 0.06); } }
         .seg-btn.is-on {
           color: var(--sm-text);
           background: var(--sm-raised);
@@ -803,6 +805,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search names, functions, claims…"
+              aria-label="Search the Source Map"
               style={{
                 width: '100%',
                 padding: '8px 30px 8px 32px',
@@ -818,6 +821,7 @@ function Header({ meta, onAboutClick, onCompareClick, searchQuery, setSearchQuer
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
+                aria-label="Clear search"
                 style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--sm-muted)', cursor: 'pointer' }}
               >
                 <X size={14} />
@@ -909,6 +913,7 @@ function FilterBar({ traditions, activeTraditions, onToggle, onAll, onNone }) {
               key={t.id}
               onClick={() => onToggle(t.id)}
               className="tradition-chip"
+              aria-pressed={active}
               style={{
                 padding: '4px 9px',
                 fontSize: '12px',

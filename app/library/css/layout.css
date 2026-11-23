@@ -213,11 +213,17 @@
   transition: transform 0.3s var(--ease-out-expo);
 }
 
-.rail__item:hover,
 .rail__item[aria-selected="true"] {
   background: rgb(var(--accent-rgb) / 0.06);
   border-color: rgb(var(--accent-rgb) / 0.2);
   transform: translateY(-3px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .rail__item:hover {
+    background: rgb(var(--accent-rgb) / 0.06);
+    border-color: rgb(var(--accent-rgb) / 0.2);
+    transform: translateY(-3px);
+  }
 }
 
 .rail__item[aria-selected="true"] {
@@ -225,9 +231,13 @@
   border-color: rgb(var(--accent-rgb) / 0.3);
 }
 
-.rail__item:hover::after,
 .rail__item[aria-selected="true"]::after {
   transform: scaleX(1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .rail__item:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .rail__tradition {

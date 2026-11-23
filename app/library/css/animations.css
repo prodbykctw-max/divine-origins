@@ -111,11 +111,13 @@
           drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
 }
 
-.book:hover {
-  transform: rotateY(-4deg) rotateX(1deg) translateZ(30px) translateY(-16px);
-  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.8))
-          drop-shadow(0 0 30px rgb(var(--accent-rgb) / 0.15));
-  z-index: 10;
+@media (hover: hover) and (pointer: fine) {
+  .book:hover {
+    transform: rotateY(-4deg) rotateX(1deg) translateZ(30px) translateY(-16px);
+    filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 0 30px rgb(var(--accent-rgb) / 0.15));
+    z-index: 10;
+  }
 }
 
 .book.selected {
@@ -177,7 +179,7 @@
   transition: opacity 0.4s;
 }
 
-.book:hover .book__cover-img { opacity: 0.65; }
+@media (hover: hover) and (pointer: fine) { .book:hover .book__cover-img { opacity: 0.65; } }
 
 /* Book spine */
 .book__spine {

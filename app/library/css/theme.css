@@ -238,7 +238,8 @@ input::placeholder { color: var(--text-dim); }
   background: linear-gradient(to top, rgba(8,12,22,0.94) 0%, rgba(8,12,22,0.6) 32%, rgba(8,12,22,0) 62%), var(--tab-img) center / cover no-repeat;
   transition: transform 0.2s;
 }
-.trad-card--img:hover, .trad-card--img:focus-visible { transform: scale(1.015); }
+.trad-card--img:focus-visible { transform: scale(1.015); }
+@media (hover: hover) and (pointer: fine) { .trad-card--img:hover { transform: scale(1.015); } }
 #home-trad-grid .trad-card--img .t-caption { color: #cfd8e6 !important; }
 .trad-card--img .t-title { font-size: 1.05rem; color: #f3f4f1; }
 .tab-credits { font-size: 0.75rem; line-height: 1.5; color: var(--text-dim); margin-top: 0.4rem; }

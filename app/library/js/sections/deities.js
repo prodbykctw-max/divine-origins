@@ -27,7 +27,7 @@ export function renderDeities() {
       <div class="container">
         <header class="section__header">
           <span class="section__eyeline">${DEITIES.length} Entries · All Traditions</span>
-          <h2 class="section__title">Creator Beings & Divine Archetypes</h2>
+          <h1 class="section__title">Creator Beings & Divine Archetypes</h1>
           <p class="section__desc">
             Every documented creator, supreme being, demiurge, and divine council
             across all known human traditions. Three evidence tiers clearly labeled.
@@ -42,7 +42,8 @@ export function renderDeities() {
                         padding:0.75rem 3rem 0.75rem 1.2rem;outline:none;
                         transition:border-color 0.2s;border-radius:2px"
                  aria-label="Search deities">
-          <span style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--text-dim)">⊕</span>
+          <span aria-hidden="true" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--text-dim)">⊕</span>
+          <div id="deity-status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"></div>
         </div>
 
         <!-- Tradition filter -->
@@ -76,8 +77,9 @@ function buildDeityFilters() {
   return pills.map(p => `
     <button class="deity-filter-pill ${p.id === 'all' ? 'deity-filter-pill--active' : ''}"
             data-trad="${p.id}"
+            aria-pressed="${p.id === 'all'}"
             style="font-family:var(--font-mono);font-size: 0.75rem;letter-spacing: 0;text-transform: none;
-                   padding:0.28rem 0.65rem;border-radius:2px;cursor:pointer;transition:all 0.2s;
+                   padding:0.28rem 0.65rem;border-radius:2px;cursor:pointer;transition:border-color 0.2s,color 0.2s,background 0.2s;
                    border:1px solid ${p.id === 'all' ? p.color : 'rgb(var(--ink-rgb) / 0.07)'};
                    color:${p.id === 'all' ? p.color : 'var(--text-dim)'};
                    background:${p.id === 'all' ? p.color + '12' : 'transparent'}">
@@ -88,6 +90,9 @@ function buildDeityFilters() {
 function renderDeityRail() {
   const rail = document.getElementById('deity-rail');
   if (!rail) return;
+
+  const status = document.getElementById('deity-status');
+  if (status) status.textContent = `${filteredDeities.length} ${filteredDeities.length === 1 ? 'deity' : 'deities'}`;
 
   rail.innerHTML = filteredDeities.map((d, i) => {
     const group = TRADITION_GROUPS.find(g => g.id === d.tradition);
@@ -220,6 +225,7 @@ function bindDeityEvents() {
 
       document.querySelectorAll('.deity-filter-pill').forEach(p => {
         const active = p.dataset.trad === activeTrad;
+        p.setAttribute('aria-pressed', String(active));
         const color  = active ? 'var(--accent)' : 'rgb(var(--ink-rgb) / 0.07)';
         p.style.borderColor  = color;
         p.style.color        = active ? 'var(--accent)' : 'var(--text-dim)';
@@ -227,6 +233,7 @@ function bindDeityEvents() {
       });
 
       renderDeityRail();
+      initScrollReveals();
       if (filteredDeities.length > 0) injectDeityPanel(0, 1);
     });
   });
@@ -248,6 +255,7 @@ function bindDeityEvents() {
         );
         currentIdx = 0;
         renderDeityRail();
+        initScrollReveals();
         if (filteredDeities.length > 0) injectDeityPanel(0, 1);
       }, 220);
     });

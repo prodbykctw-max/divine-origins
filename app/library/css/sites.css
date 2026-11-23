@@ -20,7 +20,7 @@
   border-radius: var(--r-mid); overflow: hidden; padding: 0; font: inherit;
   transition: border-color 0.2s, transform 0.2s;
 }
-.site-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+@media (hover: hover) and (pointer: fine) { .site-card:hover { border-color: var(--accent); transform: translateY(-2px); } }
 .site-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .site-card__img { display: block; aspect-ratio: 16 / 10; background: var(--deep) center / cover no-repeat; overflow: hidden; }
 .site-card__glyph {
@@ -87,3 +87,7 @@
 .site-dive__fig .art-cap__where { color: var(--accent) !important; }
 .site-dive__fig .art-cap__credit { color: var(--text-secondary) !important; }
 .site-dive > .t-label:first-child { margin-top: 2.75rem; }
+
+/* Skip link: off-screen until a keyboard user tabs to it */
+.skip-link { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-link:focus { width: auto; height: auto; clip: auto; overflow: visible; z-index: 1000; margin: 0.5rem; padding: 0.6rem 1rem; background: var(--surface); color: var(--text-primary); border: 1px solid var(--accent); border-radius: 4px; }

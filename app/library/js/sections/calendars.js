@@ -17,7 +17,7 @@ export function renderCalendars() {
       <div class="container">
         <header class="section__header">
           <span class="section__eyeline">Time as Theology</span>
-          <h2 class="section__title">Sacred Calendar Systems</h2>
+          <h1 class="section__title">Sacred Calendar Systems</h1>
           <p class="section__desc">
             Every religious tradition encodes its theology in how it counts time.
             The Enochian 364-day calendar conflicts with the Hebrew lunar calendar —
@@ -34,7 +34,7 @@ export function renderCalendars() {
                     class="cal-card reveal-card"
                     style="background:var(--layer);padding:1.2rem;text-align:left;cursor:pointer;
                            transition:background 0.2s;border:none;animation-delay:${i * 0.05}s"
-                    onmouseover="this.style.background='var(--surface)'"
+                    onmouseover="if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.style.background='var(--surface)'"
                     onmouseout="this.style.background='var(--layer)'">
               <div class="t-caption" style="color:var(--gold-dim);margin-bottom:0.3rem">${sentence(c.type)}</div>
               <div class="t-title" style="font-size:0.82rem;color:var(--text-primary);margin-bottom:0.2rem;line-height:1.3">${c.name}</div>

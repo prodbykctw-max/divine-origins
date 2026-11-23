@@ -14,7 +14,7 @@ export function renderPatterns() {
       <div class="container">
         <header class="section__header">
           <span class="section__eyeline">The Connections Others Overlooked</span>
-          <h2 class="section__title">The Pattern</h2>
+          <h1 class="section__title">The Pattern</h1>
           <p class="section__desc">
             These parallel chains exist across traditions, across millennia, across continents.
             The evidence is presented as it stands. You decide what it means.
