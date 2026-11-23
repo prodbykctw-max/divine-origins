@@ -57,6 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Scroll reveals (runs after first section renders)
   setTimeout(initScrollReveals, 300);
 
+  // Skip link: move focus to the main area without touching the hash router
+  document.querySelector('.skip-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const main = document.getElementById('main');
+    if (!main) return;
+    main.setAttribute('tabindex', '-1');
+    main.focus({ preventScroll: false });
+  });
+
   // 6. Global keyboard handler
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();

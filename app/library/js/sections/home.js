@@ -114,7 +114,7 @@ function buildTradCard(g) {
     </div>`;
   return `
     <div data-trad-nav="${g.id}" style="background:var(--layer);padding:1.5rem;cursor:pointer;transition:background 0.2s,transform 0.2s;border-left:3px solid ${g.color}22"
-         onmouseover="this.style.background='var(--surface)';this.style.borderLeftColor='${g.color}'"
+         onmouseover="if(matchMedia('(hover:hover) and (pointer:fine)').matches){this.style.background='var(--surface)';this.style.borderLeftColor='${g.color}'}"
          onmouseout="this.style.background='var(--layer)';this.style.borderLeftColor='${g.color}22'">
       <div class="t-caption" style="color:${g.color};margin-bottom:0.4rem">${g.era}</div>
       <div class="t-title" style="font-size:0.95rem;color:var(--text-primary);margin-bottom:0.3rem">${g.label}</div>

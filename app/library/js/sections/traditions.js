@@ -20,7 +20,7 @@ export function renderTraditions() {
       <div class="container">
         <header class="section__header">
           <span class="section__eyeline">Every Tradition · Equal Depth</span>
-          <h2 class="section__title">15 Tradition Groups</h2>
+          <h1 class="section__title">15 Tradition Groups</h1>
           <p class="section__desc">
             Scroll the rail to browse. Select a tradition — the full account
             cycles in below. Each entry includes scholarly context,

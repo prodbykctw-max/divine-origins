@@ -40,13 +40,15 @@ function loadIndex() {
   if (!indexPromise) {
     indexPromise = fetch(BASE + 'index.json')
       .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then((j) => (index = j));
+      .then((j) => (index = j))
+      .catch((err) => { indexPromise = null; throw err; });
   }
   return indexPromise;
 }
 function loadRows(path) {
   if (!fileCache.has(path)) {
-    fileCache.set(path, fetch(BASE + path).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }));
+    fileCache.set(path, fetch(BASE + path).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch((err) => { fileCache.delete(path); throw err; }));
   }
   return fileCache.get(path);
 }
@@ -86,7 +88,8 @@ export function renderSites() {
           </div>
           <div class="sites-picker">
             <input id="sites-pick" type="search" autocomplete="off" spellcheck="false"
-                   placeholder="Type a country…" aria-label="Choose a country" aria-controls="sites-suggest">
+                   placeholder="Type a country…" aria-label="Choose a country" aria-controls="sites-suggest"
+                   role="combobox" aria-expanded="false" aria-autocomplete="list">
             <ul id="sites-suggest" class="sites-suggest" role="listbox" hidden></ul>
           </div>
           <div id="sites-result" class="sites-result"></div>
@@ -198,18 +201,21 @@ function suggestions(q) {
 function renderSuggest(list) {
   const ul = document.getElementById('sites-suggest');
   if (!ul) return;
-  if (!list.length) { ul.hidden = true; ul.innerHTML = ''; return; }
+  const pick = document.getElementById('sites-pick');
+  if (!list.length) { ul.hidden = true; ul.innerHTML = ''; pick?.setAttribute('aria-expanded', 'false'); return; }
   ul.innerHTML = list.map((s) => `
     <li role="option"><button type="button" data-key="${esc(s.key)}">
       <span>${esc(s.label)}</span><span class="sites-suggest__n">${fmt(s.count)}</span>
     </button></li>`).join('');
   ul.hidden = false;
+  pick?.setAttribute('aria-expanded', 'true');
 }
 
 function choose(key) {
   if (!index) return;
   const box = document.getElementById('sites-suggest');
   if (box) box.hidden = true;
+  document.getElementById('sites-pick')?.setAttribute('aria-expanded', 'false');
   if (mode === 'country') {
     const c = index.countries.find((x) => x[0] === key);
     if (!c) return;

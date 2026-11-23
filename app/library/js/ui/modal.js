@@ -45,6 +45,17 @@ export function openModal({ accentColor = 'var(--accent)', html = '', source = n
     if (accent) accent.style.cssText = `height:3px;background:linear-gradient(90deg,${accentColor},transparent)`;
     content.innerHTML = html;
 
+    // Name the dialog after the entry's own heading
+    const heading = content.querySelector('h1, h2');
+    if (heading) {
+      if (!heading.id) heading.id = 'modal-heading';
+      overlay.setAttribute('aria-labelledby', heading.id);
+    } else {
+      overlay.removeAttribute('aria-labelledby');
+    }
+    // Keep Tab (and screen readers) inside the dialog while it is open
+    document.querySelector('.page')?.setAttribute('inert', '');
+
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -89,6 +100,10 @@ function finishClose() {
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  overlay.removeAttribute('aria-labelledby');
+  document.querySelector('.page')?.removeAttribute('inert');
+  // Hand focus back to the card or button that opened the dialog
+  if (src && src.isConnected) src.focus({ preventScroll: true });
   isOpen = false;
   src = null; srcImg = null; destImg = '';
 }

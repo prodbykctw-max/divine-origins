@@ -39,7 +39,7 @@ export function renderTimeline() {
       <div class="container--narrow">
         <header class="section__header">
           <span class="section__eyeline">Oldest Known Sources First</span>
-          <h2 class="section__title">From the Beginning of the Record</h2>
+          <h1 class="section__title">From the Beginning of the Record</h1>
           <p class="section__desc">
             Ordered by earliest documented evidence. Oral traditions predate all writing —
             the oldest written text is not necessarily the oldest belief.
