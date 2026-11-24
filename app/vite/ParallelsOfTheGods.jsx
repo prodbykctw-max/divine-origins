@@ -1531,7 +1531,7 @@ function SourcesTab({ facet, deity }) {
 // from the site's sites/ folder, which the Holy Sites section also uses.
 const SITES_BASE = (typeof window !== 'undefined' && window.__IMG_BASE__)
   ? window.__IMG_BASE__.replace(/img\/$/, 'sites/') : 'sites/';
-const LIVE_SITE = 'https://prodbykctw-max.github.io/divine-origins/#sites';
+const LIVE_SITE = 'https://divine-origins.pages.dev/#sites';
 
 function SitesTab({ deity, entry }) {
   const [state, setState] = useState({ loading: true });
