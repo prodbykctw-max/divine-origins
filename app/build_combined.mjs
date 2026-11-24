@@ -17,7 +17,7 @@ const VITE = join(APP, 'vite');
 const LIB = join(APP, 'library');
 const OUT = join(APP, 'divine-origins-combined.html');
 const SITE = join(APP, 'site');            // deploy folder (gitignored; built by CI)
-const LIVE = 'https://prodbykctw-max.github.io/divine-origins/';
+const LIVE = 'https://divine-origins.pages.dev/';
 const run = (cmd, cwd) => execSync(cmd, { cwd, stdio: 'inherit' });
 
 // 1. Exact, locked dependencies (one node_modules for the whole site)

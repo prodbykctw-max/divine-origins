@@ -1,7 +1,9 @@
 name: Deploy site
 
-# Builds the site from main and publishes it to GitHub Pages:
-# https://prodbykctw-max.github.io/divine-origins/
+# Builds the site from main and publishes it to GitHub Pages.
+# The live site moved to Cloudflare Pages on 2026-11-24 (https://divine-origins.pages.dev/)
+# after GitHub Pages kept failing to publish with "deployment_failed"; it is deployed with
+# `wrangler pages deploy` from this workflow's github-pages artifact.
 on:
   push:
     branches: [main]
